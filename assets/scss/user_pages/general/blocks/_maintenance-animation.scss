@@ -1,0 +1,11 @@
+.maintenance-banner-container {
+    position: relative;
+    z-index: 1003;
+    overflow: hidden;
+    height: 40px;
+
+    &:not(.animate) {
+        opacity: 0;
+        height: 0;
+    }
+}

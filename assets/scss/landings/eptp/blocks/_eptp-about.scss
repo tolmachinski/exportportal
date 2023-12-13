@@ -1,0 +1,60 @@
+.eptp {
+
+    &__about {
+        position: relative;
+        overflow: hidden;
+        padding: 119px 0 118px;
+    }
+
+    &__about-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 880px;
+    }
+
+    &__about-subtitle {
+        margin-bottom: 30px;
+        padding-left: 1px;
+    }
+
+    &__about-btn {
+        align-self: center;
+        width: 100%;
+        max-width: 270px;
+    }
+
+    @include my-media(991) {
+
+        &__about {
+            padding: 109px 0;
+        }
+
+        &__about-container {
+            max-width: 765px;
+        }
+
+        &__about-subtitle {
+            padding-left: 0;
+        }
+
+        &__about-btn {
+            margin-right: 16px;
+            padding: .875rem .75rem;
+        }
+    }
+
+    @include my-media(660) {
+
+        &__about {
+            padding: 65px 0;
+        }
+
+        &__about-subtitle {
+            margin-bottom: 20px;
+        }
+
+        &__about-btn {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,213 @@
+.epl-login-form {
+    $root: &;
+
+    position: relative;
+    background: $white;
+
+    &__content {
+        text-align: center;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    &__ttl {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+    }
+
+    &__desc {
+        margin-bottom: 18px;
+        color: $black-light;
+        text-align: left;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    &__sign-up {
+        padding-top: 18px;
+        text-align: center;
+    }
+
+    &__stay-signed {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin-bottom: 0;
+        font-weight: normal;
+        line-height: 20px;
+        color: $black;
+    }
+
+    &__forgot-link {
+        width: 50%;
+        color: $blue;
+        text-align: right;
+    }
+
+    &__submit-btn {
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    &__captcha {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__captcha-item {
+        display: flex;
+        justify-content: space-between;
+        width: 220px;
+
+        .image {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+            height: 50px;
+        }
+    }
+
+    &__captcha-refrash {
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    &__captcha-input {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    &__refrash {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+
+        .ep-icon {
+            padding: 5px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__ttl {
+            font-size: 44px;
+            line-height: 50px;
+        }
+    }
+
+    @include phone-only {
+
+        &__content {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__ttl {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        &__actions {
+            margin-top: 5px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__content {
+
+            &--popup {
+                #{$root} {
+
+                    &__desc {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+
+        &__desc {
+            margin-bottom: 14px;
+        }
+
+        &__submit-btn {
+            margin-top: 15px;
+        }
+
+        &__sign-up {
+            padding-top: 12px;
+        }
+    }
+
+    @include my-media(480) {
+
+        &__captcha {
+            flex-direction: column;
+        }
+
+        &__captcha-item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.epl-login-form-wrp {
+
+    .epl-login-form {
+        background: none;
+
+        &__content {
+            max-width: 400px;
+            padding: 0 15px;
+            line-height: 24px;
+        }
+
+        &__desc {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        &__submit-btn {
+            margin-top: 16px;
+        }
+
+        @include my-media(991) {
+
+            &__desc {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+        }
+
+        @include phone-only {
+
+            &__content {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        @include phone-extra-small {
+
+            &__desc {
+                margin-bottom: 10px;
+            }
+
+            &__submit-btn {
+                margin-top: 12px;
+            }
+        }
+    }
+}

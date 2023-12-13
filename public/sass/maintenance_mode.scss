@@ -1,0 +1,15 @@
+@import "../../assets/scss/import/_scss_functions";
+@import "../../assets/scss/import/_colors";
+
+.pr-5 {
+    padding-right: 5px !important;
+}
+
+.pl-5 {
+    padding-left: 5px !important;
+}
+
+.txt-red{ color: $color-red !important; }
+.txt-gray{ color: $color-gray !important; }
+
+@import "../../assets/scss/user_pages/general/blocks/_maintenance_mode";

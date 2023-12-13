@@ -1,0 +1,12 @@
+.bootstrap-dialog--transaction {
+    padding: 15px;
+    padding-right: 15px !important;
+
+    .modal-dialog {
+        max-width: calc(1.77 * 80vh);
+
+        img {
+            width: 100%;
+        }
+    }
+}

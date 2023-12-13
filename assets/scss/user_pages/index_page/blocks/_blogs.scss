@@ -1,0 +1,170 @@
+.blogs {
+    position: relative;
+
+    $root: &;
+
+    &__content {
+        position: relative;
+
+        &.loading {
+            min-height: 337px;
+        }
+    }
+
+    &__slide {
+        position: relative;
+        padding: 0 35px;
+    }
+
+    &__image {
+        width: 776px;
+        height: 337.31px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 30px;
+        width: calc(100% - 70px); // because padding 0 35px;
+        padding: 14px 15px 13px;
+        background-color: $color-white;
+    }
+
+    &__title {
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        color: $color-black;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @include h201816;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    &__about {
+
+        @include p161614;
+
+        margin-top: 3px;
+        color: $color-black-light;
+    }
+
+    &__date {
+        margin-left: 2px;
+    }
+
+    &__arrows {
+        position: absolute;
+        bottom: 46px;
+        z-index: 1;
+        font-size: 20px;
+        color: $color-gray-light;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-blue2;
+        }
+    }
+
+    &__arrows-prev {
+        left: calc((100% - 776px - 70px)/2);
+        transform: translateX(-50%);
+    }
+
+    &__arrows-next {
+        right: calc((100% - 776px - 70px)/2);
+        transform: translateX(50%);
+    }
+
+    .slick-slide {
+        transition: opacity 0.15s linear;
+
+        &:not(.slick-active) {
+            opacity: 0.5;
+        }
+    }
+
+    @include my-media(1200, "min") {
+
+        &__content:not(.slick-initialized) {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+
+            #{$root}__slide:first-child {
+                margin-left: -560px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__content {
+
+            &.loading {
+                // If increase quantity of blogs need to impcrease
+                $quantity: 3;
+                $margins: 28px * ($quantity - 1);
+                $info: 63px * $quantity;
+                $imgs: calc(((100vw - 30px) * 0.43468678459) * $quantity);
+
+                min-height: calc($imgs + $info + $margins);
+            }
+        }
+
+        &__slide {
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 29px;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            height: calc((100vw - 30px) * 0.43468);
+        }
+
+        &__info {
+            position: static;
+            width: 100%;
+            padding: 14px 0 0;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__content {
+
+            &.loading {
+                // If increase quantity of blogs need to impcrease
+                $quantity: 3;
+                $margins: 12px * ($quantity - 1);
+                $info: 52px * $quantity;
+                $imgs: calc(((100vw - 30px) * 0.43468678459) * $quantity);
+
+                min-height: calc($imgs + $info + $margins);
+            }
+        }
+
+        &__slide {
+
+            &:not(:last-child) {
+                margin-bottom: 13px;
+            }
+        }
+
+        &__about {
+            margin-top: 0;
+        }
+
+        &__info {
+            padding: 9px 0 0;
+        }
+    }
+}

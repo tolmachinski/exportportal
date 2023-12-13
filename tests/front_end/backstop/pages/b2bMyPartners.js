@@ -1,0 +1,47 @@
+module.exports = [
+    {
+        label: "B2b Partners",
+        url: "/b2b/my_partners",
+        jsFileName: "b2bMyPartners",
+        authentication: "certified seller",
+    },
+    {
+        label: "B2b Partners Filter Panel",
+        url: "/b2b/my_partners",
+        jsFileName: "b2bMyPartners",
+        authentication: "certified seller",
+        filterPopup: true,
+    },
+    {
+        label: "B2b Partners Fill Filter Panel",
+        url: "/b2b/my_partners",
+        jsFileName: "b2bMyPartners",
+        authentication: "certified seller",
+        filterPopup: true,
+        fillFilterPopup: true,
+    },
+    {
+        label: "B2b Partners Active Filter Panel on Mobile",
+        url: "/b2b/my_partners",
+        jsFileName: "b2bMyPartners",
+        authentication: "certified seller",
+        filterPopup: true,
+        fillFilterPopup: true,
+        activeFilter: true,
+    },
+    {
+        label: "B2b Partners Dropdown Menu",
+        url: "/b2b/my_partners",
+        jsFileName: "b2bMyPartners",
+        authentication: "certified seller",
+        dropdown: true,
+    },
+    {
+        label: "B2b Partners Dropdown Menu Delete Partner",
+        url: "/b2b/my_partners",
+        jsFileName: "b2bMyPartners",
+        authentication: "certified seller",
+        dropdown: true,
+        deletePartner: true,
+    },
+]

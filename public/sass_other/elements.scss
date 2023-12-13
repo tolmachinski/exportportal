@@ -1,0 +1,99 @@
+@import "../../assets/scss/import/_scss_functions";
+@import "../../assets/scss/import/_colors";
+@import "../sass/import/_variables";
+
+
+@import "../sass/styles_new";
+
+.bd-toc{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 30px;
+}
+
+.elements-view{
+    padding: 0 50px 50px 50px;
+    margin-bottom: 70px;
+    outline: 1px solid $color-gray-light;
+}
+
+.elements-colors{
+    background: #c9c9c9;
+    padding: 10px 10px 30px 10px;
+
+    &__item{
+        display: inline-block;
+        width: 25%;
+        padding-right: 15px;
+        padding-bottom: 10px;
+    }
+
+    &__circle{
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+}
+
+.elements-spacing{
+
+    &__ttl1{
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 24px;
+    }
+
+    &__ttl2{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 18px;
+    }
+
+    &__50{
+        height: 50px;
+        padding-left: 15px;
+        line-height: 50px;
+        color: $color-orange;
+        border-left: 3px solid $color-orange;
+    }
+
+    &__70{
+        height: 70px;
+        padding-left: 15px;
+        line-height: 70px;
+        color: $color-red;
+        border-left: 3px solid $color-red;
+    }
+}
+
+.nav{
+    &--bg{
+        > .nav-item{
+            > .nav-link{
+                background: $color-gray-lighter;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .nav-link{
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .nav{
+        margin-left: 25px;
+        font-size: 14px;
+    }
+}

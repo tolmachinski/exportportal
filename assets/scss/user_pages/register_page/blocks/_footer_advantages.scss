@@ -1,0 +1,132 @@
+.footer-advantages {
+    margin-top: 70px;
+
+    &__wrap {
+        padding: 70px 110px;
+        background-color: $color-gray-lighter;
+    }
+
+    &__ttl {
+
+        @include h423024;
+
+        text-align: center;
+    }
+
+    &__subttl {
+        margin-top: 15px;
+
+        @include p181816;
+
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1120px;
+        margin: 30px auto 0;
+        padding: 0 15px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include p181816;
+
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &__item-icon-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 13px;
+        background: $color-white;
+        border-radius: 50%;
+
+        svg {
+            fill: $color-blue2;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 0;
+        padding: 50px 15px 0;
+
+        &__wrap {
+            padding: 70px 55px;
+        }
+
+        &__subttl {
+            margin-top: 12px;
+        }
+
+        &__list {
+            flex-wrap: wrap;
+            margin: 30px 0 -30px;
+            padding: 0 17px;
+        }
+
+        &__item {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+
+    @include phone-only {
+
+        &__ttl {
+            font-size: calcFluidFontSize(24, 30, 320, 767);
+            line-height: 1.21;
+        }
+
+        &__subttl, &__item {
+            font-size: calcFluidFontSize(16, 18, 320, 767);
+            line-height: 1.21;
+        }
+    }
+
+    @include phone-extra-small {
+        padding: 30px 15px 0;
+
+        &__wrap {
+            padding: 50px 15px;
+        }
+
+        &__subttl {
+            margin-top: 5px;
+        }
+
+        &__item {
+            width: 47%;
+        }
+
+        &__item-icon-wrap {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 6px;
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    @include my-media(375) {
+
+        &__subttl {
+            margin-top: 9px;
+        }
+
+        &__list {
+            padding: 0 7px;
+        }
+    }
+}

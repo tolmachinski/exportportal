@@ -1,0 +1,44 @@
+.checkbox-list {
+
+    &__item {
+        margin-bottom: 14px;
+
+        @include p161614;
+
+        &:only-child,
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            margin: 0;
+        }
+
+        .ep-icon {
+            margin-left: 10.5px;
+        }
+    }
+
+    &__label {
+        display: inline-flex;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    &__txt {
+        flex: 1;
+        padding-left: 10px;
+        color: $black-light;
+    }
+
+    @include phone-only {
+
+        &__item {
+            margin-bottom: 10px;
+        }
+
+        &__txt {
+            padding-top: 4px;
+        }
+    }
+}

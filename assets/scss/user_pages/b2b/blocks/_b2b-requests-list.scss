@@ -1,0 +1,7 @@
+.b2b-requests-list {
+    margin-top: 14px;
+
+    @include phone-only {
+        margin-top: 13px;
+    }
+}

@@ -1,0 +1,66 @@
+@import "../colors";
+
+.custom-radio {
+    display: flex !important;
+    align-items: center;
+    width: fit-content;
+    margin-top: 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.7 !important;
+    }
+
+    input[type="radio"]:not(.hasDatepicker) {
+        display: grid;
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+        margin-top: -2px;
+        background-color: #fff;
+        cursor: pointer;
+        border: 1px solid $gray;
+        border-radius: 50%;
+        place-content: center;
+        appearance: none;
+
+        &::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: inset 8px 8px $blue;
+            transform: scale(0);
+        }
+
+        &:checked {
+            border-color: $blue !important;
+
+            &::before {
+                transform: scale(1);
+            }
+        }
+
+        &.validengine-border {
+            background: #fff !important;
+            border-color: $red !important;
+        }
+    }
+
+    &__text {
+        margin-left: 10px;
+        padding-left: 0 !important;
+
+        @include p161616;
+    }
+}
+
+.dt_radio {
+
+    .custom-radio {
+        margin-top: 0;
+    }
+}
+

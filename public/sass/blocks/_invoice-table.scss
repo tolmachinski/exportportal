@@ -1,0 +1,65 @@
+.invoice-table{
+	padding-bottom: 25px;
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__col{
+		width: 50%;
+
+		&:first-child{
+			padding-right: 15px;
+		}
+
+		&:last-child{
+			padding-left: 15px;
+		}
+	}
+
+	&__col-full{
+		width: 100%;
+	}
+
+    @include my-media(660){
+        &__col{
+            width: auto;
+
+            &:first-child{
+                padding-right: 5px;
+            }
+
+            &:last-child{
+                padding-left: 5px;
+            }
+        }
+
+        &__discount{
+            width: 135px;
+        }
+    }
+
+    @include my-media(425){
+        &__item{
+            flex-wrap: wrap;
+        }
+
+        &__col{
+            width: 100%;
+
+            &:first-child{
+                padding-right: 0;
+            }
+
+            &:last-child{
+                padding-left: 0;
+            }
+        }
+
+        &__discount{
+            width: 150px;
+        }
+    }
+
+}

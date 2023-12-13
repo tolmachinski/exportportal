@@ -1,0 +1,152 @@
+.think-local {
+    $root: &;
+
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__row {
+        display: flex;
+        justify-content: center;
+
+        &--reverse {
+            margin: 50px 0 0;
+            background-color: $color-gray-lighter;
+            #{$root} {
+
+                &__info {
+                    padding: 30px 50px;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding: 30px 0 30px 50px;
+        text-align: left;
+
+        &--left {
+            padding: 30px 50px;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 230px;
+        }
+    }
+
+    &__ttl {
+        margin: 0 0 18px;
+
+        @include h302620;
+    }
+
+    &__subttl {
+        margin: 0 0 19px;
+
+        @include p181816;
+    }
+
+    &__bg {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 50%;
+
+        .image {
+            width: 100%;
+            height: auto;
+            min-height: 380px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__row {
+            justify-content: flex-start;
+
+            &--reverse {
+                margin: 30px 0 0;
+                #{$root} {
+
+                    &__bg {
+                        width: 54%;
+                    }
+
+                    &__info {
+                        width: 46%;
+                        padding: 30px;
+                    }
+                }
+            }
+        }
+
+        &__bg {
+            width: 46%;
+        }
+
+        &__info {
+            width: 54%;
+            padding: 30px 0 30px 30px;
+        }
+
+        &__ttl,
+        &__subttl {
+            margin: 0 0 19px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__row {
+            flex-direction: column;
+
+            &--reverse {
+                flex-direction: column-reverse;
+                #{$root} {
+
+                    &__bg {
+                        width: 100%;
+                        margin: 0;
+                    }
+
+                    &__info {
+                        width: 100%;
+                        padding: 19px 15px 15px;
+                    }
+                }
+            }
+        }
+
+        &__bg {
+            width: 100%;
+            margin: 0 0 20px;
+        }
+
+        &__info {
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            text-align: center;
+
+            .btn {
+                max-width: 290px;
+            }
+        }
+
+        &__ttl,
+        &__subttl {
+            margin: 0 0 13px;
+        }
+    }
+
+
+    @include my-media(425) {
+        text-align: left;
+    }
+}

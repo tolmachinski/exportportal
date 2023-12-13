@@ -1,0 +1,160 @@
+.register-types {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    width: 100%;
+
+    @include my-media(1400) {
+        grid-template-columns: repeat(2, 50%);
+        margin-top: 30px;
+    }
+
+    @include my-media(767) {
+        grid-template-columns: 100%;
+        margin-top: 15px;
+    }
+}
+
+.register-type {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 27px 30px 28px;
+    color: $color-black;
+    border: 1px solid $color-gray-light;
+    transition: all 0.15s linear;
+
+    &__link,
+    &__header,
+    &__paragraph {
+        transition: all 0.15s linear;
+    }
+
+    &__header {
+
+        @include h201816;
+
+        font-weight: 500;
+    }
+
+    &__paragraph {
+        margin: 13px 0 12px;
+
+        @include p161614;
+
+        color: $color-black-light;
+    }
+
+    &__link {
+
+        @include h181816;
+
+        color: $color-blue2;
+
+        svg {
+            margin-left: 6px;
+            fill: $color-blue2;
+        }
+    }
+
+    &:hover {
+        background-color: $color-blue2;
+        border-color: $color-blue2;
+
+        #{$root}__link,
+        #{$root}__header,
+        #{$root}__paragraph {
+            color: $color-white;
+        }
+
+        #{$root}__link {
+            text-decoration: underline;
+        }
+
+        svg {
+            fill: $color-white;
+        }
+    }
+
+    @include my-media(1401, "min") {
+
+        &:not(:last-child) {
+            border-right: none;
+        }
+    }
+
+    @include my-media(1400) {
+
+        &__paragraph {
+            width: 450px;
+            max-width: 100%;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-bottom: none;
+        }
+    }
+
+    @include my-media(991) {
+        padding: 28px 28px 27px 29px;
+
+        &:first-child {
+            #{$root}__paragraph {
+                width: 309px;
+            }
+        }
+
+        &__paragraph {
+            width: 310px;
+            margin: 13px 0 10px;
+        }
+    }
+
+    @include my-media(768, "min") {
+
+        &:not(:nth-child(2), :nth-child(4)) {
+            border-right: none;
+        }
+    }
+
+    @include my-media(767) {
+        padding: 13px 14px 12px;
+
+        &:first-child {
+            #{$root}__paragraph {
+                width: 100%;
+            }
+        }
+
+        &__paragraph {
+            width: 100%;
+        }
+
+        &:nth-child(1n+0) {
+            border-bottom: 1px solid $color-gray-light;
+        }
+
+        &:not(:first-child) {
+            margin-top: 5px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__paragraph {
+            margin: 7px 0 8px;
+        }
+
+        &__link {
+
+            svg {
+                bottom: 1px;
+                width: 14px;
+                height: 14px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

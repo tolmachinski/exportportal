@@ -1,0 +1,25 @@
+.giveaway-video {
+    position: relative;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+
+    .image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &:hover {
+
+        .youtube-play-icon {
+
+            svg {
+                fill: $color-youtube-darken;
+            }
+        }
+    }
+
+    @include phone-only {
+        margin-top: 14px;
+    }
+}

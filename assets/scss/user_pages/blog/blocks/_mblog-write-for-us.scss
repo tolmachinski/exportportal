@@ -1,0 +1,75 @@
+.mblog-write-for-us {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    background: $gray-lighter;
+
+    &__detail {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        padding: 18px 20px 16px 30px;
+    }
+
+    &__ttl {
+
+        @include h262018;
+    }
+
+    &__desc {
+        padding: 4px 0 8px;
+
+        @include p181816;
+    }
+
+    &__more {
+
+        @include p181816;
+
+        font-weight: 500;
+
+        svg {
+            margin: -2px 0 0 7px;
+            fill: $blue;
+        }
+
+        &:hover {
+            color: $blue;
+            text-decoration: underline;
+
+            svg {
+                fill: $blue;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include my-media(1024) {
+
+        &__detail {
+            padding-top: 21px;
+        }
+
+        &__desc {
+            padding-top: 3px;
+        }
+    }
+
+    @include phone-only {
+        display: block;
+        margin-top: 30px;
+
+        &__detail {
+            padding: 14px 15px 11px;
+        }
+
+        &__desc {
+            padding-top: 8px;
+            padding-bottom: 7px;
+        }
+    }
+}

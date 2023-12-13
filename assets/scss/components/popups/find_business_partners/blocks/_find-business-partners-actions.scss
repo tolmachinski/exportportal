@@ -1,0 +1,38 @@
+.find-business-partners-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 13px !important;
+
+    .btn {
+        width: 100%;
+        max-width: 130px;
+        margin: 0 5px;
+    }
+
+    .checkbox-list {
+        width: 100%;
+        margin-top: 13px;
+        text-align: center;
+
+        &__label {
+            justify-content: center;
+        }
+
+        &__txt {
+            padding-left: 10px;
+        }
+    }
+
+    @include phone-extra-small {
+        margin: 9px 0 0 !important;
+
+        .checkbox-list {
+            margin-top: 14px;
+
+            &__txt {
+                line-height: 25px;
+            }
+        }
+    }
+}

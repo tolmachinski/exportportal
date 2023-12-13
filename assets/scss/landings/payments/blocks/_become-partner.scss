@@ -1,0 +1,119 @@
+.become-partner {
+
+    &__title, &__description {
+        text-align: center;
+    }
+
+    &__title {
+        margin-top: 15px;
+    }
+
+    &__description {
+        margin: 8px 0 12px;
+    }
+
+    &__benefits {
+
+        li {
+            display: flex;
+            margin-top: 12px;
+        }
+
+        svg {
+            min-width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @include my-media(768, "min") {
+        flex-direction: row-reverse;
+
+        &__info, &__image {
+            width: 50%;
+        }
+
+        &__info {
+            padding-right: 15px;
+        }
+
+        &__image {
+            padding-left: 15px;
+        }
+
+        &__title, &__description {
+            text-align: left;
+        }
+
+        &__title {
+            margin-top: 2px;
+        }
+
+        &__description {
+            margin: 15px 0 14px;
+        }
+
+        &__benefits {
+
+            li {
+                display: flex;
+                margin-top: 13px;
+            }
+        }
+    }
+
+    @include my-media(800, "min") {
+
+        &__image {
+            height: 560px;
+        }
+    }
+
+    @include my-media(992, "min") {
+
+        &__image {
+            height: 500px;
+        }
+    }
+
+    @include my-media(1101, "min") {
+
+        &__image {
+            height: auto;
+        }
+    }
+
+    @include my-media(1200, "min") {
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            margin-top: 4px;
+        }
+
+        &__description {
+            margin: 15px 0 28px;
+        }
+
+        &__info {
+            width: 445px;
+            padding-right: 0;
+        }
+
+        &__image {
+            width: 675px;
+            height: 585px;
+            padding-left: 0;
+        }
+
+        &__benefits {
+
+            svg {
+                margin-right: 15px;
+            }
+        }
+    }
+}

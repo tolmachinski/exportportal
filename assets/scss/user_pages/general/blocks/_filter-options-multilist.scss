@@ -1,0 +1,134 @@
+.filter-options-multilist {
+    $root: &;
+
+    margin-top: 13px;
+
+    &__item {
+
+        &:nth-child(n + 6) {
+            display: none;
+        }
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+        padding-left: 20px;
+    }
+
+    &__toggler {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        cursor: pointer;
+        transform: translateY(-50%);
+
+        &:hover {
+            color: $color-blue2;
+        }
+
+        &--rotate {
+            #{$root} {
+
+                &__toggler-icon {
+                    width: 11px;
+                    height: 11px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__toggler-icon {
+        transition: transform .1s linear;
+    }
+
+    &__ttl {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-black;
+    }
+
+    &__link {
+
+        @include p161614;
+
+        @include text-nowrap;
+
+        color: $color-black-light;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    &__counter {
+        margin-left: auto;
+        padding-left: 10px;
+
+        @include p161614;
+
+        color: $color-gray;
+    }
+
+    &__sub {
+        display: none;
+        padding-left: 20px;
+
+        &--display {
+            display: block;
+        }
+    }
+
+    &__sub-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7px;
+        color: $color-black-light;
+    }
+
+    &__sub-item-icon {
+        display: block;
+        margin-top: 9px;
+    }
+
+    &__sub-link {
+        padding: 0 10px;
+
+        @include p161614;
+
+        @include text-nowrap;
+
+        color: $color-black-light;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    @include phone-only {
+
+        &__header {
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+
+        &__link {
+            padding: 4px 10px;
+        }
+
+        &__sub-item {
+            margin-bottom: 5px;
+        }
+
+        &__sub-link {
+            padding: 4px 10px;
+        }
+    }
+}

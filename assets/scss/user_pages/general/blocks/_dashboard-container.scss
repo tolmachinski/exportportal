@@ -1,0 +1,23 @@
+.dashboard-container {
+    min-height: 500px;
+    padding-top: 70px;
+
+    @include my-media(991) {
+        padding-top: 60px;
+    }
+
+    @include phone-only {
+        min-height: 200px;
+        padding: 50px 7.5px 0;
+
+        .row {
+            margin-left: -7.5px;
+            margin-right: -7.5px;
+
+            >[class*=col-] {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+            }
+        }
+    }
+}

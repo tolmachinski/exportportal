@@ -1,0 +1,13 @@
+.page-main-title {
+    margin: 24px 0 28px;
+
+    @include h302620;
+
+    @include my-media(991) {
+        margin-top: 28px;
+    }
+
+    @include phone-only {
+        margin-top: -4px;
+    }
+}

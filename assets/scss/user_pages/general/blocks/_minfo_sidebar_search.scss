@@ -1,0 +1,21 @@
+.minfo-sidebar-search {
+    display: flex;
+    border: 2px solid $color-blue2;
+
+    &__input {
+        min-width: 0;
+        border: none !important;
+    }
+
+    &__btn {
+        padding: 0 20px;
+        background: $color-white;
+        cursor: pointer;
+        border: none;
+
+        .ep-icon {
+            font-size: 23px;
+            color: $color-gray;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.ep-events-recommended {
+
+     &__ttl-wrap {
+         background: $color-blue-light;
+         text-align: center;
+     }
+
+     &__ttl {
+         padding: 8px 0 6px;
+
+        @include p121212(true);
+
+         text-transform: uppercase;
+     }
+
+     .ep-events {
+
+         &__item {
+             border-color: $color-blue-light;
+         }
+     }
+}

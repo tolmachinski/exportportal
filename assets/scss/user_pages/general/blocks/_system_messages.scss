@@ -1,0 +1,96 @@
+@import "../../../import/_scss_functions";
+
+@import "../../../import/_colors";
+
+.system-messages {
+	position: fixed;
+	top: 60px;
+	right: 25px;
+	z-index: 99999;
+	width: 350px;
+	padding: 0 !important;
+	box-shadow: 0 0 10px #f0f0f0;
+
+	&__ttl {
+		position: relative;
+		padding: 16px 20px;
+		font-size: 20px;
+		line-height: 20px;
+		color: $color-white;
+		background-color: $color-blue2;
+
+		.ep-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 20px 18px;
+			line-height: 12px;
+			cursor: pointer;
+		}
+	}
+
+	&__card {
+		position: relative;
+		padding: 20px;
+		border-top: 3px solid $color-white;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+
+		&--message-error,
+		&--error {
+			background-color: $color-red-light;
+		}
+
+		&--message-success,
+		&--success {
+			background-color: $color-green-light;
+		}
+
+		&--message-info,
+		&--info {
+			background-color: $color-blue2-light;
+		}
+
+		&--message-warning,
+		&--warning {
+			background: $color-orange-light;
+		}
+	}
+
+	&__card-ttl {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 15px;
+
+		strong {
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 14px;
+			text-transform: capitalize;
+		}
+
+		.ep-icon {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			padding: 15px;
+			line-height: 12px;
+			cursor: pointer;
+		}
+	}
+
+	&__card-txt {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 22px;
+    }
+
+    @media screen and (max-width: 991px) {
+        top: 50px;
+    }
+
+    @media screen and (max-width: 425px) {
+		right: 5px;
+        width: 310px;
+    }
+}

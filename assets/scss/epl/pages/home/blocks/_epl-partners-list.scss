@@ -1,0 +1,59 @@
+.epl-partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 23px -22px 0;
+
+    &__item {
+
+        @media (hover: hover) {
+
+            &:hover {
+
+                .image {
+                    filter: grayscale(0) opacity(1);
+                }
+            }
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            height: 56px;
+            padding: 0 25px;
+        }
+
+        .image {
+            filter: grayscale(100%) opacity(0.3);
+            transition: filter 0.3s ease-in-out;
+        }
+    }
+
+    @include my-media(1024) {
+
+        &__item {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include phone-only {
+        margin: 27px -10px 0;
+
+        &__item {
+            margin-bottom: 29px;
+
+            &:hover {
+
+                .image {
+                    filter: grayscale(100%) opacity(0.3);
+                }
+            }
+
+            .link {
+                height: auto;
+                padding: 0 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.simple-tabs{
+	margin: 40px 0;
+
+	&__item{
+		height: 51px;
+		margin-right: 25px;
+		float: left;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.link{
+		padding: 5px 10px;
+		font-size: 14px;
+		line-height: 51px;
+		color: $color-gray;
+
+		&:hover{
+			color: $color-black;
+		}
+
+		&.active{
+			font-size: 24px;
+			line-height: 44px;
+			color: $color-black;
+		}
+    }
+
+    @media screen and (max-width: 480px) {
+        &__item{
+			margin-right: 10px;
+		}
+    }
+}

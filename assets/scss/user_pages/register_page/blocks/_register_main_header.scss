@@ -1,0 +1,253 @@
+.register-main-header {
+	$root: &;
+
+	&__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+		width: 100%;
+		min-height: 400px;
+	}
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+
+        @include object-fit(cover);
+    }
+
+    &__ttl {
+        max-width: 685px;
+        margin-left: 100px;
+    }
+
+	&__ttl-txt {
+
+		@include h503826;
+
+		color: $color-white;
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__link-col {
+		width: 25%;
+        border-bottom: 1px solid $color-gray-light;
+        border-left: 1px solid $color-gray-light;
+
+        &:last-child {
+            border-right: 1px solid $color-gray-light;
+        }
+
+        &:hover {
+            border-color: $color-blue2;
+        }
+	}
+
+	&__link-block {
+		display: block;
+		padding: 27.5px 29px 28px;
+
+		&:hover {
+			background: $color-blue2;
+
+			#{$root} {
+
+				&__link-ttl {
+					color: $color-white;
+				}
+
+                &__link-txt {
+                    color: $color-white;
+
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+			}
+		}
+	}
+
+    &__link-ttl {
+
+        @include h201816;
+
+        color: $color-black;
+	}
+
+	&__link-txt {
+        margin-top: 14px;
+
+        @include h181816;
+
+        color: $color-blue2;
+
+        svg {
+            margin-left: 5px;
+            fill: $color-blue2;
+        }
+    }
+
+    @include my-media(1300) {
+        padding: 0;
+
+        &__link-block {
+            padding: 27.5px 10px 28px;
+        }
+    }
+
+	@include my-media(1024) {
+		background-position: right 0;
+
+        &__link-block {
+            padding: 27.5px 29px 28px;
+        }
+
+        &__links {
+            margin: 30px 15px 0;
+        }
+
+		&__link-col {
+			min-width: 50%;
+            border-top: 1px solid $color-gray-light;
+
+            &:first-child, &:nth-child(2) {
+                border-bottom: 1px solid $color-gray-light;
+            }
+
+            &:nth-child(2) {
+                border-right: 1px solid $color-gray-light;
+            }
+
+            &:nth-child(3), &:nth-child(4) {
+                border-top: none;
+            }
+
+            &:hover {
+
+                &:first-child, &:nth-child(2) {
+                    border-color: $color-blue2;
+                }
+            }
+		}
+	}
+
+	@include my-media(991) {
+
+		&__content {
+            position: relative;
+            min-height: 600px;
+			padding-top: 20px;
+			padding-bottom: 30px;
+		}
+
+        &__ttl {
+            position: absolute;
+            right: 0;
+            bottom: 69px;
+            left: 0;
+            max-width: 70vw;
+            margin: 0 auto;
+        }
+
+        &__ttl-txt {
+            font-size: calcFluidFontSize(38, 50, 768, 991);
+            line-height: 1.21;
+            text-align: center;
+        }
+	}
+
+	@include phone-only {
+
+        &__ttl-txt {
+            font-size: calcFluidFontSize(26, 38, 320, 767);
+            line-height: 1.21;
+            text-align: center;
+        }
+
+        &__link-ttl, &__link-txt {
+            font-size: calcFluidFontSize(16, 18, 320, 767);
+            line-height: 1.21;
+        }
+
+        &__link-txt {
+            margin-top: 4px;
+        }
+	}
+
+    @include my-media(710) {
+
+        &__content {
+            min-height: 550px;
+        }
+
+        &__ttl {
+            bottom: 28px;
+            max-width: 74vw;
+        }
+    }
+
+    @include my-media(635) {
+
+        &__ttl {
+            max-width: 78vw;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__ttl {
+            max-width: 67%;
+        }
+
+        &__links {
+            margin: 16px 15px 0;
+            border: none;
+        }
+
+        &__link-col {
+            width: 100%;
+            margin-bottom: 5px;
+            border: 1px solid $color-gray-light !important;
+
+            &:hover {
+                border-color: $color-blue2 !important;
+            }
+        }
+
+        &__link-block {
+            padding: 12px 13px 14px;
+        }
+    }
+
+    @include my-media(470) {
+
+        &__ttl {
+            max-width: 75%;
+        }
+    }
+
+    @include my-media(390) {
+
+        &__ttl {
+            max-width: 84.5%;
+        }
+
+        &__content {
+            min-height: 414px;
+        }
+    }
+}
+

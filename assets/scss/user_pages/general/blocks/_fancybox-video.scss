@@ -1,0 +1,11 @@
+.fancybox-video {
+
+    @include my-media(991) {
+
+        .fancybox-iframe {
+            top: 40%;
+            height: 50vw;
+            transform: translateY(-40%);
+        }
+    }
+}

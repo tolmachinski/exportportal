@@ -1,0 +1,127 @@
+.dashboard-line {
+    $root: &;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	&__ttl {
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+        @include text-nowrap;
+
+        &--simple {
+            padding-top: 0;
+        }
+	}
+
+	&__ttl-sub {
+		font-size: 16px;
+		font-weight: 500;
+
+		@include text-nowrap;
+    }
+
+    &__ttl-sub2 {
+        padding-top: 8px;
+        font-size: 18px;
+		font-weight: 400;
+        line-height: 22px;
+	}
+
+	&__actions {
+
+		.btn {
+			margin-top: 2px;
+			margin-bottom: 2px;
+			padding-left:30px;
+			padding-right:30px;
+			white-space: nowrap;
+        }
+
+        > .btn-group {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .btn {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+	}
+
+	.elem-powered-by {
+		padding: 15px 10px 0 0;
+	}
+
+    @include my-media(660) {
+
+        &__ttl {
+            white-space: unset;
+        }
+
+        &__actions {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 100%;
+
+			> .dropdown,
+			> .btn {
+				width: 49%;
+				margin-top: 0;
+				margin-bottom: 2%;
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			> .dropdown {
+
+				.btn {
+					width: 100%;
+				}
+			}
+        }
+
+        &--ordered {
+            #{$root} {
+
+                &__actions {
+
+                    > .btn-group {
+                        order: 1;
+                        width: 49%;
+                        margin-bottom: 2%;
+
+                        .btn {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__ttl-sub2 {
+            font-size: 16px;
+        }
+
+        &--ordered {
+            #{$root} {
+
+                &__actions {
+
+                    > .btn-group {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

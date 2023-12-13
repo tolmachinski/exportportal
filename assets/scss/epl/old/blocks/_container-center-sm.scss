@@ -1,0 +1,15 @@
+.container-center-sm {
+	min-width: 320px;
+	max-width: 1200px;
+	margin:0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &--padding-7 {
+
+        @include phone-only {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.b2b-user-items {
+    position: relative;
+    overflow: hidden;
+    margin: -7.5px 0;
+
+    &:not(:hover) {
+
+        .slick-arrow {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    .slick-prev {
+        left: 7px;
+    }
+
+    .slick-next {
+        right: 8px;
+    }
+
+    @include my-media(991) {
+        margin: -8px 0;
+        padding-bottom: 27px;
+
+        .slick-dots {
+            bottom: -20px;
+        }
+    }
+
+    @include phone-only {
+        margin: -2px 0 -13px;
+        padding-bottom: 30px;
+
+        .slick-dots {
+            bottom: -26px;
+        }
+    }
+}

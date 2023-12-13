@@ -1,0 +1,20 @@
+.sidebar-subscribe {
+    margin-top: 27px;
+
+    &__ttl {
+
+        @include h181816;
+    }
+
+    &__form {
+        margin-top: 14px;
+    }
+
+    &__form-input {
+        margin-bottom: 3px;
+    }
+
+    &__form-btn {
+        margin-top: 16px;
+    }
+}

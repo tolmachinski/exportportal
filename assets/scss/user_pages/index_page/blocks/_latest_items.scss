@@ -1,0 +1,209 @@
+.latest-items {
+    $root: &;
+
+    position: relative;
+
+    &__flex-wrap {
+        display: flex;
+
+        #{$root} {
+
+            &__content {
+
+                .loading {
+                    min-height: 350px;
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: 0;
+            width: calc(100% - 30px);
+        }
+
+        .products {
+            position: relative;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        margin: -7.5px 0;
+
+        &:not(:hover) {
+
+            .slick-arrow {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        .loading {
+            min-height: 700px;
+        }
+    }
+
+    &__btn {
+        display: none;
+    }
+
+    .slick-prev {
+        left: 7px;
+    }
+
+    .slick-next {
+        right: 8px;
+    }
+
+    @include my-media(991) {
+
+        &__flex-wrap {
+            margin-bottom: -9px;
+            padding-bottom: 35px;
+
+            #{$root} {
+
+                &__content {
+                    margin-top: -7px;
+                    padding-bottom: 0;
+
+                    .loading {
+                        min-height: calc(157px + (100vw - 66px) * 0.75 / 3);
+                    }
+                }
+            }
+
+            .slick-dots {
+                bottom: 6px;
+            }
+        }
+
+        &__content {
+            margin: -5px 0 -10px;
+            padding-bottom: 25px;
+
+            .slick-dots {
+                bottom: -20px;
+            }
+
+            .loading {
+                min-height: calc(2 * (158px + (100vw - 66px) * 0.75 / 3));
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__content {
+            margin-top: -2px;
+
+            .loading {
+                min-height: calc(2 * (119px + (100vw - 44px) * 0.75 / 3));
+            }
+        }
+
+        &__flex-wrap {
+            #{$root} {
+
+                &__content {
+                    margin-top: -2px;
+
+                    .loading {
+                        min-height: calc(119px + (100vw - 44px) * 0.75 / 3);
+                    }
+                }
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__content {
+            margin: -2px 0;
+            padding-bottom: 0;
+
+            .loading {
+                min-height: calc(2 * (113px + (100vw - 45px) * 0.75 / 3)) !important;
+            }
+        }
+
+        &__btn {
+            display: block;
+            margin-top: 13px;
+        }
+
+        .products {
+
+            &:not(.slick-initialized) {
+                flex-wrap: wrap;
+            }
+
+            &__item {
+
+                &:nth-child(n+4) {
+                    display: block !important;
+                }
+
+                &:nth-child(n+7) {
+                    display: none !important;
+                }
+            }
+        }
+
+        &__flex-wrap {
+            flex-direction: column;
+            padding-bottom: 0;
+
+            #{$root} {
+
+                &__content {
+                    margin: -2px 0;
+                }
+            }
+        }
+    }
+
+    @include my-media(475) {
+
+        &__content {
+
+            .loading {
+                min-height: calc(4 * (119px + (100vw - 40px) * 0.75 / 2)) !important;
+            }
+        }
+
+        .products {
+
+            &__item {
+
+                &:nth-child(n+7) {
+                    display: block !important;
+                }
+
+                &:nth-child(n+9) {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    @include my-media(424) {
+
+        &__content {
+
+            .loading {
+                min-height: calc(4 * (119px + (100vw - 40px) * 0.75 / 2)) !important;
+            }
+        }
+    }
+
+    @include my-media(359) {
+
+        &__content {
+
+            .loading {
+                min-height: calc(4 * (101px + (100vw - 40px) * 0.75 / 2)) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.not-found {
+    margin: 15px 0 0;
+    padding: 15px;
+    color: $color-black;
+    background: $color-white;
+    border: 1px solid $color-gray-light;
+
+    &__ttl {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        text-transform: uppercase;
+    }
+
+    &__search,
+    &__desc {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-black-light;
+    }
+
+    &__desc {
+        margin-top: 15px;
+    }
+
+    &__list {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-gray;
+    }
+
+    @include phone-only {
+        margin-top: 10px;
+    }
+}
+

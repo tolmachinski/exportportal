@@ -1,0 +1,105 @@
+.formErrorInsideDialog{
+	&.formError {
+		z-index: 4;
+
+		.formErrorContent { z-index: 5; }
+
+		.formErrorArrow { z-index: 6; }
+	}
+}
+
+.inputContainer {
+	position: relative;
+	float: left;
+}
+
+.formError {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	cursor: pointer;
+	z-index: 1;
+
+	.formErrorContent {
+		width: 100%;
+		min-width: 140px;
+		background: $color-red-light;
+		position:relative;
+		color: $color-red;
+		font-size: 12px;
+		padding: 10px;
+		line-height: 12px;
+		z-index: 2;
+
+		.ep-icon_remove{
+			float: right;
+		}
+	}
+
+	.formErrorArrow {
+		width: 15px;
+		margin: -2px 0 0 13px;
+		position:relative;
+		z-index: 3;
+
+		div {
+			font-size: 0px;
+			height: 1px;
+			background: $color-red-light;
+			margin: 0 auto;
+			line-height: 0;
+			font-size: 0;
+			display: block;
+		}
+
+		.line10 { width: 15px;}
+		.line9 { width: 13px;}
+		.line8 { width: 11px;}
+		.line7 { width: 9px;}
+		.line6 { width: 7px;}
+		.line5 { width: 5px;}
+		.line4 { width: 3px;}
+		.line3 { width: 1px;}
+	}
+
+	.formErrorArrowBottom {
+		margin: 0px 0 0 12px;
+		top:2px;
+	}
+}
+
+.ajaxSubmit {
+	padding: 20px;
+	background: $color-green-lighter;
+	display: none
+}
+
+.greenPopup{
+	.formErrorContent {
+		background: $color-green-lighter;
+		color: $color-green;
+	}
+
+	.formErrorArrow div {
+		background: $color-green-lighter;
+		color: $color-green;
+	}
+}
+
+.blackPopup{
+	.formErrorContent {
+		background: $color-gray-dark;
+		color: $color-white;
+	}
+
+	.formErrorArrow div {
+		background: $color-gray-dark;
+		color: $color-white;
+	}
+}
+
+body[dir='rtl'] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+	margin: -2px 13px 0 0;
+}

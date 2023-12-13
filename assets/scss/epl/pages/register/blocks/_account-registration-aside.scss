@@ -1,0 +1,47 @@
+.account-registration-aside {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    height: 950px;
+    padding: 50px 105px;
+    color: $black;
+    text-align: center;
+
+    &__ttl {
+        margin-top: 50px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $zIndexBg;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include my-media(1200) {
+        max-width: 500px;
+        padding: 50px 15px;
+    }
+
+    @include my-media(1100) {
+        max-width: 450px;
+    }
+
+    @include my-media(1024) {
+        max-width: 420px;
+    }
+
+    @include my-media(991) {
+        display: none;
+    }
+}

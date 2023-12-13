@@ -1,0 +1,18 @@
+.select2-lazy-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 159px;
+
+    .select2-selection {
+
+        &__rendered {
+            display: flex !important;
+            align-items: flex-start;
+        }
+    }
+
+    @include phone-only {
+        width: 147px;
+    }
+}

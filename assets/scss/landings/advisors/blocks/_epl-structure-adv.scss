@@ -1,0 +1,126 @@
+.epl-structure-adv {
+    $root: &;
+
+    padding-top: 81px;
+    padding-bottom: 240px;
+    background-image: url("#{$assetsLinkAdvisorsPage}landings/map.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    &__headline {
+
+        @extend %epl-headline;
+
+        margin-bottom: 50px;
+    }
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 953px;
+        margin: 0 auto;
+        padding-top: 68px;
+    }
+
+    &__column {
+        width: 25%;
+        max-width: 170px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        overflow: hidden;
+        height: 42px;
+        margin-top: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 21px;
+        color: $color-black;
+        letter-spacing: 1.35px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        margin-top: 43px;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1.35px;
+        background-color: #1381f3;
+        border: 1px solid transparent;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #1381f3;
+            background-color: transparent;
+            border: 1px solid #1381f3;
+        }
+    }
+
+    @media only screen and (min-width: 1199px) {
+
+        &__headline {
+          margin-right: 34px;
+        }
+
+        &__icon {
+          padding-top: 2px;
+          padding-right: 13px;
+        }
+
+        &__title {
+          margin-right: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 1199px) {
+        padding-bottom: 191px;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        &__container {
+            max-width: 400px;
+          padding-top: 0;
+        }
+
+        &__column {
+            width: 50%;
+          margin-top: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 575px) {
+
+        &__container {
+          justify-content: center;
+          max-width: 280px;
+        }
+
+        &__link {
+          margin-top: 0;
+        }
+
+        &__column {
+          width: 100%;
+        }
+    }
+}

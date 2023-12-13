@@ -1,0 +1,7 @@
+.about-comment-b {
+    margin-top: 20px;
+
+    @include phone-only{
+        margin-top: 0;
+    }
+}

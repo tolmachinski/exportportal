@@ -1,0 +1,17 @@
+.spersonal-subnav{
+	display: none;
+	padding-left: 30px;
+
+	&__item{
+		padding: 8px 0;
+
+		.link{
+			display: block;
+			color: $color-black;
+
+			&:hover{
+				color: $color-blue2;
+			}
+		}
+	}
+}

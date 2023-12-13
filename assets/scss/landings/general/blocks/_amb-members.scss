@@ -1,0 +1,151 @@
+.ambassador {
+    // .ambassador__members
+
+    &__members {
+        margin-bottom: 71px;
+
+        .ambassador__section-title {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__members-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    // .ambassador__members-title
+
+    &__members-title {
+        flex: 1;
+        margin-bottom: 19px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+
+    // .ambassador__members-column
+
+    &__members-column {
+        display: flex;
+        width: 25%;
+        max-width: 170px;
+    }
+
+    &__members-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    // .ambassador__members-icon
+
+    &__members-icon {
+        // flex: 1;
+        height: 91px;
+    }
+
+    &__advisors-icon {
+        margin-top: -2px;
+        margin-bottom: 2px;
+    }
+
+    &__logistics-icon {
+        margin-top: 2px;
+        margin-bottom: -2px;
+    }
+
+    // .ambassador__members-btn
+
+    &__members-btn {
+        padding: 13px 20px;
+        font-size: 18px;
+    }
+
+
+    @include my-media(991) {
+
+        &__members {
+            margin-bottom: 22px;
+
+            .ambassador__section-title {
+                margin-bottom: 28px;
+            }
+        }
+
+        &__members-container {
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 750px;
+            padding: 0;
+        }
+
+        &__members-column {
+            justify-content: center;
+            width: 33.333333%;
+            max-width: 100%;
+            margin-bottom: 49px;
+        }
+
+        &__members-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            max-width: 170px;
+            text-align: center;
+        }
+
+        &__members-btn {
+            padding: 8px 20px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__members {
+            margin-bottom: 50px;
+        }
+
+        &__members-container {
+            padding: 0 10px;
+        }
+
+        &__members-column {
+            width: 50%;
+            margin-bottom: 28px;
+            padding: 0 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__members-title {
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+        }
+
+        &__members-icon {
+            height: 81px;
+        }
+
+        &__members-btn {
+            padding: 10.5px 20px;
+            font-size: 14px;
+        }
+    }
+}
+
+
+

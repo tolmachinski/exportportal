@@ -1,0 +1,16 @@
+.top-categories-list{
+
+    @include my-media(991){
+        &__txt{
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+
+    @include phone-only{
+        &__item{
+            margin-bottom: 20px;
+        }
+    }
+
+}

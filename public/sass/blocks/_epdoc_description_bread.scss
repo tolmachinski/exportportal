@@ -1,0 +1,54 @@
+.epdoc-description-bread{
+
+	&__ttl{
+		float: left;
+		padding: 1px 5px 1px 0;
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	&__link{
+		position: relative;
+		float: left;
+		padding: 1px 5px 1px 0;
+    	margin-right: 5px;
+		font-size: 14px;
+		color: $color-gray;
+
+		&:hover{
+			color: $color-blue2;
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 5px;
+			bottom: 5px;
+			right: 0;
+			border-left: 1px solid $color-blue2;
+			color: $color-blue2;
+		}
+
+		&:last-of-type{
+			&:before{
+				display: none;
+			}
+		}
+	}
+
+	&--raquo{
+		.epdoc-description-bread{
+			&__link{
+				padding-right: 10px;
+
+				&:before{
+					content: "\00BB";
+					border: none;
+					line-height: 13px;
+					color: $color-blue2;
+					font-size: 17px;
+				}
+			}
+		}
+	}
+}

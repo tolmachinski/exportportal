@@ -1,0 +1,164 @@
+.dashboard-nav-customize {
+	$root: &;
+
+	&__item {
+		width: 300px;
+		margin-bottom: 0 !important;
+		border-top: 1px solid $gray-light;
+	}
+
+	&__ttl {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 20px;
+		padding-bottom: 14px;
+		font-size: 20px;
+		font-weight: 500;
+
+		.ep-icon {
+			z-index: 1;
+			line-height: 32px;
+			cursor: pointer;
+			transition: .3s all;
+
+			&:hover {
+				color: $blue;
+			}
+
+			&--rotate {
+				transform: rotate(45deg);
+				transform-origin: 50% 50%;
+			}
+		}
+	}
+
+	&--nohover {
+		#{$root} {
+
+			&__links-item {
+
+				&:hover:not(.ui-draggable-disabled) {
+
+					.actions {
+						display: none;
+					}
+				}
+			}
+		}
+    }
+
+	&__links-item {
+		position: relative;
+
+		&.ui-draggable-disabled {
+			opacity: 0.4;
+
+			.linkone {
+
+				&:hover {
+					color: inherit;
+				}
+			}
+		}
+
+		&:hover:not(.ui-draggable-disabled) {
+
+			.actions {
+				display: block;
+			}
+		}
+	}
+
+    @include phone-only {
+
+        &__item {
+			width: 100%;
+		}
+
+		&--nohover {
+
+			.actions {
+				display: none;
+			}
+		}
+
+		&--draggable {
+
+			&::before {
+				content: " ";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.dashboard-nav-selected {
+
+	&__links {
+		padding-bottom: 25px;
+		border-top: 1px solid $gray-light;
+	}
+
+	&__links-item {
+		position: relative;
+		min-height: 39px;
+		border-bottom: 1px solid $gray-light;
+
+		&:hover {
+
+			.actions {
+				display: block;
+			}
+		}
+
+		&.ui-draggable-dragging {
+			padding-left: 10px;
+
+			.actions {
+				right: 10px;
+				background-color: #e0e0e0 !important;
+			}
+		}
+	}
+
+	&__actions {
+		padding-top: 40px;
+
+		.btn {
+			min-width: 260px;
+			margin-bottom: 15px;
+		}
+	}
+
+	@include phone-only {
+
+		&__actions {
+
+			.btn {
+				display: block;
+
+				.ico-draggable {
+					display: none;
+				}
+			}
+		}
+
+		&__links-item {
+
+			&::before {
+				content: " ";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
+	}
+}

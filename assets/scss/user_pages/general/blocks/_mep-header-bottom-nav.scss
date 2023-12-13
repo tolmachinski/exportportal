@@ -1,0 +1,142 @@
+.mep-header-bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 51px;
+    background: $color-white;
+    border-top: 1px solid $color-gray-light;
+
+    &__link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background: $white;
+
+        &--basket {
+
+            .epuser-line__circle-sign {
+                right: -4px !important;
+            }
+
+            svg {
+                stroke: $color-black-light;
+                stroke-width: 2;
+            }
+        }
+
+		&--chat {
+            background: $color-blue2;
+
+			&.active-min {
+
+				&::before {
+                    content: "";
+                    position: absolute;
+					top: 3px;
+					right: 4px;
+					z-index: 2;
+					width: 12px;
+					height: 12px;
+					background: $color-green;
+					border: 2px solid $color-white;
+					border-radius: 50%;
+				}
+
+				~ .dropdown-menu {
+
+					.dropdown-item {
+						position: relative;
+
+						&--main-chat {
+
+							&::before {
+								content: "";
+								position: absolute;
+								top: 2px;
+								left: -1px;
+								width: 12px;
+								height: 12px;
+								background: $color-green;
+								border: 2px solid $color-white;
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+			}
+
+            svg {
+                fill: $color-white !important;
+                transform-origin: 11.5px 11.5px;
+			}
+		}
+
+        &--messages {
+
+            .epuser-line__circle-sign {
+                right: -4px !important;
+            }
+
+            svg {
+                stroke: $color-white;
+                stroke-width: 4;
+			}
+
+            &.disabled {
+
+                svg {
+                    fill: $color-gray-light;
+                }
+            }
+        }
+
+        .epuser-line__circle-sign {
+            position: absolute;
+            top: -2px;
+            right: -3px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid $color-white;
+            border-radius: 50%;
+		}
+
+		&--blue {
+            justify-content: center;
+            width: 100px;
+            margin-left: 10px;
+            padding: 0 15px;
+            font-size: 14px;
+            line-height: 40px;
+            color: $color-white;
+            background: $color-blue2;
+		}
+
+        svg {
+            fill: $color-black-light;
+        }
+
+        &.chat-active {
+
+            svg {
+                fill: $color-blue2;
+            }
+        }
+    }
+
+    &__relative {
+        position: relative;
+    }
+
+    @include phone-only {
+
+        &__link {
+
+            &--blue {
+                width: 116px;
+            }
+        }
+    }
+}

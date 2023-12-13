@@ -1,0 +1,9 @@
+.container-blog-detail {
+    max-width: 834px;
+    margin: 0 auto;
+    padding: 0 42px;
+
+    @include my-media(768) {
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,120 @@
+
+@include my-media(1200) {
+
+	.dn-xl {
+		display: none;
+    }
+
+    .db-xl {
+        display: block;
+    }
+}
+
+@include tablet-landscape-up {
+
+	.show-1024 {
+		display: block;
+	}
+
+	.hide-1024 {
+		display: none;
+	}
+}
+
+@include my-media(991) {
+
+	.dn-lg {
+		display: none !important;
+	}
+
+	.d-ib-lg {
+		display: inline-block;
+    }
+
+    .d-xs-none {
+        display: none !important;
+    }
+}
+
+@include phone-only {
+
+	.show-767 {
+		display: block;
+    }
+
+	.hide-767 {
+		display: none;
+	}
+
+	.dn-md {
+		display: none;
+	}
+
+	.dn-md_i {
+		display: none !important;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@include my-media(660) {
+
+	.dn-m {
+		display: none;
+	}
+}
+
+@include my-media(576) {
+
+	.dn-sm {
+		display: none;
+    }
+}
+
+@include my-media(1200, 'min') {
+
+	.dn-xl-min {
+		display: none;
+	}
+}
+
+@include my-media(992, 'min') {
+
+	.dn-lg-min {
+		display: none;
+	}
+}
+
+@include tablet-portrait-up {
+
+    .show-mn-767 {
+		display: block;
+	}
+
+	.hide-mn-767 {
+		display: none;
+	}
+}
+
+@include my-media(767, 'min') {
+
+	.dn-md-min {
+		display: none;
+    }
+}
+
+@include my-media(660, 'min') {
+
+	.dn-m-min {
+		display: none;
+	}
+}
+
+@include my-media(576, 'min') {
+
+	.dn-sm-min {
+		display: none;
+	}
+}

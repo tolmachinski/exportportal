@@ -1,0 +1,65 @@
+@include tablet-landscape-up {
+
+	.col-lt-1,
+	.col-lt-2,
+	.col-lt-3,
+	.col-lt-4,
+	.col-lt-5,
+	.col-lt-6,
+	.col-lt-7,
+	.col-lt-8,
+	.col-lt-9,
+	.col-lt-10,
+	.col-lt-11,
+	.col-lt-12 {
+		float: left;
+	}
+
+	.col-lt-12 {
+		width: 100%;
+	}
+
+	.col-lt-11 {
+		width: 91.66666667%;
+	}
+
+	.col-lt-10 {
+		width: 83.33333333%;
+	}
+
+	.col-lt-9 {
+		width: 75%;
+	}
+
+	.col-lt-8 {
+		width: 66.66666667%;
+	}
+
+	.col-lt-7 {
+		width: 58.33333333%;
+	}
+
+	.col-lt-6 {
+		width: 50%;
+	}
+
+	.col-lt-5 {
+		width: 41.66666667%;
+	}
+
+	.col-lt-4 {
+		width: 33.33333333%;
+	}
+
+	.col-lt-3 {
+		width: 25%;
+	}
+
+	.col-lt-2 {
+		width: 16.66666667%;
+	}
+
+	.col-lt-1 {
+		width: 8.33333333%;
+	}
+}

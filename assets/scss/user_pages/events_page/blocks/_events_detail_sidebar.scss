@@ -1,0 +1,143 @@
+.events-detail-sidebar {
+    $root: &;
+
+    position: absolute;
+    top: 228px;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-width: 1420px;
+
+    .calendar-btn {
+        width: 100% !important;
+        height: 50px !important;
+        color: $color-black !important;
+        background: $color-gray-lighter !important;
+        border-color: $color-gray-lighter !important;
+        border-radius: 0 !important;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: $color-black !important;
+        }
+
+        &__calendar-txt {
+            position: relative;
+            top: 2px;
+            display: initial;
+            margin-left: 6px;
+        }
+    }
+
+    .calendar-btn-success {
+        background: $color-green-light !important;
+
+        &:hover {
+            background: $color-red-light !important;
+
+            .ep-events__calendar-success {
+                display: none;
+            }
+
+            .ep-events__calendar-delete {
+                display: block;
+            }
+        }
+    }
+
+    &--active {
+        position: fixed !important;
+        top: 90px;
+    }
+
+    &__wrap {
+        position: absolute;
+        right: 0;
+        width: 300px;
+    }
+
+    .event-countdown {
+        justify-content: center;
+        margin-bottom: 33px;
+
+        &__item {
+            padding: 4px 10px 0;
+        }
+
+        &__numbers {
+            margin-bottom: -3px;
+
+            @include p161616(true);
+        }
+
+        &__text {
+
+            @include p121212;
+        }
+    }
+
+    @include my-media(1450) {
+        max-width: calc(100% - 30px);
+    }
+
+    @include my-media(1200) {
+        position: initial;
+        max-width: 100%;
+
+        &--active {
+            top: 60px;
+            left: 0;
+            z-index: 10;
+            height: 80px;
+            padding-left: 15px;
+            background: $color-white;
+        }
+
+        &__wrap {
+            position: initial;
+            width: 100%;
+        }
+
+        .event-countdown {
+            margin-top: 28px;
+        }
+
+        .calendar-btn {
+            min-width: 180px;
+            max-width: 236px;
+            margin: 0 15px 0 0;
+        }
+    }
+
+    @include my-media(991) {
+
+        &--active {
+            top: 50px;
+        }
+    }
+
+    @include phone-only {
+
+        &--active {
+            height: 70px;
+        }
+
+        .calendar-btn {
+            height: 40px !important;
+        }
+    }
+
+    @include my-media(550) {
+
+        .calendar-btn {
+            width: calc((100% - 160px) / 2) !important;
+            min-width: auto;
+            max-width: 100%;
+
+            &__calendar-txt {
+                display: none;
+            }
+        }
+    }
+}

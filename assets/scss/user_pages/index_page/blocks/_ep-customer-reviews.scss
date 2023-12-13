@@ -1,0 +1,244 @@
+.ep-customer-reviews {
+    $root: &;
+
+    position: relative;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    &__slider {
+        margin: 0 -13px;
+
+        &:not(:hover) {
+
+            .slick-arrow {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        &.loading {
+            min-height: 392px;
+        }
+
+        .slick-dots {
+            position: static;
+            margin-top: 4px;
+
+            li:first-child:last-child {
+                display: none;
+            }
+        }
+
+        .slick-slide {
+            margin: 0 15px;
+        }
+
+        .slick-prev {
+            left: 15px;
+        }
+
+        .slick-next {
+            right: 15px;
+        }
+    }
+
+    &__item {
+        padding-top: 50px;
+    }
+
+    &__inner {
+        position: relative;
+        height: 314px;
+        padding: 93px 28px 25px;
+        text-align: center;
+        background: $color-white;
+        border: 1px solid $color-gray-light;
+    }
+
+    &__user-img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 10;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        background-color: $color-white;
+        border: 5px solid $color-gray-lighter;
+        border-radius: 50%;
+        transform: translate3d(-50%, -50%, 0);
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            @include object-fit(cover, center);
+        }
+    }
+
+    &__user-info {
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 79px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__user-name {
+
+        @include h181816;
+
+        color: $color-black;
+        text-transform: uppercase;
+    }
+
+    &__user-group {
+        margin-top: 4px;
+
+        @include p161614;
+
+        color: $color-green;
+
+        &--certified {
+            color: $color-orange;
+        }
+    }
+
+    &__text {
+        margin-top: 21px;
+
+        @include p181816;
+
+        color: $color-black-light;
+
+        @include text-line-ellipsis('false', 5);
+    }
+
+    &__share {
+        margin-top: 28px;
+        text-align: center;
+    }
+
+    &__share-txt {
+
+        @include h201816;
+    }
+
+    &__share-btn {
+        width: 100%;
+        max-width: 360px;
+        margin-top: 14px;
+    }
+
+    @include my-media(1200) {
+
+        &__inner {
+            padding: 93px 13px 25px;
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__inner {
+            padding: 91px 28px 25px;
+        }
+    }
+
+    @include my-media(991) {
+
+        .section-header {
+            margin-bottom: 15px;
+        }
+
+        &__slider {
+            margin: 0 -8px;
+
+            &.loading {
+                min-height: 410px;
+            }
+
+            .slick-slide {
+                margin: 0 9px;
+            }
+
+            .slick-arrow {
+                display: none;
+            }
+        }
+
+        &__inner {
+            height: 332px;
+        }
+
+        &__bg {
+
+            .image {
+                width: 82px;
+                height: 70px;
+            }
+        }
+
+        &__text {
+
+            @include text-line-ellipsis('false', 6);
+        }
+
+        &__user-group {
+            margin-top: 3px;
+
+            @include p141414;
+        }
+    }
+
+    @include phone-only {
+
+        &__slider {
+
+            &.loading {
+                min-height: 415px;
+            }
+
+            .slick-dots {
+                margin-top: 7px;
+            }
+        }
+
+        &__inner {
+            height: 337px;
+            padding: 93px 13px 15px;
+        }
+
+        &__user-group {
+            margin-top: 0;
+        }
+
+        &__text {
+            margin-top: 23px;
+        }
+
+        &__share {
+            margin-top: 27px;
+        }
+
+        &__share-btn {
+            margin-top: 9px;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__share-txt {
+
+            span {
+                display: block;
+            }
+        }
+    }
+}

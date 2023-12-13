@@ -1,0 +1,47 @@
+.marker-content{
+	min-height: 145px;
+	padding: 15px;
+	font-size: 14px;
+	line-height: 16px;
+
+	&__img{
+		width: 80px;
+		height: 80px;
+	}
+
+	&__desc{
+
+	}
+
+	&__ttl{
+		font-weight: 500;
+		color: $color-black;
+
+		.link{
+			font-weight: 500;
+			color: $color-black;
+		}
+	}
+
+	&__text{
+
+	}
+
+	&__date{
+		margin-top: 10px;
+
+	}
+
+	&__address{
+
+	}
+
+	&__flag{
+		display: flex;
+		align-items: center;
+
+		.image{
+			margin-right: 5px;
+		}
+	}
+}

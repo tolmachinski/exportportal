@@ -1,0 +1,140 @@
+$pathImages: '../../../images/';
+
+@mixin inputCss {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    font-family: Roboto, "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-black-light;
+    appearance: none;
+    border: 1px solid $color-black;
+    border-radius: 0;
+
+    @include input-placeholder {
+        opacity: 1;
+        color: $color-gray;
+    }
+
+    &:focus {
+        border: 1px solid $color-blue2;
+    }
+
+    @include my-media(767) {
+        height: 40px;
+    }
+}
+
+.ep {
+    $inputTypes: '&[type="text"], &[type="search"], &[type="email"], &[type="password"], &[type="number"], &[type="tel"]';
+
+    &-select,
+    &-textarea {
+
+        @include inputCss;
+    }
+
+    &-input {
+        #{$inputTypes} {
+
+            @include inputCss;
+        }
+
+        &--popup {
+            #{$inputTypes} {
+                height: 40px;
+            }
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            -webkit-text-fill-color: $color-black !important;
+            box-shadow: 0 0 0 50px $color-white inset !important;
+        }
+
+        &[type=number] {
+            appearance: textfield;
+        }
+    }
+}
+
+.ep-textarea {
+    padding: 10px 15px;
+    resize: none;
+}
+
+.ep-select {
+    padding: 0 34px 0 15px;
+    appearance: none;
+    background: $color-white url(#{$pathImages}arrow-select-new2.png) right center no-repeat;
+    cursor: pointer;
+
+    &--popup {
+        height: 40px;
+    }
+
+    &:invalid {
+        color: $color-gray !important;
+    }
+
+    &[multiple="multiple"] {
+        display: block;
+        height: 140px;
+        padding: 0;
+        background: $color-white;
+
+        option {
+            padding: 10px 20px;
+        }
+    }
+}
+
+.ep-select:disabled,
+.ep-input:disabled,
+.ep-input:read-only {
+    opacity: initial;
+    color: $color-gray !important;
+    background-color: $color-white;
+    cursor: default;
+    border: 1px solid $color-gray-light !important;
+}
+
+.ep-label {
+    position: relative;
+    display: block;
+    margin: 29px 0 9px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $color-black;
+
+    &--popup {
+        margin: 19px 0 9px;
+    }
+
+    &--required {
+
+        &::after {
+            content: "*";
+            font-size: 18px;
+            line-height: 24px;
+            color: $color-red;
+        }
+    }
+
+    @include my-media(767) {
+        font-size: 16px;
+        line-height: 22px;
+
+        &--required {
+
+            &::after {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+}

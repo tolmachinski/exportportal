@@ -1,0 +1,144 @@
+.inputs-40 {
+
+	textarea,
+	select,
+	input[type="number"],
+	input[type="search"],
+	input[type="email"],
+	input[type="text"],
+	input[type="password"] {
+		height: 40px;
+		padding-left: 15px;
+		padding-right: 15px;
+		line-height: 38px;
+	}
+
+	select[multiple="multiple"] {
+		height: 140px;
+	}
+
+	select {
+		padding-left: 15px;
+		padding-right: 34px;
+		background: $color-white url(#{$pathImages}arrow-select-new2.png) right center no-repeat;
+	}
+
+	.multiple-epselect {
+		$root: &;
+
+		&__input {
+			height: 40px;
+			padding-left: 15px;
+			padding-right: 34px;
+			line-height: 38px;
+			background: $color-white url(#{$pathImages}arrow-select-new2.png) right center no-repeat;
+		}
+
+		&__list-wr {
+			top: 40px;
+		}
+
+		&-wr {
+
+			&--open-top {
+				#{$root} {
+
+					&__list-wr {
+						top: -250px !important;
+					}
+				}
+			}
+		}
+	}
+
+	textarea {
+		line-height: 22px;
+	}
+
+	.wr-select2-h35,
+	.wr-select2-h50,
+	.wr-select-city-b {
+
+		.select2-selection--single {
+			height: 40px;
+
+			.select2-selection__rendered {
+				padding-left: 15px;
+				padding-right: 34px;
+				line-height: 38px;
+			}
+
+			.select2-selection__arrow {
+				width: 34px;
+				height: 38px;
+			}
+		}
+
+		.validengine-border {
+
+			.select2-selection--multiple,
+			.select2-selection--single {
+				height: 38px !important;
+				min-height: 38px !important;
+				border: none !important;
+
+				.select2-selection__rendered {
+					padding-left: 15px !important;
+					padding-right: 34px !important;
+					line-height: 38px !important;
+				}
+
+				.select2-selection__arrow {
+					width: 34px !important;
+					height: 36px !important;
+				}
+			}
+		}
+	}
+
+	.btn {
+		padding: .563rem .75rem;
+		font-size: 1rem;
+    	line-height: 1.25;
+	}
+
+	.input-group-text {
+		padding: .563rem .75rem;
+	}
+
+	.fileinput-loader-btn {
+		line-height: 40px;
+	}
+
+	.select2-container .select2-selection--multiple {
+		min-height: 40px;
+	}
+
+	.select2-container {
+
+		input[type="text"],
+		input[type="search"] {
+			height: 38px;
+		}
+	}
+
+	select.form-control:not([size]):not([multiple]) {
+		height: 40px;
+		padding: 0 34px 0 15px;
+		border: 1px solid $color-black;
+	}
+
+	.view-password .ep-icon_invisible,
+	.view-password .ep-icon_visible {
+		line-height: 40px;
+	}
+
+	div.tagsinput,
+	.bootstrap-tagsinput {
+		padding: 0 15px;
+	}
+
+	.list-group-item {
+		padding: 7px 15px 7px 25px;
+	}
+}

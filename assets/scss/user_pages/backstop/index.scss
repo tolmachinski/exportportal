@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    padding: 0 20px;
+}
+
+h2 {
+    margin: 25px 0 10px;
+    font-size: 25px;
+}
+
+.lemur {
+    position: fixed;
+    right: 10%;
+    bottom: -180px;
+    cursor: pointer;
+    transform-origin: 60px 80px;
+    transition: all 0.3s ease-out;
+    animation: bell-ring 25s ease-in-out infinite;
+
+    &:hover {
+        bottom: -170px;
+        transform: rotateZ(0);
+        animation: none;
+    }
+
+    &.active {
+        bottom: calc(50% - 130px);
+        animation: none;
+    }
+}
+
+.container-900 {
+    max-width: 900px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.col {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.selected-block {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    padding: 5px;
+    border: 1px solid;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.selected-block, .search-pages {
+    width: 100%;
+}
+
+.selected-block.media-block {
+    height: 102px;
+}
+
+.selected-block > div {
+    display: flex;
+    align-items: center;
+}
+
+.selected-block label {
+    display: flex;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.selected-block input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+}
+
+.actions-block {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 21px;
+    color: white;
+    background: rgb(6 156 39);
+    border: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.search-pages {
+    height: 22px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"], button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+input[type="submit"]:hover, button:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.alert {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    min-height: 50px;
+    color: white;
+    background-color: black;
+}
+
+.alert.show {
+    visibility: visible;
+    animation-duration: 1s;
+    animation-name: alert;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+
+    &--row {
+        flex-direction: row;
+        align-items: center;
+
+        label {
+            margin-right: 5px;
+        }
+    }
+}
+
+@keyframes alert {
+
+    0%, 40% {
+        opacity: 0;
+    }
+
+    20%, 60%, 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bell-ring {
+
+    0% {
+ transform: rotateZ(0); }
+
+    1% {
+ transform: rotateZ(30deg); }
+
+    4% {
+ transform: rotateZ(-28deg); }
+
+    7% {
+ transform: rotateZ(34deg); }
+
+    10% {
+ transform: rotateZ(-32deg); }
+
+    13% {
+ transform: rotateZ(30deg); }
+
+    16% {
+ transform: rotateZ(-28deg); }
+
+    19% {
+ transform: rotateZ(34deg); }
+
+    22% {
+ transform: rotateZ(-32deg); }
+
+    25% {
+ transform: rotateZ(30deg); }
+
+    28% {
+ transform: rotateZ(-28deg); }
+
+    31% {
+ transform: rotateZ(26deg); }
+
+    34% {
+ transform: rotateZ(-24deg); }
+
+    37% {
+ transform: rotateZ(22deg); }
+
+    40% {
+ transform: rotateZ(-20deg); }
+
+    43% {
+ transform: rotateZ(18deg); }
+
+    46% {
+ transform: rotateZ(-16deg); }
+
+    49% {
+ transform: rotateZ(14deg); }
+
+    52% {
+ transform: rotateZ(-12deg); }
+
+    55% {
+ transform: rotateZ(10deg); }
+
+    58% {
+ transform: rotateZ(-8deg); }
+
+    61% {
+ transform: rotateZ(6deg); }
+
+    64% {
+ transform: rotateZ(-4deg); }
+
+    67% {
+ transform: rotateZ(2deg); }
+
+    70% {
+ transform: rotateZ(-1deg); }
+
+    73% {
+ transform: rotateZ(1deg); }
+
+    76% {
+ transform: rotateZ(0); }
+
+    100% {
+ transform: rotateZ(0); }
+}

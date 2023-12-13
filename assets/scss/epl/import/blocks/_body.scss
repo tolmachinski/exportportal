@@ -1,0 +1,105 @@
+body {
+	width: 100%;
+	min-width: 320px;
+	font-family: Roboto, "Segoe UI", Arial, sans-serif;
+	color: $black-light;
+    text-size-adjust: 100%;
+
+    &.locked,
+    &.modal-open {
+        overflow: hidden;
+        margin: 0;
+        padding-right: 8px;
+
+        .epl-header,
+        .fixed-rigth-block,
+        .system-messages,
+        .fancybox-bg {
+            margin-right: 8px;
+        }
+
+        .epuser-subline,
+        .epl-header-line,
+        .epl-mobile-header-bottom {
+            padding-right: 8px;
+        }
+
+        .fixed-rigth-block {
+
+            &__item {
+
+                &--scrollup {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .popup-system-banner {
+
+            &--epl {
+                right: 8px;
+            }
+        }
+    }
+
+    @include touch {
+
+        &.locked,
+        &.modal-open {
+            padding-right: 0;
+
+            .epl-header,
+            .fixed-rigth-block,
+            .system-messages,
+            .fancybox-bg {
+                margin-right: 0;
+            }
+
+            .epuser-subline,
+            .epl-header-line,
+            .epl-mobile-header-bottom {
+                padding-right: 0;
+            }
+
+            .fixed-rigth-block {
+
+                &__item {
+
+                    &--scrollup {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .popup-system-banner {
+
+                &--epl {
+                    right: 0;
+                }
+            }
+
+            .epl-header-line {
+
+                &__background {
+
+                    &.active {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include retina-display(1.5) {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+}
+
+html,
+body {
+	font-size: 16px;
+	line-height: 1.5;
+}

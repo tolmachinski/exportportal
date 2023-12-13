@@ -1,0 +1,81 @@
+.schedule-demo-popup {
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col-50pr {
+        width: 50%;
+        max-width: 225px;
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .input-label {
+            margin-top: 0;
+        }
+    }
+
+    &__btn-wr {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__submit-btn {
+        width: 150px;
+        margin-top: 5px;
+    }
+
+    button.select2 {
+        border: none;
+        outline: none;
+    }
+
+    @include phone-only {
+
+        &__row {
+            display: block;
+        }
+
+        &__col-50pr {
+            width: 100%;
+            max-width: none;
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+
+            .input-label {
+                margin-top: 20px;
+            }
+
+            &:first-child {
+
+                .input-label {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &__submit-btn {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .input-label {
+            line-height: 20px !important;
+        }
+
+        .select2-container {
+
+            &--open {
+
+                .select2-dropdown {
+                    max-width: calc(100% - 19px) !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.countries-tab{
+	&__item{
+		padding: 10px 5px 10px 0;
+
+		.link{
+			display: inline-block;
+			max-width: 100%;
+			font-size: 16px;
+			line-height: 32px;
+			color: $color-black;
+			@include text-nowrap;
+
+			&:hover{
+				color: $color-blue2;
+			}
+		}
+
+		.image{
+			margin-right: 5px;
+		}
+	}
+
+	&__text{
+		display: flex;
+	}
+
+	&__country{
+		min-width: 0;
+		padding-left: 10px;
+		@include text-nowrap;
+    }
+
+    @include my-media(480){
+        text-align: center;
+    }
+}

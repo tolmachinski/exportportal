@@ -1,0 +1,36 @@
+.complete-profile-warning {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 14px 15px;
+    color: $color-black;
+    text-transform: capitalize;
+    background-color: $color-orange-light;
+
+    @include p161614;
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    &__button {
+        color: $color-blue2;
+        text-decoration: underline;
+        background: transparent;
+    }
+
+    @include phone-only {
+        margin: 5px 0 20px;
+        padding: 10.5px 10px;
+
+        i {
+            display: none;
+        }
+    }
+}

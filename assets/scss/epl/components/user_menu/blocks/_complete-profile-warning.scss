@@ -1,0 +1,40 @@
+.complete-profile-warning {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 5px;
+    padding: 14px 15px;
+    color: $black;
+    text-transform: capitalize;
+    background-color: $orange-light;
+
+    @include p161614;
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    &__button {
+        color: $blue;
+        text-decoration: underline;
+        background: transparent;
+    }
+
+    @include my-media(992, "min") {
+        display: none;
+    }
+
+    @include phone-only {
+        margin: 5px 0 20px;
+        padding: 10.5px 10px;
+
+        i {
+            display: none;
+        }
+    }
+}

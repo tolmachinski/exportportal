@@ -1,0 +1,33 @@
+@import "../../import/_scss_functions";
+
+@import "../../import/_colors";
+
+@import './blocks/_epuser-line';
+
+@import "./blocks/_upgrade-banner-top";
+
+.t-0 {
+    top: 0 !important;
+}
+
+.mep-header-bottom {
+
+    &__user-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 32px;
+        height: 32px;
+        border: 1px solid $color-gray-light;
+        border-radius: 50%;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            margin: 0 -100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.mobile-links {
+
+    @include phone-only {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        .btn {
+            min-width: 100px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.ppersonal-user-is-certified {
+    width: 90px;
+    margin-right: 100px;
+    margin-top: 5px;
+
+    @include my-media(1180) {
+        margin-right: 70px;
+        margin-top: 30px;
+    }
+
+    @include my-media(900) {
+        margin-right: 40px;
+    }
+
+    @include my-media(800) {
+        margin-right: 15px;
+    }
+
+    @include phone-only{
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
+}

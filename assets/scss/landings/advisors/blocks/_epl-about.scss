@@ -1,0 +1,215 @@
+.epl-about {
+    $root: &;
+
+    padding-top: 27px;
+    padding-bottom: 40px;
+
+    &__headline {
+
+        @extend %epl-headline;
+    }
+
+    &__subtitle {
+        margin-top: 46px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 1.1px;
+
+        span {
+            display: block;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 24px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 928px;
+        margin: 65px auto;
+    }
+
+    &__list-item {
+        width: 20%;
+
+        &--25 {
+            width: 25%;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: 1.7px;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 933px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 352px;
+            height: 86px;
+            margin: 54px 0 0;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 1.0px;
+            text-transform: uppercase;
+            background-color: #006ee6;
+            border: 1px solid transparent;
+            transition: $fast-transition;
+
+            &:hover {
+                color: #006ee6;
+                background-color: transparent;
+                border: 1px solid #006ee6;
+                transition: $fast-transition;
+            }
+        }
+    }
+
+    &__trade {
+ width: 90px; }
+
+    &__tech {
+ width: 77px; }
+
+    &__ecommerce {
+ width: 150px; }
+
+    &__logistics {
+ width: 165px; }
+
+    &__government {
+ width: 150px; }
+
+    &__laws {
+ width: 155px; }
+
+    &__sme {
+ width: 104px; }
+
+    &__industry {
+ width: 137px; }
+
+    &__data {
+ width: 112px; }
+
+    @media only screen and (min-width: $break-lg) {
+
+        &__info {
+            margin: 55px auto 0;
+        }
+
+        &__link {
+
+            a {
+                padding-left: 11px;
+            }
+        }
+
+        &__trade {
+            margin-left: 31px;
+        }
+
+        &__tech {
+            margin-left: 44px;
+        }
+
+        &__ecommerce {
+            margin-top: 8px;
+            margin-left: 20px;
+        }
+
+        &__logistics {
+            margin-top: 4px;
+            margin-left: 20px;
+        }
+
+        &__government {
+            margin: 10px 2px 0 auto;
+        }
+
+        &__laws {
+            margin-top: 71px;
+            margin-left: -3px;
+        }
+
+        &__sme {
+            margin-top: 69px;
+            margin-left: 23px;
+            #{$root}__title {
+                padding-left: 9px;
+            }
+        }
+
+        &__industry {
+            margin-top: 53px;
+            margin-left: 29px;
+
+            #{$root}__title {
+                margin-left: -7px;
+                line-height: 30px;
+            }
+        }
+
+        &__data {
+            margin-top: 68px;
+            margin-left: 42px;
+            #{$root}__title {
+                line-height: 30px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $break-lg) {
+
+        &__list-item {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media only screen and (max-width: $break-md) {
+
+        &__list-item {
+            width: 33.3%;
+        }
+
+        &__block {
+            margin: 0 auto;
+        }
+    }
+
+    @media only screen and (max-width: $break-xs) {
+
+        &__list-item {
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+
+        &__list-item {
+            width: 100%;
+        }
+    }
+}

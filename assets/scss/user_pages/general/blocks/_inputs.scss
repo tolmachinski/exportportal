@@ -1,0 +1,163 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: inherit !important;
+    box-shadow: 0 0 0 50px $color-white inset !important;
+}
+
+textarea,
+select,
+input[type="number"],
+input[type="search"],
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	height: 50px;
+	padding: 0 20px;
+	font-family: Roboto, "Segoe UI", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 48px;
+	color: $color-black;
+	background-color: $color-white;
+	border: 1px solid $color-black;
+	border-radius: 0;
+	vertical-align: middle;
+	appearance: none;
+
+	&:placeholder-shown {
+		line-height: normal;
+		color: $color-gray;
+	}
+
+	@include input-placeholder {
+		opacity: 1;
+
+		// line-height: normal;
+		color: $color-gray;
+	}
+
+	&:focus {
+		border: 1px solid $color-blue2;
+    }
+
+    @media screen and (max-width: 991px) {
+        height: 40px;
+		padding-left: 15px;
+		padding-right: 15px;
+        line-height: 38px;
+
+        &.input-new {
+            height: 50px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        background-color: $color-white;
+		appearance: none;
+
+        &.input-new {
+            height: 40px;
+            line-height: 38px;
+        }
+    }
+}
+
+input::first-line {
+    vertical-align: middle;
+}
+
+textarea {
+	padding-top: 10px;
+	resize: none;
+    line-height: 22px;
+
+    @media screen and (max-width: 991px) {
+        line-height: 22px;
+    }
+}
+
+select {
+	padding-right: 44px;
+	appearance: none;
+	background: $color-white url(#{$pathImages}arrow-select-new.png) right center no-repeat;
+	cursor: pointer;
+
+	&:invalid {
+		color: $color-gray !important;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding-right: 34px;
+		background: $color-white url(#{$pathImages}arrow-select-new2.png) right center no-repeat;
+    }
+}
+
+select[multiple="multiple"] {
+	display: block;
+	height: 140px;
+	padding: 0;
+	background: $color-white;
+
+	option {
+		padding: 10px 20px;
+    }
+
+    @media screen and (max-width: 991px) {
+        height: 140px;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+	appearance:textfield;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+	color: unset;
+}
+
+select:disabled,
+input:disabled,
+input:read-only,
+.form-control:disabled,
+.form-control[readonly] {
+	opacity: initial;
+    background-color: $color-white;
+	cursor: default;
+    border: 1px solid $color-black;
+}
+
+select:disabled,
+input:disabled,
+.form-control:disabled {
+	color: $color-gray !important;
+	border: 1px solid $color-gray-light !important;
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+
+@media screen and (min-width:0\0) {
+
+    select {
+        padding: 5px\9;
+        background:none\9;
+    }
+}
+
+/* CAUTION: IE hackery ahead */
+
+select::-ms-expand {
+    display: none; /* remove default arrow on ie10 and ie11 */
+}

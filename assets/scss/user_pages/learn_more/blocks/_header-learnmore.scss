@@ -1,0 +1,94 @@
+.header-learnmore-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 500px;
+    padding: 55px 42px 50px 50px;
+
+    .btn {
+        min-width: 250px;
+    }
+
+    @include my-media(991) {
+        min-height: 300px;
+        padding: 54px 50px 50px;
+    }
+
+    @include phone-only {
+        min-height: 250px;
+        padding: 4px 15px 0;
+    }
+}
+
+.learnmore-header {
+    text-align: center;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            @include object-fit(cover, center);
+        }
+    }
+
+    &__title {
+        font-size: 55px;
+        line-height: 57px;
+        color: $color-white;
+    }
+
+    &__paragraph {
+        margin-bottom: 26px;
+        padding-top: 15px;
+        font-size: 18px;
+        line-height: 20px;
+        color: $color-white;
+    }
+
+    @include my-media(991) {
+
+        &__title {
+            margin-left: -1px;
+            font-size: 45px;
+            line-height: 47px;
+        }
+
+        &__paragraph {
+            margin-bottom: 16px;
+            padding-top: 14px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__title {
+            padding: 0 70px;
+            font-size: 35px;
+            line-height: 37px;
+        }
+
+        &__paragraph {
+            margin-bottom: 15px;
+            padding-top: 13px;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
+    @include my-media(374) {
+
+        &__title {
+            padding: 0 25px;
+        }
+    }
+}

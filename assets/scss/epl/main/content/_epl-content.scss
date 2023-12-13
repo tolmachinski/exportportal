@@ -1,0 +1,25 @@
+.epl-content {
+    padding-top: 70px;
+
+    &--no-indent-lg {
+        padding-top: 0;
+    }
+
+    @include my-media(991) {
+
+        &--no-indent-lg {
+            padding-top: 100px !important;
+        }
+    }
+
+    @include my-media(900) {
+        padding-top: 60px;
+    }
+
+    @include phone-only {
+
+        &--no-indent-lg {
+            padding-top: 90px !important;
+        }
+    }
+}

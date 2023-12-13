@@ -1,0 +1,104 @@
+.epuser-subline-list2 {
+	$root: &;
+
+	&__item {
+		border-bottom: 1px solid $gray-light;
+
+		&--seen {
+			#{$root} {
+
+				&__ttl-txt {
+					color: $gray;
+				}
+
+				&__ttl-detail {
+
+					i.txt-blue2 {
+						color: $blue-light !important;
+					}
+
+					i.txt-orange {
+						color: $orange-light !important;
+					}
+				}
+			}
+		}
+	}
+
+	&__ttl {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__ttl-txt {
+        margin-top: 1px !important;
+
+		@include text-nowrap;
+	}
+
+	&__ttl-detail {
+		display: flex;
+		flex: 1;
+		justify-content: space-between;
+		align-items: center;
+		min-width: 0;
+		padding: 12px 0 12px 15px;
+		font-size: 14px;
+		cursor: pointer;
+
+		@include text-nowrap;
+
+		.ep-icon {
+			font-size: 17px;
+		}
+	}
+
+	&__ttl-detail-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		min-width: 0;
+	}
+
+	&__date {
+		color: $gray;
+
+		.ep-icon {
+			display: none;
+		}
+	}
+
+	&__desc {
+		display: none;
+		padding: 0 0 10px 64px;
+		font-size: 16px;
+	}
+
+	@include phone-only {
+
+		&__ttl-detail-inner {
+			display: block;
+		}
+	}
+
+	@include my-media(660) {
+
+		&__ttl-detail {
+			font-size: 12px;
+		}
+	}
+
+	@include my-media(480) {
+
+		&__ttl-detail {
+			padding: 7px 0 7px 6px;
+
+			.ep-icon {
+				margin-right: 6px;
+				font-size: 13px;
+			}
+		}
+	}
+}

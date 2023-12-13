@@ -1,0 +1,37 @@
+@function dir-value($first, $second) {
+
+    @if $dir-default == ltr {
+
+        @return $first;
+    }
+
+ @else {
+
+        @return $second;
+    }
+}
+
+@function dir-values($values) {
+
+    @if $dir-default == 'rtl' and length($values) == 4 {
+
+        @return nth($values, 1) nth($values, 4) nth($values, 3) nth($values, 2);
+    }
+
+ @else {
+
+        @return $values;
+    }
+}
+
+@mixin dir($direction) {
+
+    @if $direction == $dir-default {
+        @content;
+    }
+}
+
+$val-left: dir-value(left, right);
+$val-right: dir-value(right, left);
+$val-first: dir-value(first, last);
+$val-last: dir-value(last, first);

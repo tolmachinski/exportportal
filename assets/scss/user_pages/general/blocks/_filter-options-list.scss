@@ -1,0 +1,77 @@
+.filter-options-list {
+    margin-top: 13px;
+
+    &--mb-33 {
+        margin-bottom: 33px;
+    }
+
+    &__item {
+
+        &:not(:first-child) {
+            margin-top: 7px;
+        }
+
+        &:nth-child(n + 6) {
+            display: none;
+        }
+
+        &--mb-10 {
+            margin: 0 0 11px;
+
+            &:not(:first-child) {
+                margin: 0 0 11px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+
+        @include p161614;
+
+        color: $color-black-light;
+
+        @include text-nowrap;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    &__label-text {
+        margin: 0 0 0 10px;
+    }
+
+    &__counter {
+        padding-left: 10px;
+
+        @include p161614;
+
+        color: $color-gray;
+    }
+
+    @include phone-only {
+
+        &__item {
+
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+
+        &__link {
+            padding: 4px 0;
+        }
+    }
+}

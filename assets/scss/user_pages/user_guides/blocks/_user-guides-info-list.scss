@@ -1,0 +1,64 @@
+.user-guides-info-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        position: relative;
+        width: 300px;
+        margin-bottom: 8px;
+        margin-right: 20px;
+        padding-left: 17px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-black;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 0;
+            display: block;
+            width: 7px;
+            height: 7px;
+            background: $color-blue2;
+            border-radius: 50%;
+        }
+
+        &:nth-child(2n + 2) {
+            margin-right: 0;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__item {
+            width: 320px;
+            margin-right: 35px;
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            width: 100%;
+            margin-bottom: 6px;
+            margin-right: 0;
+
+            &:nth-child(2) {
+                order: 3;
+            }
+
+            &:nth-child(3) {
+                order: 2;
+            }
+
+            &:nth-child(4) {
+                order: 4;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

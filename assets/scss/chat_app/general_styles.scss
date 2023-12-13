@@ -1,0 +1,21 @@
+@import "../import/_scss_functions";
+
+@import "../import/_colors";
+
+@import "../user_pages/import/_variables";
+
+@import "./blocks/_modal-new-chat";
+
+@import "./blocks/_chat-app";
+
+@import "./blocks/_themes-chat-app";
+
+@import "./blocks/_messages-chat-app";
+
+@import "./blocks/_page";
+
+@import "./blocks/_lock-body";
+
+// This css added to change height of chat frames if header with maintenance or certified banner
+
+@import "./blocks/_header-modification-frames";

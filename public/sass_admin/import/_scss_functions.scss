@@ -1,0 +1,279 @@
+
+@use "sass:math";
+@use "sass:list";
+
+$main-font-size: 16;
+
+@mixin fs-names{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@mixin fs-ttl{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@mixin fs-ttl-mini{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@mixin fs-category{
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@mixin fs-additional{
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+@mixin text-nowrap{
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin img-center{
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+  @if $position {
+	  -o-object-position: $position;
+	     object-position: $position;
+  	font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+  	font-family: 'object-fit: #{$fit}';
+  }
+}
+
+@mixin fontface-simple($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    src: url('#{$file-path}.woff2') format('woff2'),
+         url('#{$file-path}.woff')  format('woff');
+  }
+}
+
+@mixin font-face-my($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+
+    @if $asset-pipeline == true {
+      src: font-url('#{$file-path}.eot');
+      src: font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$file-path}.woff')                format('woff'),
+           font-url('#{$file-path}.ttf')                 format('truetype'),
+           font-url('#{$file-path}.svg##{$font-family}') format('svg');
+    } @else {
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$file-path}.woff')                     format('woff'),
+           url('#{$file-path}.ttf')                      format('truetype'),
+           url('#{$file-path}.svg##{$font-family}')      format('svg');
+    }
+  }
+}
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+     -moz-transform-origin: $origin;
+      -ms-transform-origin: $origin; // IE9 only
+          transform-origin: $origin;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+@mixin ep-large-text() {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: normal;
+    color: $color-black;
+}
+
+@mixin ep-middle-text() {
+    font-size: 16px;
+	line-height: 26px;
+    font-weight: normal;
+	color: $color-black;
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+  @if $position {
+	  -o-object-position: $position;
+	     object-position: $position;
+  	font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+  	font-family: 'object-fit: #{$fit}';
+  }
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{math.div($pixels, $context)}em
+}
+
+@function lh($pixels, $context: $main-font-size) {
+  @return #{math.div($pixels, $context)}
+}
+
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+// $columns values should be delimited by a space
+@mixin grid-template-columns($columns...) {
+  -ms-grid-columns: $columns;
+  grid-template-columns: $columns;
+}
+
+// $rows values should be delimited by a space
+@mixin grid-template-rows($rows...) {
+  -ms-grid-rows: $rows;
+  grid-template-rows: $rows;
+}
+
+// Can be used in combination with above grid-template-X mixins.
+// These result in the same output:
+// @include grid-template-columns(10px grid-repeat(4, 20px) 30px);
+// @include grid-template-columns(10px 20px 20px 20px 20px 30px);
+@function grid-repeat($repeat, $stuff: 1fr) {
+  $list: ();
+  @for $i from 1 through $repeat {
+    $list: append($list, $stuff, space);
+  }
+  @return $list;
+}
+
+@mixin grid-column($col-start, $col-end) {
+  -ms-grid-column: $col-start;
+  -ms-grid-column-span: $col-end - $col-start;
+  grid-column: list.slash($col-start, $col-end);
+}
+
+@mixin grid-row($row-start, $row-end) {
+  -ms-grid-row: $row-start;
+  -ms-grid-row-span: $row-end - $row-start;
+  grid-row: list.slash($row-start, $row-end);
+}
+
+@mixin grid-align-self($value) {
+  -ms-grid-row-align: $value;
+  align-self: $value;
+}
+
+@mixin grid-justify-self($value) {
+  -ms-grid-column-align: $value;
+  justify-self: $value;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-line-ellipsis($height: false, $value: 2) {
+  display: -webkit-box;
+  @if $height != false{
+    max-height: #{$height}px;
+  }
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin phone-extra-small($type: "max") {
+	$width: 575;
+    @if $type == "min" {
+        $width: 576;
+    }
+    @media (#{$type}-width: #{$width}px) {
+        @content;
+    }
+}
+
+@mixin phone-only {
+	@media (max-width: 767px) { @content; }
+}
+
+@mixin tablet-landscape-up {
+	@media (max-width: 1024px) { @content; }
+}
+
+@mixin tablet-portrait-up {
+	@media (min-width: 768px) { @content; }
+}
+
+@mixin desktop-up {
+	@media (min-width: 1025px) { @content; }
+}
+
+@mixin desktop-big-up {
+	@media (min-width: 1800px) { @content; }
+}
+
+@mixin my-media($px: 0, $type: 'max', $dir: 'width') {
+  @if $type == 'max' {
+	  @media (max-#{$dir}: #{$px}px) { @content; }
+  } @else if $type == 'min' {
+    @media (min-#{$dir}: #{$px}px) { @content; }
+  }
+}
+
+@mixin my-media-interval($pxmin: 0, $pxmax: 0) {
+
+  @media (min-width: #{$pxmin}px)
+      and (max-width: #{$pxmax}px)
+  {
+    @content;
+  }
+}
+
+@mixin ie-only {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @content; }
+}
+
+@mixin edge-only {
+	@supports (-ms-ime-align:auto) { @content; }
+}

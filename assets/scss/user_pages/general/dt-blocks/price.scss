@@ -1,0 +1,23 @@
+.dt-new {
+
+    &__price {
+        display: flex;
+        align-items: baseline;
+
+        @include p161616(true);
+
+        svg {
+            margin-left: 5px;
+        }
+
+        &--decrease {
+            color: $color-green;
+            fill: $color-green;
+        }
+
+        &--increase {
+            color: $color-red;
+            fill: $color-red;
+        }
+    }
+}

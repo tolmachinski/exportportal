@@ -1,0 +1,451 @@
+.order-detail {
+	padding: 20px 0 0 20px;
+
+	&__scroll {
+		height: 736px;
+	}
+
+	&__top {
+		padding-bottom: 20px;
+	}
+
+	&__top-btns {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 20px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&__top-btns-item {
+		width: 33.33%;
+		padding-left: 5px;
+		padding-right: 5px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		.btn {
+			padding-left: 0;
+			padding-right: 0;
+			white-space: nowrap;
+		}
+
+		@include my-media(870) {
+
+			.btn {
+
+				.ep-icon:not(.ep-icon_arrow-down) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__ttl-actions {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 5px;
+
+		.name {
+			font-size: 18px;
+			font-weight: 500;
+			color: $black;
+		}
+	}
+
+	&__params-item {
+		position: relative;
+		display: flex;
+		padding-bottom: 3px;
+
+		&--double {
+			justify-content: space-between;
+		}
+
+		.dropdown-toggle {
+
+			.ep-icon {
+				height: 30px;
+				line-height: 31px;
+				border-radius: 15px;
+			}
+		}
+	}
+
+	&__param-col {
+		display: flex;
+	}
+
+	&__params-name {
+		width: 85px;
+		margin-right: 10px;
+		color: $gray;
+	}
+
+	&__param {
+		flex: 1;
+		min-width: 0;
+	}
+
+	&__status-timer {
+		overflow: hidden;
+		min-height: 24px;
+	}
+
+	&__category {
+
+		.link {
+			color: $gray;
+			text-transform: uppercase;
+		}
+	}
+
+	&__status {
+		font-weight: 500;
+		color: $blue;
+	}
+
+	&__scroll-content {
+		height: 592px;
+	}
+
+	&__scroll-padding {
+		padding-right: 5px;
+	}
+
+	&__table {
+		width: 100%;
+		text-align: right;
+		border-collapse: collapse;
+
+		th {
+			padding-bottom: 10px;
+			font-weight: 400;
+			color: $gray;
+			border-bottom: 1px solid $gray-light;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+
+		td {
+			padding: 5px 0;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+
+		tbody {
+			padding-top: 15px;
+
+			tr:first-child {
+
+				td {
+					padding-top: 20px;
+				}
+			}
+		}
+
+		&--mobile {
+
+			> thead {
+				display: none;
+			}
+
+			> tbody {
+
+				> tr {
+					display: block;
+					border-bottom: 5px solid $blue;
+
+					> td {
+						position: relative;
+						display: block;
+						width: auto !important;
+						max-width: 100% !important;
+						min-height: 26px;
+						padding:  45px 5px 5px !important;
+						border-bottom: 1px solid $gray-light;
+
+						&::before {
+							content: attr(data-title);
+							position: absolute;
+							top: 0;
+							right: 0;
+							left: 0;
+							height: 40px;
+							padding: 5px;
+							font-weight: 400;
+							color: $gray;
+							background: $white;
+							border-bottom: 1px solid $gray-light;
+
+							@include text-nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.order-detail-products {
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__item {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__table-total {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		padding: 10px 0;
+		border-bottom: 1px solid $gray-light;
+		text-align: right;
+	}
+
+	.display-grid {
+		display: grid;
+	}
+
+	&__product-image {
+
+		@include grid-row(1,1);
+
+		@include grid-column(1,1);
+
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+	}
+
+	&__product-detail {
+
+		@include grid-row(1,1);
+
+		@include grid-column(2,3);
+
+		@include text-nowrap;
+	}
+
+	&__product-ttl {
+		color: $black;
+	}
+
+	&__product-rating {
+		display: flex;
+		align-items: center;
+		padding-top: 5px;
+
+		.ep-icon {
+			margin-right: 5px;
+		}
+
+		.delimeter {
+			display: inline-block;
+			width: 1px;
+			height: 18px;
+			margin: 0 8px;
+			border-left: 1px solid $gray;
+		}
+	}
+
+	&__product-rating-item {
+		display: block;
+
+		@include text-nowrap;
+
+		font-size: 14px;
+		color: $gray;
+	}
+
+	&__ship {
+		margin-top: 7px;
+		padding-top: 25px;
+		border-top: 1px solid $gray-light;
+	}
+
+	&__ship-name {
+		padding-right: 5px;
+		color: $gray;
+	}
+
+	&__prod-link {
+		display: block;
+		overflow: hidden;
+		max-height: 35px;
+		line-height: 18px;
+	}
+
+	&__list {
+		padding: 0 5px 20px 20px;
+	}
+
+	&__list-item {
+		padding-bottom: 15px;
+	}
+
+	&__list-name {
+		margin-bottom: 15px;
+		padding: 12px 0 10px;
+		font-weight: 500;
+		border-top: 1px solid $gray-light;
+		border-bottom: 1px solid $gray-light;
+	}
+
+	&__gallary {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	&__gallary-item {
+		width: 100px;
+		height: 100px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+    }
+
+    @include my-media(1200) {
+
+        &__params-item {
+
+			&--double {
+				display: block;
+			}
+		}
+
+		&__top-btns {
+			display: block;
+		}
+
+		&__top-btns-item {
+			width: 100%;
+			padding-bottom: 5px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+    }
+
+    @include my-media(1024) {
+
+        &__product-detail {
+			display: none;
+		}
+    }
+
+    @include my-media(991) {
+        padding: 0;
+
+		&__scroll-content {
+			height: auto;
+		}
+
+		&__list {
+			padding: 0;
+		}
+
+		&__params-item {
+
+			&--double {
+				display: flex;
+			}
+		}
+
+		&__top-btns {
+			display: flex;
+		}
+
+		&__top-btns-item {
+			width: 33.33%;
+			padding-bottom: 0;
+			padding-left: 5px;
+			padding-right: 5px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+    }
+
+    @include phone-only {
+
+        &__table {
+
+			&--mobile {
+
+				td,
+				td.tar,
+				td.tac {
+					text-align: left !important;
+				}
+			}
+		}
+    }
+
+    @include my-media(660) {
+
+        &__top-btns {
+			display: block;
+		}
+
+		&__top-btns-item {
+			width: 100%;
+			padding-bottom: 5px;
+			padding-left: 0;
+			padding-right: 0;
+
+			.btn {
+
+				.ep-icon {
+					display: inline-block;
+				}
+			}
+		}
+
+		&__params-item {
+
+			&--double {
+				display: block;
+			}
+		}
+    }
+
+    @include my-media(480) {
+
+        &__status-timer {
+			overflow: unset;
+		}
+    }
+}
+
+@include my-media(1024) {
+
+    .fancybox-inner {
+
+        .order-detail {
+
+            &__product-detail {
+
+                @include display-grid;
+            }
+        }
+    }
+}

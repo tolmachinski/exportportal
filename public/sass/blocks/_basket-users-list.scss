@@ -1,0 +1,22 @@
+.basket-users-list{
+    height: unset;
+
+    @include my-media(480){
+        .order-users-list{
+            &__item{
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            &__line{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .rating-symbol-wr{
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}

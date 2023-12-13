@@ -1,0 +1,63 @@
+.epl-resources-faq-categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px -5px 40px;
+
+    &__item {
+        width: calc(50% - 10px);
+        margin: 0 5px 10px;
+        background: $white;
+        border: 2px solid $gray-light;
+        border-radius: 5px;
+        transition: border-color .15s linear;
+
+        &:hover {
+            border-color: $blue;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 18px 28px;
+    }
+
+    &__ttl {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $black-light;
+    }
+
+    &__count {
+        margin-top: 6px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $gray;
+    }
+
+    @include my-media(991) {
+        margin: 15px -5px 20px;
+
+        &__link {
+            padding: 18px;
+        }
+    }
+
+    @include phone-only {
+        margin: 14px -5px 17px;
+
+        &__item {
+            width: 100%;
+        }
+
+        &__ttl {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__link {
+            padding: 20px 13px;
+        }
+    }
+}

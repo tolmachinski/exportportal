@@ -1,0 +1,431 @@
+.mep-header-user {
+	$root: &;
+
+	position: relative;
+
+	&__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+		height: 51px;
+		margin: 0 -15px;
+		padding: 0 0 10px 15px;
+		border-bottom: 1px solid $color-gray-light;
+
+		.ep-icon {
+			color: $color-black;
+		}
+	}
+
+    &__top-left {
+        position: relative;
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    &__top-right {
+        display: flex;
+        justify-content: flex-end;
+
+        .ep-icon {
+            display: flex;
+            align-items: center;
+            width: 40px;
+            height: 50px;
+        }
+
+        .ep-icon_users {
+            justify-content: center;
+            margin-right: 0 !important;
+        }
+
+        .ep-icon_logout {
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+    }
+
+	&__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .epuser-line__circle-sign {
+            left: 30px;
+        }
+	}
+
+    &__restricted {
+        position: absolute;
+        top: 0;
+        left: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: $color-red;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+    }
+
+    &__restricted-info-btn {
+        padding: 0 !important;
+        background-color: unset;
+
+        svg {
+            fill: $color-blue2;
+        }
+    }
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		width: 40px;
+		height: 40px;
+		margin-right: 10px;
+		border: 1px solid $color-gray-light;
+		border-radius: 50%;
+
+		.image {
+			width: 100%;
+			height: 100%;
+
+			@include object-fit(cover, center);
+
+			margin: 0 -100%;
+		}
+	}
+
+	&__info {
+        display: flex;
+		flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        max-width: calc(100% - 52px);
+		font-weight: 400;
+	}
+
+    &__name {
+        display: block;
+        overflow: hidden;
+        max-width: 300px;
+        padding-top: 2px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-black-light;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+	&__group {
+		font-size: 14px;
+		line-height: 17px;
+        text-align: left;
+        background: transparent;
+	}
+
+	&__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 52px;
+		margin: 0 -15px;
+        background: $color-white;
+		border-bottom: 1px solid $color-gray-light;
+
+        &--bdn {
+            border-bottom: 0;
+        }
+
+        .select-language {
+            font-size: 16px;
+        }
+
+        .dropdown-toggle {
+
+            .ep-icon {
+                font-size: 11px;
+            }
+        }
+	}
+
+	&__menu-item {
+		position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        padding: 0 15px;
+		font-size: 18px;
+		line-height: 23px;
+		color: $color-black;
+        background: none;
+
+		&--chat {
+            color: $color-white;
+            background: $color-blue2;
+
+			&.active-min {
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: -3px;
+					right: -2px;
+					z-index: 2;
+					width: 12px;
+					height: 12px;
+					background: $color-green;
+					border: 2px solid $color-white;
+					border-radius: 50%;
+				}
+
+				~ .dropdown-menu {
+
+					.dropdown-item {
+						position: relative;
+
+						&--main-chat {
+
+							&::before {
+								content: "";
+								position: absolute;
+								top: 2px;
+								left: -1px;
+								width: 12px;
+								height: 12px;
+								background: $color-green;
+								border: 2px solid $color-white;
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+			}
+
+            &:hover {
+                color: $color-white !important;
+            }
+
+            .ep-icon {
+                margin-top: -3px;
+                color: $color-white !important;
+                transform-origin: 9.7px 9.5px;
+            }
+        }
+
+        &--ticket {
+
+            .ep-icon {
+                margin-top: -2px;
+            }
+
+            @include ie-only {
+                display: none !important;
+            }
+        }
+
+        &--text {
+            display: flex;
+            align-items: center;
+            padding-top: 3px;
+
+            .item-text {
+                margin-left: 10px;
+                font-size: 16px;
+                line-height: 1;
+            }
+
+            .ep-icon {
+                font-size: 18px;
+                color: $color-gray;
+            }
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		.ep-icon {
+			vertical-align: top;
+		}
+
+        svg {
+            fill: $color-gray;
+        }
+
+		.circle {
+			position: absolute;
+			top: -5px;
+            right: 0;
+			width: 12px;
+			height: 12px;
+			border: 2px solid $color-white;
+			border-radius: 50%;
+		}
+
+		.epuser-line__circle-sign {
+            top: -4px;
+            right: -4px;
+		}
+	}
+
+	&__menu-l,
+	&__menu-r {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+	}
+
+	&__menu-l {
+
+		&--jc-s {
+			justify-content: flex-start;
+		}
+	}
+
+	&__menu-r {
+
+		&--show {
+			display: flex;
+		}
+	}
+
+	&__content {
+		overflow: auto;
+		height: auto;
+	}
+
+	&__selector {
+        display: flex;
+        justify-content: space-between;
+        max-height: 42px;
+		margin: 0 -15px;
+		padding: 0 12px;
+		border-top: 1px solid $color-gray-light;
+
+		.link {
+			display: flex;
+			align-items: center;
+			padding: 10px 0;
+			font-size: 14px;
+            line-height: 22px;
+			color: $color-gray;
+
+			&.active {
+				color: $color-blue2;
+			}
+
+			.ep-icon {
+				font-size: 10px;
+                line-height: 11px;
+			}
+
+            .ep-icon_arrow-left {
+				padding-right: 5px;
+			}
+
+			.ep-icon_arrow-right {
+				padding-left: 5px;
+			}
+		}
+    }
+
+    &__epl-btn {
+        min-width: 115px;
+        margin-right: 21px;
+        padding: .875rem 7px .875rem 8px;
+    }
+
+    &__preferences {
+        margin-right: 13px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-black-light;
+        text-transform: uppercase;
+    }
+
+    &__preferences-delimiter {
+        color: $color-gray;
+    }
+
+    @include phone-only {
+
+        &__menu-item {
+            width: 50px;
+            padding: 0;
+
+            &--text {
+
+                .item-text {
+                    display: none;
+                }
+
+                .ep-icon {
+                    color: $color-black;
+                }
+            }
+
+            &--chat,
+            &--ticket {
+
+                .ep-icon {
+                    margin-top: 0;
+                }
+            }
+
+            svg {
+                fill: $color-black;
+            }
+        }
+
+        &__menu-r {
+            display: flex;
+            align-items: center;
+        }
+
+        &__preferences {
+            margin-right: 15px;
+        }
+
+        &__menu {
+
+            .select-language,
+            .dropdown-toggle {
+                font-size: 14px;
+            }
+
+            .select-language {
+                margin-left: 2px;
+            }
+
+            .dropdown-toggle {
+                display: flex;
+                align-items: center;
+
+                .ep-icon {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    @include my-media(660) {
+
+        &__epl-btn {
+            min-width: auto;
+            margin-right: 6px;
+            padding-left: 6px;
+        }
+
+        &__preferences {
+            margin-right: 0;
+        }
+    }
+}

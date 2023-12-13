@@ -1,0 +1,141 @@
+.categories-banner {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background: $color-gray-lighter;
+
+    &__description {
+        width: 536px;
+        padding: 10px 50px 10px 40px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 37px;
+        letter-spacing: 1.35px;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+    }
+
+    &__picture {
+        position: absolute;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease-out;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__images {
+        position: relative;
+        overflow: hidden;
+        width: 634px;
+        height: 100%;
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        z-index: 2;
+        transform: translateY(-50%);
+    }
+
+    @include my-media(1200) {
+
+        &__description {
+            width: auto;
+        }
+
+        &__images {
+            width: auto;
+            min-width: 450px;
+        }
+    }
+
+    @include my-media(1024) {
+
+        &__title {
+            font-size: 26px;
+            line-height: 32px;
+            letter-spacing: 1.17px;
+        }
+
+        &__desc {
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1.01px;
+        }
+    }
+
+    @include my-media(991) {
+        height: 96px;
+
+        &__images {
+            min-width: 350px;
+        }
+
+        &__btn {
+            right: 20px;
+            min-width: 210px !important;
+        }
+
+        &__description {
+            padding: 15px 20px 10px;
+        }
+    }
+
+    @include phone-only {
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.9px;
+        }
+    }
+
+    @include my-media(650) {
+        flex-direction: column;
+        height: 200px;
+        text-align: center;
+
+        &__description {
+            padding: 10px;
+        }
+
+        &__title {
+            margin-bottom: 5px;
+        }
+
+        &__images {
+            width: 100%;
+            min-width: unset;
+            height: 100px;
+            margin-top: auto;
+        }
+
+        &__btn {
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+    }
+}

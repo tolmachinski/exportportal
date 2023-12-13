@@ -1,0 +1,14 @@
+.select-country-flag {
+    width: 32px;
+    height: 32px;
+	margin-top: 7px;
+	margin-right: 10px;
+
+	.inputs-40 & {
+		margin-top: 3px;
+	}
+
+	@include my-media(991) {
+		margin-top: 2px;
+	}
+}

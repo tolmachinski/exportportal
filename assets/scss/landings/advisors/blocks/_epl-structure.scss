@@ -1,0 +1,179 @@
+.epl-structure {
+    $root: &;
+
+    padding-top: 81px;
+    padding-bottom: 240px;
+    background-image: url(#{$assetsLinkAdvisorsPage}landings/map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__headline {
+
+        @extend %epl-headline;
+    }
+
+    &__subtitle {
+        margin-top: 92px;
+        font-size: 38px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 928px;
+        margin: 0 auto;
+    }
+
+    &__image {
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 110px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        font-size: 34px;
+        line-height: 44px;
+        color: $color-black;
+    }
+
+    &__country {
+        #{$root}__image {
+
+            span {
+                background-position: -1172px -26px;
+                transform: rotate(45deg);
+            }
+        }
+        #{$root}__title {
+            text-align: right;
+        }
+    }
+
+    &__content {
+        #{$root}__image {
+
+            span {
+                background-position: -1172px -26px;
+            }
+        }
+        #{$root}__title {
+            text-align: center;
+        }
+    }
+
+    &__industry {
+        #{$root}__image {
+
+            span {
+                width: 57px;
+                height: 80px;
+                background-position: -1172px -26px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media only screen and (min-width: $break-lg) {
+
+        &__subtitle {
+            padding-left: 33px;
+            letter-spacing: 1.5px;
+        }
+
+        &__country {
+            max-width: 285px;
+            #{$root}__image {
+                margin-top: 19px;
+                margin-right: -58px;
+                text-align: right;
+
+                span {
+                    margin-right: 30px;
+                }
+            }
+            #{$root}__title {
+                margin-top: -8px;
+                margin-right: 29px;
+            }
+        }
+
+        &__content {
+            width: 100%;
+            max-width: 220px;
+            #{$root}__image {
+                margin-top: 25px;
+                margin-left: 38px;
+                text-align: center;
+
+                span {
+                    margin-right: 30px;
+                }
+            }
+            #{$root}__title {
+                margin-top: -14px;
+                margin-left: 17px;
+            }
+        }
+
+        &__industry {
+            max-width: 285px;
+            #{$root}__image {
+                margin-top: 28px;
+                margin-left: -13px;
+
+                span {
+                    margin-right: 30px;
+                }
+            }
+            #{$root}__title {
+                margin-top: 10px;
+                margin-left: 53px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $break-lg) {
+
+        &__image {
+            display: none;
+        }
+
+        &__list {
+            margin-top: 50px;
+        }
+
+        &__title {
+            text-align: center !important;
+        }
+    }
+
+    @media only screen and (max-width: $break-sm) {
+
+        &__title {
+            font-size: 26px;
+            line-height: 36px;
+        }
+    }
+
+    @media only screen and (max-width: $break-xs) {
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__list-item {
+            padding: 15px;
+        }
+    }
+}

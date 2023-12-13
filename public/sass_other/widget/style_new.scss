@@ -1,0 +1,209 @@
+@import "../../../assets/scss/import/_scss_functions";
+@import "../../../assets/scss/import/_colors";
+
+@include fontface-simple("Roboto", "../fonts/Roboto-Medium", 500, normal);
+@include fontface-simple("Roboto", "../fonts/Roboto-Regular", normal, normal);
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.widget-types{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border: 1px solid $color-blue2;
+
+    &__ttl {
+        display: flex;
+        align-items: center;
+        padding: 5px 20px;
+        font-size: 18px;
+
+        .image{
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+
+    &__header {
+
+    }
+
+    &__seller-section{
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        margin: 0 20px;
+        border-bottom: 1px solid $color-gray;
+    }
+
+    &__seller-photo{
+        width: 64px;
+        height: 64px;
+        margin-right: 12px;
+        background: $color-gray-light;
+        overflow: hidden;
+
+        .link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .image{
+            flex: 0 0 auto;
+        }
+    }
+
+    &__seller-info{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    &__seller-name{
+        min-width: 0;
+        margin-right: 15px;
+        font-weight: 500;
+        color: $color-black;
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__items-count{
+        color: $color-gray;
+        white-space: nowrap;
+    }
+
+    &__profile-link{
+        color: $color-blue2;
+    }
+
+    &__body{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px;
+        overflow: auto;
+        overflow: overlay;
+    }
+
+    &__seller-line{
+        display: flex;
+    }
+
+    .item-template {
+        display: none !important;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__item-image {
+        width: 128px;
+        height: 128px;
+        // overflow: hidden;
+        background: $color-gray-light;
+
+        // .link{
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     height: 100%;
+        // }
+
+        // .image{
+        //     flex: 0 0 auto;
+        // }
+    }
+
+}
+
+.widget-type-1 {
+    border: 2px solid $color-blue2;
+
+    .widget-types{
+        &__ttl {
+            background-color: $color-blue2;
+            color: $color-white;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        &__body{
+            margin: 20px 10px 0 10px;
+        }
+
+        &__item {
+            display: block;
+            height: 128px;
+            margin: 0 10px 15px 10px;
+        }
+    }
+}
+
+.widget-type-2 {
+    .widget-types{
+        &__ttl {
+            background-color: $color-white;
+            border-bottom: 1px solid $color-blue2;
+            color: $color-blue2;
+            word-wrap: break-word;
+        }
+
+        &__items-count{
+            max-width: 100px;
+        }
+
+        &__profile-link{
+            text-decoration: underline;
+        }
+
+        &__body{
+            display: block;
+            margin-top: 15px;
+        }
+
+        &__item {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        &__item-image {
+            width: 64px;
+            height: 64px;
+            margin-right: 15px;
+
+            .image{
+                max-height: 100%;
+            }
+        }
+
+        &__item-title{
+            flex: 1;
+            min-width: 0;
+            color: $color-black;
+            font-weight: 500;
+        }
+    }
+}

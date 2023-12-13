@@ -1,0 +1,67 @@
+.epuser-subline-filter {
+	display: flex;
+
+	&__ttl {
+		margin-right: 15px;
+	}
+
+	.link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin: 0 15px;
+
+		&.active,
+		&:hover {
+
+			&::before {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: -9px;
+				left: 0;
+				border-bottom: 2px solid $blue;
+			}
+		}
+
+		.ep-icon {
+			margin-right: 9px;
+			font-size: 17px;
+		}
+
+		.name {
+			margin-right: 5px;
+			color: $black;
+		}
+
+		.count {
+			color: $gray;
+		}
+	}
+
+	&--mobile-660,
+	&--mobile {
+		display: none;
+
+		@media screen and (max-height: 635px) {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	@include my-media(660) {
+
+		&--mobile-660 {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	@include my-media(480) {
+
+		&--mobile {
+			display: block;
+			width: 100%;
+		}
+	}
+}

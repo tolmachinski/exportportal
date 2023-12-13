@@ -1,0 +1,31 @@
+.basket-similar-items {
+    display: grid;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+
+    .columns-content {
+        &__ttl {
+            height: 50px;
+            margin: 0 20px 25px;
+            padding: 0;
+        }
+    }
+
+    @include my-media(991) {
+        .columns-content {
+            &__ttl {
+                margin: 0 12px 25px;
+            }
+        }
+    }
+
+    @include phone-only {
+        .columns-content {
+            &__ttl {
+                margin: 0 8px 25px;
+            }
+        }
+    }
+}

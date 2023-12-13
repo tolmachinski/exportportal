@@ -1,0 +1,154 @@
+.categories-group-list {
+    $root: &;
+
+    overflow: auto;
+    max-height: 610px;
+    padding-right: 12px;
+
+    &__item {
+        max-width: 537px;
+        padding: 7px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        > #{$root} {
+            display: none;
+            max-height: none;
+            padding: 2px 0 0 42px;
+
+            #{$root} {
+
+                &__item {
+                    padding-top: 9px;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            #{$root} {
+
+                &__top {
+
+                    .ep-icon {
+                        color: $color-blue2;
+                    }
+                }
+
+                &__name {
+                    color: $color-blue2;
+                }
+            }
+        }
+
+        &.active-toggle {
+
+            > #{$root} {
+                display: block;
+
+                #{$root} {
+
+                    &__name {
+                        color: $color-black;
+
+                        &:hover {
+                            color: $color-blue2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        .ep-icon {
+            width: 10px;
+            margin-right: 12px;
+            font-size: 10px;
+            line-height: 23px;
+        }
+    }
+
+    &__name {
+        display: inline-block;
+        flex: 1;
+        padding-right: 5px;
+        font-size: 16px;
+        line-height: 25px;
+        color: $color-black;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-blue2;
+        }
+
+        .label-new {
+            font-size: 12px;
+            color: $color-green;
+            text-transform: uppercase;
+        }
+    }
+
+    &__counter {
+        color: $color-gray;
+    }
+
+    &__noicon {
+        width: 22px;
+    }
+
+    &--main {
+        padding-left: 0;
+        padding-right: 10px;
+
+        #{$root} {
+
+            &__name {
+                font-weight: 500;
+            }
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__top {
+
+            .ep-icon {
+                margin-right: 10px;
+            }
+        }
+
+        &__noicon {
+            width: 20px;
+        }
+    }
+
+    @include my-media(991) {
+        padding-right: 30px;
+
+        &__item {
+            max-width: 440px;
+            padding: 7px 0;
+
+            > #{$root} {
+                padding: 2px 0 0 40px;
+            }
+        }
+
+        &__name {
+            padding-right: 40px;
+        }
+    }
+
+    @include phone-only {
+        padding-right: 0;
+    }
+}

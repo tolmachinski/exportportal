@@ -1,0 +1,36 @@
+/*#region user guide*/
+.user-guide__new {
+    padding: 20px 0 16px 0;
+
+    .user-guide__new-type {
+        color: $color-blue2;
+    }
+
+	.user-guide-text {
+		min-height: 60px;
+		margin-top: 15px;
+		margin-bottom: 5px !important;
+		overflow: hidden;
+	}
+
+	.user-guide-breadcrumbs {
+
+        &__link,
+        span {
+			color: $color-gray;
+		}
+
+		span {
+			margin: 0 8px;
+
+            .ep-icon {
+                margin-bottom: 3.2px;
+            }
+		}
+
+        &__arrow {
+            font-size: 11px;
+        }
+	}
+}
+/*#endregion user guide*/

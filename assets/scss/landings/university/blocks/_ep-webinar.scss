@@ -1,0 +1,10 @@
+.ep-webinar {
+
+    @include my-media(768, "min") {
+        margin-top: -1px;
+    }
+
+    @include my-media(991, "min") {
+        margin-top: -3px;
+    }
+}

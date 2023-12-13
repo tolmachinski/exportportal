@@ -1,0 +1,53 @@
+.dashboard-nav-list {
+
+    &__item {
+        min-height: 38px;
+
+        &:first-child {
+            min-height: 30px;
+            padding-top: 0;
+        }
+
+        .link {
+            display: flex;
+            padding: 6px 0;
+            color: $black;
+        }
+
+        .ep-icon {
+            width: 18px;
+            margin-right: 15px;
+            font-size: 18px;
+            line-height: 22px;
+            color: $gray;
+        }
+
+        .txt-b {
+            flex: 1;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            min-height: unset;
+
+            .link {
+                padding: 0 0 12px;
+            }
+
+            .ep-icon {
+                margin-right: 8px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .txt-b {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

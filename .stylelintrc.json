@@ -1,0 +1,72 @@
+{
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-order"
+    ],
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-prettier-scss"
+    ],
+    "rules": {
+        "at-rule-empty-line-before": "always",
+        "at-rule-no-unknown": null,
+        "block-opening-brace-space-before": "always",
+        "block-opening-brace-newline-before": "never-single-line",
+        "block-opening-brace-newline-after": "always",
+        "block-closing-brace-empty-line-before": "never",
+        "block-closing-brace-newline-after": "always",
+        "color-hex-case": "lower",
+        "color-no-invalid-hex": true,
+        "declaration-block-semicolon-newline-before": "never-multi-line",
+        "declaration-block-semicolon-newline-after": "always",
+        "declaration-bang-space-after": "never",
+        "declaration-bang-space-before": "always",
+        "font-family-no-duplicate-names": true,
+        "font-family-no-missing-generic-family-keyword": [
+            true,
+            {
+                "ignoreFontFamilies": ["iconsEP", "categories-icons"]
+            }
+        ],
+        "function-linear-gradient-no-nonstandard-direction": null,
+        "function-name-case": null,
+        "keyframes-name-pattern": null,
+        "no-descending-specificity": null,
+        "no-invalid-position-at-import-rule": true,
+        "number-max-precision": 15,
+        "rule-empty-line-before": "always",
+        "scss/at-function-pattern": null,
+        "scss/at-if-no-null": null,
+        "scss/at-import-no-partial-leading-underscore": null,
+        "scss/at-import-partial-extension": null,
+        "scss/at-mixin-pattern": null,
+        "scss/at-rule-no-unknown": true,
+        "scss/dollar-variable-pattern": null,
+        "scss/no-global-function-names": null,
+        "string-no-newline": true,
+        "selector-class-pattern": null,
+        "value-keyword-case": "lower",
+        "value-no-vendor-prefix": null,
+        "value-list-comma-space-after": "always",
+        "value-list-comma-space-before": "never",
+        "property-case": "lower",
+        "order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-order": [
+            "content", "position", "top", "right", "bottom", "left", "z-index", "direction", "display", "visibility", "opacity",
+            "flex", "flex-basis", "flex-direction", "flex-flow", "flex-grow", "flex-shrink", "flex-wrap", "order",
+            "grid", "grid-template", "grid-template-areas", "grid-template-columns", "grid-template-rows", "grid-area", "grid-auto-columns", "grid-auto-flow", "grid-auto-rows", "grid-column", "grid-column-start", "grid-column-end", "grid-row", "grid-row-start", "grid-row-end", "gap", "column-gap", "row-gap", "grid-gap", "grid-column-gap", "grid-row-gap",
+            "justify-content", "align-items", "align-self", "align-content",
+            "break-before", "break-inside", "break-after",
+            "columns", "column-count", "column-fill", "overflow", "clear", "float",
+            "width", "min-width", "max-width", "height", "min-height", "max-height", "margin", "margin-top", "margin-bottom", "margin-left", "margin-right", "padding", "padding-top", "padding-bottom", "padding-left", "padding-right",
+            "font", "font-family", "font-size", "font-weight", "font-size-adjust", "font-stretch", "font-style", "font-variant", "line-height", "color", "letter-spacing", "text-indent", "text-decoration", "text-decoration-color", "text-decoration-line", "text-decoration-style", "text-transform", "text-overflow", "text-shadow", "white-space", "word-break", "word-wrap", "word-spacing",
+            "background", "background-attachment", "background-clip", "background-color", "background-image", "background-origin", "background-position", "background-repeat", "background-size",
+            "cursor", "border",  "border-top", "border-right", "border-bottom", "border-left", "border-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "border-image", "border-image-outset", "border-image-repeat", "border-image-slice", "border-image-source", "border-image-width","border-radius", "border-top-style", "border-top-width",   "border-right-style", "border-right-width", "border-bottom-style", "border-bottom-width", "border-left-style", "border-left-width", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius",
+            "outline", "outline-color", "outline-offset", "outline-style", "outline-width", "list-style", "list-style-type", "list-style-position", "list-style-image","box-shadow", "filter",
+            "perspective", "transform", "transform-origin", "transform-style", "transition", "transition-delay", "transition-duration", "transition-property", "transition-timing-function", "backface-visibility", "animation", "animation-delay", "animation-direction", "animation-duration", "animation-fill-mode", "animation-fill-mode", "animation-name", "animation-play-state", "animation-timing-function"
+        ]
+    }
+}

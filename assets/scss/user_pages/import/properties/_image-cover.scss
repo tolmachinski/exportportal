@@ -1,0 +1,14 @@
+.image-cover {
+
+	@include object-fit(cover, bottom);
+
+	&--center {
+
+		@include object-fit(cover, center);
+    }
+
+    &--top {
+
+		@include object-fit(cover, top);
+	}
+}

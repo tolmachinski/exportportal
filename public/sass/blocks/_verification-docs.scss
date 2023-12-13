@@ -1,0 +1,29 @@
+.verification-docs {
+    $root: &;
+    &__info-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        &:before {
+            content: "";
+            height: 16px;
+            min-width: 16px;
+            margin-right: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 2px solid $color-blue2;
+        }
+    }
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: normal;
+        padding: 100px 0 50px 0;
+    }
+
+    @include phone-only{
+        &__info-row:before {
+            margin-right: 10px;
+        }
+    }
+}

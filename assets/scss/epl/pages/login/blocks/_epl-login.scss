@@ -1,0 +1,53 @@
+.epl-login {
+    position: relative;
+    overflow: hidden;
+    min-height: 735px;
+    margin-top: 70px;
+
+    &__bg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $zIndexBg;
+        overflow: hidden;
+
+        .image {
+            display: block;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__bg {
+
+            .image {
+                height: 350px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        min-height: 695px;
+        margin-top: 60px;
+    }
+
+    @include phone-only {
+        min-height: 685px;
+        margin-top: 50px;
+    }
+
+    @include phone-extra-small {
+        min-height: 530px;
+
+        &__bg {
+
+            .image {
+                height: 200px;
+            }
+        }
+    }
+}

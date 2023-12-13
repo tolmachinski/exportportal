@@ -1,0 +1,65 @@
+@include my-media(480) {
+
+	.col-tn-1,
+	.col-tn-2,
+	.col-tn-3,
+	.col-tn-4,
+	.col-tn-5,
+	.col-tn-6,
+	.col-tn-7,
+	.col-tn-8,
+	.col-tn-9,
+	.col-tn-10,
+	.col-tn-11,
+	.col-tn-12 {
+		float: left;
+	}
+
+	.col-tn-12 {
+		width: 100%;
+	}
+
+	.col-tn-11 {
+		width: 91.66666667%;
+	}
+
+	.col-tn-10 {
+		width: 83.33333333%;
+	}
+
+	.col-tn-9 {
+		width: 75%;
+	}
+
+	.col-tn-8 {
+		width: 66.66666667%;
+	}
+
+	.col-tn-7 {
+		width: 58.33333333%;
+	}
+
+	.col-tn-6 {
+		width: 50%;
+	}
+
+	.col-tn-5 {
+		width: 41.66666667%;
+	}
+
+	.col-tn-4 {
+		width: 33.33333333%;
+	}
+
+	.col-tn-3 {
+		width: 25%;
+	}
+
+	.col-tn-2 {
+		width: 16.66666667%;
+	}
+
+	.col-tn-1 {
+		width: 8.33333333%;
+	}
+}

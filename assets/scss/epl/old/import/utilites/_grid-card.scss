@@ -1,0 +1,6 @@
+.grid-card {
+
+	@include display-grid;
+
+	@include grid-template-columns(65px 1fr);
+}

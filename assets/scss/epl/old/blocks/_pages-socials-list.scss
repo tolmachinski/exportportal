@@ -1,0 +1,55 @@
+.pages-socials-list {
+    $root: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &__item {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: 0 2px;
+        text-align: center;
+        color: $white;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &--facebook {
+            background: $color-facebook;
+        }
+
+        &--twitter {
+            background: $color-twitter;
+        }
+
+        &--pinterest {
+            background: $color-pinterest;
+        }
+
+        &--linkedin {
+            background: $color-linkedin;
+        }
+
+        svg {
+            fill: $white;
+        }
+    }
+
+    &--size-50 {
+        #{$root} {
+
+            &__item {
+                width: 50px;
+                height: 50px;
+
+                svg {
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+    }
+}

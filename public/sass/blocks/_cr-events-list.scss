@@ -1,0 +1,145 @@
+.cr-events-list{
+	&__item{
+		padding-bottom: 50px;
+
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+
+	&__img{
+		width: 145px;
+		height: 145px;
+		border: 1px solid $color-blue2;
+
+		.link{
+			cursor: pointer;
+
+			.image{
+				min-height: 100%;
+			}
+		}
+	}
+
+	&__img2{
+		width: 140px;
+		height: 125px;
+		margin-right: 15px;
+		border: 1px solid $color-gray-light;
+	}
+
+	&__params{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__params-l{
+		flex: 1;
+		min-width: 0;
+		padding-right: 10px;
+	}
+
+	&__params-r{
+		text-align: right;
+	}
+
+	&__date{
+		strong{
+			text-transform: uppercase;
+		}
+	}
+
+	&__ttl{
+		@include text-nowrap;
+
+		.link{
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: 500;
+			color: $color-black;
+		}
+	}
+
+	&__ba{
+		padding: 6px 0;
+		@include text-nowrap;
+	}
+
+	&__rep{
+		@include text-nowrap;
+
+		.ep-icon{
+			display: none;
+		}
+	}
+
+	&__country{
+		font-weight: 500;
+	}
+
+	&__desc{
+		max-height: 72px;
+		margin-top: 5px;
+		overflow: hidden;
+	}
+
+	&__hidden{
+		display: none;
+    }
+
+    @include my-media(480){
+
+        &__hidden{
+            display: block;
+        }
+
+        &__inner{
+            padding-bottom: 15px;
+
+            .cr-events-list{
+                &__ttl,
+                &__desc{
+                    display: none;
+                }
+            }
+        }
+
+        &__img{
+            width: 50%;
+        }
+
+        &__detail{
+            width: 50%;
+        }
+
+        &__params{
+            flex-direction: column;
+        }
+
+        &__params-l{
+            padding: 0;
+        }
+
+        &__params-r{
+            text-align: left;
+        }
+
+        &__rep{
+            display: flex;
+            align-items: baseline;
+
+            .ep-icon{
+                display: inline-block;
+                padding-right: 5px;
+            }
+
+            .name{
+                display: none;
+            }
+        }
+
+        &__detail{
+            margin-top: 0;
+        }
+    }
+}

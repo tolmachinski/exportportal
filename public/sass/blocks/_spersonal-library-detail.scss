@@ -1,0 +1,27 @@
+.spersonal-library-detail{
+	word-wrap: break-word;
+
+	&__params{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 45px;
+	}
+
+	&__category{
+		@include fs-category;
+		color: $color-gray;
+	}
+
+	&__date{
+		color: $color-gray;
+	}
+
+	&__load{
+		padding-bottom: 45px;
+	}
+
+	&__text{
+		padding-bottom: 25px;
+	}
+}

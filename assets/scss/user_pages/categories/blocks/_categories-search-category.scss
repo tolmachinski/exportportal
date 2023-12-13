@@ -1,0 +1,250 @@
+.all-categories {
+
+    &__input-group {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 70px;
+
+        .input-group-btn {
+			position: relative;
+            margin-left: 15px;
+
+            &:first-child {
+                width: 100%;
+                max-width: 480px;
+                margin-left: 0;
+			}
+
+            &:last-child {
+                width: 100%;
+                max-width: 260px;
+			}
+
+            input {
+				padding-top: 0;
+				padding-bottom: 0;
+                padding-right: 46px;
+			}
+
+            .btn {
+                height: 100%;
+			}
+
+            >.ep-icon {
+                position: absolute;
+				top: 0;
+				right: 5px;
+				bottom: 0;
+				z-index: 1;
+				padding: 0 10px;
+				line-height: 50px;
+                color: $color-black;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-blue2;
+                }
+            }
+        }
+	}
+
+    &__title-link {
+        color: $color-black;
+	}
+
+    &__search-item {
+		position: relative;
+		margin-top: 30px;
+		padding-right: 45px;
+
+		.btn-add-item {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			line-height: 35px;
+		}
+
+		> .link {
+			color: $color-black;
+		}
+	}
+
+    &__wrapper {
+		color: $color-gray;
+
+		a {
+			color: $color-gray;
+
+			&:hover {
+				color: $color-blue2;
+			}
+		}
+	}
+
+    &__link {
+        color: $color-gray;
+
+        &:hover {
+            color: $color-blue2;
+        }
+    }
+
+    &__all-results {
+        margin-top: 10px;
+    }
+
+    @include my-media(991) {
+
+        &__input-group {
+
+			.input-group-btn {
+
+				>.ep-icon {
+					line-height: 40px;
+				}
+			}
+		}
+    }
+
+    @include my-media(480) {
+
+        &__input-group {
+            display: flex;
+            flex-direction: column;
+
+            .form-control,
+            .input-group-btn,
+            .btn {
+                width: 100%;
+            }
+
+            .input-group-btn {
+                margin-top: 20px;
+                margin-left: 0;
+
+                &:last-child {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.categories-list {
+
+    .categories-list {
+        display: none;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .ep-icon {
+        margin-right: 15px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 0 25px;
+        border-top: 1px solid $color-gray-light;
+
+        //        border-bottom: 1px solid $color-gray-light;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.0;
+
+        >.ep-icon {
+            font-size: 16px;
+            cursor: pointer;
+            transform: rotate(45deg);
+            transition: all 0.15s linear;
+
+            &.active {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__letter {
+        font-size: 20px;
+        font-weight: 500;
+        color: $color-black;
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 25px;
+        line-height: 1.0;
+
+        .ep-icon_circle {
+            margin-left: 2px;
+            margin-right: 18px;
+            font-size: 6px;
+        }
+    }
+
+    &__ttl {
+        display: flex;
+        align-items: center;
+        overflow:hidden;
+        max-width: 75%;
+        font-size: 16px;
+        color: $color-black;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        .image {
+            width: 32px !important;
+            height: 32px !important;
+            margin-right: 10px !important;
+        }
+    }
+
+    &__count {
+        display: flex;
+        justify-content: center;
+        max-width: 14%;
+        margin: 0 0 0 auto;
+        color: $color-gray;
+
+        span {
+            overflow:hidden;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    @include my-media(767) {
+
+        &__header {
+
+			>.ep-icon {
+				font-size: 22px;
+			}
+		}
+
+		&__item {
+			line-height: 22px;
+		}
+
+		.ep-icon {
+			font-size: 8px;
+
+			&:not(.ep-icon_circle) {
+				font-size: 22px;
+			}
+		}
+    }
+}

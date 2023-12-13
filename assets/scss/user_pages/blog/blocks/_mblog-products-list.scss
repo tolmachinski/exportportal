@@ -1,0 +1,12 @@
+.mblog-products-list {
+    margin: 50px auto;
+
+    .list-product:not(.slick-initialized) {
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    @include my-media(991) {
+        margin: 30px -15px;
+    }
+}

@@ -1,0 +1,121 @@
+.dwn-recommended {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    &__headline {
+        padding-top: 75px;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    &__block {
+        display: flex;
+        width: calc(50% - 15px);
+        padding: 19px 50px 19px 20px;
+        border: 1px solid $color-gray-light;
+    }
+
+    &__cover {
+        width: 126px;
+        min-width: 126px;
+
+        img {
+            width: 100%;
+            box-shadow: 5px 10px 15px #0003;
+        }
+    }
+
+    &__info {
+        width: calc(100% - 126px);
+        margin-top: -2px;
+        padding-left: 30px;
+    }
+
+    &__title {
+
+        @include text-line-ellipsis;
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $color-black;
+    }
+
+    &__description {
+        padding-top: 7px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include my-media(991) {
+
+        &__container {
+            display: block;
+            padding-top: 16px;
+        }
+
+        &__block {
+            width: 100%;
+
+            &:last-of-type {
+                margin-top: 15px;
+            }
+        }
+
+        &__headline {
+            padding-top: 52px;
+        }
+
+        &__info {
+            padding-left: 19px;
+        }
+    }
+
+    @include my-media(600) {
+
+        &__headline {
+            padding-top: 0;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        &__container {
+            padding-top: 18px;
+        }
+
+        &__block {
+            flex-direction: column;
+            padding: 13px 14px 10px;
+        }
+
+        &__cover {
+            width: 86px;
+            min-width: 86px;
+            margin: 0 auto;
+        }
+
+        &__info {
+            width: 100%;
+            padding-top: 16px;
+            padding-left: 0;
+        }
+
+        &__title {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__description {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

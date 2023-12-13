@@ -1,0 +1,58 @@
+.ppersonal-branches{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&__item{
+		width: 50%;
+		padding-bottom: 50px;
+
+		&:nth-child(odd){
+			padding-right: 50px;
+		}
+
+		&--full{
+			width: 100%;
+		}
+	}
+
+	&__ttl{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__ttl-txt{
+		padding-bottom: 5px;
+		font-weight: 500;
+		font-size: 18px;
+		color: $color-black;
+
+		.link{
+			color: $color-black;
+		}
+	}
+
+	&__row{
+		display: flex;
+		padding: 3px 0;
+	}
+
+	&__name{
+		width: 130px;
+	}
+
+	&__val{
+		flex: 1;
+		min-width: 0;
+    }
+
+    @include my-media(1024){
+        &__item{
+			width: 100%;
+
+			&:nth-child(odd){
+				padding-right: 0;
+			}
+		}
+    }
+}

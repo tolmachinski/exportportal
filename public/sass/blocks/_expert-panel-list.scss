@@ -1,0 +1,50 @@
+.expert-panel-list{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 60px;
+
+	&__item{
+		width: 150px;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+
+	&__icon{
+		.image{
+			height: 46px;
+		}
+	}
+
+	&__text{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 24px;
+		height: 50px;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	&__more{
+		margin-top: 15px;
+
+		i{
+			font-size: 11px;
+		}
+    }
+
+    @include my-media(660){
+        &__item{
+            width: 50%;
+            padding: 0 15px;
+        }
+    }
+
+    @include my-media(480){
+        &__item{
+			width: 100%;
+			padding: 0 15px;
+		}
+    }
+}

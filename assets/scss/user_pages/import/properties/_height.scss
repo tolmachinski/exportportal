@@ -1,0 +1,65 @@
+/* height */
+$i: 5;
+
+@while $i <= 600 {
+.h-#{$i} {
+height:#{$i}px !important;}
+
+ $i: $i + 5;}
+
+.h-auto {
+ height: auto !important; }
+
+.h-8 {
+ height: 8px !important; }
+
+.h-16 {
+ height: 16px !important; }
+
+.h-24 {
+ height: 24px !important; }
+
+.h-93 {
+ height: 93px !important; }
+
+.h-472 {
+ height: 472px !important; }
+
+.h-755 {
+ height: 755px !important; }
+
+.h-100pr {
+ height: 100% !important; }
+
+/* min height */
+$i: 50;
+
+@while $i <= 350 {
+.mnh-#{$i} {
+min-height:#{$i}px !important;}
+
+ $i: $i + 5;}
+
+.mnh-0 {
+ min-height: 0 !important; }
+
+.mnh-315 {
+min-height: 315px;}
+
+/* max height */
+$i: 25;
+
+@while $i <= 700 {
+.mh-#{$i} {
+max-height:#{$i}px !important;}
+
+ $i: $i + 5;}
+
+.mh-600 {
+max-height:600px !important;}
+
+.mh-100pr {
+ max-height: 100% !important; }
+
+
+

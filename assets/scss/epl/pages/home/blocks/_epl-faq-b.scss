@@ -1,0 +1,23 @@
+.epl-faq-b {
+    padding: 71px 0 70px;
+    background: $gray-lighter;
+
+    &__center {
+        text-align: center;
+    }
+
+    @include my-media(1024) {
+        padding: 62px 0 60px;
+    }
+
+    @include phone-only {
+        padding: 52px 0 50px;
+
+        .epl-desc-text-b {
+
+            &__ttl {
+                margin-bottom: 13px;
+            }
+        }
+    }
+}

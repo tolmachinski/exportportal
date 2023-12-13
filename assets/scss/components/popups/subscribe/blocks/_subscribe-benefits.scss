@@ -1,0 +1,18 @@
+.subscribe-benefits {
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include phone-only {
+
+        &__modal {
+
+            .image {
+                height: 153px;
+            }
+        }
+    }
+}

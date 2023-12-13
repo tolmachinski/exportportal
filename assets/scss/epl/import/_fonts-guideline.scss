@@ -1,0 +1,264 @@
+// ==================== HELPERS ====================
+
+@function getFontWeight($isMedium) {
+    $fontWeight: 400;
+
+    @if $isMedium == true {
+        $fontWeight: 500;
+    }
+
+    @return $fontWeight;
+}
+
+// ==================== HELPERS ====================
+
+// ==================== HEADINGS ====================
+// oldname: heading1
+
+@mixin h966240 {
+    font-size: 96px;
+    font-weight: 500;
+    line-height: 104px;
+
+    @include my-media(1199) {
+        font-size: 80px;
+        line-height: 88px;
+    }
+
+    @include my-media(991) {
+        font-size: 62px;
+        line-height: 70px;
+    }
+
+    @include my-media(767) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+// oldname: heading2
+
+@mixin h725030 {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 80px;
+
+    @include my-media(991) {
+        font-size: 50px;
+        line-height: 58px;
+    }
+
+    @include my-media(767) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+// oldname: heading3
+
+@mixin h503826 {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 58px;
+
+    @include my-media(991) {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    @include my-media(767) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+// oldname: heading4
+
+@mixin h423024 {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 50px;
+
+    @include my-media(991) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    @include my-media(767) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+// oldname: heading5
+
+@mixin h302620 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 38px;
+
+    @include my-media(991) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    @include my-media(767) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+// oldname: heading6
+
+@mixin h262018 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 32px;
+
+    @include my-media(991) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    @include my-media(767) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+// oldname: heading7
+
+@mixin h201816 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+
+    @include my-media(991) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @include my-media(767) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+// oldname: heading8
+
+@mixin h181816 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+
+    @include my-media(767) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+// oldname: heading9
+
+@mixin h181614 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+
+    @include my-media(991) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include my-media(767) {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+@mixin h161616 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+// ==================== HEADINGS ====================
+
+// ===================== PARAGRAPHS ====================
+// oldname: paragraph1
+
+@mixin p181816($isMedium: false) {
+    font-size: 18px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 24px;
+
+    @include my-media(767) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@mixin p161616($isMedium: false) {
+    font-size: 16px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 22px;
+}
+
+// oldname: paragraph2
+
+@mixin p161614($isMedium: false) {
+    font-size: 16px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 22px;
+
+    @include my-media(767) {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+// oldname: paragraph3
+
+@mixin p141414($isMedium: false) {
+    font-size: 14px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 19px;
+}
+
+@mixin p141412($isMedium: false) {
+    font-size: 14px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 19px;
+
+    @include my-media(767) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+// oldname: paragraph4
+
+@mixin p121212($isMedium: false) {
+    font-size: 12px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 16px;
+}
+
+@mixin p121210($isMedium: false) {
+    font-size: 12px;
+    font-weight: getFontWeight($isMedium);
+    line-height: 16px;
+
+    @include my-media(767) {
+        font-size: 10px;
+        line-height: 14px;
+    }
+}
+
+// input field
+
+@mixin textfield {
+
+    @include p161616;
+}
+
+// ===================== PARAGRAPHS ====================

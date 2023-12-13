@@ -1,0 +1,152 @@
+.gain-access {
+
+    &__steps {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__step {
+        padding-bottom: 14px;
+        background-color: $color-gray-lighter;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__step-image {
+        position: relative;
+    }
+
+    &__step-label, &__step-label span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+    }
+
+    &__step-label {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: $color-white;
+        transform: translate(-50%, 50%);
+
+        span {
+            width: 52px;
+            height: 52px;
+            font-size: 26px;
+            line-height: 30px;
+            color: $color-white;
+            background-color: $color-green;
+        }
+    }
+
+    &__step-title {
+        display: block;
+        padding: 43px 15px 0;
+        font-weight: 500;
+    }
+
+    &__step-description {
+        max-width: 395px;
+        margin: 0 auto;
+        padding: 2px 15px 0;
+    }
+
+    &__step-link {
+        width: calc(100% - 30px);
+        max-width: 270px;
+        margin-top: 8px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @include my-media(576, "min") {
+
+        &__steps {
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        &__step {
+            width: calc(50% - 7.5px);
+
+            &:first-child {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    @include my-media(768, "min") {
+
+        &__step {
+            width: calc(33.333333333% - 10px);
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+
+            &:first-child {
+
+                img {
+                    border-radius: 0 0 0 120px;
+                }
+            }
+
+            &:last-child {
+
+                img {
+                    border-radius: 0 0 120px;
+                }
+            }
+        }
+
+        &__step-title {
+            padding: 44px 15px 5px;
+        }
+
+        &__step-description {
+            padding: 3px 15px 0;
+
+            &--first {
+                padding: 3px 30px 0;
+            }
+        }
+
+        &__step-link {
+            margin-top: 15px;
+        }
+    }
+
+    @include my-media(1200, "min") {
+
+        &__step {
+            width: 370px;
+            padding-bottom: 30px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+        }
+
+        &__step-title {
+            padding: 44px 15px 0;
+        }
+
+        &__step-description {
+            padding: 9px 30px 0;
+
+            &--first {
+                padding: 8px 30px 0;
+            }
+        }
+    }
+}

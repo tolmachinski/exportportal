@@ -1,0 +1,14 @@
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 6px;
+    min-height: 6px;
+    color: $white;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $blue;
+    border-radius: 3px;
+    transition: width .6s ease;
+}

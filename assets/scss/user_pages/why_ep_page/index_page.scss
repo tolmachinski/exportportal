@@ -1,0 +1,25 @@
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../plug/slick-1-8-1/slick";
+
+@import "../../plug/slick-1-8-1/slick-arrow";
+
+@import "../../plug/slick-1-8-1/slick-dots";
+
+@import "./blocks/_wexport-section";
+
+@import "./blocks/_wexport-questions";
+
+@import "./blocks/_ep-functions";
+
+@import "./blocks/_ep-benefits";
+
+@import "./blocks/_ep-benefits-list";
+
+@import "./blocks/_ep-reviews";
+
+@import "../../components/popups/write_review/index.scss";

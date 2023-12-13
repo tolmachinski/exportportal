@@ -1,0 +1,19 @@
+.epl-partners-b {
+    padding: 70px 0 65px;
+    border-bottom: 2px solid rgba($gray-light, 0.4);
+
+    @include my-media(1024) {
+        padding: 60px 0 34px;
+    }
+
+    @include phone-only {
+        padding: 51px 0 21px;
+
+        .epl-desc-text-b {
+
+            &__ttl {
+                margin-bottom: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,208 @@
+.calendar {
+    $root: &;
+
+    margin-top: 50px;
+    margin-bottom: 117px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 15px;
+    }
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    &__navbar-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        color: $color-black;
+        background-color: $color-gray-light;
+
+        & + & {
+            margin: 0 0 0 10px;
+        }
+
+        &[disabled] {
+            background-color: $color-gray-light !important;
+        }
+
+        &--prev {
+
+            svg {
+                margin-left: 3px;
+            }
+        }
+
+        &--next {
+
+            svg {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &__navbar-title {
+        margin: 0 0 0 20px;
+
+        @include h181816;
+    }
+
+    &__navbar-btn-today {
+        width: 130px;
+        margin: 0;
+    }
+
+    &__event-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-left: 5px;
+
+        @include p121210;
+
+        font-weight: 400;
+
+        svg {
+            margin: 0 5px 0 0;
+        }
+
+        span {
+            overflow: hidden;
+            width: calc(100% - 18px);
+        }
+    }
+
+    &__main {
+        height: 880px;
+    }
+
+    &__month-day {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $color-black;
+
+        @include p161614;
+    }
+
+    .toastui-calendar-weekday-events {
+        top: 6px;
+    }
+
+    .toastui-calendar-see-more-container {
+        z-index: 1001 !important;
+    }
+
+    @include my-media(991) {
+        margin-top: 33px;
+        margin-bottom: 80px;
+
+        &__main {
+            height: 749px;
+        }
+    }
+
+    @include my-media(768) {
+
+        .toastui-calendar-weekday-events {
+            top: 19px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 15px;
+        margin-bottom: 50px;
+
+        &__header-ttl {
+            margin-bottom: 9px !important;
+        }
+
+        &__navbar-btn {
+
+            & + & {
+                margin: 0 0 0 5px;
+            }
+        }
+
+        &__header {
+            margin: 0 0 10px;
+        }
+
+        &__main {
+            height: 422px;
+        }
+
+        &__navbar-btn-today {
+            width: 66px;
+        }
+
+        &__navbar-title {
+            margin: 0 0 0 10px;
+        }
+
+        .toastui-calendar-weekday-events {
+            top: 16px;
+        }
+
+        .toastui-calendar-see-more-container {
+            width: 290px !important;
+            height: auto !important;
+        }
+
+        .toastui-calendar-see-more-container .toastui-calendar-weekday-event,
+        .toastui-calendar-weekday-event-title {
+            overflow: initial !important;
+        }
+
+        .toastui-calendar-see-more-container .toastui-calendar-weekday-event {
+            margin: 10px 0 !important;
+        }
+
+        .triangle-right {
+
+            &::before {
+                top: -1px !important;
+            }
+        }
+
+        .triangle-right ::after {
+            bottom: -1px !important;
+        }
+
+        .toastui-calendar-see-more-header {
+            padding: 7px 8px 0 !important;
+        }
+
+        .toastui-calendar-month-more-list {
+            margin-top: 19px;
+            padding: 0 8px;
+
+            .toastui-calendar-weekday-event {
+                height: 20px !important;
+            }
+
+            #{$root} {
+
+                &__event-title {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        .calendar-date {
+            font-size: 14px;
+        }
+    }
+}

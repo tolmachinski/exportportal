@@ -1,0 +1,343 @@
+.epsecurity-header{
+	position: relative;
+	text-align: center;
+
+	.image{
+		width: 100%;
+		height: 100%;
+		@include object-fit(cover, bottom);
+	}
+
+	&__ttl{
+		position: absolute;
+		top: 35px;
+		left: 0;
+		right: 0;
+		font-size: 95px;
+		font-weight: 500;
+		line-height: 99px;
+		text-align: center;
+		color: $color-white;
+		text-shadow: 1px 1px 1px $color-black;
+	}
+
+	&__line{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 65px;
+		left: 0;
+		right: 0;
+		min-height: 90px;
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	&__txt{
+		padding-right: 20px;
+		font-size: 24px;
+		font-weight: 500;
+		color: $color-white;
+	}
+
+	.ep-icon{
+		font-size: 60px;
+		color: $color-green;
+    }
+
+    @include phone-only(){
+        &__line{
+			bottom: 10px;
+			min-height: auto;
+			padding: 5px;
+		}
+
+		&__ttl{
+			top: 0;
+			font-size: 45px;
+			line-height: 48px;
+		}
+
+		&__txt{
+			font-size: 16px;
+			line-height: 18px;
+		}
+
+		.ep-icon{
+			font-size: 35px;
+		}
+    }
+}
+
+.epsecurity-blockchain{
+	margin: 50px 0;
+	background: url(../img/security/bg-blockchain3.png) 0 0 repeat;
+
+	&__block{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 80px 0;
+	}
+
+	&__txt{
+		width: 80%;
+		padding: 20px;
+		background: $color-white;
+
+		strong{
+			font-size: 24px;
+			line-height: 26px;
+		}
+
+		p{
+			padding-top: 20px;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__img{
+		margin: 0 80px;
+    }
+
+    @include my-media(991){
+		text-align: center;
+		background: $color-white;
+
+		&__block{
+            flex-direction: column;
+            padding: 0;
+		}
+
+		&__txt{
+            width: auto;
+            padding: 0;
+		}
+
+		&__img{
+			margin: 50px 0 0 0;
+
+			.image{
+				width: 100%;
+				height: 100%;
+				@include object-fit(cover, bottom);
+			}
+		}
+    }
+}
+
+.epsecurity-security-list{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 65px;
+
+	&__item{
+		width: 26%;
+		text-align: center;
+
+		.ep-icon{
+			font-size: 58px;
+			color: $color-blue2;
+		}
+	}
+
+	&__ttl{
+		height: 105px;
+		padding-top: 45px;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 30px;
+	}
+
+	&__txt{
+		padding-top: 25px;
+		font-size: 18px;
+		line-height: 22px;
+    }
+
+    @include phone-only{
+        flex-direction: column;
+        padding-top: 40px;
+
+		&__item{
+			width: 100%;
+			padding-bottom: 20px;
+		}
+
+		&__ttl{
+			height: auto;
+			padding-top: 25px;
+		}
+
+		&__txt{
+			padding-top: 15px;
+		}
+    }
+}
+
+.epsecurity-how-work{
+	padding-top: 90px;
+	text-align: center;
+
+	.ep-icon{
+		font-size: 70px;
+		color: $color-green;
+	}
+
+	&__ttl{
+		padding-top: 25px;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 30px;
+	}
+
+	&__txt{
+		width: 45%;
+		margin: 0 auto;
+		padding-top: 20px;
+		font-size: 18px;
+		line-height: 22px;
+    }
+
+    @include phone-only{
+        padding-top: 50px;
+
+        &__txt{
+			width: auto;
+		}
+    }
+}
+
+.epsecurity-stay-protected{
+	position: relative;
+
+	.image{
+		width: 100%;
+		height: 100%;
+		@include object-fit(cover, bottom);
+	}
+
+	&__detail{
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+	}
+
+	&__ttl{
+		padding-top: 40px;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&__list{
+		padding: 20px 0 0 40px;
+
+		li{
+			padding: 15px 0;
+			font-size: 18px;
+			line-height: 20px;
+
+			@include my-media(960){
+				text-shadow: 0 0 5px $color-gray-lighter;
+			}
+		}
+    }
+
+    @include phone-only{
+        overflow: hidden;
+
+		.image{
+			width: auto;
+			height: auto;
+		}
+
+		&__ttl{
+			padding: 0 0 20px 0;
+		}
+
+		&__detail{
+			text-align: center;
+		}
+
+		&__list{
+			padding: 0;
+		}
+    }
+}
+
+.epsecurity-payment{
+    display: flex;
+	align-items: center;
+	padding-top: 100px;
+
+	&__item{
+		width: 50%;
+
+		.image{
+			width: 100%;
+			@include object-fit(cover, center);
+		}
+
+		&:first-child{
+			margin-right: 50px;
+		}
+
+		&:last-child{
+			margin-left: 50px;
+		}
+	}
+
+	&__ttl{
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 500;
+	}
+	&__paragraph{
+		padding-top: 20px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+    @include my-media(991){
+        padding-top: 0;
+
+        &__paragraph{
+			font-size: 21px;
+			line-height: 24px;
+		}
+    }
+
+    @include phone-only{
+        flex-direction: column;
+
+		&__item{
+			width: auto;
+			margin: 0;
+            text-align: center;
+
+            &:first-child,
+            &:last-child{
+                margin: 0;
+            }
+
+			.image{
+				max-width: 100%;
+				width: auto;
+				margin-bottom: 15px;
+				padding-right: 0;
+			}
+        }
+
+        &__paragraph{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+		&__img{
+			order: 1;
+			padding-top: 20px;
+		}
+    }
+}

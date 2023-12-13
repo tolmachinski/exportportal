@@ -1,0 +1,63 @@
+.mblog-recommended {
+    margin-top: 48px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 30px;
+    }
+
+    &__list-item {
+        min-width: 0;
+    }
+
+    &__list-ttl {
+        padding-top: 4px;
+        color: $black;
+
+        @include h161616;
+    }
+
+    &__list-picture {
+        display: block;
+    }
+
+    &__list-image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__more {
+        text-align: center;
+    }
+
+    &__more-btn {
+        min-width: 250px;
+        margin-top: 30px;
+    }
+
+    @include my-media(991) {
+
+        &__list {
+            gap: 29px 15px;
+        }
+
+        &__more-btn {
+            margin-top: 28px;
+        }
+    }
+
+    @include my-media(580) {
+        margin-top: 13px;
+
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 18px 30px;
+            margin-top: -5px;
+        }
+
+        &__more-btn {
+            margin-top: 13px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.col-md-order-1 {
+
+    @include phone-only {
+        order: 2;
+    }
+}
+
+.col-md-order-2 {
+
+    @include phone-only {
+        order: 1;
+    }
+}

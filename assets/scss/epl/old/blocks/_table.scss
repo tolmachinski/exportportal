@@ -1,0 +1,23 @@
+.table {
+
+	th {
+		font-weight: 500;
+	}
+
+	&--padding {
+
+		td {
+			padding: 1rem .75rem;
+		}
+	}
+
+	tbody {
+
+		tr:last-child {
+
+			td.bdb-1-black {
+				border: none !important;
+			}
+		}
+	}
+}

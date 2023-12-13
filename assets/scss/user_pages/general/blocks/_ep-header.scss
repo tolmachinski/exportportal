@@ -1,0 +1,133 @@
+.ep-header {
+    $root: &;
+
+    position: relative;
+
+    @include my-media(992, 'min') {
+
+        &--fixed {
+            padding-top: 129px;
+
+            .ep-header-top {
+                display: none;
+            }
+        }
+
+        &--fixed#{$root}--maintenance {
+            padding-top: 169px;
+        }
+
+        &--fixed#{$root}--banner {
+            padding-top: 199px;
+        }
+
+        &--fixed#{$root}--banner#{$root}--maintenance {
+            padding-top: 219px;
+        }
+    }
+
+    @include my-media(991) {
+        padding-top: 50px;
+
+        &--maintenance {
+            padding-top: 90px;
+
+            .ep-header-top {
+                top: 91px;
+            }
+        }
+
+        &--banner {
+            padding-top: 130px;
+
+            &#{$root}--maintenance {
+                padding-top: 170px;
+
+                .ep-header-top {
+                    top: 172px;
+                }
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &--maintenance {
+
+            .ep-header-top {
+                top: -290px;
+            }
+        }
+
+        &--banner {
+
+            .ep-header-top {
+                top: -250px;
+            }
+
+            &#{$root}--maintenance {
+
+                .ep-header-top {
+                    top: -210px;
+                }
+            }
+        }
+    }
+
+    @include my-media(660) {
+
+        &--banner {
+            padding-top: 238px; // + 107
+
+            .ep-header-top {
+                top: -143px;
+            }
+
+            &#{$root}--maintenance {
+                padding-top: 278px;
+
+                .ep-header-top {
+                    top: -103px;
+                }
+            }
+        }
+    }
+
+    @include my-media(630) {
+
+        &--banner {
+            padding-top: 258px; // + 127
+
+            .ep-header-top {
+                top: -123px;
+            }
+
+            &#{$root}--maintenance {
+                padding-top: 298px;
+
+                .ep-header-top {
+                    top: -63px;
+                }
+            }
+        }
+    }
+
+    @include my-media(330) {
+
+        &--banner {
+            padding-top: 278px; // + 147
+
+            .ep-header-top {
+                top: -103px;
+            }
+
+            &#{$root}--maintenance {
+                padding-top: 318px;
+
+                .ep-header-top {
+                    top: -23px;
+                }
+            }
+        }
+    }
+}

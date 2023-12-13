@@ -1,0 +1,14 @@
+.fancybox-lock2 {
+	overflow: hidden !important;
+    width: auto;
+}
+
+
+.fancybox-margin2 {
+    margin-right: 8px;
+
+    @include touch {
+        margin-right: 0;
+    }
+}
+

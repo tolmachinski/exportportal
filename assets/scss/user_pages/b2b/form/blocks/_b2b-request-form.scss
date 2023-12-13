@@ -1,0 +1,156 @@
+.b2b-request-form {
+    position: relative;
+
+    &__textarea {
+        height: 311px;
+    }
+
+    &__location-wr {
+        align-items: flex-end;
+    }
+
+    &__country-wr {
+        display: flex;
+        align-items: center;
+
+        .btn {
+            min-width: 50px;
+            margin-left: 15px;
+        }
+    }
+
+    &__main-image-wrapper {
+        display: flex;
+    }
+
+    &__main-image {
+        margin-right: 7px;
+    }
+
+    &__main-image-rules {
+        flex: 1;
+        width: 100%;
+    }
+
+    &__select-files-btn {
+        min-width: 130px;
+        margin-top: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .multiple-epselect {
+        margin-bottom: -4px;
+
+        &__input {
+            padding-left: 15px;
+        }
+    }
+
+    .fileupload2 {
+        margin: 0 -5px;
+
+        &__item {
+            width: 133px;
+            height: 100px;
+
+            .image {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__main-image {
+            margin-right: 10px;
+        }
+
+        &__select-files-btn {
+            min-width: 140px;
+        }
+
+        .multiple-epselect {
+
+            &__input {
+                height: 50px;
+                line-height: 48px;
+            }
+        }
+
+        .fileupload2 {
+            margin: -5px -6px 0;
+
+            &__item {
+                width: 140px;
+                height: 105px;
+            }
+        }
+
+        div.tagsinput {
+            padding: 0 18px;
+        }
+    }
+
+    @include phone-only {
+
+        &__country-wr {
+
+            .btn {
+                min-width: 40px;
+                margin-left: 10px;
+                padding: .5rem;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        div.tagsinput {
+
+            input {
+                height: 38px;
+            }
+        }
+
+        .multiple-epselect {
+
+            &__input {
+                height: 40px;
+                line-height: 38px;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__main-image-wrapper {
+            flex-direction: column-reverse;
+        }
+
+        &__main-image {
+            margin-top: 10px;
+        }
+
+        &__select-files-btn {
+            min-width: 148px;
+        }
+
+        &__country-wr {
+            margin-top: 10px;
+        }
+
+        .fileupload2 {
+
+            &__item {
+                width: 148px;
+                height: 111px;
+            }
+        }
+    }
+}

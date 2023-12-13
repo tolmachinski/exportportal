@@ -1,0 +1,200 @@
+.benefits {
+
+    &__subttl {
+        max-width: 1195px;
+    }
+
+    &__products-img {
+        max-width: 750px;
+    }
+
+    &__products-content-wrap {
+        max-width: calc(100% - 820px);
+    }
+
+    &__products-ttl {
+        max-width: 355px;
+    }
+
+    &__products-subttl {
+        max-width: 520px;
+    }
+
+    &__shipping {
+        justify-content: space-between;
+        margin-top: 30px;
+        padding: 33px 30px 30px;
+        background: $color-gray-lighter;
+        border: none;
+    }
+
+    &__shipping-img {
+        max-width: 657px;
+    }
+
+    &__shipping-content-wrap {
+        max-width: calc(100% - 727px);
+    }
+
+    &__shipping-ttl {
+        max-width: 100%;
+    }
+
+    &__shipping-subttl {
+        max-width: 570px;
+    }
+
+    @include my-media(1300) {
+
+        &__products-img, &__shipping-img {
+            max-width: 600px;
+        }
+
+        &__products-content-wrap, &__shipping-content-wrap {
+            max-width: calc(100% - 690px);
+        }
+    }
+
+    @include my-media(1199) {
+
+        &__products-img {
+
+            .image {
+                object-position: center;
+            }
+        }
+    }
+
+    @include my-media (991) {
+
+        &__products-img {
+            max-width: 243px;
+            height: 243px;
+        }
+
+        &__products-content-wrap {
+            max-width: calc(100% - 273px);
+        }
+
+        &__products-ttl {
+            max-width: 300px;
+        }
+
+        &__shipping {
+            margin-top: 15px;
+            padding: 30px;
+        }
+
+        &__shipping-ttl {
+            max-width: 275px;
+        }
+    }
+
+    @include my-media (880) {
+
+        &__products-img {
+            height: 300px;
+        }
+    }
+
+    @include my-media (825) {
+
+        &__products-img {
+            max-width: 244px !important;
+            height: 244px;
+        }
+
+        &__products-content-wrap {
+            max-width: calc(100% - 275px) !important;
+        }
+
+        &__shipping-img {
+            height: 314px;
+        }
+    }
+
+    @include my-media (575) {
+
+        &__shipping {
+            margin-top: 0;
+        }
+
+        &__products-img {
+            max-width: 100% !important;
+        }
+
+        &__products-content-wrap {
+            max-width: 100% !important;
+        }
+    }
+}
+
+.userinfo-scheme {
+    margin-top: 70px;
+
+    &__basket {
+        margin-left: -4px;
+    }
+
+    &__card-lock-icon {
+        margin-top: 4px;
+    }
+
+    &__box-code2 {
+        margin-top: 4px;
+        margin-left: 5px;
+    }
+
+    @include my-media (991) {
+
+        &__wrap {
+            padding-right: 13px;
+        }
+    }
+
+    @include my-media (575) {
+
+        &__basket {
+            margin-top: 5px;
+            margin-left: -1px;
+        }
+    }
+}
+
+.build-export {
+
+    @include my-media (1200) {
+
+        &__content-wrap {
+            max-width: 580px;
+        }
+    }
+
+    @include my-media (1080) {
+
+        &__content-wrap {
+            max-width: 480px;
+        }
+    }
+
+    @include my-media (575) {
+        margin-top: 30px;
+
+        &__background {
+
+            .image {
+                min-height: 510px;
+            }
+        }
+    }
+
+    @include my-media (400) {
+
+        &__background {
+
+            .image {
+                min-height: 600px;
+            }
+        }
+    }
+}

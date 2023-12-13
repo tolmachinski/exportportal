@@ -1,0 +1,84 @@
+.wexport {
+	$root: &;
+    padding-top: 100px;
+
+    &__title {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 20px;
+        margin-top: 50px;
+        line-height: 35px;
+    }
+
+    &__chart-image {
+        margin-top: 90px;
+        margin-bottom: 25px;
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__chart-text {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 90px;
+    }
+
+    &__small-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+
+    &__sidebar-links {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: $color-black;
+        margin-top: 35px;
+        .ep-icon {
+            @include rotate(-90deg);
+            margin-right: 20px;
+        }
+        &:first-of-type {
+            margin-top: 50px;
+        }
+        &.active {
+            color: $color-blue2;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        padding-top: 30px;
+
+        &__chart-image {
+            margin-top: 50px;
+            margin-bottom: 0;
+            img {
+                width: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &__text {
+            text-align: center;
+        }
+        &__title {
+            text-align: center;
+        }
+    }
+}
+
+.wexport-sidebar{
+	position: sticky;
+	top: 0;
+}

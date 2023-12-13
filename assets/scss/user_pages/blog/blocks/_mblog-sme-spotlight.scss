@@ -1,0 +1,106 @@
+.mblog-sme-spotlight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    margin: 50px 0;
+
+    &__item {
+        min-width: 0;
+        border: 1px solid $blue-light;
+    }
+
+    &__item-link {
+        color: $black-light;
+        cursor: default;
+    }
+
+    &__badge {
+        display: block;
+        padding: 6px 0;
+        font-weight: 500;
+        color: $black-light;
+        background: $blue-light;
+        text-align: center;
+
+        @include p121212;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    &__detail {
+        padding: 9px 14px 7px;
+    }
+
+    &__ttl {
+        min-height: 48px;
+
+        @include text-line-ellipsis;
+
+        @include h181816;
+
+        &:hover {
+            color: $blue;
+            cursor: pointer;
+        }
+    }
+
+    &__date {
+        margin-top: 3px;
+
+        @include p141412;
+
+        color: $gray;
+    }
+
+    &__more {
+        display: inline-block;
+        margin-top: 3px;
+
+        @include p161616;
+
+        font-weight: 500;
+        color: $blue;
+
+        &:hover {
+            color: $blue-hover;
+            cursor: pointer;
+        }
+    }
+
+    @include my-media(1024) {
+        margin: 30px 0;
+
+        &__detail {
+            padding: 9px 9px 6px;
+        }
+    }
+
+    @include my-media(580) {
+        grid-template-columns: 100%;
+        column-gap: 0;
+        row-gap: 10px;
+        margin: 30px 0;
+
+        &__ttl {
+            display: block;
+            min-height: auto;
+        }
+
+        &__detail {
+            padding-top: 8px;
+            padding-bottom: 7px;
+        }
+
+        &__more {
+            margin-top: 7px;
+        }
+    }
+}

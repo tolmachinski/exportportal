@@ -1,0 +1,146 @@
+.ambassador {
+    &__title-row {
+        display: flex;
+        justify-content: space-between;
+        .minfo-form {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 360px;
+            &__input2 {
+                width: 100%;
+                max-width: 165px;
+                font-weight: 500;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+    }
+    &__search-row {
+        display: flex;
+        align-items: center;
+        max-width: 330px;
+        border: 2px solid $color-gray-lighter;
+    }
+    &__dropdowns {
+        display: flex;
+        justify-content: flex-end;
+        .dropdown {
+            width: 150px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.ambassador-blocks {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+
+.ambassador-block {
+	width: 33.33%;
+	padding: 10px;
+
+	&__wr{
+		padding: 15px;
+		border: 1px solid $color-gray-light;
+		text-align: center;
+	}
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 135px;
+		height: 135px;
+		margin: 0 auto;
+		overflow: hidden;
+		border: 1px solid $color-gray-lighter;
+		border-radius: 67px;
+		cursor: pointer;
+	}
+
+    &__name {
+		display: inline-block;
+		margin-top: 8px;
+        @include text-nowrap;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-black;
+	}
+
+    &__position {
+		display: block;
+		min-height: 21px;
+        font-size: 14px;
+        color: $color-black;
+	}
+
+    &__status {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 15px 0 50px 0;
+		text-transform: uppercase;
+
+		.ep-icon{
+			margin-right: 10px;
+		}
+	}
+
+	.dropdown-toggle{
+		&:after{
+			display: none;
+		}
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 50%;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.ambassador-types{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.ep-icon{
+		font-size: 47px;
+	}
+
+	&__item{
+		width: 33.33%;
+		min-width: 200px;
+		padding: 10px;
+		text-align: center;
+
+		&:last-child{
+			.ep-icon{
+				height: 47px;
+				font-size: 60px;
+				line-height: 46px;
+			}
+		}
+	}
+
+	&__name{
+		padding-top: 10px;
+		font-weight: 500;
+	}
+
+	&__desc{
+		padding-top: 15px;
+		font-size: 12px;
+	}
+}
+
+.ambassador-video{
+	margin-top: 50px;
+}

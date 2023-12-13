@@ -1,0 +1,147 @@
+.giveaway-promo {
+    position: relative;
+    min-height: 730px;
+    padding: 70px;
+
+    &__content {
+        width: 70%;
+        max-width: 740px;
+        margin-left: auto;
+        padding: 50px;
+        text-align: center;
+        background: $color-white;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        width: 100%;
+
+        .image {
+            width: 100%;
+            height: 730px;
+            object-fit: cover;
+        }
+    }
+
+    &__icon {
+
+        .image {
+            width: 186px;
+            height: 204px;
+        }
+    }
+
+    &__ttl {
+        max-width: 455px;
+        margin: 32px auto 0;
+
+        @include h503826;
+    }
+
+    &__subttl {
+        margin-top: 15px;
+
+        @include p181816;
+    }
+
+    &__btn {
+        width: 250px;
+        margin-top: 25px;
+    }
+
+    @include my-media(1921, 'min') {
+
+        &__bg {
+
+            .image {
+                object-position: top;
+            }
+        }
+    }
+
+    @include my-media(1200) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 837px;
+        padding: 50px 19px;
+
+        &__bg {
+
+            .image {
+                height: 837px;
+                object-position: left;
+            }
+        }
+
+        &__content {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        &__icon {
+
+            .image {
+                width: 102px;
+                height: 113px;
+            }
+        }
+
+        &__ttl {
+            margin-top: 15px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__content {
+            padding: 50px 30px;
+        }
+
+        &__btn {
+            margin-top: 13px;
+        }
+    }
+
+    @include phone-only {
+        min-height: 719px;
+        padding: 30px 0;
+
+        &__bg {
+
+            .image {
+                height: 719px;
+            }
+        }
+
+        &__content {
+            padding: 30px 15px;
+        }
+
+        &__icon {
+
+            .image {
+                width: 112px;
+                height: 123px;
+            }
+        }
+
+        &__subttl {
+            margin-top: 9px;
+        }
+
+        &__btn {
+            width: 260px;
+            margin-top: 8px;
+        }
+
+        .giveaway-container {
+            padding: 0 5px;
+        }
+    }
+}

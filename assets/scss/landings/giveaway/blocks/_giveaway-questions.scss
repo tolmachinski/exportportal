@@ -1,0 +1,16 @@
+.giveaway-questions {
+    text-align: center;
+
+    &__btn {
+        width: 250px;
+        margin-top: 30px;
+    }
+
+    @include phone-only {
+
+        &__btn {
+            width: 260px;
+            margin-top: 13px;
+        }
+    }
+}

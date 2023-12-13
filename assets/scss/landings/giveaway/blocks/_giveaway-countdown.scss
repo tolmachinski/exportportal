@@ -1,0 +1,214 @@
+.giveaway-countdown {
+    $root: &;
+
+    display: flex;
+
+    &__ended {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-black-light, 0.65);
+    }
+
+    &__ended-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        height: 130px;
+        margin: 0 35px;
+        background: $color-white;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:not(:last-child) {
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                right: -40px;
+                display: block;
+                width: 10px;
+                height: 10px;
+                background: rgba($color-white, 0.5);
+                border-radius: 50%;
+            }
+
+
+            &::before {
+                top: 50px;
+            }
+
+            &::after {
+                bottom: 50px;
+            }
+        }
+    }
+
+    &__numbers {
+
+        @include h503826;
+    }
+
+    &__text,
+    &__text-mobile {
+
+        @include h201816;
+    }
+
+    &__text-mobile {
+        display: none;
+    }
+
+    &__separator {
+        font-size: 30px;
+    }
+
+    @include my-media(1200) {
+
+        &__item {
+            width: 120px;
+            height: 120px;
+            margin: 0 25px;
+
+            &:not(:last-child) {
+
+                &::before,
+                &::after {
+                    right: -30px;
+                }
+
+                &::before {
+                    top: 45px;
+                }
+
+                &::after {
+                    bottom: 45px;
+                }
+            }
+        }
+
+        &__numbers {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 30px;
+
+        &__item {
+            width: 90px;
+            height: 90px;
+            margin: 0 38px 0 0;
+
+            &:not(:last-child) {
+
+                &::before,
+                &::after {
+                    right: -23px;
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                }
+
+
+                &::before {
+                    top: 50px;
+                }
+
+                &::after {
+                    bottom: 50px;
+                }
+            }
+        }
+
+        &__numbers {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 10px;
+
+        &__item {
+            width: 60px;
+            height: 60px;
+            margin-right: 16px;
+
+            &:not(:last-child) {
+
+                &::before,
+                &::after {
+                    right: -10px;
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                }
+
+
+                &::before {
+                    top: 32px;
+                }
+
+                &::after {
+                    bottom: 32px;
+                }
+            }
+
+            &:nth-child(n + 3) {
+                #{$root} {
+
+                    &__text {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__numbers {
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        &__text-mobile {
+            display: block;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__ended-bg {
+            display: flex;
+            align-items: center;
+
+            .image {
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.learnmore-social-block {
+    padding-top: 89px;
+    padding-bottom: 1px;
+
+    @include my-media(991) {
+        padding-top: 91px;
+        padding-bottom: 31px;
+    }
+
+    @include phone-only {
+        padding: 45px 0 46px;
+    }
+}
+
+.learnmore-socials {
+    display: flex;
+    justify-content: space-between;
+    margin: 42px -10px 0;
+
+    &__item {
+        position: relative;
+        width: 12.926%;
+        height: 0;
+        margin: 0 10px;
+        padding-bottom: 12.926%;
+        text-align: center;
+        color: $color-white;
+
+        &:hover {
+            color: $color-black;
+        }
+
+        .ep-icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin-top: -22px;
+            font-size: 44px;
+        }
+
+        &--facebook {
+            background: $color-facebook;
+        }
+
+        &--twitter {
+            background: $color-twitter;
+        }
+
+        &--pinterest {
+            background: $color-pinterest;
+        }
+
+        &--linkedin {
+            background: $color-linkedin;
+        }
+
+        &--youtube {
+            background: $color-youtube;
+        }
+
+        &--instagram {
+            background: $color-instagram;
+        }
+
+        &--whatsapp {
+            background: $color-whatsapp;
+        }
+    }
+
+    @include tablet-landscape-up {
+        margin-left: -5px;
+        margin-right: -5px;
+
+        &__item {
+            margin-left: 5px;
+            margin-right: 5px;
+
+            .ep-icon {
+                margin-top: -17px;
+                font-size: 34px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        .ep-icon {
+            margin-top: -9px;
+            font-size: 18px;
+        }
+    }
+}

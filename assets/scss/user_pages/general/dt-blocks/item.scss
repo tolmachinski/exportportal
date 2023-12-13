@@ -1,0 +1,62 @@
+.dt-new {
+
+    &__item-td {
+        display: flex;
+    }
+
+    &__item-img-wrap {
+        width: 100px;
+        height: 80px;
+
+        .image {
+            width: 100%;
+            max-height: 100%;
+
+            @include object-fit(cover);
+        }
+    }
+
+    &__item-content {
+        width: calc(100% - 115px);
+        margin-left: 15px;
+    }
+
+    &__item-text {
+
+        @include p161616(true);
+
+        @include text-line-ellipsis;
+
+        word-break: break-word;
+    }
+
+    &__item-discount {
+
+        @include p141414;
+
+        color: $color-gray;
+    }
+
+    @include my-media(575) {
+
+        &__item-td {
+            flex-direction: column;
+        }
+
+        &__item-img-wrap {
+            width: 150px;
+            height: 120px;
+            max-height: initial;
+            margin: 0 auto;
+
+            .image {
+                height: 100%;
+            }
+        }
+
+        &__item-content {
+            width: 100%;
+            margin: 10px 0 0;
+        }
+    }
+}

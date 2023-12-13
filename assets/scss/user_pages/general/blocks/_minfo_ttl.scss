@@ -1,0 +1,15 @@
+.minfo-ttl {
+    padding: 25px 0;
+
+    &.fs-72 {
+        line-height: 74px;
+    }
+
+    @include my-media(480) {
+
+        &.fs-72 {
+            font-size: 55px !important;
+            line-height: 57px !important;
+        }
+    }
+}

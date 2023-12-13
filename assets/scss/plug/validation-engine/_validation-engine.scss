@@ -1,0 +1,196 @@
+.formErrorInsideDialog{
+	&.formError {
+		z-index: 4;
+
+		.formErrorContent { z-index: 5; }
+
+		.formErrorArrow { z-index: 6; }
+	}
+}
+
+.inputContainer {
+	position: relative;
+	float: left;
+}
+
+.formErrorTtl{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+	@include text-nowrap;
+
+	.txt{
+		font-weight: 500;
+	}
+}
+
+.formError {
+	position: absolute;
+	left: 0;
+	display: none;
+	cursor: pointer;
+	z-index: 2;
+
+	&.hide{
+		display: none !important;
+		opacity: 0 !important;
+	}
+
+	&.show{
+		display: block !important;
+		opacity: 1 !important;
+	}
+
+	~ .validengine-border{
+		background-image: url('../../../images/required-circle.png');
+		background-position: calc( 100% - 5px ) 5px;
+		background-repeat: no-repeat;
+		border: 1px solid $color-red !important;
+
+		&.multiple-epselect{
+			background: none!important;
+			border: none!important;
+
+			.multiple-epselect__input{
+				position: relative;
+				background-image: url('../../../images/required-circle.png');
+				background-position: calc( 100% - 5px ) 5px;
+				background-repeat: no-repeat;
+				border: 1px solid $color-red !important;
+				background: #fff url(../../../images/arrow-select-new.png) right center no-repeat;
+
+				&:before{
+					content: "";
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					width: 7px;
+					height: 7px;
+					background: $color-red;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.select2-selection--multiple,
+		.select2-selection--single{
+			min-height: 38px !important;
+			height: 38px !important;
+			border: none !important;
+
+			.select2-selection__arrow{
+				height: 36px !important;
+				background-image: url('../../../images/required-circle.png');
+				background-position: calc( 100% - 5px ) 5px;
+				background-repeat: no-repeat;
+			}
+		}
+    }
+
+    ~ select.validengine-border{
+        background-image: url('../../../images/required-circle.png'), url('../../../images/arrow-select-new.png');
+        background-position: calc( 100% - 5px ) 5px, right center;
+        .inputs-40 &{
+            ~ select.validengine-border{
+                background-image: url('../../../images/required-circle.png'), url('../../../images/arrow-select-new2.png');
+            }
+        }
+    }
+
+	.formErrorContent {
+		position:relative;
+		width: 100%;
+		min-width: 140px;
+		padding: 7px 21px;
+		color: $color-black;
+		font-size: 14px;
+		line-height: 18px;
+		background: $color-red-light;
+		z-index: 2;
+
+		.ep-icon_remove-stroke{
+			position: absolute;
+			top: 20px;
+			right: 15px;
+			font-size: 10px;
+		}
+
+		@include my-media(991){
+			padding: 10px;
+		}
+	}
+
+	.formErrorArrow {
+		width: 15px;
+		margin: -2px 0 0 13px;
+		position:relative;
+		z-index: 3;
+
+		div {
+			font-size: 0px;
+			height: 1px;
+			background: $color-red-light;
+			margin: 0 auto;
+			line-height: 0;
+			font-size: 0;
+			display: block;
+		}
+
+		.line10 { width: 15px;}
+		.line9 { width: 13px;}
+		.line8 { width: 11px;}
+		.line7 { width: 9px;}
+		.line6 { width: 7px;}
+		.line5 { width: 5px;}
+		.line4 { width: 3px;}
+		.line3 { width: 1px;}
+	}
+
+	.formErrorArrowBottom {
+		margin: 0px 0 0 12px;
+		top:2px;
+	}
+}
+
+.ajaxSubmit {
+	padding: 20px;
+	background: $color-green-light;
+	display: none
+}
+
+.greenPopup{
+	.formErrorContent {
+		background: $color-green-light;
+		color: $color-green;
+	}
+
+	.formErrorArrow div {
+		background: $color-green-light;
+		color: $color-green;
+	}
+
+	~ .validengine-border{
+		border: 1px solid $color-black !important;
+	}
+}
+
+.blackPopup{
+	.formErrorContent {
+		background: $color-black;
+		color: $color-white;
+	}
+
+	.formErrorArrow div {
+		background: $color-black;
+		color: $color-white;
+	}
+
+	~ .validengine-border{
+		border: 1px solid $color-black !important;
+	}
+}
+
+body[dir='rtl'] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+	margin: -2px 13px 0 0;
+}

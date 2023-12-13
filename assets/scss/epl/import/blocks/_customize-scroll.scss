@@ -1,0 +1,23 @@
+
+@media (hover: hover) {
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: $gray-light $gray-lighter;
+
+        &::-webkit-scrollbar-track {
+            margin-left: 5px;
+            background-color: $gray-lighter;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            margin-left: 5px;
+            background-color: $gray-lighter;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $gray-light;
+        }
+    }
+}

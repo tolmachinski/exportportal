@@ -1,0 +1,7 @@
+.grecaptcha-badge {
+    bottom: 66px !important;
+
+    @include my-media(991) {
+        bottom: 55px !important;
+    }
+}

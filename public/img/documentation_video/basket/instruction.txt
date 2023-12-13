@@ -1,0 +1,101 @@
+﻿exportportal.com/user_guide/popup_forms/show_doc/buyer_basket_doc?user_type=buyer
+1_basket_widget
+1) Для добавления товара в корзину
+нажимаем кнопку "Add to basket"
+Click the "Add to basket" button for adding the item to the basket
+
+2) Все товар добавленные в корзину
+можно просмотреть в блоке 
+"Корзина" который находится 
+в хидере сайта
+All items added to basket can be viewed in the "Basket" block on the site's header
+
+3) Все товары сгрупперованы 
+по блокам с продавцами
+All items are sorted by blocks with sellers
+
+4) У товара можно просмотреть 
+некоторые детали заказа и 
+удалить товар из корзины
+You can view the order details and remove the item from the basket
+
+5) При нажатии кнопки 
+"Го ту баскет" мы переходим на 
+основную страницу корзины
+On clicking the "Go to basket" button you are transferred to the main basket page
+------------------------------
+
+2_basket_blocks
+1) Блок с названием 
+страницы 
+Title page block
+
+2) Блок со списком продавцов
+Block with the list of sellers
+
+3) Блок с товарами 
+сгруппероваными по продавцам
+Block with items grouped by sellers
+------------------------
+
+3_basket_seller_blocks
+1) Блок с выбранным продавцом
+Block with the selected seller
+
+2) Блок с товарами выбранного
+ продавца
+Block with the items by the selected seller
+--------------------------------- 
+
+4_basket_seller
+1) Экшины одного товара
+Actions for one item
+
+2) Экшин для request shipping 
+estimate
+Action for sending the shipping estimate request
+
+3) Экшин просмотра страницы 
+товара
+Action for viewing the item page
+
+4) Экшин удаления товара из 
+корзины
+Action for removing the item from the basket
+
+5) Экшин создания ордера по 
+одному товару
+Action for creating order for one item
+
+6) Экшины по товарам 
+сгрупперованым по продавцу
+Action for items grouped by seller
+
+7) Экшин request shipping estimate
+по товарам сгрупперованым по 
+продавцу
+Action for sending the shipping estimate request for items grouped by seller
+
+8) Создать ордер по товарам 
+сгрупперованым по продавцу
+Create the order for items grouped by seller
+--0-----------------------------
+
+5_basket_order
+1) На жимаем кнопку создания 
+ордера по товару 
+"Create order by the item"
+Click the "Create order by the item" button to create order for one item
+
+2) Вводим аддрес доставки 
+и подтверждаем данные
+Insert the delivery address and confirm data
+
+3) Нажимаем кнопку создания 
+ордера по товарам выбранного
+продавца "Create order"
+Click the "Create order" button to create order for items grouped by seller
+
+4) Вводим аддрес доставки 
+и подтверждаем данные
+Insert the delivery address and confirm data

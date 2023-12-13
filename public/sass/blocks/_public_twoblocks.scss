@@ -1,0 +1,68 @@
+.public-twoblocks{
+	display: flex;
+	align-items: center;
+	padding-top: 100px;
+
+	&__item{
+		width: 50%;
+
+		.image{
+			width: 100%;
+			@include object-fit(cover, center);
+		}
+
+		&:first-child{
+			margin-right: 50px;
+		}
+
+		&:last-child{
+			margin-left: 50px;
+		}
+	}
+
+	&__ttl{
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 500;
+	}
+
+	&__paragraph{
+		padding-top: 30px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.btn{
+		margin-top: 70px;
+    }
+
+    @include my-media(991){
+        &__paragraph{
+			font-size: 21px;
+			line-height: 24px;
+		}
+    }
+
+    @include phone-only{
+        flex-direction: column;
+		padding-top: 50px;
+
+		&__item{
+			width: auto;
+			margin: 0 !important;
+			text-align: center;
+
+			.image{
+				max-width: 100%;
+				width: auto;
+				margin-bottom: 15px;
+				padding-right: 0;
+			}
+		}
+
+		&__img{
+			order: 1;
+			padding-top: 20px;
+		}
+    }
+}

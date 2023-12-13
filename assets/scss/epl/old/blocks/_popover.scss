@@ -1,0 +1,17 @@
+.popover {
+	border: 1px solid $black;
+
+	&--w100pr {
+		max-width: 500px;
+	}
+}
+
+.bs-popover-top .arrow::before,
+.bs-popover-auto[x-placement^="top"] .arrow::before {
+	border-top-color: $black;
+}
+
+.bs-popover-bottom .arrow::before,
+.bs-popover-auto[x-placement^="bottom"] .arrow::before {
+	border-bottom-color: $black;
+}

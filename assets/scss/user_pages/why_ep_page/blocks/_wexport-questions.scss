@@ -1,0 +1,134 @@
+.wexport-questions {
+    position: relative;
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: calc(50% + 15px);
+        z-index: 1;
+        width: 570px;
+        padding: 50px 40px;
+        background: $color-white;
+        transform: translateY(-49.75%);
+        text-align: center;
+    }
+
+    &__bg {
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            min-height: 625px;
+            object-fit: cover;
+        }
+    }
+
+    &__icon {
+
+        .image {
+            width: 86px;
+            height: 84px;
+        }
+    }
+
+    &__ttl {
+        margin-top: 16px;
+
+        @include h423024;
+    }
+
+    &__subttl {
+        margin-top: 14px;
+
+        @include p181816;
+    }
+
+    &__btn {
+        width: 250px;
+        margin-top: 14px;
+    }
+
+    @include my-media(1200) {
+
+        &__content {
+            left: calc(45% + 10px);
+            width: 430px;
+            padding: 30px;
+            transform: translateY(-50%);
+        }
+
+        &__ttl {
+            margin-top: 15px;
+        }
+
+        &__subttl {
+            margin-top: 13px;
+        }
+    }
+
+    @include my-media (991) {
+
+        &__bg {
+
+            .image {
+                min-height: unset;
+            }
+        }
+
+        &__icon {
+
+            .image {
+                width: 56px;
+                height: 54px;
+            }
+        }
+
+        &__content {
+            left: calc(35% + 9px);
+        }
+    }
+
+    @include phone-only {
+
+        &__bg {
+            overflow: hidden;
+
+            .image {
+                min-width: 767px;
+            }
+        }
+
+        &__content {
+            top: 50%;
+            left: 50%;
+            width: 290px;
+            padding: 15px;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @include my-media(425) {
+
+        &__bg {
+
+            .image {
+                min-width: unset;
+                min-height: 400px;
+            }
+        }
+
+        &__ttl {
+            max-width: 200px;
+            margin: 15px auto 0;
+        }
+
+        &__subttl {
+            margin-top: 8px;
+        }
+
+        &__btn {
+            width: 200px;
+            margin-top: 9px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.iradiobox,
+.icheckbox{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	border: 1px solid $color-gray;
+
+	&.disabled{
+		border-color: $color-gray-light;
+	}
+
+	&.checked{
+		&:before{
+			content: "";
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			background: #999;
+		}
+	}
+
+	&--20{
+		width: 20px;
+		height: 20px;
+
+		&.checked{
+			&:before{
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+
+	&--green{
+		border-color: $color-green;
+
+		&.checked{
+
+			 + label{color: $color-black !important;}
+
+			&:before{
+				background: $color-green;
+			}
+		}
+	}
+
+	&--gray{
+		border-color: $color-gray-light;
+
+		&.checked{
+			border-color: $color-gray;
+
+			&:before{
+				background: $color-gray;
+			}
+		}
+	}
+
+	&--black{
+		border-color: $color-black;
+
+		&.checked{
+			&:before{
+				background: $color-black;
+			}
+		}
+	}
+
+	&--white{
+		border-color: $color-white;
+
+		&.checked{
+			&:before{
+				background: $color-white;
+			}
+		}
+	}
+
+	&--blue{
+		border-color: $color-gray;
+
+		&.checked{
+			&:before{
+				background: $color-blue2;
+			}
+		}
+	}
+}

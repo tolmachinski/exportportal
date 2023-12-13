@@ -1,0 +1,11 @@
+.half-input {
+	max-width: 50%;
+
+	&--mw-305 {
+		max-width: 305px;
+	}
+
+	@include phone-only {
+		max-width: 100%;
+    }
+}

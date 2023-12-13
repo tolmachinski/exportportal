@@ -1,0 +1,98 @@
+.flex-display {
+ display: flex !important;
+ }
+
+.flex-display--i {
+ display: inline-flex !important;
+ }
+
+.flex-d--r {
+ flex-direction: row;
+ }
+
+.flex-d--c {
+ flex-direction: column;
+ }
+
+.flex-jc--sb {
+ justify-content: space-between;
+ }
+
+.flex-jc--c {
+ justify-content: center;
+ }
+
+.flex-jc--fs {
+ justify-content: flex-start !important;
+ }
+
+.flex-jc--fe {
+ justify-content: flex-end;
+ }
+
+.flex-jc--sa {
+ justify-content: space-around !important;
+ }
+
+.flex-ac--sb {
+ align-content: space-between;
+ }
+
+.flex-ai--c {
+ align-items: center;
+ }
+
+.flex-as--fe {
+ align-self: flex-end;
+ }
+
+.flex-w--w {
+ flex-wrap: wrap;
+ }
+
+.flex--i {
+ flex: inherit !important;
+ }
+
+.flex--1 {
+ flex: 1 !important;
+ }
+
+.flex--0 {
+ flex: 0 !important;
+ }
+
+.order--0 {
+ order: 0 !important;
+ }
+
+.order--1 {
+ order: 1 !important;
+ }
+
+.order--2 {
+ order: 2 !important;
+ }
+
+.order--3 {
+ order: 3 !important;
+ }
+
+$i: 0;
+
+@for $i from 1 through 10 {
+	.flex-order#{$i} {
+		order: #{$i};
+	}
+}
+
+@include phone-only {
+
+    .order-md--1 {
+		order: 1 !important;
+    }
+
+    .show-column-md {
+		flex-direction: column;
+    }
+}

@@ -1,0 +1,98 @@
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.ttl-h1,
+.ttl-h2,
+.ttl-h3,
+.ttl-h4 {
+	margin: 0;
+	color: $black;
+
+	.link {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		color: inherit;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+.ttl-h1,
+h1 {
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 28px;
+
+	.link {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+    }
+}
+
+.ttl-h1 {
+
+    &--margin-50 {
+        margin: 50px 0 20px;
+    }
+
+    @include phone-only {
+
+        &--margin-50 {
+            margin: 30px 0 15px;
+        }
+
+        &--mobile-size {
+            font-size: 18px;
+        }
+    }
+}
+
+.ttl-h2,
+h2 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 22px;
+	color: $black;
+
+	.link {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+.ttl-h3,
+h3 {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 18px;
+	color: $black;
+
+	.link {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+.ttl-h4,
+h4 {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 25px;
+	color: $black;
+
+	.link {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}

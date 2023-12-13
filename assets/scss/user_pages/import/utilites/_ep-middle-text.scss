@@ -1,0 +1,46 @@
+.ep-middle-text {
+    font-size: 16px;
+	line-height: 26px;
+	color: $color-black;
+	word-wrap: break-word;
+
+    p {
+		margin-bottom: 35px;
+		font-size: 16px !important;
+		line-height: 26px !important;
+	}
+
+    strong {
+        font-weight: 500;
+    }
+
+    ul,
+	ol {
+		padding: 5px 0 20px;
+		font-size: 16px !important;
+		line-height: 22px !important;
+        color: $color-black;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+		li {
+            width: calc( 100% - 18px );
+            padding-bottom: 10px;
+            transform: translateX(18px);
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+		}
+	}
+
+	ul {
+        list-style: disc;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+}

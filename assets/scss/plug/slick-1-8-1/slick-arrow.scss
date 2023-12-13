@@ -1,0 +1,40 @@
+.slick-arrow {
+    &.slick-arrow-custom {
+        position: absolute;
+        bottom: 50%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        color: $color-gray-light;
+        background: $color-white;
+        border: 1px solid $color-gray-light;
+        outline: none !important;
+        cursor: pointer;
+        transition: all .1s linear;
+        transform: translateY(50%);
+
+        &:hover {
+            color: $color-black;
+        }
+
+        @include touch {
+            &:hover {
+                color: $color-gray-light;
+            }
+
+            &:active {
+                color: $color-black;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        &.slick-arrow-custom {
+            display: none;
+        }
+    }
+}

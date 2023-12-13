@@ -1,0 +1,135 @@
+.categories-items-s {
+    width: 100%;
+    margin-bottom: 70px;
+
+    &__inner {
+        padding: 22px;
+        background: $color-gray-lighter;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__col {
+
+        &--left {
+            flex: 0 0 470px;
+        }
+
+        &--right {
+            overflow: hidden;
+            width: 100%;
+            max-width: 670px;
+            margin-left: 30px;
+        }
+    }
+
+    &__btn {
+        width: 250px;
+        margin-top: 15px;
+
+        &--md {
+            display: none;
+        }
+    }
+
+    .products {
+
+        &.slick-initialized {
+
+            &:not(:hover) {
+
+                .slick-arrow {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+        left: 7px;
+    }
+
+    .slick-next {
+        right: 8px;
+    }
+
+    @include tablet-landscape-up {
+
+        &__col {
+
+            &--right {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        margin-bottom: 50px;
+
+        &__inner {
+            padding: 30px 0;
+        }
+
+        &__row {
+            flex-direction: column;
+        }
+
+        &__col {
+
+            &--left {
+                flex: unset;
+                width: 100%;
+                text-align: center;
+            }
+
+            &--right {
+                max-width: unset;
+                margin-left: 0;
+            }
+        }
+
+        &__btn {
+
+           &--lg {
+               display: none;
+           }
+
+            &--md {
+                display: block;
+                margin: 34px auto 0;
+            }
+        }
+
+        .slick-dots {
+            bottom: -20px;
+        }
+    }
+
+    @include phone-only {
+        margin-bottom: 30px;
+
+        &__inner {
+            padding: 29px 0;
+        }
+
+
+        &__btn {
+            margin-top: 40px;
+        }
+
+        .slick-dots {
+            bottom: -26px;
+        }
+    }
+
+    @include my-media(475) {
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

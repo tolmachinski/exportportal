@@ -1,0 +1,8 @@
+.filter-result-counter {
+
+    @include h181816;
+
+    &__number {
+        color: $color-gray;
+    }
+}

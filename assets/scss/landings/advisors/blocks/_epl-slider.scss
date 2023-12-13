@@ -1,0 +1,160 @@
+.epl-slider {
+    position: relative;
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+
+    &__container {
+        height: 670px;
+    }
+
+    &__slide {
+        position: relative;
+        display: none;
+        height: 670px;
+        background: rgb(25 25 25);
+        background: linear-gradient( rgb(25 25 25 / 75%), rgb(25 25 25 / 75%));
+
+        &:first-child {
+            display: block;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &__headline {
+
+        @extend %epl-headline;
+
+        color: #fff;
+    }
+
+    &__list {
+        max-width: 800px;
+        margin: 30px auto 0;
+        padding-left: 30px;
+        padding-right: 15px;
+        color: #fff;
+    }
+
+    &__list-item {
+        position: relative;
+        margin-bottom: 22px;
+        font-size: 22px;
+        line-height: 32px;
+        color: inherit;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: -20px;
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+    }
+
+    &__text {
+        overflow: hidden;
+        width: 100%;
+        max-width: 790px;
+        max-height: 300px;
+        margin: 50px auto 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 48px;
+        line-height: 58px;
+        color: #fff;
+        text-align: center;
+    }
+
+    &__info {
+        overflow: hidden;
+        height: 100%;
+        padding-top: 75px;
+        padding-bottom: 90px;
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+    .slick-dots li {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin: 0 7px;
+        font-size: 0;
+        background-color: rgb(255 255 255 / 50%);
+        cursor: pointer;
+        border-radius: 50%;
+
+        &.slick-active {
+            background-color: #fff;
+        }
+
+        button {
+            width: inherit;
+            height: inherit;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+
+
+    @media only screen and (max-width: $break-sm) {
+        height: 850px;
+
+        &__container {
+            height: 850px;
+        }
+
+        &__slide {
+            height: 850px;
+        }
+    }
+
+    @media only screen and (max-width: $break-xs) {
+
+        &__text {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+
+        &__container {
+            height: 1000px;
+        }
+
+        &__slide {
+            height: 1000px;
+        }
+
+        height: 1000px;
+    }
+}

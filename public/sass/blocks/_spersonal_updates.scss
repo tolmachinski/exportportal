@@ -1,0 +1,44 @@
+.spersonal-updates{
+	padding-top: 30px;
+
+	&__item{
+		padding-bottom: 50px;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 25px;
+	}
+
+	&__date{
+		color: $color-gray;
+	}
+
+	&__img{
+		width: 136px;
+		height: 136px;
+		margin-right: 20px;
+		padding-top: 6px;
+	}
+
+	&__text{
+		line-height: 22px;
+
+		p{
+			line-height: 22px!important;
+		}
+    }
+
+    @include phone-only{
+        &__txt{
+            display: block;
+        }
+
+        &__img{
+            height: auto;
+            margin: 0 auto 15px auto;
+        }
+    }
+}

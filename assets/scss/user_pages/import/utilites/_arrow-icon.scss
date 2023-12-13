@@ -1,0 +1,16 @@
+.crafted-arrow {
+    width: 7px;
+    height: 7px;
+    margin: 0 5px 0 2px;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+
+    &.left {
+        transform: rotate(45deg);
+    }
+
+    &.right {
+        transform: rotate(-135deg);
+    }
+}

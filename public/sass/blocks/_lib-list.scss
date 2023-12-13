@@ -1,0 +1,162 @@
+.lib-list{
+	padding-bottom: 30px;
+
+	&__item{
+		padding: 30px 0;
+		border-bottom: 1px solid $color-gray-light;
+
+		&:first-child{
+			border-top: 1px solid $color-gray-light;
+		}
+	}
+
+	&__ttl{
+		padding-bottom: 10px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	&__user{
+		padding-bottom: 8px;
+		font-size: 14px;
+
+		.ep-icon{
+			font-size: 20px;
+			color: $color-blue2;
+		}
+	}
+
+	&__addr{
+		font-size: 16px;
+		line-height: 25px;
+
+		.image{
+			margin-right: 8px;
+		}
+	}
+
+	&__txt{
+		padding: 10px 0;
+		font-size: 16px;
+		line-height: 22px
+	}
+
+	&__params{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-top: 10px;
+	}
+
+	&__param{
+		display: flex;
+		align-items: center;
+		flex: 1;
+		padding-right: 60px;
+		padding-bottom: 5px;
+		color: $color-gray;
+		white-space: nowrap;
+
+		&:last-child{
+			padding-right: 0;
+		}
+
+		.ep-icon{
+			padding-right: 20px;
+		}
+
+		.link{
+			color: $color-gray;
+
+			&:hover{
+				color: $color-blue2;
+			}
+		}
+	}
+
+	&__columns{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 35px;
+	}
+
+	&__column{
+		width: 33.33%;
+		padding-right: 8%;
+
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+
+	&__column-item{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 0;
+	}
+
+	&__column-name{
+		padding-right: 15px;
+		@include text-nowrap;
+
+		.ep-icon{
+			margin-top: -2px;
+			color: $color-gray;
+		}
+	}
+
+	&__column-value{
+		font-weight: 500;
+    }
+
+    @include my-media(1024){
+        &__columns{
+			flex-wrap: wrap;
+		}
+
+		&__column{
+			width: 50%;
+			padding-right: 8%;
+
+			&:last-child{
+				padding-right: 8%;
+			}
+		}
+    }
+
+    @include phone-only{
+        &__params{
+            justify-content: space-between;
+        }
+
+        &__param{
+            width: auto;
+            padding-right: 10px;
+        }
+
+        &__columns{
+            flex-wrap: wrap;
+        }
+
+        &__column{
+            width: 100%;
+            padding-right: 0;
+
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+    }
+
+    @include my-media(480){
+        &__params{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__param{
+            padding: 0 0 5px 0;
+        }
+    }
+}

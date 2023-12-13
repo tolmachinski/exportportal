@@ -1,0 +1,196 @@
+.toastui-calendar-weekday-event {
+    height: 20px !important;
+    margin: 0 10px !important;
+    border: none !important;
+}
+
+.toastui-calendar-weekday-event-title {
+    height: 100%;
+    padding-left: 0;
+}
+
+.toastui-calendar-template-allday {
+    height: 100%;
+}
+
+.toastui-calendar-weekday-events {
+    top: 11px;
+}
+
+.toastui-calendar-grid-cell-more-events {
+    height: 20px;
+    padding: 0;
+}
+
+.toastui-calendar-month .toastui-calendar-day-names {
+    height: 50px;
+    padding: 0;
+    border: 1px solid $color-gray-light;
+    border-bottom: none;
+}
+
+.toastui-calendar-day-name-item.toastui-calendar-month {
+    height: 50px;
+}
+
+.toastui-calendar-grid-cell-date {
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+}
+
+.toastui-calendar-holiday-sun,
+.toastui-calendar-template-monthDayName {
+    display: block;
+    height: 100%;
+}
+
+.toastui-calendar-month-daygrid {
+    border: 1px solid $color-gray-light;
+    border-top: none;
+}
+
+.triangle-right {
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 10px 10px;
+        border-color: transparent transparent $color-white transparent;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-color: transparent $color-white transparent transparent;
+        border-style: solid;
+        border-width: 0 10px 10px 0;
+    }
+}
+
+.toastui-calendar-see-more-container {
+    z-index: 1001;
+
+    .toastui-calendar-weekday-event {
+        margin: 5px 0 !important;
+    }
+}
+
+.toastui-calendar-see-more-header {
+    display: flex;
+    align-items: center;
+    height: initial !important;
+    margin: 0 0 2px !important;
+    padding: 13px 14px 0 !important;
+}
+
+.toastui-calendar-grid-cell-footer {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+
+    .toastui-calendar-grid-cell-date {
+        display: none;
+    }
+}
+
+.toastui-calendar-template-monthGridFooterExceed {
+    display: flex;
+    height: 100%;
+}
+
+.toastui-calendar-more-title-date {
+    margin: 0 5px 0 0;
+
+    @include p161616;
+
+    color: $color-black;
+}
+
+.toastui-calendar-more-title-day {
+
+    @include p121212;
+
+    color: $color-black;
+}
+
+.toastui-calendar-popup-button.toastui-calendar-popup-close {
+    top: 14px;
+    right: 14px;
+}
+
+.toastui-calendar-month-more-list {
+    overflow: initial !important;
+    height: initial !important;
+    padding: 0 14px;
+}
+
+.toastui-calendar-popup-overlay {
+    display: none !important;
+}
+
+@include my-media(991) {
+
+    .toastui-calendar-month .toastui-calendar-day-names {
+        height: 41px;
+    }
+
+    .toastui-calendar-day-name-item.toastui-calendar-month {
+        height: 41px;
+        padding: 0 5px;
+    }
+
+    .toastui-calendar-weekday-events {
+        top: 9px;
+    }
+
+    .toastui-calendar-weekday-event {
+        margin: 0 5px !important;
+    }
+
+    .toastui-calendar-grid-cell-date {
+        width: 22px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    .toastui-calendar-grid-cell-footer {
+        margin: 0 5px;
+    }
+}
+
+@include phone-only {
+
+    .toastui-calendar-see-more-container {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+    }
+
+    .toastui-calendar-month .toastui-calendar-day-names {
+        height: 31px;
+    }
+
+    .toastui-calendar-day-name-item.toastui-calendar-month {
+        height: 31px;
+    }
+
+    .toastui-calendar-weekday-events {
+        top: 16px;
+    }
+
+    .toastui-calendar-weekday-event {
+        height: 15px !important;
+    }
+}

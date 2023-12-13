@@ -1,0 +1,53 @@
+.strong-matches {
+    overflow: hidden;
+    height: 111px;
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+
+        @include h423024;
+
+        text-align: center;
+        color: $color-white;
+    }
+
+    @include my-media(991) {
+        height: 97px;
+    }
+
+    @include phone-extra-small {
+        height: 99px;
+    }
+
+    @include retina-display(1.5) {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+}

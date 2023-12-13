@@ -1,0 +1,46 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "plugins": ["prettier"],
+    "extends": ["eslint:recommended", "airbnb-base", "plugin:prettier/recommended"],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module",
+        "allowImportExportEverywhere": false,
+        "requireConfigFile": false,
+        "babelOptions": {
+            "plugins": [
+                "@babel/plugin-transform-runtime"
+            ]
+        },
+        "codeFrame": true
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        }
+    },
+    "rules": {
+        "no-bitwise": ["error", { "allow": ["~"] }],
+        "func-names": ["warn", "as-needed", { "generators": "as-needed" }],
+        "linebreak-style": ["error", "unix"],
+        "camelcase": [
+            "warn",
+            {
+                "properties": "always"
+            }
+        ],
+        "consistent-this": ["warn", "self", "that"]
+    },
+    "overrides": [
+        {
+            "files": ["assets/**/*.js"],
+            "excludedFiles": "*.test.js"
+        }
+    ]
+}

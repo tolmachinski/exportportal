@@ -1,0 +1,244 @@
+.giveaway-intro {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    min-height: 770px;
+    padding-bottom: 100px;
+
+    &__content {
+        width: 100%;
+        max-width: 685px;
+    }
+
+    &__title,
+    &__description {
+        color: $color-white;
+    }
+
+    &__title {
+
+        @include h725030;
+    }
+
+    &__description {
+        margin-top: 15px;
+
+        @include p181816;
+    }
+
+    &__btn {
+        width: 250px;
+        margin-top: 30px;
+    }
+
+    &__prize-badge {
+        display: none;
+        height: 98px;
+
+        .image {
+            width: 200px;
+            height: 92px;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+
+        .image {
+            width: 100%;
+            height: 770px;
+            object-fit: cover;
+            object-position: right;
+        }
+    }
+
+    &--winner {
+        padding-bottom: 128px;
+
+        #{$root} {
+
+            &__content {
+                max-width: none;
+            }
+
+            &__title {
+                max-width: 685px;
+            }
+
+            &__description {
+                max-width: 720px;
+            }
+        }
+    }
+
+    @include my-media(1921, 'min') {
+
+        &__background {
+            width: 100%;
+
+            .image {
+                height: auto;
+            }
+        }
+    }
+
+    @include my-media(1250) {
+        min-height: 720px;
+        padding-bottom: 50px;
+
+        &__content {
+            position: relative;
+            max-width: none;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 50px;
+            line-height: 58px;
+        }
+
+        &__description {
+            margin: 10px auto 0;
+
+            br {
+                display: none;
+            }
+        }
+
+        &__btn {
+            width: 250px;
+        }
+
+        &__prize-badge {
+            display: block;
+        }
+
+        &__background {
+            width: 100%;
+            height: 100%;
+
+            .image {
+                height: 1050px;
+                object-position: top;
+            }
+        }
+
+        &--winner {
+            padding-bottom: 50px;
+
+            #{$root} {
+
+                &__title {
+                    max-width: 880px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    @include my-media(991) {
+        min-height: 640px;
+        margin-top: 60px;
+
+        &__background {
+
+            .image {
+                height: 100%;
+            }
+        }
+
+        &__title {
+            max-width: 475px;
+            margin: 0 auto;
+        }
+
+        &--winner {
+            #{$root} {
+
+                &__title {
+                    max-width: 700px;
+                }
+            }
+        }
+    }
+
+    @include phone-only {
+        min-height: 526px;
+        margin-top: 50px;
+
+        &__title {
+            font-size: 30px;
+            line-height: 38px;
+        }
+
+        &--winner {
+            #{$root} {
+
+                &__title {
+                    max-width: 530px;
+                }
+
+                &__description {
+                    max-width: 600px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        &__btn {
+            margin-top: 8px;
+        }
+
+        &__prize-badge {
+            height: 77px;
+
+            .image {
+                width: 150px;
+                height: 70px;
+            }
+        }
+    }
+
+    @include my-media(625) {
+
+        &--winner {
+            #{$root} {
+
+                &__description {
+                    max-width: 530px;
+                }
+            }
+        }
+    }
+
+    @include phone-extra-small {
+        padding-bottom: 30px;
+
+        &__btn {
+            width: 290px;
+        }
+    }
+
+    @include my-media(375) {
+
+        &__title {
+            max-width: 285px;
+        }
+
+        &--winner {
+            #{$root} {
+
+                &__title {
+                    max-width: 285px;
+                }
+            }
+        }
+    }
+}

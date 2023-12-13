@@ -1,0 +1,23 @@
+.video-play {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+
+	@include img-center;
+
+	&__circle {
+		width: 60px;
+		height: 60px;
+		border: 3px solid $color-white;
+		border-radius: 50%;
+	}
+
+	.ep-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -8px;
+		margin-left: -8px;
+		color: $color-white;
+	}
+}

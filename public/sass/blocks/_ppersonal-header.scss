@@ -1,0 +1,12 @@
+.ppersonal-header{
+	&__rating{
+		.rating-symbol-wr{
+			display: block;
+			margin-bottom: 3px;
+		}
+	}
+
+	&__group{
+		color: $color-green;
+	}
+}

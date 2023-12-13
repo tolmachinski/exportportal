@@ -1,0 +1,20 @@
+.shadow-header-top {
+	position: fixed;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 21;
+	display: none;
+	overflow: auto;
+	width: auto;
+	height: auto;
+	background: rgb(0 0 0 / 30%);
+}
+
+.fancybox-lock {
+
+	.shadow-header-top {
+		overflow-y: scroll;
+	}
+}

@@ -1,0 +1,54 @@
+.giveaway-contests-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 13px !important;
+
+    .btn {
+        width: 50%;
+        max-width: 200px;
+        margin: 0 5px;
+
+        &:only-of-type {
+            width: 100%;
+        }
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .checkbox-list {
+        width: 100%;
+        margin-top: 13px;
+        text-align: center;
+
+        &__label {
+            justify-content: center;
+        }
+
+        &__txt {
+            padding-left: 10px;
+        }
+    }
+
+    @include phone-extra-small {
+        margin-top: 15px !important;
+
+        .btn {
+            max-width: 130px;
+        }
+
+        .checkbox-list {
+            margin-top: 14px;
+
+            &__txt {
+                line-height: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.advices-b2b {
+    margin-top: 10px;
+
+    &__item {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+
+    &__text {
+        width: 88%;
+        margin-left: 25px;
+    }
+
+    &__text-top {
+        display: flex;
+    }
+
+    &__name {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: $color-black;
+        margin-right: 20px;
+        max-width: 180px;
+        display: block;
+        @include text-nowrap;
+    }
+
+    .dropdown {
+        margin-left: auto;
+        .dropdown-menu {
+            min-width: 50px;
+        }
+    }
+
+    &__message {
+        margin-bottom: 30px;
+    }
+
+    @include phone-only{
+        margin-top: 50px;
+
+        &__item {
+            display: block;
+        }
+
+        &__img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 15px auto;
+        }
+
+        &__text {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    @include my-media(660){
+
+        &__item {
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &__text-top {
+            flex-wrap: wrap;
+        }
+
+        &__name {
+            margin-bottom: 15px;
+        }
+
+        &__date {
+            width: 80%;
+            margin: 0 0 15px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.seller-products-wr {
+    @include my-media(1200) {
+        .products {
+            &__item {
+                min-width: 234px;
+            }
+        }
+    }
+
+    @include phone-only {
+        .products {
+            &__item {
+                min-width: 180px;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+        .products {
+            &__item {
+                min-width: 147.5px;
+            }
+        }
+    }
+}

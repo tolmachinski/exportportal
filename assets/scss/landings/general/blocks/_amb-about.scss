@@ -1,0 +1,83 @@
+.ambassador {
+    // .ambassador__about-container
+
+    &__about-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    // .ambassador__about-gif
+
+    &__about-gif {
+        width: 160px;
+        margin: 0 auto 22px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // .ambassador__about-title
+
+    &__about-title {
+        margin-bottom: 19px;
+    }
+
+    // .ambassador__about-text
+
+    &__about-text {
+        margin-bottom: 29px;
+        margin-left: 0;
+
+        &:not(:last-of-type) {
+            margin-bottom: 13px;
+        }
+    }
+
+    &__about-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    @include my-media(991) {
+
+        &__about-title {
+            margin-bottom: 17px;
+        }
+
+        &__about-text {
+            margin-bottom: 26px;
+            margin-left: 0;
+
+            &:not(:last-of-type) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__about-gif {
+            margin: 0 auto 21px;
+        }
+
+        &__about-title {
+            margin-bottom: 13px;
+        }
+
+        &__about-text {
+            margin-bottom: 12px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__about-btn {
+            margin-left: -2px;
+        }
+    }
+}

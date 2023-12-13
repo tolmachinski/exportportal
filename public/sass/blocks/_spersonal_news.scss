@@ -1,0 +1,119 @@
+.spersonal-news{
+	padding-top: 30px;
+
+	&__item{
+		padding-bottom: 50px;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 25px;
+	}
+
+	&__date{
+		color: $color-gray;
+	}
+
+	&__ttl{
+		margin-bottom: 10px;
+		@include fs-ttl;
+
+		.link{
+			color: $color-black;
+		}
+	}
+
+	&__img{
+		width: 136px;
+		max-height: 103px;
+        margin-right: 20px;
+        overflow: hidden;
+	}
+
+	@include phone-extra-small{
+		&__txt{
+			display: block;
+		}
+
+		&__img{
+			height: 103px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.spersonal-news-detail{
+
+	&__date{
+		padding-bottom: 15px;
+		color: $color-gray;
+	}
+
+	&__img{
+		margin: 0 auto 20px auto;
+		text-align:center;
+
+		.image{
+			max-width: 100%;
+		}
+	}
+}
+
+.spersonal-news-comments{
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+		border-bottom: 1px solid $color-gray;
+
+		&:first-child{
+			padding-top: 0;
+		}
+	}
+
+	&__img{
+		width: 75px;
+		height: 75px;
+		margin-right: 30px;
+		background: $color-gray-lighter;
+		border-radius: 50%;
+		text-align: center;
+		overflow: hidden;
+
+		.image{
+			max-height: 100%;
+		}
+	}
+
+	&__detail{
+		flex: 1;
+		width: 100%;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__name{
+		@include fs-names;
+		color: $color-gray-light;
+	}
+
+	&__date{
+		color: $color-gray-light;
+	}
+
+	&__ttl{
+		padding-top: 10px;
+		@include fs-ttl;
+	}
+
+	&__txt{
+		padding-top: 10px;
+		word-wrap: break-word;
+	}
+}

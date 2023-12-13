@@ -1,0 +1,119 @@
+.maintenance-mode {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-white;
+    letter-spacing: 0;
+    background: $color-black-light;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        padding: 0 40px;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__icon {
+        margin-right: 9px;
+        fill: $color-red;
+    }
+
+    &__days {
+        align-self: flex-end;
+        padding-left: 5px;
+        padding-right: 10px;
+        font-size: 12px;
+        line-height: 30px;
+        color: $color-gray;
+        text-transform: uppercase;
+    }
+
+    &__txt-tablet {
+        display: none;
+    }
+
+    &__txt-mobile {
+        display: none;
+    }
+
+    &__counter {
+        margin-top: 10px;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 46px;
+    }
+
+    &__timer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+
+    @include my-media(1200) {
+
+        &__inner {
+            padding: 0 15px;
+        }
+
+        &__txt {
+            font-size: 14px;
+        }
+    }
+
+    @include my-media(1050) {
+
+        &__txt {
+            display: none;
+        }
+
+        &__txt-tablet {
+            display: inline;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__inner {
+            padding: 0 20px;
+        }
+
+        &__active {
+            padding-top: 90px;
+        }
+    }
+
+    @include my-media(767) {
+
+        &__txt-tablet {
+            display: none;
+        }
+
+        &__txt-mobile {
+            display: inline;
+        }
+    }
+
+    @include my-media(480) {
+
+        &__days {
+            line-height: 16px;
+        }
+
+        &__counter {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        &__timer {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+}

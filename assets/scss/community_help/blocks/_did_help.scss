@@ -1,0 +1,141 @@
+.did-help {
+	display: flex;
+    align-items: center;
+    padding-right: 12px;
+	text-align: center;
+	font-weight: 400;
+
+	&__txt {
+		padding-right: 20px;
+		color: $color-gray;
+    }
+
+    &--mobile {
+        display: none;
+    }
+
+	.didhelp-btn {
+        display: inline-block;
+        margin-right: 12px;
+        padding-right: 22px;
+
+        &:last-child {
+            margin-right: -15px;
+            padding-right: 15px;
+        }
+
+        &--up {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -3px;
+                left: -1px;
+                z-index: 1;
+                display: block;
+                border: 8px solid transparent;
+                border-bottom: 8px solid $color-gray;
+            }
+        }
+
+        &--down {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: -2px;
+                z-index: 1;
+                display: block;
+                border: 8px solid transparent;
+                border-top: 8px solid $color-gray;
+            }
+        }
+
+		&.disabled {
+
+			.ep-icon_arrow-line-up,
+			.ep-icon_arrow-line-down {
+				color: $color-green;
+			}
+
+			&:hover {
+				cursor: default;
+			}
+        }
+
+        &.active {
+
+            &:last-child {
+                padding-right: 22px;
+            }
+        }
+
+		&:hover {
+			cursor: pointer;
+
+			.ep-icon_arrow-line-down {
+				color: $color-red;
+            }
+
+            .ep-icon_arrow-line-up {
+                color: $color-green;
+            }
+		}
+	}
+
+	.ep-icon_arrow-line-up,
+	.ep-icon_arrow-line-down {
+		font-size: rem(14px);
+		line-height: lh(24);
+		color: $color-gray;
+	}
+
+	.counter-b {
+		padding-right: 9px;
+		font-size: rem(16px);
+    }
+
+    @include my-media(992, "min") {
+
+        .didhelp-btn {
+
+            &--up {
+
+                &:hover, &.active {
+
+                    &::after {
+                        border-bottom: 8px solid $color-green;
+                    }
+                }
+            }
+
+            &--down {
+
+                &:hover, &.active {
+
+                    &::after {
+                        border-top: 8px solid $color-red;
+                    }
+                }
+            }
+        }
+    }
+
+    @include my-media(576) {
+        display: none;
+
+        &--mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 11px;
+        }
+
+        .counter-b {
+            padding-right: 8px;
+        }
+    }
+}

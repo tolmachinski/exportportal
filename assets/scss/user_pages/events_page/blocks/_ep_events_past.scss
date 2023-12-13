@@ -1,0 +1,125 @@
+.ep-events-past {
+    $root: &;
+
+    margin-bottom: 25px;
+
+    &__heading {
+        margin-top: 52px;
+    }
+
+    &__heading-ttl {
+
+        @include h262018;
+    }
+
+    &__list {
+        width: 100%;
+        margin: 17px 0 30px;
+    }
+
+    &__item {
+        margin: 0 0 15px;
+        padding: 15px 29px 14px;
+        border: 1px solid $color-gray-light;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 9px;
+    }
+
+    &__type {
+        margin-right: 10px;
+        padding: 5px 15px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        color: $color-black-light;
+        text-transform: uppercase;
+        background: $color-gray-lighter;
+    }
+
+    &__ttl {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $color-black;
+        word-wrap: break-word;
+
+        &:hover {
+            color: $color-blue2;
+        }
+    }
+
+    &__date {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $color-gray;
+        text-transform: uppercase;
+    }
+
+    &__country,
+    &__place,
+    &__speaker {
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-black-light;
+    }
+
+    &__country {
+        display: flex;
+        align-items: center;
+
+        span {
+            padding-left: 5px;
+        }
+    }
+
+    &__speaker-txt-gray {
+        color: $color-gray;
+    }
+
+    &__btn {
+        width: 250px;
+    }
+
+    @include my-media(991) {
+        margin-bottom: 0;
+
+        &__heading {
+            margin-top: 50px;
+        }
+
+        &__list {
+            margin: 13px 0 15px;
+        }
+
+        &__item {
+            padding: 15px 14px 12px;
+        }
+    }
+
+    @include phone-only {
+        margin-bottom: 30px;
+
+        &__heading {
+            margin-top: 27px;
+        }
+
+        &__list {
+            margin: 12px 0 19px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+
+        &__date {
+            font-size: 12px;
+        }
+    }
+}

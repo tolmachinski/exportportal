@@ -1,0 +1,178 @@
+.account {
+    $root: &;
+
+    width: 270px;
+    height: 100%;
+    font-weight: 400;
+    border-right: 1px solid $gray-light;
+    border-left: 1px solid $gray-light;
+
+    &__logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 82px;
+        padding: 0 82px;
+        color: $black;
+
+        &:hover {
+            color: inherit;
+            background: $gray-lighter;
+        }
+    }
+
+    &__logout-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+        background: $white;
+        border: 1px solid $gray-light;
+        border-radius: 50%;
+
+        .link {
+            width: 14px;
+            height: 18px;
+            font-size: 0;
+        }
+
+        .ep-icon {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
+    &__logout-text {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black;
+
+        @include text-nowrap;
+    }
+
+    &__current {
+        display: block;
+        min-height: 226px;
+        padding: 62px 0;
+        text-align: center;
+        color: $black;
+        border-bottom: 1px solid $gray-light;
+    }
+
+    &__current-img {
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 10px;
+        background: $white;
+        border: 1px solid $gray-light;
+        border-radius: 50%;
+    }
+
+    &__current-info {
+        padding: 0 15px;
+    }
+
+    &__current-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+
+        @include text-nowrap;
+    }
+
+    &__current-company {
+        margin-top: 3px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $gray;
+
+        @include text-nowrap;
+    }
+
+    &__current-group {
+        font-size: 14px;
+        line-height: 20px;
+        color: $blue;
+
+        @include text-nowrap;
+    }
+
+    @include my-media(991) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: none;
+
+        &__logout {
+            width: 42px;
+            height: 42px;
+            padding: 0;
+        }
+
+        &__logout-icon {
+            margin-right: 0;
+
+            .ep-icon {
+                line-height: 16px;
+            }
+        }
+
+        &__logout-text {
+            display: none;
+        }
+
+        &__current {
+            display: flex;
+            width: calc(100% - 42px);
+            min-height: 60px;
+            padding: 0 15px 0 0;
+            border: none;
+        }
+
+        &__current-img {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+        }
+
+        &__current-info {
+            max-width: calc(100% - 75px);
+            margin-left: 15px;
+            padding: 0;
+            text-align: left;
+        }
+
+        &__current-name {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__current-company {
+            margin-top: 0;
+        }
+    }
+
+    @include phone-only {
+
+        &__current-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__current {
+            padding: 0;
+        }
+
+        &__current-info {
+            margin-left: 10px;
+        }
+    }
+}

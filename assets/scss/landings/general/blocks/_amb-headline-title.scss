@@ -1,0 +1,13 @@
+.amb-headline-title {
+    margin-bottom: 31px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: letterspacing(75, 30);
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $break-sm) {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

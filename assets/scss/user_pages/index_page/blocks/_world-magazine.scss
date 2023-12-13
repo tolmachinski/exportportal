@@ -1,0 +1,147 @@
+.world-magazine {
+    $root: &;
+
+    position: relative;
+
+    .ajax-loader {
+        background-color: $color-gray-light !important;
+    }
+
+    &__content {
+        position: relative;
+        overflow: hidden;
+        padding: 22px 30px 22px 263px;
+        background: linear-gradient(-90deg, $color-gray-lighter, $color-gray-lighter 70%, rgba($color-gray-lighter, 0) 85%);
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        height: 100%;
+    }
+
+    &__image {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__slider {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+
+        &.loading {
+            min-height: 344px;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__item {
+        position: relative;
+        min-width: 250px;
+        max-width: 250px;
+        min-height: 344px !important;
+		padding: 8px;
+    }
+
+    &__img {
+        display: block;
+        height: 100%;
+    }
+
+    &__inner {
+        position: absolute;
+		top: 8px;
+		right: 8px;
+		left: 8px;
+		overflow: hidden;
+		height: 329px;
+        padding: 0;
+        background: $color-white;
+        border: none;
+    }
+
+    @include my-media(991) {
+        padding-bottom: 1px;
+
+        &__content {
+            padding: 23px 30px 23px 262px;
+            background: linear-gradient(-90deg, $color-gray-lighter, $color-gray-lighter 55%, rgba($color-gray-lighter, 0) 80%);
+        }
+
+        &__item {
+            width: 251px;
+            min-width: 251px;
+            max-width: 251px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__content {
+            padding: 165px 15px 15px;
+            background: linear-gradient(0, $color-gray-lighter, $color-gray-lighter 55%, rgba($color-gray-lighter, 0) 80%);
+        }
+
+        &__picture {
+            height: auto;
+        }
+
+        &__image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__item {
+            min-width: 186px;
+            max-width: 186px;
+            min-height: 250px !important;
+            padding: 0 10px 0 0;
+        }
+
+
+		&__inner {
+			position: relative;
+			top: 0;
+			right: 0;
+			left: 0;
+			height: auto;
+		}
+
+        &__img {
+            height: 250px;
+        }
+
+        .image-card3 {
+
+            .image {
+                width: 100%;
+            }
+        }
+    }
+
+    @include my-media(425) {
+
+        &__content {
+            background: linear-gradient(0, $color-gray-lighter, $color-gray-lighter 65%, rgba($color-gray-lighter, 0) 85%);
+        }
+
+        &__picture {
+            right: 0;
+            left: auto;
+            height: 200px;
+        }
+
+        &__image {
+            width: auto;
+            height: 100%;
+        }
+    }
+}

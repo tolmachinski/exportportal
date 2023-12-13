@@ -1,0 +1,12 @@
+.lock-body {
+    overflow: hidden;
+    width: auto;
+
+    @media (hover: hover) {
+        margin-right: 8px;
+
+        &__margin {
+            margin-right: 8px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.specifics-price-wrapper{
+    .info-alert-b{
+        margin-bottom: 20px;
+    }
+
+    &__actions{
+        display: flex;
+
+        .btn{
+            min-width: 150px;
+
+            + .btn{
+                margin-left: 15px;
+            }
+        }
+    }
+
+    @include my-media(768){
+        .info-alert-b{
+            margin-bottom: 15px;
+        }
+    }
+
+    @include my-media(520){
+        &__actions{
+            flex-direction: column;
+
+            .btn{
+                width: 100%;
+                margin-bottom: 10px;
+
+                + .btn{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+}

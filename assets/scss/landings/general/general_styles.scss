@@ -1,0 +1,107 @@
+// stylelint-disable no-invalid-position-at-import-rule
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../user_pages/import/variables";
+
+// Local variables
+$fast-transition: all 0.15s linear;
+$break-lg: 1199px;
+$break-md: 991px;
+$break-sm: 767px;
+$break-xs: 575px;
+$break-mobile: 425px;
+$assetsLinkAdvisorsPage: '../../../../images/';
+
+// Main mixins
+
+@mixin flex-my($align: center, $justify: space-between, $direction: row, $wrap: wrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin hover-state {
+
+    &:hover,
+    &:active,
+    &:focus {
+        @content;
+    }
+}
+
+@function letterspacing($val, $font-size) {
+
+    @return ($val * $font-size * 0.001) * 1px;
+}
+
+
+@import "../../import/_variables_bootstrap";
+
+@import "../../plug/bootstrap-4-5-2/functions";
+
+@import "../../plug/bootstrap-4-5-2/variables";
+
+@import "../../plug/bootstrap-4-5-2/mixins";
+
+@import "../../plug/bootstrap-4-5-2/buttons";
+
+@import "../../plug/bootstrap-4-5-2/bootstrap-grid.scss";
+
+@import "../../plug/validation-engine/validation-engine";
+
+@import '../../plug/bootstrap-4-5-2/_input-group';
+
+@import "../../user_pages/import/my_normalize";
+
+@import "../../user_pages/import/_fonts";
+
+@import "../../user_pages/import/fonts";
+
+@import "../../user_pages/import/main";
+
+@include connect-epicons("../../../assets/fonts");
+
+@import "../../import/_iconsEP";
+
+@import "../../user_pages/import/helper";
+
+
+@import "../../user_pages/general/blocks/modal_template";
+
+@import "../../plug/bootstrap-4-5-2/modal";
+
+@import "../../user_pages/general/blocks/_loader";
+
+@import "../../user_pages/general/blocks/_inputs";
+
+@import "../../../scss/community_help/blocks/main_tags";
+
+@import "../../user_pages/general/blocks/_shadow_header_top";
+
+@import "../../user_pages/general/blocks/_modal_system_messages";
+
+@import "../../user_pages/general/blocks/_ep_icon";
+
+@import "../../user_pages/general/blocks/_system_messages";
+
+@import "../../user_pages/general/blocks/_fixed_right";
+
+@import "../../user_pages/general/blocks/_pages-socials-list";
+
+@import "../../user_pages/general/blocks/_view_password";
+
+@import "../../user_pages/general/blocks/_modal_form";
+
+@import "../../user_pages/general/blocks/_inputs-40";
+
+@import "../../user_pages/general/blocks/_modal_result";
+
+@import "../../user_pages/general/blocks/_skiptranslate";
+
+@import "../../../../public/sass/blocks/report_problem";
+
+

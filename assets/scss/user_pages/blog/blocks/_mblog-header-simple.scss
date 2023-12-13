@@ -1,0 +1,46 @@
+.mblog-header-simple {
+    display: flex;
+    align-items: center;
+    min-height: 210px;
+    margin-bottom: 70px;
+    padding: 0 50px;
+    background: $color-gray-lighter;
+
+    &__ttl {
+
+        @include h302620;
+
+        br {
+            display: none;
+        }
+    }
+
+    &__ttl-desc {
+        padding-top: 10px;
+
+        @include h181614;
+
+        font-weight: 400;
+    }
+
+    @include my-media(991) {
+        min-height: 175px;
+        margin-bottom: 45px;
+        padding: 40px 15px;
+    }
+
+    @include my-media(768) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @include my-media(660) {
+        min-height: auto;
+        margin-bottom: 28px;
+        padding: 14px 15px;
+
+        &__ttl-desc {
+            padding-top: 8px;
+        }
+    }
+}

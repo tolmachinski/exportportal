@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="512" width="512" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 512.00001 512.00001">
+	<g id="layer1" transform="translate(0,-540.36216)">
+		<g id="g4046" transform="matrix(32,0,0,32,0,540.36216)">
+			<g id="g4000">
+				<g id="g4002">
+					<g id="g4004" fill="#010002">
+						<path id="path4006" d="m13 0h-10c-1.657 0-3 1.343-3 3v10c0 1.657 1.343 3 3 3h10c1.657 0 3-1.343 3-3v-10c0-1.657-1.343-3-3-3zm-0.085 9.791c-0.054 0.666-0.56 1.516-1.267 1.639-2.265 0.176-4.949 0.154-7.295 0-0.732-0.092-1.213-0.974-1.267-1.639-0.114-1.398-0.114-2.194 0-3.592 0.054-0.665 0.547-1.542 1.267-1.622 2.319-0.195 5.018-0.153 7.295 0 0.814 0.03 1.213 0.869 1.267 1.535 0.112 1.398 0.112 2.281 0 3.679z"/>
+						<polygon id="polygon4008" points="7 6 7 10 10 8"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

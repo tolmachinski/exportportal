@@ -1,0 +1,98 @@
+.account-registration-another {
+
+    &__toggle {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding: 12px 0;
+        border-top: 1px solid $color-gray-light;
+        border-bottom: 1px solid $color-gray-light;
+
+        .link {
+            margin-right: 5px;
+            font-weight: 500;
+            color: $color-black;
+
+            &:hover {
+                color: $color-blue2;
+            }
+
+            .ep-icon {
+                margin-top: -4px;
+                margin-right: 10px;
+                font-size: 17px;
+                color: $color-blue2;
+            }
+        }
+
+        .info-dialog {
+            line-height: 24px;
+        }
+    }
+
+    &__toggle-left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__toggle-optional-txt {
+        color: $color-gray;
+    }
+
+    &__group {
+        display: none;
+        padding-top: 10px;
+    }
+
+    &__group-title {
+        position: relative;
+        padding-bottom: 4px;
+        text-align: center;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 1px;
+            background: $color-gray-light;
+        }
+    }
+
+    &__group-title-text {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding: 0 15.5px;
+        color: $color-gray;
+        background: $color-white;
+    }
+
+    @include tablet-landscape-up {
+
+        &__toggle {
+            margin-top: 20px;
+            padding: 7px 0;
+        }
+    }
+
+    @include phone-only {
+
+        &__group {
+            padding-top: 0;
+        }
+
+        &__group-title {
+            padding-bottom: 0;
+        }
+
+        &__checkbox-item {
+            margin-bottom: 10px;
+        }
+
+        &__checkbox-txt {
+            padding-left: 9px;
+        }
+    }
+}

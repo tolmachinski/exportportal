@@ -1,0 +1,30 @@
+.spersonal-nav{
+	padding-bottom: 15px;
+
+	&__item{
+		padding: 8px 0;
+		cursor: pointer;
+	}
+
+	&__home,
+	&__name{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.link{
+			color: $color-black;
+		}
+
+		.ep-icon{
+			font-size: 10px;
+		}
+
+		&:hover{
+			.ep-icon,
+			.link{
+				color: $color-blue2;
+			}
+		}
+	}
+}

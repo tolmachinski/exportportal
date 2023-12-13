@@ -1,0 +1,43 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+// Plugins
+
+@import "../../plug/slick-1-8-1/slick";
+
+@import "../../plug/slick-1-8-1/slick-arrow";
+
+@import "../../plug/slick-1-8-1/slick-dots";
+
+// Critical
+
+@import "./blocks/_categories-search-category";
+
+@import "./blocks/_categories-group-main";
+
+// Page blocks
+
+@import "./blocks/_categories-main-title";
+
+@import "./blocks/_categories-products-slider-heading";
+
+@import "./blocks/_categories-group-breadcrumbs";
+
+@import "./blocks/_categories-group-selected";
+
+@import "./blocks/_categories-group-list";
+
+@import "./blocks/_categories-items-s";
+
+@import "./blocks/_discover-items";
+
+@import "../../components/product_card/blocks/_products-categories-popular-wr";
+
+@import "./blocks/_categories-popular-items";
+
+@import "./blocks/_categories_banner";
+
+@import "../../components/product_card/_products";

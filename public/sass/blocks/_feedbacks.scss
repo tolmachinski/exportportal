@@ -1,0 +1,251 @@
+/*#region feedback*/
+.feedback-main-title {
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 12px;
+    line-height: 85px;
+
+    strong {
+        display: block;
+        font-size: 72px;
+        font-weight: 500;
+        letter-spacing: 1.44px;
+    }
+
+    &--lh-72{
+        line-height: 72px;
+    }
+
+    @include my-media(1200){
+        font-size: 50px;
+        letter-spacing: 5px;
+        line-height: 60px;
+
+        strong {
+            font-size: 55px;
+        }
+    }
+
+    @include my-media(991){
+        font-size: 35px;
+        letter-spacing: 3px;
+        line-height: 45px;
+
+        strong {
+            font-size: 40px;
+        }
+    }
+
+    @include phone-extra-small{
+        font-size: 25px;
+        letter-spacing: 1px;
+        line-height: 35px;
+
+        strong {
+            font-size: 30px;
+        }
+    }
+}
+
+.feedback-main-paragraph {
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    margin: 10px auto 0 auto;
+    line-height: 32px;
+
+    @include phone-only{
+        padding: 0 15px;
+    }
+}
+
+.feedback-header {
+	padding-top: 70px;
+	text-align: center;
+
+    &__bg{
+        position: relative;
+		z-index: -1;
+		text-align: center;
+
+        .image{
+            width: 100%;
+            margin-top: -270px;
+        }
+	}
+
+	&__btn{
+		min-width: 265px;
+		margin-top: 25px;
+	}
+
+    @include my-media(1600){
+        &__bg{
+            .image{
+                margin-top: -150px;
+            }
+        }
+    }
+
+    @include tablet-landscape-up{
+        &__bg{
+            .image{
+                margin-top: -50px;
+            }
+        }
+    }
+
+    @include phone-only{
+        padding-top: 50px;
+    }
+}
+
+.feedback-like-website-form {
+    $root: &;
+    margin: 0 auto;
+    max-width: 770px;
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 770px;
+        text-align: center;
+        margin: 40px auto 33px auto;
+        position: relative;
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 49%;
+            float: left;
+            background-color: $color-gray-lighter;
+            @include text-nowrap;
+
+            .ep-icon{
+                margin-right: 21px;
+                font-size: 40px;
+            }
+
+            input {
+                position: absolute;
+                top: 50%;
+                opacity: 0;
+            }
+
+            .like-input {
+                &:checked + #{$root}__button {
+                    background-color: $color-blue2;
+                    color: $color-white;
+                }
+            }
+
+            .dislike-input {
+                &:checked + #{$root}__button {
+                    background-color: $color-red;
+                    color: $color-white;
+                }
+            }
+        }
+
+        .like {
+            background-color: $color-gray-lighter;;
+            color: $color-blue2;
+            cursor: pointer;
+        }
+
+        .dislike {
+            background-color: $color-gray-lighter;
+            color: $color-red;
+            cursor: pointer;
+        }
+    }
+
+    &__button{
+        width: 100%;
+        line-height: 86px;
+    }
+
+    &__button-hide-text{
+        display: none;
+    }
+
+    &__button-text{
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    &__actions{
+        margin-top: 20px;
+        text-align: center;
+
+        .btn{
+            padding: .813rem .75rem;
+            font-size: 18px;
+        }
+    }
+
+    @include my-media(1200){
+        &__buttons {
+            margin: 25px auto;
+        }
+
+        &__button-text{
+            font-size: 20px;
+        }
+    }
+
+    @include my-media(991){
+        margin: 15px auto;
+    }
+
+    @include phone-only{
+        &__buttons {
+            label{
+                .ep-icon{
+                    margin-right: 10px;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        &__button{
+            line-height: 50px;
+        }
+
+        &__button-text{
+            font-size: 18px;
+        }
+    }
+
+    @include phone-extra-small{
+        &__button-hide-text{
+            display: inline-block;
+        }
+
+        &__button-text{
+            display: none;
+        }
+
+        &__actions{
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.feedback-footer {
+    padding-top: 86px;
+    padding-bottom: 635px;
+    background: url('../img/feedback_page/ft-background.jpg') center bottom no-repeat;
+
+    @include phone-only{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: $color-white;
+    }
+}
+/*#endregion feedback*/

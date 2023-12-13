@@ -1,0 +1,104 @@
+.learnmore-subscribe-block {
+
+    .subscribe-block {
+
+        .container-center-sm {
+            padding: 0 15px 0 21px;
+        }
+
+        &__ttl {
+
+            span {
+                color: $color-blue2;
+            }
+        }
+
+        &__form-input {
+            height: 72px;
+        }
+
+        &__form-btn {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        &__form-terms {
+            margin-top: 10px;
+            letter-spacing: 0.32px;
+        }
+
+        &__form-terms-text {
+            margin-left: 15px;
+        }
+
+        @include my-media(991) {
+            padding: 95px 0 90px;
+
+            .container-center-sm {
+                padding: 0 15px;
+            }
+
+            &__ttl {
+                margin-bottom: 0;
+                font-size: 45px;
+                line-height: 55px;
+            }
+
+            &__subttl {
+                margin-top: 7px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+
+            &__form {
+                margin-top: 25px;
+            }
+
+            &__form-input {
+                height: 40px;
+            }
+
+            &__form-btn {
+                min-width: 295px;
+                font-weight: 500;
+            }
+
+            &__form-terms {
+                margin-bottom: 8px;
+            }
+        }
+
+        @include phone-only {
+            padding: 55px 0 50px;
+
+            .container-center-sm {
+                padding: 0 15px;
+            }
+
+            &__ttl {
+                font-size: 32px;
+                line-height: 34px;
+            }
+
+            &__subttl {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            &__form-btn {
+                min-width: 200px;
+            }
+        }
+
+        @include phone-extra-small {
+
+            &__subttl {
+                padding: 0;
+            }
+
+            &__form-input {
+                margin-bottom: 10px !important;
+            }
+        }
+    }
+}

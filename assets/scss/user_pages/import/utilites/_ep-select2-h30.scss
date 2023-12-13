@@ -1,0 +1,23 @@
+.ep-select2-h30 {
+
+	.select2-selection--single {
+		min-height: 30px;
+
+		.select2-selection__rendered {
+			font-size: 14px;
+			line-height: 28px;
+		}
+
+		.select2-selection__arrow {
+			height: 28px;
+		}
+	}
+
+	&--input {
+
+		.select2-selection {
+			height: 35px;
+			border: 1px solid $color-black;
+		}
+	}
+}

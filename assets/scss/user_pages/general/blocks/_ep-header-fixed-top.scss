@@ -1,0 +1,23 @@
+.ep-header-fixed-top {
+    position: relative;
+    z-index: 101;
+    width: 100%;
+    min-width: 320px;
+    background: $color-white;
+    box-shadow: none;
+
+    .ep-header--fixed & {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1001;
+    }
+
+    @include my-media(991) {
+        position: fixed;
+        top: 0;
+        z-index: 1001;
+        overflow: initial !important;
+    }
+}

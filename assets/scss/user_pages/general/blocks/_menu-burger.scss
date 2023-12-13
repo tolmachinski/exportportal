@@ -1,0 +1,38 @@
+.menu-burger {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 18px;
+    color: $color-black-light;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-black-light;
+        border-radius: 30px;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-black-light;
+        border-radius: 30px;
+    }
+}
+

@@ -1,0 +1,283 @@
+.b2b-detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 54px;
+
+    &__title {
+        width: 100%;
+        margin-bottom: 28px;
+
+        @include h302620;
+
+        color: $color-black;
+    }
+
+    &__col-left {
+        width: 300px;
+
+        .btn {
+
+            &+.dropdown {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &__col-right {
+        flex: 1;
+        width: 100%;
+        margin-left: 30px;
+    }
+
+    &__logo {
+        width: 300px;
+        height: 226px;
+
+        &+.btn,
+        &+.dropdown {
+            margin-top: 10px;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 17px;
+    }
+
+    &__info-label {
+        width: 133px;
+        margin-right: 20px;
+
+        @include p161614;
+
+        color: $color-gray;
+        word-break: break-all;
+    }
+
+    &__info-desc {
+        flex: 1;
+
+        @include p161614;
+
+        color: $color-black;
+        word-break: break-all;
+        word-wrap: break-word;
+
+        &--ttu {
+            text-transform: uppercase;
+        }
+
+        .link {
+
+            &:hover {
+                color: $color-blue2-hover;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__location {
+        display: flex;
+        flex-wrap: wrap;
+
+        &--countries {
+            margin: -1px -10px;
+        }
+    }
+
+    &__country {
+        display: flex;
+        align-items: center;
+        margin: 1px 10px;
+    }
+
+    &__country-name {
+        margin-left: 5px;
+
+        @include p161614;
+    }
+
+    &__country-flag {
+        width: 24px;
+        height: 17px;
+    }
+
+    &__address {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__map-actions {
+        display: flex;
+        margin-left: 15px;
+    }
+
+    &__map-link {
+        display: inline;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+
+    &__info-link {
+        color: $color-black;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    .ep-tags_new {
+        margin: 28px 0 0 153px;
+
+        .ep-tags {
+
+            &__item_new {
+                display: inline-block;
+                margin-right: 6px;
+
+                @include p141414;
+
+                color: $color-black;
+
+                &:hover {
+                    color: $color-blue2-hover;
+                }
+            }
+        }
+    }
+
+    .ep-tinymce-text {
+
+        p {
+            line-height: 22px !important;
+        }
+    }
+
+    @include my-media(1100) {
+
+        &__map-actions {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 39px;
+
+        &__title {
+            margin-bottom: 15px;
+        }
+
+        &__col-left {
+            width: 232px;
+        }
+
+        &__logo {
+            width: 232px;
+            height: 175px;
+        }
+
+        &__col-right {
+            margin-left: 15px;
+        }
+
+        &__info-row {
+            margin-bottom: 12px;
+        }
+
+        &__map-actions {
+            margin: 7px 0 0;
+        }
+
+        .ep-tags_new {
+            margin-top: 26px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 23px;
+
+        &__title {
+            margin-bottom: 9px;
+        }
+
+        &__col-left {
+            width: 100%;
+
+            .btn {
+                display: inline-block;
+                width: auto;
+                min-width: 290px;
+
+                &+.dropdown {
+                    margin-top: 10px;
+                }
+            }
+
+            .dropdown {
+                max-width: 290px;
+            }
+        }
+
+        &__logo {
+            width: 290px;
+            height: 218px;
+        }
+
+        &__col-right {
+            margin: 30px 0 0;
+        }
+
+        &__info-row {
+            margin-bottom: 14px;
+        }
+
+        &__info-label,
+        &__info-desc {
+            width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__location {
+
+            &--countries {
+                margin: 2px -10px;
+            }
+        }
+
+        &__country-flag {
+            width: 20px;
+            height: 13px;
+        }
+
+        &__map-actions {
+            width: 100%;
+        }
+
+        &__map-link {
+
+            &:first-child {
+                margin-right: 18px;
+            }
+        }
+
+        .ep-tags_new {
+            margin-left: 0;
+        }
+    }
+}

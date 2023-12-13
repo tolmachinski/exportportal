@@ -1,0 +1,19 @@
+.how-it-works {
+
+    &__scheme {
+        width: 100%;
+        margin-bottom: -2px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @include my-media(1200, "min") {
+
+        &__scheme {
+            margin-bottom: 0;
+        }
+    }
+}

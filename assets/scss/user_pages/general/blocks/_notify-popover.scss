@@ -1,0 +1,42 @@
+.notify-popover {
+    padding: 19px 18px 18px;
+
+	&__main {
+
+        @include p161616(true);
+	}
+
+	&__additional {
+
+        @include p141414;
+
+        &--indent {
+            padding-top: 2px;
+        }
+	}
+
+    &__txt-blue {
+        color: $color-blue2;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__black-link {
+        font-weight: 500;
+        color: $color-black;
+    }
+
+    &__txt-medium {
+        font-weight: 500;
+    }
+
+	@include my-media(991) {
+		padding: 17px 20px 13px;
+	}
+
+    @include my-media(575) {
+        padding: 17px 20px 18px;
+    }
+}

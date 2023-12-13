@@ -1,0 +1,229 @@
+@import "./import/_all_imports";
+
+$pathImages4: '../../../../images/';
+$pathImages5: '../../../../../images/';
+
+@import "./old/import/_variables_bootstrap";
+
+@import "./old/plug/bootstrap-4-1-1/functions";
+
+@import "./old/plug/bootstrap-4-1-1/variables";
+
+@import "./old/plug/bootstrap-4-1-1/mixins";
+
+@import "./old/plug/bootstrap-4-1-1/forms";
+
+@import "./old/plug/bootstrap-4-1-1/input-group";
+
+@import "./old/plug/bootstrap-4-1-1/nav";
+
+@import "./old/plug/bootstrap-4-1-1/badge";
+
+@import "./old/plug/bootstrap-4-1-1/modal";
+
+@import "./old/plug/bootstrap-4-1-1/popover";
+
+@import "./old/plug/bootstrap-4-1-1/list-group";
+
+@import "./old/plug/bootstrap-4-1-1/tables";
+
+@import "./old/plug/bootstrap-4-1-1/carousel";
+
+@import "./old/plug/jquery-validation-engine-2-6-2/_validationEngine.jquery";
+
+@import "./old/plug/select2-4-0-3/_select2-4-0-3";
+
+@import "./old/plug/jquery-ui-1-12-1-custom/jquery-ui-1.12.1.custom";
+
+@import "./old/plug/jquery-fancybox-2-1-7/_jquery.fancybox";
+
+@import "./old/plug/datatables/_jquery.dataTables";
+
+@import "./old/plug/datatables/_main_data_table";
+
+@import "./old/plug/datatables/_datatables";
+
+@import "./old/plug/bootstrap-dialog-1-35-4/bootstrap-dialog";
+
+@import "./old/plug/jquery-jscrollpane-2-0-20/jquery.jscrollpane";
+
+@import "./old/import/utilites/_select-country-flag";
+
+@import "./old/import/utilites/_select-country-code-group";
+
+@import "./old/import/utilites/_btn-file";
+
+@import "./old/import/utilites/_image-card2";
+
+@import "./old/import/utilites/_image-card-center";
+
+@import "./old/import/utilites/_grid-card";
+
+@import "./old/import/utilites/_pseudo-checkbox";
+
+@import "./old/import/utilites/_clearfix";
+
+@import "./old/import/utilites/_link";
+
+@import "./old/import/utilites/_bg-color";
+
+@import "./old/import/utilites/_col-tn";
+
+@import "./old/import/properties/_text-wraps";
+
+@import "./old/import/properties/_float";
+
+@import "./old/import/properties/_texts";
+
+@import "./old/import/properties/_text-align";
+
+@import "./old/import/properties/_width";
+
+@import "./old/import/properties/_height";
+
+@import "./old/import/properties/_padding";
+
+@import "./old/import/properties/_margin";
+
+@import "./old/import/properties/_font-size";
+
+@import "./old/import/properties/_line-height";
+
+@import "./old/import/properties/_vertical-align";
+
+@import "./old/import/properties/_border-radius";
+
+@import "./old/import/properties/_cursor";
+
+@import "./old/import/properties/_text-transform";
+
+@import "./old/blocks/_title-h";
+
+@import "./old/blocks/_wr-select2";
+
+@import "./old/blocks/_inputs-40";
+
+@import "./old/blocks/_wr-input-label";
+
+@import "./old/blocks/_textcounter-wrapper";
+
+@import "./old/blocks/_half-input";
+
+@import "./old/blocks/_modal-template";
+
+@import "./old/blocks/_view-password";
+
+@import "./old/blocks/_modal-result";
+
+@import "./old/blocks/_popover";
+
+@import "./old/blocks/companies-list";
+
+@import "./old/blocks/_table";
+
+@import "./old/blocks/_nav";
+
+@import "./old/blocks/_dashboard-nav";
+
+@import "./old/blocks/_dashboard-container";
+
+@import "./old/blocks/_container-center-sm";
+
+@import "./old/blocks/_container-center2";
+
+@import "./old/blocks/_dashboard-info";
+
+@import "./old/blocks/_dtfilter-popup";
+
+@import "./old/blocks/_dashborad-line";
+
+@import "./old/blocks/_elem-powered-by";
+
+@import "./old/blocks/_btn-filter";
+
+@import "./old/blocks/_dtable-all";
+
+@import "./old/blocks/_email-settings-list";
+
+@import "./old/blocks/_ui-datepicker";
+
+@import "./old/blocks/_ui-widget-content";
+
+@import "./old/blocks/_promo-materials-title";
+
+@import "./old/blocks/_promo-materials";
+
+@import "./old/blocks/_list-statistic-dasboard";
+
+@import "./old/blocks/_questions";
+
+@import "./old/blocks/_columns-content-left-btn";
+
+@import "./old/blocks/_columns-content";
+
+@import "./old/blocks/_dashboard-statuses";
+
+@import "./old/blocks/_dashboard-sidebar-sub";
+
+@import "./old/blocks/_order-users-list";
+
+@import "./old/blocks/_order-users-list-ul";
+
+@import "./old/blocks/_order-list-pag";
+
+@import "./old/blocks/_order-status";
+
+@import "./old/blocks/_order-detail";
+
+@import "./old/blocks/_wr-calendar-orders";
+
+@import "./old/blocks/_dashboard-statistic-ttl";
+
+@import "./old/blocks/_dashboard-statistic";
+
+@import "./old/blocks/_title-public";
+
+@import "./old/blocks/_dashboard-nav-customize";
+
+@import "./old/blocks/_multiple-epselect";
+
+@import "./old/blocks/_multiple-epselect-countries";
+
+@import "./old/blocks/_friend-invite";
+
+@import "./old/blocks/_pages-socials-list";
+
+@import "./old/blocks/_top-upgrade";
+
+@import "./old/blocks/_upgrade-question";
+
+@import "./old/blocks/_mce-tinymce";
+
+@import "./old/blocks/_mce-statusbar";
+
+@import "./old/blocks/_minfo-title";
+
+@import "./old/blocks/_input-group-text";
+
+@import "./old/blocks/_inputs";
+
+@import "./old/blocks/_add-info-row";
+
+@import "./old/blocks/_checkbox-list";
+
+@import "./old/blocks/_list-info-col-group";
+
+@import "./old/blocks/_minfo-sidebar-ttl";
+
+@import "./old/blocks/_did_help";
+
+@import "./import/blocks/_system-messages";
+
+@import "./import/blocks/_pass-strength-popup";
+
+@import "./components/popups/blocks/_wr-modal-flex";
+
+@import "./components/popups/blocks/_modal-flex";
+
+@import "./components/popups/blocks/_modal-tinymce-text";
+

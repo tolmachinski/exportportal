@@ -1,0 +1,32 @@
+.ei-statistic-header{
+	position: relative;
+	height: 300px;
+	margin: 25px 0 0 0;
+	overflow: hidden;
+	text-align: center;
+
+	background-image: url(../img/no_image/no-image-512x512.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+	&__wr{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	&__ttl{
+		position: absolute;
+		left: 15px;
+		bottom: 65px;
+		margin: 0;
+		font-size: 38px;
+		line-height: 45px;
+		font-weight: 500;
+		color: $color-white;
+	}
+}

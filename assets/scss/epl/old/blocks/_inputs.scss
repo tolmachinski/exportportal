@@ -1,0 +1,9 @@
+select:disabled,
+input:disabled,
+.form-control:disabled,
+.form-control[readonly] {
+
+    body & {
+        background-color: $white !important;
+    }
+}

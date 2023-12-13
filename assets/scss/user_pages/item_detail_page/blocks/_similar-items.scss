@@ -1,0 +1,95 @@
+.similar-items {
+    position: relative;
+    margin-top: 40px;
+    padding: 0 7px 13px 0;
+
+    &__title {
+        margin-bottom: 7px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $color-black;
+    }
+
+    .loading {
+        min-height: 350px;
+    }
+
+    .slick-prev {
+        left: 7px;
+    }
+
+    .slick-next {
+        right: -1px;
+    }
+
+    .products {
+
+        &.slick-initialized {
+
+            &:not(:hover) {
+
+                .slick-arrow {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    @include my-media(991) {
+        padding: 0 0 25px;
+
+        .loading {
+            min-height: calc(158px + (100vw - 66px) * 0.75 / 3);
+        }
+
+        .slick-dots {
+            bottom: -20px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 29px;
+
+        &__title {
+            margin-bottom: 6px;
+        }
+
+        .loading {
+            min-height: calc(119px + (100vw - 45px) * 0.75 / 3);
+        }
+
+        .slick-dots {
+            bottom: -25px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        .loading {
+            min-height: calc(113px + (100vw - 45px) * 0.75 / 3);
+        }
+    }
+
+    @include my-media(475) {
+
+        .loading {
+            min-height: calc(2 * (119px + (100vw - 40px) * 0.75 / 2));
+        }
+    }
+
+    @include my-media(424) {
+
+        .loading {
+            min-height: calc(2 * (119px + (100vw - 40px) * 0.75 / 2));
+        }
+    }
+
+    @include my-media(359) {
+
+        .loading {
+            min-height: calc(2 * (101px + (100vw - 40px) * 0.75 / 2));
+        }
+    }
+}

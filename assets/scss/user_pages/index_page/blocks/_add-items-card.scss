@@ -1,0 +1,64 @@
+.add-items-card {
+    display: flex;
+    flex:  0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 256px;
+    min-height: 335px;
+    margin-right: 14px;
+    padding: 30px;
+    background: $color-gray-lighter;
+    text-align: center;
+
+    &__title {
+        margin-top: 14px;
+
+        @include h201816;
+    }
+
+    &__desc {
+        margin: 8px 0 13px;
+
+        @include p161614;
+    }
+
+    @include my-media(991) {
+        width: calc((100vw - 66px) / 3);
+        min-height: calc(143px + (100vw - 66px) * 0.75 / 3);
+        padding: 16px;
+
+        &__desc {
+            padding: 0 5px;
+        }
+    }
+
+    @include phone-only {
+        width: calc((100vw - 36px) / 3);
+        min-height: calc(114px + (100vw - 45px) * 0.75 / 3);
+        margin-right: 5px;
+        padding: 10px;
+
+        &__title {
+            margin-top: 6px;
+        }
+    }
+
+    @include phone-extra-small {
+        width: 100%;
+        min-height: auto;
+        margin: 0 0 15px;
+        padding: 30px;
+
+        &__icon {
+
+            svg {
+                width: 44px;
+                height: 53px;
+            }
+        }
+
+        &__desc {
+            margin: 2px 0 9px;
+        }
+    }
+}

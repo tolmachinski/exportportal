@@ -1,0 +1,41 @@
+.upgrade-modal-more-visible{
+    text-align: center;
+
+    &__img{
+        margin-bottom: 12px;
+
+        .image{
+            max-width: 100%;
+        }
+    }
+
+    &__ttl{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    &__txt{
+        padding-top: 6px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include phone-only{
+
+        &__img{
+            margin-bottom: 15px;
+        }
+
+        &__ttl{
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__txt{
+            padding-top: 5px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.slick-dots {
+    position: absolute;
+    bottom: -30px;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    li {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        cursor: pointer;
+
+        button {
+            width: 12px;
+            height: 12px;
+            font-size: 0;
+            line-height: 0;
+            color: transparent;
+            background: $color-white;
+            border: 1px solid $color-black;
+            border-radius: 50%;
+            outline: none;
+            transition: all .1s linear;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background: $color-black;
+            }
+        }
+    }
+
+    li.slick-active {
+        button {
+            background: $color-black;
+        }
+    }
+
+    @include touch {
+
+        button:hover,
+        button:focus {
+            background: transparent !important;
+        }
+
+        .slick-active button {
+            background: $color-black !important;
+        }
+    }
+}

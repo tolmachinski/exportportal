@@ -1,0 +1,162 @@
+.ambassador {
+    // .ambassador__responsibilities
+
+    &__responsibilities {
+        margin-bottom: 71px;
+    }
+
+    // .ambassador__responsibilities-container
+
+    &__responsibilities-container {
+        width: 100%;
+        max-width: 759px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    // .ambassador__responsibilities-title
+
+    &__responsibilities-title {
+        margin-bottom: 9px;
+    }
+
+    // .ambassador__responsibilities-text
+
+    &__responsibilities-text {
+        margin-bottom: 49px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    // .ambassador__responsibilities-item
+
+    &__responsibilities-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .ambassador__responsibilities-image
+
+    &__responsibilities-image {
+        margin-right: 29px;
+    }
+
+    &__responsibilities-link {
+        display: block;
+        color: $color-blue2;
+    }
+
+    // .ambassador__responsibilities-list-item
+
+    &__responsibilities-list-item {
+        position: relative;
+        margin-bottom: 13px;
+        padding-left: 23px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background-color: $color-black;
+            border-radius: 50%;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__responsibilities-title {
+            margin-bottom: 7px;
+        }
+
+        &__responsibilities-text {
+            margin-bottom: 26px;
+        }
+
+        &__responsibilities-list {
+            padding-top: 2px;
+        }
+
+        &__responsibilities-list-item {
+            margin-bottom: 8px;
+
+            &::before {
+                top: 9px;
+            }
+        }
+
+        &__responsibilities-image {
+            margin-right: 30px;
+        }
+    }
+
+    @include phone-only {
+
+        &__responsibilities {
+            margin-bottom: 47px;
+        }
+    }
+
+    @include my-media(665) {
+
+        &__responsibilities-container {
+            padding: 0;
+        }
+
+        &__responsibilities-title {
+            margin-bottom: 8px;
+        }
+
+        &__responsibilities-text {
+            margin-bottom: 12px;
+            padding: 0 20px;
+        }
+
+        &__responsibilities-item {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto 22px;
+        }
+
+
+        &__responsibilities-image {
+            width: 100%;
+            margin-bottom: 13px;
+            margin-right: 0;
+
+
+            picture,
+            img {
+                width: 100%;
+            }
+        }
+
+        &__responsibilities-list {
+            padding: 0 15px;
+        }
+
+        &__responsibilities-list-item {
+            margin-bottom: 5px;
+            padding-left: 18px;
+
+            &::before {
+                top: 8px;
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+}

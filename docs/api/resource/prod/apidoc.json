@@ -1,0 +1,13 @@
+{
+  "name": "EP API",
+  "version": "2.0.0",
+  "title": "EP API Docuementation",
+  "url": "https://exportportal.com",
+  "template" : {"forceLanguage": "en"},
+  "description": "API for getting categories, buyers and sellers",
+  "order": [
+    "GetCategories",
+    "GetSellers",
+    "GetBuyers"
+  ]
+}

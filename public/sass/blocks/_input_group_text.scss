@@ -1,0 +1,8 @@
+.input-group-text{
+	background: none;
+    border: none;
+
+    @include my-media(991){
+		padding: .563rem .75rem;
+	}
+}

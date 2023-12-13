@@ -1,0 +1,143 @@
+// stylelint-disable no-invalid-position-at-import-rule
+
+@import "../import/_scss_functions";
+
+@import "../import/_colors";
+
+@import '../import/guideline/_fonts-guideline';
+
+@import "./../user_pages/import/_variables";
+
+@import "../user_pages/import/_my_normalize";
+
+@import "../user_pages/import/_fonts";
+
+@include connect-epicons;
+
+@import "../import/_iconsEP";
+
+@import "../import/_variables_bootstrap";
+
+@import "../plug/bootstrap-4-5-2/_functions";
+
+@import "../plug/bootstrap-4-5-2/_variables";
+
+@import "../plug/bootstrap-4-5-2/_mixins";
+
+@import "../plug/bootstrap-4-5-2/_reboot";
+
+@import "../plug/bootstrap-4-5-2/_grid";
+
+@import "../plug/bootstrap-4-5-2/_forms";
+
+@import "../plug/bootstrap-4-5-2/_buttons";
+
+@import "../plug/bootstrap-4-5-2/_transitions";
+
+@import "../plug/bootstrap-4-5-2/_dropdown";
+
+@import "../plug/bootstrap-4-5-2/_button-group";
+
+@import "../plug/bootstrap-4-5-2/_input-group";
+
+@import "../plug/bootstrap-4-5-2/_custom-forms";
+
+@import "../plug/bootstrap-4-5-2/_nav";
+
+@import "../plug/bootstrap-4-5-2/_navbar";
+
+@import "../plug/bootstrap-4-5-2/_modal";
+
+@import "../plug/bootstrap-4-5-2/_tooltip";
+
+@import "../plug/bootstrap-4-5-2/_popover";
+
+@import "../plug/bootstrap-4-5-2/utilities/display";
+
+@import '../plug/bootstrap-4-5-2/_list-group';
+
+@import "../import/_normalize_bootstrap";
+
+@import "../user_pages/import/_helper";
+
+@import "../user_pages/general/blocks/_inputs";
+
+@import "../user_pages/general/blocks/_inputs-40";
+
+@import "../user_pages/general/blocks/_ep_icon";
+
+@import "../user_pages/general/blocks/_modal_system_messages";
+
+@import "../user_pages/general/blocks/_popover";
+
+@import "../user_pages/general/blocks/_loader";
+
+@import "../user_pages/general/blocks/_modal_template";
+
+@import "../user_pages/general/blocks/_alerts";
+
+@import "../user_pages/general/blocks/_title_h";
+
+@import "../user_pages/general/blocks/_modal_result";
+
+@import "../user_pages/general/blocks/_login_form";
+
+@import "../user_pages/general/blocks/_login_delog";
+
+@import "../user_pages/general/blocks/_view_password";
+
+@import "../user_pages/general/blocks/_select_account_list";
+
+@import "../user_pages/general/blocks/_tabs_circle";
+
+@import '../user_pages/general/blocks/_ep-header-fixed-top';
+
+@import "blocks/_ep-header-fixed-top"; // it need to fix bug with jumping content on loading with !important css
+
+@import "../user_pages/general/blocks/_maintenance-animation";
+
+@import "../user_pages/general/blocks/_menu-burger";
+
+@import "../user_pages/general/blocks/_user-preferences";
+
+@import "../user_pages/general/blocks/_skiptranslate";
+
+@import "../user_pages/general/blocks/_promo-banners";
+
+@import "blocks/_main_wrappers";
+
+@import "blocks/_main_tags";
+
+@import "blocks/_community_content";
+
+@import "blocks/_community_search_header";
+
+@import "blocks/_sidebar_title";
+
+@import "blocks/_categories_list";
+
+@import "blocks/_sidebar_countries";
+
+@import "../user_pages/general/blocks/_row";
+
+@import "../user_pages/general/blocks/_dropdown";
+
+@import "blocks/_main_flex_card";
+
+@import "blocks/_ask_community";
+
+$files_icon_path: "../../../../images/global/icons_file/";
+
+@import "../user_pages/general/blocks/files_icon";
+
+$no_image_path: "../../../../images/no-image/";
+
+@import "../user_pages/general/blocks/files_upload";
+
+$mainDataTableSortingImgPath: "../../../images/plugins/datatables/";
+
+@import "../plug/datatables/_main_data_table";
+
+@import "./blocks/_ep-header-top";
+
+@import "./../user_pages/import/properties/display-media";

@@ -1,0 +1,32 @@
+.tac {
+ text-align: center !important;
+ }
+
+.tar {
+ text-align: right !important;
+ }
+
+.tal {
+ text-align: left !important;
+ }
+
+@include phone-only {
+
+    .text-sm-center {
+        text-align: center;
+    }
+}
+
+@include my-media(992, 'min') {
+
+	.tar-md {
+        text-align: right !important;
+	}
+}
+
+@include my-media(767, 'min') {
+
+	.tac-md-min {
+		text-align: center;
+	}
+}

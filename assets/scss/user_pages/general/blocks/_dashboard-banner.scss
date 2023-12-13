@@ -1,0 +1,132 @@
+.dashboard-banner {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    background: $color-blue2-light;
+
+    &__img {
+        flex: 0 0 140px;
+        height: 65px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 140px);
+        padding: 6px 10px 5px 15px;
+    }
+
+    &__title {
+        margin-top: 1px;
+
+        @include p141414;
+
+        @include text-nowrap;
+
+        span {
+            color: $color-blue2;
+        }
+    }
+
+    &__info {
+        flex: 1;
+        padding-right: 30px;
+
+        @include text-nowrap;
+    }
+
+    &__desc {
+
+        @include h181614;
+
+        @include text-nowrap;
+
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        overflow: hidden;
+        min-width: 130px !important;
+        max-width: 250px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @include my-media(991) {
+        margin: 0 0 18px;
+
+        &__title {
+            margin-top: 3px;
+        }
+
+        &__desc {
+            margin-top: 1px;
+        }
+    }
+
+    @include phone-only {
+
+        &__block {
+            padding: 6px 10px 5px;
+        }
+
+        &__info {
+            padding-right: 10px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__block {
+            width: 100%;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+
+    @include my-media(475) {
+
+        &__block {
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            padding: 9px 10px 10px;
+            text-align: center;
+        }
+
+        &__info {
+            padding-right: 0;
+        }
+
+        &__title,
+        &__desc {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            white-space: initial;
+        }
+
+        &__title {
+            margin-top: 0;
+        }
+
+        &__desc {
+            margin-top: 3px;
+            margin-bottom: 8px;
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

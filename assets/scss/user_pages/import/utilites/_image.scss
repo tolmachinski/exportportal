@@ -1,0 +1,12 @@
+.image {
+
+	&--landscape {
+		width: auto !important;
+		height: 100% !important;
+	}
+
+	&--portrait {
+		width: 100% !important;
+		height: auto !important;
+	}
+}

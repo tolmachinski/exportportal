@@ -1,0 +1,49 @@
+@import "./import/_all_imports";
+
+$pathImages4: '../../../../images/';
+
+@import "./old/import/_variables_bootstrap";
+
+@import "./old/plug/bootstrap-dialog-1-35-4/_bootstrap-dialog";
+
+@import "./old/plug/bootstrap-4-1-1/functions";
+
+@import "./old/plug/bootstrap-4-1-1/variables";
+
+@import "./old/plug/bootstrap-4-1-1/mixins";
+
+@import "./old/plug/bootstrap-4-1-1/modal";
+
+@import "./old/import/properties/_text-wraps";
+
+@import "./old/import/properties/_float";
+
+@import "./old/import/properties/_texts";
+
+@import "./old/import/properties/_text-align";
+
+@import "./old/import/properties/_width";
+
+@import "./old/import/properties/_height";
+
+@import "./old/import/properties/_padding";
+
+@import "./old/import/properties/_margin";
+
+@import "./old/import/properties/_font-size";
+
+@import "./old/import/properties/_line-height";
+
+@import "./old/import/properties/_vertical-align";
+
+@import "./old/import/properties/_border-radius";
+
+@import "./old/import/properties/_cursor";
+
+@import "./old/import/properties/_text-transform";
+
+@import "./old/blocks/_modal-result";
+
+@import "./old/blocks/_modal-template";
+
+@import "./old/blocks/_inputs-40";

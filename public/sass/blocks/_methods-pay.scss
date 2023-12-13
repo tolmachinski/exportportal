@@ -1,0 +1,28 @@
+.methods-pay{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 140px;
+		height: 100px;
+		padding: 5px 15px;
+		margin: 15px 15px 0 0;
+		border: 1px solid $color-gray-lighter;
+		cursor: pointer;
+
+		&:hover,
+		&.active{
+			border-color: $color-blue2;
+			box-shadow: 0 0 5px $color-gray-light;
+		}
+	}
+
+	&__name{
+		padding-top: 5px;
+		text-align: center;
+	}
+}

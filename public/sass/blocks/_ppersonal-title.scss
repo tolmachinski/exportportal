@@ -1,0 +1,12 @@
+.ppersonal-title{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0 40px 0;
+
+	&__txt{
+		margin: 0;
+		font-size: 26px;
+		font-weight: 500;
+	}
+}

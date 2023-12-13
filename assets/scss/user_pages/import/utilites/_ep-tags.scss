@@ -1,0 +1,85 @@
+.ep-tags {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		position: relative;
+		max-width: 130px;
+		height: 20px;
+		margin: 0 10px 3px 0;
+		padding: 0 20px 0 23px;
+        font-size: 11px;
+        line-height: 20px;
+		color: $color-white;
+		background-color: $color-blue2;
+		border-radius: 3px 0 0 3px;
+		transition: all 0.2s;
+
+        @include text-nowrap;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 7px;
+			left: 10px;
+			width: 6px;
+			height: 6px;
+			background: $color-white;
+			border-radius: 10px;
+
+			@include box-shadow(inset 0 1px rgba(0, 0, 0, 0.25));
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: $color-white;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-left: 10px solid $color-blue2;
+			transition: all 0.2s;
+		}
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-green;
+
+			&::after {
+			   border-left-color: $color-green;
+			}
+		}
+	}
+
+	&--light {
+
+		.ep-tags {
+
+			&__item {
+				color: $color-blue2;
+				background-color: $color-gray-lighter;
+
+				&::before {
+					background: $color-white;
+				}
+
+				&::after {
+					background: $color-white;
+					border-top: 10px solid transparent;
+					border-bottom: 10px solid transparent;
+					border-left: 10px solid $color-gray-lighter;
+				}
+
+				&:hover {
+					color: $color-white;
+					background-color: $color-green;
+
+					&::after {
+					   border-left-color: $color-green;
+					}
+				}
+			}
+		}
+	}
+}

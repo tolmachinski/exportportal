@@ -1,0 +1,54 @@
+.option-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -15px -10px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: calc(50% - 30px);
+        margin: 0 15px 10px;
+    }
+
+    &__text {
+        flex: 1;
+        padding-bottom: 9px;
+
+        @include p181816;
+
+        border-bottom: 1px solid $color-black;
+
+        span {
+
+            @include text-line-ellipsis(false, 1);
+        }
+    }
+
+    &__btn {
+        flex: 0 0 50px;
+        margin-left: 15px;
+    }
+
+    @include phone-only {
+        margin: 10px -7.5px -15px;
+
+        &__item {
+            width: calc(50% - 15px);
+            margin: 0 7.5px 15px;
+        }
+
+        &__btn {
+            flex: 0 0 40px;
+            margin-left: 10px;
+            padding: .5rem;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__item {
+            width: calc(100% - 15px);
+        }
+    }
+}

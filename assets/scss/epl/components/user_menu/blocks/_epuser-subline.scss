@@ -1,0 +1,114 @@
+.epuser-subline {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    overflow: auto;
+    height: auto;
+    background: $white;
+    border-top: 1px solid $gray-light;
+    box-shadow: 0 10px 15px rgba($black-light, 0.2);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $gray-light;
+    }
+
+    &__ttl {
+        width: 25%;
+        font-size: 18px;
+        font-weight: 500;
+        color: $black;
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__inner {
+        display: none;
+        max-width: 1170px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .tab-content {
+
+        &--borders {
+            padding-top: 50px;
+
+            .text-b {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        &--toggle {
+            margin-top: 30px;
+            padding-top: 0;
+        }
+
+        &--navigation {
+            margin-top: 20px;
+            padding-top: 0;
+        }
+
+        > .tab-pane {
+            display: none;
+            min-height: 260px;
+            max-height: 273px;
+            overflow-y: auto;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        @include my-media(991) {
+
+            &--toggle {
+                margin-top: 20px;
+            }
+
+            > .tab-pane {
+                min-height: 265px;
+                max-height: 265px;
+
+                &--profile-complete.active {
+                    display: none;
+
+                    + .tab-pane--quick-menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        @include phone-only {
+
+            &--toggle {
+                margin-top: 15px;
+            }
+
+            &--navigation {
+                margin-top: 15px;
+            }
+
+            > .tab-pane {
+                min-height: 262px;
+                max-height: 262px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        top: 60px;
+
+        &__header {
+            display: none;
+        }
+    }
+}

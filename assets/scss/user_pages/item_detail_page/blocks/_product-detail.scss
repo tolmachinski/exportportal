@@ -1,0 +1,20 @@
+.product-detail {
+
+	@include phone-only {
+
+		&__comments-page {
+			padding-top: 50px;
+		}
+
+		&__toggle {
+
+			.ep-tinymce-text {
+				padding: 0;
+			}
+
+			.photo {
+				padding: 0;
+			}
+		}
+	}
+}

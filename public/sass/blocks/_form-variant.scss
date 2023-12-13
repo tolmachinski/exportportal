@@ -1,0 +1,27 @@
+.form-variant{
+	padding: 15px;
+	position: relative;
+	margin: 0 0 15px 0;
+	border: 1px solid $color-green;
+
+	.ttl-b{
+		font: 16px Arial,sans-serif;
+		margin-bottom: 10px;
+	}
+
+	.inputs-b{
+		padding: 0 0 10px 0;
+	}
+
+	&__actions{
+		position:absolute;
+		top: 5px;
+		right: 5px;
+
+		a{
+			&:hover{
+				color: $color-gray-light;
+			}
+		}
+	}
+}

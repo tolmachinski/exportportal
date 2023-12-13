@@ -1,0 +1,36 @@
+.container-center {
+    min-width: 320px;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 45px;
+
+    &--header {
+        max-width: 1510px;
+    }
+
+    &--footer {
+        max-width: 1560px;
+    }
+
+    @include my-media(1200) {
+
+        &--header {
+            padding: 0 30px;
+        }
+    }
+
+    @include my-media(991) {
+        padding: 0 45px;
+    }
+
+    @include phone-only {
+        padding: 0 15px;
+    }
+}
+
+.container-1420 {
+    min-width: 320px;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

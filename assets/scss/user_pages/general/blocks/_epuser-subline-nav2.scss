@@ -1,0 +1,201 @@
+.epuser-subline-nav2 {
+	$root: &;
+
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: space-between;
+	border-bottom: 1px solid $color-gray-light;
+
+	&__item {
+		display: flex;
+		flex: 0 0 auto;
+
+		&:last-child {
+			margin-left: 50px;
+		}
+
+		&:first-child {
+			flex: 1;
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-right: 65px;
+			padding-top: 15px;
+			padding-bottom: 24.6px;
+			line-height: 1;
+			color: $color-gray;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover,
+			&.active {
+
+				&::before {
+					content: "";
+					position: absolute;
+					right: 0;
+					bottom: -2px;
+					left: 0;
+					border-bottom: 2px solid $color-blue2;
+				}
+			}
+
+			.ep-icon {
+				margin-right: 5px;
+				font-size: 17px;
+			}
+
+			.txt,
+			.name {
+				margin-right: 5px;
+
+                @include text-nowrap;
+
+                line-height: 18px;
+				color: $color-black;
+			}
+
+			.count {
+
+				@include text-nowrap;
+			}
+
+			&.disabled {
+				opacity: 0.3;
+				cursor: default;
+
+				&:hover,
+				&.active {
+
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&--hiden-660,
+		&--hiden {
+
+			@media screen and (max-height: 635px) {
+				display: none;
+			}
+		}
+
+		&--multiple {
+
+            .link {
+                margin-right: auto;
+            }
+        }
+	}
+
+    &__content {
+        padding-top: 20px;
+
+        .container-fluid-modal {
+            min-height: 100%;
+        }
+    }
+
+	&--hover {
+
+		.epuser-subline-nav2 {
+
+			&__item {
+
+				.link {
+
+					&:hover {
+						color: $color-blue2;
+
+						&::before {
+							display: none;
+						}
+
+						.name {
+							color: $color-blue2;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-height: 635px) {
+		border: none;
+	}
+
+	@include tablet-landscape-up {
+
+		&__item {
+
+            .link {
+                margin-right: 20px;
+            }
+
+			&--multiple {
+
+				.link {
+					margin-right: auto;
+				}
+			}
+		}
+	}
+
+	@include my-media(660) {
+
+		&__item {
+
+			.link {
+				padding-bottom: 15px;
+			}
+
+			&--hiden-660 {
+				display: none;
+			}
+
+			&--multiple {
+
+                .link {
+                    margin-right: auto;
+                }
+            }
+		}
+
+        &__content {
+            padding-top: 15px;
+        }
+	}
+
+	@include my-media(480) {
+		border: none;
+
+		&__item {
+
+			&:last-child {
+				margin-left: 30px;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			.link {
+				display: none;
+				margin-right: 30px;
+			}
+
+			&--hiden {
+				display: none;
+			}
+		}
+	}
+}

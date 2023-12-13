@@ -1,0 +1,67 @@
+.did-help {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: normal;
+
+    &__txt {
+        margin-right: 30px;
+
+        @include p161614;
+
+        color: $color-gray;
+    }
+
+    .didhelp-btn {
+        margin-right: 17px;
+        font-size: 0;
+
+        &.disabled {
+
+            .ep-icon_arrow-line-up,
+            .ep-icon_arrow-line-down {
+                color: $color-blue2;
+            }
+
+            &:hover {
+                cursor: default;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .ep-icon_arrow-line-down,
+            .ep-icon_arrow-line-up {
+                color: $color-blue2;
+            }
+        }
+    }
+
+    .ep-icon_arrow-line-up,
+    .ep-icon_arrow-line-down {
+        margin-left: 3px;
+
+        @include p141414;
+
+        color: $color-gray;
+    }
+
+    .counter-b {
+
+        @include p161614;
+
+        color: $color-black;
+    }
+
+    @include phone-only {
+
+        &__txt {
+            margin-right: 15px;
+        }
+
+        .didhelp-btn {
+            margin-right: 11px;
+        }
+    }
+}

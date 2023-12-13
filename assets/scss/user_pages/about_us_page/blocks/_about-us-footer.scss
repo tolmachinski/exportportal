@@ -1,0 +1,168 @@
+.about-us-footer {
+    position: relative;
+    margin-top: 100px;
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 370px;
+        z-index: 1;
+        width: 670px;
+        padding: 70px 50px;
+        background: $color-white;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    &__bg {
+        width: 100%;
+
+        .image {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            min-height: 625px;
+        }
+    }
+
+    &__img {
+
+        .image {
+            width: 185px;
+            height: 205px;
+        }
+    }
+
+    &__ttl {
+
+        @include h423024;
+
+        margin-top: 30px;
+    }
+
+    &__subttl {
+
+        @include p181816;
+
+        margin-top: 15px;
+    }
+
+    &__btn {
+        width: 250px;
+        margin-top: 14px;
+    }
+
+    @include my-media(1800) {
+
+        &__content {
+            left: 120px;
+            padding: 25px;
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__bg {
+
+            .image {
+                min-height: 570px;
+            }
+        }
+
+        &__content {
+            width: 430px;
+        }
+
+        &__subttl {
+            margin-top: 10px;
+        }
+    }
+
+    @include my-media (991) {
+        margin-top: 67px;
+
+        &__img {
+
+            .image {
+                width: 103px;
+                height: 113px;
+            }
+        }
+
+        &__bg {
+
+            .image {
+                min-height: unset;
+            }
+        }
+
+        &__content {
+            left: 30px;
+            padding: 30px;
+        }
+
+        &__ttl,
+        &__subttl {
+            margin-top: 14px;
+        }
+
+        &__btn {
+            width: 200px;
+            margin-top: 14px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 24px;
+
+        &__bg {
+            overflow: hidden;
+
+            .image {
+                min-width: 767px;
+            }
+        }
+
+        &__img {
+
+            .image {
+                width: 112px;
+                height: 123px;
+            }
+        }
+
+        &__content {
+            left: 50%;
+            width: 290px;
+            padding: 25px 15px;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @include my-media(425) {
+
+        &__bg {
+
+            .image {
+                min-width: unset;
+                min-height: 402px;
+            }
+        }
+
+        &__content {
+            padding: 15px;
+        }
+
+        &__ttl {
+            margin-top: 15px;
+        }
+
+        &__subttl {
+            margin-top: 8px;
+        }
+
+        &__btn {
+            margin-top: 8px;
+        }
+    }
+}

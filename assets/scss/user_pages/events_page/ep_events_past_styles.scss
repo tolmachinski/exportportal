@@ -1,0 +1,25 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "./../../user_pages/general/blocks/site-content";
+
+@import "./../../user_pages/general/blocks/site-main-content";
+
+@import "blocks/_ep_events";
+
+@import "blocks/_ep_events_past";
+
+@import "./../general/blocks/_sidebar";
+
+@import "../general/blocks/_active-filters-params";
+
+@import "../general/blocks/_filter-block";
+
+@import "../general/blocks/_filter-options-list";
+
+@import "../general/blocks/_filter-options-multilist";
+
+@import "../general/blocks/_filter-search-form";
+
+@import "../general/blocks/_maxlist-more";

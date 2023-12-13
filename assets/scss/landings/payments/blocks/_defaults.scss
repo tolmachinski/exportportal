@@ -1,0 +1,31 @@
+.how-it-works, .gain-access {
+    align-items: center;
+    text-align: center;
+
+    &__description {
+        max-width: 720px;
+        margin: 10px 0 14px;
+    }
+
+    @include my-media(768, "min") {
+
+        &__title {
+            margin-top: 4px;
+        }
+
+        &__description {
+            margin: 15px 0 30px;
+        }
+    }
+
+    @include my-media(1200, "min") {
+
+        &__title {
+            margin-top: 0;
+        }
+
+        &__description {
+            margin: 14px 0 29px;
+        }
+    }
+}

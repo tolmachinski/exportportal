@@ -1,0 +1,19 @@
+.popup-become-member {
+
+	&__sub-title {
+		margin-bottom: 10px;
+		font-size: 14px;
+    }
+
+    &__image {
+        overflow: hidden;
+        max-height: 215px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

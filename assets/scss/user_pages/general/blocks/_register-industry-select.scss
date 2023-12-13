@@ -1,0 +1,41 @@
+.register-industry-select {
+
+	&__inner {
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+		width: calc(100% - 1em);
+		text-indent: 0;
+	}
+
+	&__item {
+		padding: 8.5px 10px 7px 30px;
+		text-indent: -1em;
+	}
+
+	&__name {
+
+		@include text-nowrap;
+	}
+
+	@include ie-only {
+
+		&__inner {
+			width: calc(-15px + 100%);
+		}
+	}
+
+	@include edge-only {
+
+		&__inner {
+			width: calc(-15px + 100%);
+		}
+    }
+
+    @include my-media(575) {
+
+        &__item {
+            padding: 7px 0 8px 30px;
+        }
+    }
+}

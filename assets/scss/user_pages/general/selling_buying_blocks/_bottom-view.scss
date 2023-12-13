@@ -1,0 +1,102 @@
+.build-export {
+    position: relative;
+    margin-top: 70px;
+
+    &__content-wrap {
+        position: absolute;
+        top: 50%;
+        max-width: 701px;
+        margin: 0 48px;
+        padding: 40px 41px;
+        background: $color-white;
+        transform: translate(0, -50%);
+    }
+
+    &__ttl {
+        max-width: 400px;
+
+        @include h302620;
+    }
+
+    &__subttl {
+        margin-top: 13px;
+
+        @include p181816;
+    }
+
+    .btn {
+        width: 250px;
+        margin-top: 19px;
+    }
+
+    &__background {
+
+        .image {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+
+            @include object-fit(cover, right);
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 50px;
+
+        &__content-wrap {
+            max-width: 410px;
+            margin: 0 40px;
+            padding: 30px;
+        }
+
+        &__background {
+
+            .image {
+                height: 455px;
+            }
+        }
+    }
+
+    @include my-media(700) {
+
+        &__content-wrap {
+            max-width: 340px;
+        }
+    }
+
+    @include my-media(575) {
+        margin-top: 28px;
+
+        &__content-wrap {
+            top: 15px;
+            max-width: calc(100% - 60px);
+            margin: 0 15px;
+            padding: 15px;
+            transform: none;
+        }
+
+        &__subttl {
+            margin-top: 8px;
+        }
+
+        &__background {
+
+            .image {
+                min-height: 600px;
+                aspect-ratio: 497/639;
+                object-position: bottom;
+            }
+        }
+
+        .btn {
+            margin-top: 13px;
+        }
+    }
+
+    @include my-media(475) {
+
+        .btn {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.categories-group-selected {
+    padding-top: 40px;
+
+    &.active {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    &__row {
+        display: flex;
+        padding-top: 30px;
+    }
+
+    &__col {
+
+        &--first {
+            width: 325px;
+        }
+
+        &--center {
+            width: 470px;
+            padding: 0 38px 0 66px;
+            border-left: 2px solid $color-gray-light;
+        }
+
+        &--last {
+            width: 395px;
+            padding-left: 66px;
+            border-left: 2px solid $color-gray-light;
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__col {
+
+            &--center {
+                padding: 0 58px;
+            }
+
+            &--last {
+                width: 380px;
+                padding-left: 58px;
+            }
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__col {
+
+            &--center {
+                padding: 0 38px;
+            }
+
+            &--last {
+                width: 395px;
+                padding-left: 38px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        padding: 25px 0;
+
+        &.active {
+            padding: 25px 0 40px;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        &__row {
+            display: block;
+            padding-top: 0;
+        }
+
+        &__col {
+
+            &--first {
+                width: 100%;
+            }
+
+            &--center {
+                padding: 0;
+                border-left: 0;
+
+                .categories-group-list__name {
+                    line-height: 24px;
+                }
+            }
+
+            &--last {
+                padding: 0;
+                border-left: 0;
+            }
+        }
+    }
+
+    @include phone-only {
+        padding-top: 40px;
+        padding-bottom: 10px;
+
+        &.active {
+            padding-bottom: 40px;
+        }
+    }
+
+    @include phone-extra-small {
+        padding-top: 20px;
+
+        &__col {
+
+            &--center,
+            &--last {
+                width: 100%;
+            }
+        }
+    }
+}

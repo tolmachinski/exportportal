@@ -1,0 +1,76 @@
+.mblog-what-we-do {
+    margin-top: 50px;
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__txt {
+        margin-top: 19px;
+    }
+
+    &__txt-paragraph {
+        padding-bottom: 7px;
+
+        @include p161616;
+
+        &:last-child {
+            padding-top: 10px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__sign {
+        margin-top: -2px;
+        text-align: right;
+    }
+
+    &__sign-picture {
+        display: block;
+        padding-right: 19px;
+    }
+
+    &__sign-image {
+        width: auto;
+        height: auto;
+    }
+
+    &__sign-text {
+
+        @include p161616;
+
+        font-weight: 500;
+    }
+
+    @include my-media(1024) {
+        margin-top: 49px;
+
+        &__txt {
+            margin-top: 14px;
+        }
+
+        &__txt-paragraph {
+
+            &:last-child {
+                padding-top: 0;
+            }
+        }
+
+        &__sign-picture {
+            padding-right: 43px;
+        }
+
+        &__sign-text {
+            margin-top: 4px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 29px;
+
+        &__sign-picture {
+            padding-right: 0;
+        }
+    }
+}

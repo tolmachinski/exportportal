@@ -1,0 +1,7 @@
+.following-button {
+    display: none;
+
+    @include my-media(991){
+        display: inline-block;
+    }
+}

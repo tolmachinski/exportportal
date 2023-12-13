@@ -1,0 +1,25 @@
+.btn-add-category {
+    overflow: hidden;
+    max-width: 50px;
+    padding-left: 15px;
+	padding-right: 15px;
+	white-space: nowrap;
+    transition: max-width 0.3s;
+
+	&__text {
+		display: block;
+    }
+
+    .ep-icon-svg,
+    .ep-icon {
+        margin-right: 15px;
+    }
+
+	&:hover {
+        max-width: 300px;
+    }
+
+    @include phone-only {
+        max-width: initial;
+    }
+}

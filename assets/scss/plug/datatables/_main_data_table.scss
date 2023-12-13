@@ -1,0 +1,372 @@
+.main-data-table {
+	margin: 0 auto;
+	clear: both;
+	width: 100% !important;
+	line-height: 26px;
+	border-spacing: 0;
+	border-collapse: separate;
+	border-top: 1px solid $color-gray-light;
+    border-bottom: 1px solid transparent;
+	border-right: none;
+
+    &.no-footer {
+        border-bottom: 1px solid $color-gray-light !important;
+	}
+
+	thead{
+		th{
+			padding: 16px 29px 16px 20px !important;
+ 			text-align: left !important;
+			cursor: pointer;
+			background-color: $color-white;
+			font-size: 16px;
+            font-weight: 500;
+			border-bottom:1px solid $color-gray-light !important;
+			border-right:1px solid $color-gray-light;
+
+			&:first-child{
+ 				padding-left: 0 !important;
+			}
+
+			&:last-child{
+				border-right:1px solid transparent;
+			}
+
+			&.sorting_disabled{
+				cursor: default;
+			}
+		}
+
+        .sorting {
+            background-image: url(#{$mainDataTableSortingImgPath}sort_both-min.png) !important;
+		}
+
+        .sorting_desc {
+            background-image: url(#{$mainDataTableSortingImgPath}sort_desc-min.png) !important;
+		}
+
+        .sorting_asc {
+            background-image: url(#{$mainDataTableSortingImgPath}sort_asc-min.png) !important;
+        }
+	}
+
+	tbody{
+		td{
+			padding: 16px 20px;
+
+			&:first-child{
+				padding-left: 0 !important;
+		   }
+		}
+
+	}
+
+	tfoot{
+		tr{
+			th{
+				border-top:1px solid transparent;
+			}
+		}
+	}
+
+	th,
+	td{
+		line-height: 26px;
+	}
+
+	td{
+		border-right:1px solid $color-gray-light;
+        border-bottom: 1px solid $color-gray-light;
+        &:last-of-type {
+            border-right:1px solid transparent;
+        }
+	}
+
+    tr {
+
+        &.odd {
+			background-color: $color-white !important;
+
+            &:hover {
+                background-color: $color-gray-lighter !important;
+
+				td.sorting_1,
+                td.sorting_2,
+                td.sorting_3 {
+                    background-color: $color-gray-lighter !important;
+                }
+
+            }
+
+			td.sorting_1,
+            td.sorting_2,
+            td.sorting_3 {
+                background-color: $color-white !important;
+            }
+		}
+
+        &.even {
+			background-color: $color-white !important;
+
+            &:hover {
+                background-color: $color-gray-lighter !important;
+
+				td.sorting_1,
+                td.sorting_2,
+                td.sorting_3 {
+                    background-color: $color-gray-lighter !important;
+                }
+
+            }
+
+			td.sorting_1,
+            td.sorting_2,
+            td.sorting_3 {
+                background-color: $color-white !important;
+            }
+		}
+
+        &.expired {
+
+            td {
+                background-color: $color-white !important;
+            }
+        }
+	}
+
+	&__item-status{
+		font-size: 16px;
+        line-height: 22px;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+
+	&__item-opacity{
+		opacity: 0.6;
+	}
+
+	&__item-ttl{
+		max-height: 52px;
+		overflow: hidden;
+		word-break: break-all;
+		word-break: break-word;
+	}
+
+	&__item-img{
+		position: relative;
+		width: 100px;
+		min-width: 100px;
+		height: 100px;
+
+		.image{
+			height: 100%;
+		}
+
+		&--h-auto{
+			.image{
+				height: auto;
+			}
+		}
+	}
+
+	&__item-img2{
+		position: relative;
+		width: 100px;
+		min-width: 80px;
+		height: 80px;
+		background: $color-gray-lighter;
+	}
+
+	&__item-actions{
+		position: absolute;
+		top: 5px;
+		left: 0;
+		z-index: 1;
+	}
+
+	&__item-action{
+		width: 20px;
+		height: 20px;
+		margin-bottom: 5px;
+		transition: width 0.5s;
+		padding: 0 10px;
+		cursor: pointer;
+		border-radius: 0 10px 10px 0;
+
+		&:hover{
+			width: 100%;
+
+			.text{
+				width: 100%;
+			}
+		}
+
+		.text{
+			display: block;
+			width: 0;
+			height: 20px;
+			overflow: hidden;
+			white-space: nowrap;
+			transition: width 0.5s;
+			font-size: 12px;
+			line-height: 20px;
+			color: $color-white;
+		}
+	}
+
+	&--mobile{
+		> thead {
+			display: none;
+		}
+
+        > tfoot,
+		> tbody{
+			> tr:not(.details) {
+				display: block;
+				border-bottom: 5px solid $color-blue2;
+
+				> td {
+					display: block;
+					max-width: 100% !important;
+					min-height: 26px;
+					width: auto !important;
+					padding:  5px 5px 5px 5px;
+					border-bottom: 1px solid $color-gray-light;
+					border-right: 0;
+
+					&:before {
+						content: attr(data-title);
+                        display: block;
+						padding: 5px;
+						font-weight: 500;
+						background: $color-white;
+						border-bottom: 1px solid $color-gray-light;
+					}
+				}
+			}
+		}
+	}
+
+	&--padding{
+		thead{
+			th{
+				padding: 10px !important;
+			}
+		}
+
+		tbody{
+			td{
+				padding: 10px;
+			}
+		}
+	}
+
+    &--head-cursor {
+        thead{
+            th{
+                cursor: default !important;
+            }
+        }
+	}
+
+    @include my-media(991) {
+        thead{
+            th{
+                padding: 16px 29px 16px 10px !important;
+            }
+        }
+        tbody{
+            td{
+                padding: 16px 10px;
+            }
+        }
+    }
+
+	@include ie-only{
+		&__item-ttl{
+			.link{
+				max-width: 450px;
+			}
+		}
+	}
+
+	@include phone-only{
+		&.no-footer {
+			border: none !important
+		}
+
+		tr {
+			&.even,
+			&.odd {
+				&:hover {
+					background-color: $color-white !important;
+
+					td.sorting_1,
+					td.sorting_2,
+					td.sorting_3 {
+						background-color: $color-white !important;
+					}
+
+				}
+			}
+		}
+
+		td {
+			border-right: none
+		}
+
+        &__item-status{
+            margin-top: 5px;
+        }
+
+		&--mobile{
+			>tbody{
+				>tr:not(.details)>td {
+					padding: 5px 0 8px 0;
+
+					&:before {
+						padding-left: 0;
+						padding-right: 0;
+						border-bottom: none
+					}
+
+					&.dt-actions {
+						padding-top: 5px;
+					}
+				}
+			}
+
+			td{
+				&.tar,
+				&.tac {
+					text-align: left !important
+				}
+
+				&.dt-actions {
+					text-align: right !important
+				}
+			}
+
+		}
+	}
+
+	@include my-media(425){
+		.flex-card{
+			flex-direction: column;
+
+			&__float{
+				flex: auto;
+			}
+		}
+
+		&__item-img{
+			width: 100%;
+			height: 135px;
+			margin: 0;
+
+			.image{
+				max-width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+.user-preferences {
+    $root: &;
+
+    &__link {
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-black-light;
+        text-transform: uppercase;
+        background: none;
+
+        &:hover {
+            color: $color-blue2;
+
+            #{$root} {
+
+                &__delimiter {
+                    color: $color-blue2;
+                }
+            }
+        }
+    }
+
+    &__delimiter {
+        color: $color-gray;
+    }
+
+    @include my-media(991) {
+
+        &__link {
+            margin-right: 0;
+        }
+    }
+}

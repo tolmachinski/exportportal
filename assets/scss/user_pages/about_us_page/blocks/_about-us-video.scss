@@ -1,0 +1,80 @@
+.about-us-video {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin: 100px auto 0;
+    cursor: pointer;
+
+    &:hover {
+
+        .youtube-play-icon {
+
+            svg {
+                fill: $color-youtube-darken;
+            }
+        }
+    }
+
+    &__txt {
+        position: absolute;
+        bottom: 53px;
+        left: 50px;
+        z-index: 1;
+        max-width: 640px;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 55px;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    @include my-media(991) {
+        max-width: 738px;
+        margin-top: 70px;
+
+        &__txt {
+            bottom: 30px;
+            left: 30px;
+            max-width: 385px;
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 50px;
+
+        &__txt {
+            bottom: 5px;
+            left: 10px;
+        }
+
+        .youtube-play-icon {
+            width: 31px;
+            height: 31px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__txt {
+            max-width: 250px;
+            font-size: 20px;
+            line-height: 22px;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__txt {
+            max-width: 200px;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+}

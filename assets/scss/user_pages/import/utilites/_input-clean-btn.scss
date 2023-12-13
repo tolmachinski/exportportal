@@ -1,0 +1,31 @@
+.input-clean-btn {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    &__link {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        z-index: 1;
+        padding: 5px 20px 5px 5px;
+        color: $color-blue2;
+        cursor: pointer;
+    }
+
+    .inputs-40 & {
+
+        &__link {
+            top: 7px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__link {
+            top: 7px;
+        }
+    }
+}

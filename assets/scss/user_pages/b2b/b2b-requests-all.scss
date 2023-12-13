@@ -1,0 +1,47 @@
+@import "./../../import/scss_functions";
+
+@import "./../../import/_colors";
+
+@import "./../../import/_fonts";
+
+@import "./../../import/guideline/_fonts-guideline";
+
+@import "./../../import/guideline/_elements-guideline";
+
+// General
+
+@import "./../general/blocks/_page-main-heading";
+
+@import "./../general/blocks/_site-content";
+
+@import "./../general/blocks/site-main-content";
+
+@import "./../general/blocks/_sidebar";
+
+@import "./../general/blocks/_filter-control-bar";
+
+@import "./../general/blocks/_filter-result-counter";
+
+@import "./../general/blocks/_filter-btn";
+
+@import "./../general/blocks/_filter-block";
+
+@import "./../general/blocks/_filter-search-form";
+
+@import "./../general/blocks/_filter-options-list";
+
+@import "./../general/blocks/_filter-options-multilist";
+
+@import "./../general/blocks/_active-filters-params";
+
+@import "./../general/blocks/_maxlist-more";
+
+// Main
+
+@import "./blocks/_b2b-page";
+
+@import "./blocks/_b2b-requests-list";
+
+@import "./blocks/_b2b-card";
+
+@import "./blocks/_b2b-sidebar";

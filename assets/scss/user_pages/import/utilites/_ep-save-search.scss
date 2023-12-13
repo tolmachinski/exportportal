@@ -1,0 +1,18 @@
+.ep-save-search {
+	display: flex;
+
+	&__item {
+		display: flex;
+		margin-left: 10px;
+		font-size: 12px;
+		line-height: 24px;
+		color: $color-gray;
+	}
+
+	.ep-icon {
+		margin-left: 10px;
+		font-size: 18px;
+		line-height: 24px;
+		color: $color-blue2;
+	}
+}

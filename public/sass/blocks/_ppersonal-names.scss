@@ -1,0 +1,22 @@
+.ppersonal-names{
+	padding-bottom: 12px;
+
+	&__user{
+		font-size: 20px;
+		font-weight: 500;
+		color: $color-black;
+	}
+
+	&__txt{
+		padding: 0 5px;
+		font-size: 16px;
+		line-height: 29px;
+		color: $color-gray;
+	}
+
+	&__company{
+		font-size: 20px;
+		font-weight: 500;
+		color: $color-black;
+	}
+}

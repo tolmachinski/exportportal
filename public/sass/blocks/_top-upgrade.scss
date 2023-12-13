@@ -1,0 +1,129 @@
+.top-upgrade {
+    margin-top: 50px;
+    padding: 15px 0;
+    background: $color-gray-lighter;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+	&__group {
+		display: flex;
+		align-items: center;
+    }
+
+    &__group-img {
+        margin-right: 15px;
+
+        .image{
+            height: 95px;
+        }
+    }
+
+    &__info-to {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+    }
+
+    &__info-current{
+        padding-top: 4px;
+        line-height: 19px;
+
+        &--verify{
+            color: $color-green;
+        }
+
+        &--not-verify{
+            color: $color-red;
+        }
+    }
+
+    &__group-name {
+        padding-top: 5px;
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+
+    &__info-period{
+        padding-top: 4px;
+        line-height: 19px;
+        color: $color-gray;
+    }
+
+    &__actions{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        .btn{
+            margin: 2.5px 0 2.5px 6px;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 0;
+        padding: 13px 0 12px 0;
+
+        &__actions{
+            max-width: 300px;
+        }
+    }
+
+    @include phone-only{
+        padding-bottom: 5px;
+
+        &__group-name {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        &__accreditation {
+            font-size: 14px;
+        }
+
+        &__info-current,
+        &__info-to {
+            font-size: 14px;
+        }
+
+        &__info-current{
+            padding-top: 2px;
+        }
+    }
+
+    @include my-media(660) {
+        &__inner {
+            display: block;
+        }
+
+        &__info-period{
+            font-size: 14px;
+            line-height: 18px;
+            padding-top: 0;
+        }
+
+        &__group{
+            padding-bottom: 13px;
+        }
+
+        &__group-name {
+            padding-top: 0;
+        }
+
+        &__actions{
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+
+            .btn{
+                display: block;
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+}

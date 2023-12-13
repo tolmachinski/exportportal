@@ -1,0 +1,25 @@
+.b2b-pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(133px, 133px));
+    column-gap: 10px;
+    row-gap: 10px;
+
+    &__img-wr {
+        overflow: hidden;
+        height: 100px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include my-media(991) {
+        grid-template-columns: repeat(auto-fit, minmax(139.5px, 139.5px));
+
+        &__img-wr {
+            height: 105px;
+        }
+    }
+}

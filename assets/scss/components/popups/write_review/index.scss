@@ -1,0 +1,120 @@
+.write-review {
+
+    &__info {
+        margin-bottom: 28px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__info--bold {
+        margin-bottom: 13px;
+        font-weight: 500;
+    }
+
+    &__choose-account {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -5px 0 20px;
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        width: calc(50% - 5px);
+        min-width: 263px;
+        min-height: 70px;
+        margin-bottom: 2px;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 0.15s linear;
+
+        &:hover {
+            background-color: $color-gray-lighter;
+        }
+
+        &:nth-child(2n+1) {
+            margin-right: 10px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            border-radius: 100px;
+        }
+
+        .custom-radio, input[type="radio"] {
+            margin-top: 0 !important;
+        }
+    }
+
+    &__account-info {
+        width: calc(250px - 81px);
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__account-name,
+    &__account-company {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__account-company {
+        color: $color-gray;
+    }
+
+    &__textarea {
+        padding: 10px 15px;
+    }
+
+    @include touch {
+
+        &__account {
+            padding-left: 0;
+            padding-right: 0;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        &__account-info {
+            width: calc(250px - 71px);
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__info {
+            margin-bottom: 17px;
+            font-size: 16px;
+            line-height: 22px;
+
+            &--bold {
+                margin-bottom: 13px;
+            }
+        }
+
+        &__account {
+            width: 100%;
+            margin-bottom: 1px;
+            margin-right: 0;
+
+            &:nth-child(2n+1) {
+                margin-right: 0;
+            }
+        }
+
+        &__account-info {
+            width: calc(100% - 95px);
+        }
+
+        &__choose-account {
+            margin-bottom: 12px;
+        }
+    }
+}

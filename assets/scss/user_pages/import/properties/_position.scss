@@ -1,0 +1,68 @@
+.relative-b {
+ position:relative; }
+
+.absolute-b {
+ position:absolute; }
+
+.initial-b {
+ position:initial !important; }
+
+.fixed-b {
+ position:fixed !important; }
+
+.relative-b_i {
+ position:relative !important; }
+
+.absolute-b_i {
+ position:absolute !important; }
+
+.initial-b_i {
+ position:initial !important; }
+
+.pos-t0 {
+ top: 0; }
+
+.pos-b0 {
+ bottom: 0; }
+
+.pos-l0 {
+ left: 0; }
+
+.pos-r0 {
+ right: 0; }
+
+/* top */
+
+.t-0 {
+	top: 0 !important;
+}
+
+.t-32 {
+top:32px !important;}
+
+/* bottom */
+$i: 0;
+
+@while $i <= 5 {
+.b-#{$i} {
+bottom:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* right */
+$i: 0;
+
+@while $i <= 0 {
+.r-#{$i} {
+right:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* left */
+$i: 0;
+
+@while $i <= 10 {
+.l-#{$i} {
+left:#{$i}px !important;}
+
+ $i: $i + 1;}

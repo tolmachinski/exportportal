@@ -1,0 +1,18 @@
+.epuser-subline-template {
+	height: 100%;
+
+	&__left {
+		margin-right: 50px;
+	}
+
+	&__right {
+		padding-top: 30px;
+	}
+
+    @include my-media(1199) {
+
+        &__left {
+            margin-right: 30px;
+        }
+    }
+}

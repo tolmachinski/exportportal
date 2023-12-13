@@ -1,0 +1,49 @@
+.ep-search-keys {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin: 0 15px 5px 0;
+		font-weight: normal;
+	}
+
+	&__ttl {
+		margin-right: 8px;
+		font-size: 16px;
+		line-height: 12px;
+		color: $color-gray;
+		white-space: nowrap;
+	}
+
+	&__param {
+		position: relative;
+		padding: 5px 25px 5px 0;
+		font-size: 16px;
+		line-height: 12px;
+		color: $color-black;
+	}
+
+	&__name {
+		line-height: 22px;
+	}
+
+	&__close {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 14px;
+		margin-top: -7px;
+		font-size: 14px;
+		line-height: 10px;
+		color: $color-gray;
+
+		&:hover {
+			color: $color-blue2;
+		}
+	}
+}

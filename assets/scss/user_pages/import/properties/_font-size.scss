@@ -1,0 +1,14 @@
+$i: 0;
+
+@for $i from 8 through 72 {
+.fs-#{$i} {
+font-size:#{$i}px !important;}}
+
+.fs-0 {
+font-size:0 !important;}
+
+$i: 0;
+
+@for $i from 1 through 10 {
+.fs-#{$i}vw {
+font-size:$i*1vw !important;}}

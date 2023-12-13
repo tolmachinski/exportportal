@@ -1,0 +1,214 @@
+.epl-form {
+	max-width: 550px;
+	color: $color-white;
+
+	.epl-form__info {
+		margin-bottom: 25px;
+
+		.epl-form__title {
+            font-size: 45px;
+            line-height: 54px;
+            color: $color-white;
+		}
+
+		.epl-form__paragraph {
+			font-size: 18px;
+		}
+	}
+
+	.epl-form__inputs {
+
+		.custom-file-label {
+			height: 80px !important;
+
+			span {
+				position: absolute;
+				top: 26px;
+				left: 28px;
+				width: 30px;
+				height: 30px;
+				margin: auto;
+				padding: 5px;
+				background-color: $color-gray-lighter;
+				border-radius: 50%;
+				text-align: center;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			&::after {
+				content: "Choose file to upload";
+				position: absolute;
+				top: 17px !important;
+				right: 0 !important;
+				bottom: 15px !important;
+				left: 65px !important;
+				padding: .875rem .75rem;
+				color: $color-gray !important;
+				background: none !important;
+				border: none !important;
+			}
+		}
+
+		.epl-form__input {
+			min-width: 540px;
+			height: 80px;
+			margin-bottom: 10px;
+			padding-left: 30px;
+			font-size: 18px;
+		}
+	}
+
+	.epl-form__options {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 25px;
+
+		&__forgot {
+			font-size: 18px;
+			color: $color-white;
+			transition: all .25s;
+
+			&:hover {
+				color: $color-blue2;
+			}
+		}
+	}
+
+	.epl-form-btn {
+		height: 80px;
+		text-transform: uppercase;
+		transition: all .25s;
+	}
+
+	.epdocs-form-btn {
+		margin-top: 45px;
+	}
+
+	@media screen and (max-width: 600px) {
+		min-width: 350px;
+		max-width: 350px;
+
+		&__info {
+
+			.epl-form__title {
+				font-size: 25px !important;
+			}
+
+			.epl-form__paragraph {
+				font-size: 18px;
+			}
+		}
+
+		.epl-form__inputs {
+
+			.epl-form__input,
+			.custom-file-label {
+				min-width: 350px !important;
+			}
+		}
+
+		.epl-form__options {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			.epl-form__options__forgot {
+				display: block;
+				margin-top: 10px;
+				font-size: 16px !important;
+			}
+		}
+
+		.epl-form-btn {
+			width: 250px !important;
+			height: 60px !important;
+			font-size: 15px;
+		}
+	}
+
+	@media screen and (max-width: 1350px) {
+		max-width: 500px;
+
+		.epl-form__inputs {
+
+			.epl-form__input,
+			.custom-file-label {
+				min-width: 500px;
+				height: 70px !important;
+				margin-bottom: 10px;
+			}
+
+			.custom-file-label {
+
+				span {
+					top: 20px !important;
+				}
+
+				&::after {
+					top: 12px !important;
+					width: 200px;
+				}
+			}
+
+			.epl-form__input {
+				min-width: 500px;
+				height: 70px;
+				margin-bottom: 10px;
+			}
+		}
+
+		.epl-form-btn {
+			height: 80px;
+			text-transform: uppercase;
+			transition: all .25s;
+		}
+	}
+
+	@include phone-only {
+
+		.epl-form-btn {
+			background-color: $color-blue2 !important;
+		}
+	}
+
+	@media screen and (max-width: 375px) {
+		min-width: 290px;
+		max-width: 290px;
+
+		&__info {
+
+			.epl-form__title {
+				font-size: 22px !important;
+			}
+
+			.epl-form__paragraph {
+				font-size: 16px;
+			}
+		}
+
+		.epl-form__inputs {
+
+			.epl-form__input,
+			.custom-file-label {
+				min-width: 290px !important;
+			}
+
+			.epl-form__input {
+				font-size: 16px;
+			}
+		}
+
+		.epl-form__options {
+
+			.epl-form-btn {
+				width: 250px !important;
+				height: 45px !important;
+				font-size: 15px;
+			}
+		}
+	}
+}

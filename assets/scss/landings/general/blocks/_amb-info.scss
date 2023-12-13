@@ -1,0 +1,45 @@
+.ambassador {
+    // .ambassador__info
+
+    &__info {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    // .ambassador__container
+
+    // .ambassador__info-title
+
+    &__info-title {
+        margin-bottom: 9px;
+    }
+
+
+
+    @include my-media(991) {
+
+        &__info {
+            max-width: 745px;
+            margin-bottom: 67px;
+        }
+
+        &__info-title {
+            margin-bottom: 17px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__info {
+            margin-bottom: 47px;
+        }
+
+        &__info-title {
+            margin-bottom: 13px;
+        }
+    }
+}

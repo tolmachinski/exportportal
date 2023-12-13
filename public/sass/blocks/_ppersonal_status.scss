@@ -1,0 +1,18 @@
+.ppersonal-status{
+	&__html{
+		padding-bottom: 40px;
+	}
+
+	&__text{
+		font-size: 16px;
+        line-height: 20px;
+        color: $color-gray;
+	}
+
+	.ep-icon_quotes-top{
+		padding-bottom: 15px;
+		font-size: 24px;
+		color: $color-blue2;
+	}
+
+}

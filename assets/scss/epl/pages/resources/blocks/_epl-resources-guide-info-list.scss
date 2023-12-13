@@ -1,0 +1,63 @@
+.epl-resources-guide-info-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+
+    &__item {
+        position: relative;
+        width: 300px;
+        margin: 0 20px 7px 0;
+        padding-left: 17px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 0;
+            display: block;
+            width: 7px;
+            height: 7px;
+            background: $blue;
+            border-radius: 50%;
+        }
+
+        &:nth-child(2n + 2) {
+            margin-right: 0;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__item {
+            width: 320px;
+            margin-right: 35px;
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            width: 100%;
+            margin-right: 0;
+
+            &:nth-child(2) {
+                order: 3;
+            }
+
+            &:nth-child(3) {
+                order: 2;
+            }
+
+            &:nth-child(4) {
+                order: 4;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+.giveaway-prize {
+    position: relative;
+    width: 710px;
+    margin: 130px 0 0 auto;
+    padding: 50px;
+    text-align: center;
+    background: $color-white;
+
+    &__title {
+        width: 446px;
+        margin: 0 0 32px auto;
+
+        @include h503826;
+
+        text-align: left;
+        color: $color-black;
+    }
+
+    &__badge {
+        position: absolute;
+        top: -150px;
+        left: -150px;
+        z-index: 1;
+        width: 300px;
+        height: 300px;
+
+        .image {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 30px;
+        text-align: left;
+        background: $color-gray-lighter;
+    }
+
+    &__item-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 104px;
+        height: 104px;
+        background: $color-white;
+        border-radius: 50%;
+
+        svg {
+            fill: $color-blue2;
+        }
+    }
+
+    &__item-content {
+        width: 415px;
+    }
+
+    &__item-name {
+
+        @include h262018;
+
+        color: $color-black;
+    }
+
+    &__item-description {
+        margin-top: 13px;
+
+        @include p181816;
+
+        color: $color-black-light;
+    }
+
+    &__btn {
+        width: 250px;
+        margin: 15px auto 0;
+    }
+
+    @include my-media(1350) {
+        width: 630px;
+        padding: 30px;
+
+        &__title {
+            font-size: 38px;
+            line-height: 46px;
+        }
+
+        &__badge {
+            top: -125px;
+            left: -125px;
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    @include my-media(1200) {
+        width: 100%;
+        margin-top: 390px;
+
+        &__title {
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        &__badge {
+            top: -92px;
+            left: 50%;
+            width: 200px;
+            height: 92px;
+            transform: translateX(-50%);
+        }
+
+        &__item {
+            padding: 15px;
+        }
+
+        &__item-content {
+            width: 100%;
+            max-width: 950px;
+        }
+    }
+
+    @include my-media(991) {
+        width: 700px;
+        margin: 270px auto 0;
+        padding: 50px 30px;
+
+        &__item {
+            margin-bottom: 10px;
+        }
+
+        &__item-content {
+            max-width: 490px;
+        }
+
+        &__item-description {
+            margin-top: 6px;
+        }
+
+        &__btn {
+            margin-top: 20px;
+        }
+    }
+
+    @include phone-only {
+        width: 100%;
+        margin-top: 330px;
+        padding: 30px 10px;
+
+        &__title {
+            margin-bottom: 15px;
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        &__badge {
+            top: -69px;
+            width: 150px;
+            height: 69px;
+        }
+
+        &__item {
+            flex-direction: column;
+            margin-bottom: 4px;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        &__item-icon {
+            width: 70px;
+            height: 70px;
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__item-name {
+            margin-top: 10px;
+        }
+
+        &__btn {
+            width: 260px;
+            margin-top: 10px;
+        }
+    }
+
+    @include my-media(475) {
+        margin-top: 255px;
+    }
+}

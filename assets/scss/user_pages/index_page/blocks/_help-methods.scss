@@ -1,0 +1,188 @@
+.help-methods {
+    $root: &;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -7.5px;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        width: calc(25% - 15px);
+        height: 278px;
+        margin: 0 7.5px;
+        color: $color-black;
+
+        &:hover {
+            #{$root} {
+
+                &__info {
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                &__description {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__picture {
+        display: block;
+        height: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: -186px;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        background: rgba($color-gray-lighter, 0.9);
+        transition: bottom .25s ease-out;
+    }
+
+    &__title {
+
+        @include h262018;
+    }
+
+    &__description {
+        opacity: 0;
+        margin-top: 14px;
+
+        @include p181816;
+
+        transition: all .25s ease-out;
+    }
+
+    &__link {
+        width: fit-content;
+        margin-top: 13px;
+
+        @include h181816;
+
+        color: $color-blue2;
+        transition: all 0.15s linear;
+
+        svg {
+            margin-left: 10px;
+            fill: $color-blue2;
+        }
+
+        &:hover {
+            color: $color-blue2;
+            text-decoration: underline;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 360px;
+        margin: 30px auto 0;
+    }
+
+    @include my-media(1199) {
+
+        &__content {
+            justify-content: center;
+            margin: 0 -15px -30px;
+        }
+
+        &__item {
+            width: calc(33.33333% - 30px);
+            margin: 0 15px 30px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__content {
+            margin: 0 -7.5px -15px;
+        }
+
+        &__item {
+            width: calc(50% - 15px);
+            height: 270px;
+            margin: 0 7.5px 15px;
+        }
+
+        &__image {
+            object-position: top;
+        }
+
+        &__description {
+            padding-right: 15px;
+        }
+    }
+
+    @include phone-only {
+
+        &__content {
+            margin: 0 -5px -10px;
+        }
+
+        &__item {
+            width: calc(50% - 10px);
+            height: 238px;
+            margin: 0 5px 10px;
+        }
+
+        &__info {
+            padding: 15px;
+        }
+
+        &__description {
+            margin-top: 8px;
+            padding-right: 0;
+        }
+
+        &__link {
+            margin-top: 8px;
+        }
+
+        &__btn {
+            margin-top: 15px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__content {
+            margin: 0;
+        }
+
+        &__item {
+            width: 100%;
+            margin: 0 0 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include my-media(425) {
+
+        &__item {
+            height: 206px;
+        }
+
+        &__info {
+            bottom: -154px;
+        }
+    }
+}

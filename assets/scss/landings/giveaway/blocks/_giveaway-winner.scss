@@ -1,0 +1,193 @@
+.giveaway-winner {
+    position: relative;
+    min-height: 938px;
+
+    &__bg {
+        position: absolute;
+        top: -102px;
+        right: 0;
+        bottom: 90px;
+        left: 0;
+        z-index: -1;
+        display: block;
+
+        .image {
+            width: 100%;
+            height: 977px;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        margin-top: 3px;
+
+        @include h503826;
+
+        text-align: center;
+    }
+
+    &__video {
+        position: relative;
+        margin-top: 30px;
+        border: none;
+        outline: none;
+
+        .image {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &:hover {
+
+            .youtube-play-icon {
+
+                svg {
+                    fill: $color-youtube-darken;
+                }
+            }
+        }
+    }
+
+    &__info {
+        position: relative;
+        margin-top: 102px;
+        text-align: center;
+    }
+
+    &__info-bg {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        transform: translateX(-50%);
+
+        .image {
+            max-width: 100%;
+            height: 300px
+        }
+    }
+
+    &__congratulations-title {
+
+        @include h302620;
+
+        text-transform: uppercase;
+    }
+
+    &__winner-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        @include h503826;
+
+        text-transform: uppercase;
+        word-break: break-word;
+    }
+
+    &__congratulations-desc {
+        margin-top: 15px;
+
+        @include p181816;
+
+        &+& {
+            margin-top: 10px;
+        }
+    }
+
+    @include my-media(1200) {
+        min-height: 656px;
+
+        &__bg {
+
+            .image {
+                height: 725px;
+            }
+        }
+
+        &__info-bg {
+            top: -4px;
+
+            .image {
+                height: 200px;
+            }
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__bg {
+
+            .image {
+                height: auto;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__bg {
+            top: -70px;
+            bottom: 0;
+        }
+
+        &__title {
+            margin-top: 0;
+        }
+
+        &__info {
+            margin-top: 34px;
+        }
+
+        &__congratulations-desc {
+            margin-top: 28px;
+        }
+    }
+
+    @include phone-only {
+
+        &__bg {
+            top: -48px;
+        }
+
+        &__video {
+            margin-top: 15px;
+        }
+
+        &__info {
+            margin-top: 19px;
+        }
+    }
+
+
+    @include my-media(525) {
+        min-height: 410px;
+
+        &__info-bg {
+            top: 0;
+            width: auto;
+
+            .image {
+                max-width: 310px;
+                height: 98px;
+            }
+        }
+
+        &__winner-name {
+            max-width: 215px;
+            min-height: 64px;
+            margin: 10px auto 0;
+        }
+
+        &__congratulations-desc {
+            margin-top: 5px;
+
+            &+& {
+                margin-top: 2px;
+            }
+        }
+    }
+}

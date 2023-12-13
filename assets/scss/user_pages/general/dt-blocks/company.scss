@@ -1,0 +1,41 @@
+.dt-new {
+
+    &__company {
+        display: flex;
+        align-items: center;
+    }
+
+    &__company-img {
+        width: 50px;
+        max-height: 50px;
+    }
+
+    &__company-content {
+        width: calc(100% - 60px);
+        margin-left: 8px;
+    }
+
+    &__company-flag-wrap {
+        width: 20px;
+    }
+
+    &__company-ttl {
+
+        @include p161616(true);
+
+        @include text-line-ellipsis(false, 1);
+    }
+
+    &__company-country {
+        display: flex;
+        align-items: center;
+    }
+
+    &__company-country-ttl {
+        margin-left: 5px;
+
+        @include p141414;
+
+        @include text-line-ellipsis(false, 1);
+    }
+}

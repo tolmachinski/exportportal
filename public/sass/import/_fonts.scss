@@ -1,0 +1,17 @@
+@import "../../../assets/scss/import/fonts";
+// @include fontface-simple("Roboto", "./fonts/Roboto-Light", 300, normal);
+// @include fontface-simple("Roboto", "./fonts/Roboto-Medium", 500, normal);
+// @include fontface-simple("Roboto", "./fonts/Roboto-Regular", normal, normal);
+@include font-face-Roboto-300;
+@include font-face-Roboto-400;
+@include font-face-Roboto-500;
+// @include fontface-simple("Roboto", "../../fonts/Roboto-Bold", bold, normal);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-Italic", normal, italic);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-BoldItalic", bold, italic);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-ThinItalic", 100, italic);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-ThinItalic", 100, italic);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-Thin", 100, normal);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-LightItalic", 300, italic);
+// @include fontface-simple("Roboto", "../../fonts/Roboto-MediumItalic", 500, italic);
+// @include fontface-simple("Roboto", "fonts/Roboto-Black", 900, normal);
+// @include fontface-simple("Roboto", "fonts/Roboto-BlackItalic", 900, italic);

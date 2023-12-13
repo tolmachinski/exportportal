@@ -1,0 +1,173 @@
+.sidebar-questions-wr {
+
+    @include my-media(992, "min") {
+
+        &--all {
+            margin-top: 8px;
+        }
+    }
+
+    @include my-media(991) {
+        flex: 1;
+        margin: 41px 30px 0 0;
+    }
+
+    @include phone-only {
+        width: 100%;
+        margin: 40px 0 0;
+    }
+}
+
+.sidebar-questions {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    &__item {
+        padding: 30px 0 26px;
+        border-bottom: 1px solid $color-gray-light;
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__subject {
+        display: inline-block;
+        margin-bottom: 4px;
+        padding-right: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $color-black;
+        word-break: break-word;
+        word-wrap: break-word;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    &__filters {
+        margin-top: 1px;
+
+        &-btn {
+            display: none;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        &--all {
+            margin-top: 13px;
+        }
+    }
+
+    &__countries {
+        margin-top: 50px;
+    }
+
+	&__row {
+		display: flex;
+		align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $color-black;
+	}
+
+	&__flag {
+		display: flex;
+		align-items: center;
+		max-width: 50%;
+        padding: 0 10px;
+	}
+
+	&__category {
+        position: relative;
+        padding-right: 10px;
+        color: $color-black;
+
+        @include text-nowrap;
+    }
+
+    &__delimiter {
+        width: 5px;
+        height: 5px;
+        background-color: $color-gray-light;
+        border-radius: 50%;
+    }
+
+    @include my-media(991) {
+        margin-bottom: 0;
+
+        &__heading {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        &__item {
+            padding: 31px 0 25px;
+        }
+
+        &__subject {
+            padding-right: 0;
+        }
+
+        &__filters {
+            display: flex;
+            flex-direction: column;
+            max-width: 236px;
+            margin-top: 41px;
+
+            &-btn {
+                display: block;
+            }
+
+            &--all {
+                display: none;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__heading {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        &__item {
+            padding: 20px 0 10px;
+        }
+
+        &__filters {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+    @include phone-extra-small {
+        margin-top: 21px;
+
+        &__item {
+            padding: 18px 0;
+        }
+
+        &__subject {
+            display: block;
+            line-height: 1.4;
+        }
+
+        &__filters {
+            flex-direction: column;
+        }
+
+        &__category {
+            padding-right: 7px;
+        }
+
+        &__flag {
+            padding-left: 7px;
+        }
+    }
+}

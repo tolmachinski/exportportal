@@ -1,0 +1,41 @@
+module.exports = [
+    {
+        label: "Community Help",
+        subdomain: "community",
+        url: "/",
+        jsFileName: "communityQuestionsHome",
+    },
+    {
+        label: "Community Help for logged users",
+        subdomain: "community",
+        url: "/",
+        jsFileName: "communityQuestionsHome",
+        authentication: "certified seller",
+    },
+    {
+        label: "Community Help ask a question popup",
+        subdomain: "community",
+        url: "/",
+        authentication: "certified seller",
+        jsFileName: "communityQuestionsHome",
+        openAskQuestionPopup: true,
+    },
+    {
+        label: "Community Help ask a question popup validation error",
+        subdomain: "community",
+        url: "/",
+        authentication: "certified seller",
+        jsFileName: "communityQuestionsHome",
+        openAskQuestionPopup: true,
+        askQuestionPopupValidationError: true,
+    },
+    {
+        label: "Community Help add question success",
+        subdomain: "community",
+        url: "/",
+        authentication: "certified seller",
+        jsFileName: "communityQuestionsHome",
+        openAskQuestionPopup: true,
+        addQuestion: true,
+    },
+];

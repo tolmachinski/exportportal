@@ -1,0 +1,70 @@
+.questions-empty {
+    $root: &;
+
+    margin-top: 12px;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $color-black;
+    background: $color-gray-lighter;
+
+    p {
+        margin: 0;
+    }
+
+	&__information {
+		margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 13px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    &__txt {
+        margin-bottom: 5px;
+    }
+
+    &__txt--gray {
+        color: $color-gray;
+    }
+
+	&__help-options {
+        display: flex;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__option {
+        padding: 0 3px;
+    }
+
+	@include my-media(480) {
+        margin: 8px -15px 0;
+        padding: 30px 15px;
+
+        &__title {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        &__information {
+            margin-bottom: 17px;
+        }
+
+        &__help-options {
+            display: flex;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 9px;
+            }
+        }
+	}
+}
+

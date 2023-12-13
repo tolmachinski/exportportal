@@ -1,0 +1,158 @@
+.ep-functions {
+    position: relative;
+    margin-top: 49px;
+
+    &__lg {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 717px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 44px;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%);
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 23px;
+        padding: 0 15px;
+
+        &--sm {
+            margin-top: 0;
+            padding: 0 107px 0 85px;
+        }
+    }
+
+    &__col {
+        text-align: left;
+    }
+
+    &__ttl {
+
+        @include h262018;
+
+        font-weight: 500;
+        color: $color-black;
+    }
+
+    &__desc {
+        max-width: 278px;
+        margin-top: 9px;
+
+        @include p181816;
+
+        word-wrap: break-word;
+    }
+
+    &__md {
+        display: none;
+    }
+
+    @include my-media(1200) {
+
+        &__lg {
+            height: 600px;
+        }
+
+        &__bg {
+            top: 60px;
+
+            .image {
+                width: 400px;
+                height: 455px;
+            }
+        }
+    }
+
+    @include my-media(1023) {
+
+        &__lg {
+            display: none;
+        }
+
+        &__md {
+            display: block;
+        }
+
+        &__row {
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__col {
+            width: 50%;
+        }
+
+        &__img {
+
+            .image {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__ttl,
+        &__desc {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        &__desc {
+            max-width: unset;
+            margin-top: 8px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 28px;
+
+        &__ttl,
+        &__desc {
+            margin-top: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__row {
+            flex-direction: column;
+            margin-bottom: 28px;
+
+            &--reverse-sm {
+                flex-direction:column-reverse;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__col {
+            width: 100%;
+        }
+
+        &__img {
+
+            .image {
+                min-height: 200px;
+            }
+        }
+
+        &__ttl {
+            margin-top: 14px;
+        }
+
+        &__desc {
+            margin-top: 8px;
+        }
+    }
+}

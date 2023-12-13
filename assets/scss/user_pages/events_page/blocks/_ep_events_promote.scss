@@ -1,0 +1,151 @@
+.ep-events-promote {
+    margin-bottom: 50px;
+
+    &__invite {
+
+        .ep-events-promote__block {
+            padding: 0 0 20px;
+        }
+
+        .ep-events-promote__ttl {
+            margin-top: 25px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: $color-gray-lighter;
+    }
+
+    &__img {
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__ttl {
+        margin-top: 13px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    &__desc {
+        padding: 3px 26px 14px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    @include my-media(1200) {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        &__invite {
+            order: 1;
+            max-width: 57.3%;
+            margin: 0 0 50px;
+
+            .ep-events-promote__block {
+                height: 380px;
+            }
+
+            .ep-events-promote__img {
+                width: 100%;
+                height: 200px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+        }
+
+        &__block {
+            padding: 56px 81px;
+        }
+
+        &__desc {
+            padding: 2px 70px 15px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__block {
+            padding: 57px 81px;
+        }
+
+        &__desc {
+            padding: 3px 50px 14px;
+        }
+
+        .btn {
+            padding: 0.875rem .75rem;
+        }
+    }
+
+    @include my-media(575) {
+        order: 2;
+        margin: 0 0 30px;
+
+        &__invite {
+            max-width: 100%;
+            margin: 0 0 31px;
+
+            .ep-events-promote__block {
+                height: auto;
+                padding: 0 0 15px;
+            }
+
+            .ep-events-promote__img {
+                height: auto;
+            }
+
+            .ep-events-promote__ttl {
+                margin-top: 12px;
+            }
+        }
+
+        &__desc {
+            padding: 2px 20px 15px;
+        }
+
+        .btn {
+            padding: .563rem 0.75rem;
+        }
+    }
+
+    @include phone-only {
+        // margin: 0;
+
+        &__block {
+            // margin-bottom: 30px;
+            padding: 15px;
+        }
+
+        &__img {
+            width: 90px;
+            height: 100px;
+        }
+
+        &__ttl {
+            margin-top: 7px;
+        }
+
+        &__desc {
+            padding-bottom: 8px;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.ask-community {
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 111px;
+        margin: 50px 0 0;
+        padding: 30px 50px;
+        background-color: $color-gray-lighter;
+    }
+
+    &__title {
+        margin-bottom: 7px;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    @include my-media(1100) {
+
+        &__block {
+            padding: 30px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__block {
+            margin: 40px 0 0;
+            padding: 32px 30px 31px;
+        }
+
+        &__title {
+            margin-bottom: 2px;
+        }
+    }
+
+    @include phone-only {
+
+        &__block {
+            margin-top: 40px;
+            padding: 15px;
+        }
+
+        &__title {
+            margin-bottom: 7px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__subtitle {
+            margin-bottom: 8px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @include my-media(576) {
+
+        &__block {
+            display: block;
+            height: auto;
+            margin: 40px -15px 0;
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        &__title {
+            margin-bottom: 4px;
+            padding: 0 55px;
+            line-height: 1.25;
+        }
+
+        &__subtitle {
+            margin-bottom: 13px;
+        }
+    }
+}

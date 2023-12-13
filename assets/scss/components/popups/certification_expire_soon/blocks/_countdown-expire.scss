@@ -1,0 +1,54 @@
+.countdown-expire {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        padding: 0 16px;
+        border-right: 1px solid $color-gray-light;
+        text-align: center;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &__number {
+        display: block;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    &__txt {
+        display: block;
+        padding-top: 5px;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-gray;
+        text-transform: uppercase;
+    }
+
+    @include phone-only {
+
+        &__number {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__txt {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__item {
+            padding: 0 12px;
+        }
+
+        &__txt {
+            padding-top: 2px;
+        }
+    }
+}

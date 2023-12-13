@@ -1,0 +1,96 @@
+.upgrade-extend-header{
+    margin: 50px 0 0 0;
+    padding: 90px 15px;
+    text-align: center;
+    background: $color-gray-lighter;
+
+    &__gr{
+        .image{
+            height: 95px;
+        }
+    }
+
+    &__txt{
+        padding-top: 17px;
+        font-size: 26px;
+        line-height: 28px;
+        font-weight: 500;
+    }
+
+    &__name{
+        padding-top: 14px;
+        font-size: 62px;
+        line-height: 72px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+
+    &__date{
+        padding-top: 5px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    &__btn{
+        min-width: 180px;
+        margin-top: 15px;
+    }
+
+    @include my-media(1200){
+        margin: 0;
+        padding: 108px 0;
+
+        &__txt{
+            font-size: 20px;
+        }
+
+        &__name{
+            font-size: 50px;
+        }
+
+        &__date{
+            font-size: 16px;
+        }
+    }
+
+    @include my-media(1024){
+        &__txt{
+            padding-top: 14px;
+        }
+
+        &__name{
+            padding-top: 8px;
+            line-height: 62px;
+            letter-spacing: 0;
+        }
+
+        &__date{
+            padding-top: 2px;
+        }
+
+        &__btn{
+            margin-top: 13px;
+        }
+    }
+
+    @include phone-only{
+        padding:92px 0 84px 0;
+
+        &__txt{
+            padding-top: 12px;
+            font-size: 18px;
+        }
+
+        &__name{
+            padding-top: 6px;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__btn{
+            min-width: 290px;
+        }
+    }
+}

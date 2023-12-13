@@ -1,0 +1,90 @@
+/* padding */
+$i: 0;
+
+@while $i <= 20 {
+.p-#{$i} {
+padding:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* padding left */
+$i: 0;
+
+@while $i <= 60 {
+.pl-#{$i} {
+padding-left:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* padding right */
+$i: 0;
+
+@while $i <= 60 {
+.pr-#{$i} {
+padding-right:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* padding top */
+$i: 0;
+
+@while $i <= 90 {
+.pt-#{$i} {
+padding-top:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+.pt-120 {
+ padding-top: 120px !important; }
+
+/* padding bottom */
+$i: 0;
+
+@while $i <= 50 {
+.pb-#{$i} {
+padding-bottom:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+.pb-110 {
+ padding-bottom: 110px !important; }
+
+@include my-media(991, 'min') {
+
+	.pb-10-lg-min {
+		padding-bottom: 15px;
+    }
+}
+
+@include my-media(991) {
+
+	.pb-15-lg {
+		padding-bottom: 15px;
+    }
+
+    .pr-0-sm-max {
+		padding-right: 0;
+	}
+}
+
+@include phone-only {
+
+	.pb-15-xs {
+		padding-bottom: 15px;
+    }
+
+	.pb-15-md {
+		padding-bottom: 15px;
+	}
+
+	.pb-10-md {
+		padding-bottom: 10px !important;
+	}
+}
+
+@include my-media(576) {
+
+    .p-0-sm {
+		padding: 0 !important;
+    }
+}

@@ -1,0 +1,41 @@
+.txt-nowrap-simple {
+ white-space: nowrap; }
+
+.txt-nowrap-simple_i {
+ white-space: nowrap !important; }
+
+.text-ws-pre-wrap {
+ white-space: pre-wrap; }
+
+.txt-nowrap-normal {
+ white-space: normal !important; }
+
+.txt-break-word {
+ word-wrap: break-word; }
+
+.text-nowrap {
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap !important;
+}
+
+.text-pre-line {
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: pre-line;
+}
+
+.text-overflow {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:normal;
+}
+
+.txt-ws--normal {
+	white-space: normal !important;
+}
+
+.overflow-h {
+    overflow:hidden;
+}

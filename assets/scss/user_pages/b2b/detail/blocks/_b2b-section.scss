@@ -1,0 +1,60 @@
+.b2b-section {
+    width: 100%;
+    margin-top: 50px;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+
+        @include h262018;
+
+        color: $color-black;
+    }
+
+    &__link {
+
+        @include p181816(true);
+
+        transition: all .15s linear;
+
+        svg {
+            margin-left: 11px;
+            fill: $color-blue2;
+        }
+
+        &:hover {
+            color: $color-blue2-hover;
+
+            svg {
+                fill: $color-blue2-hover;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__heading {
+            margin-bottom: 14px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 29px;
+
+        &__heading {
+            margin-bottom: 9px;
+        }
+
+        &__link {
+
+            svg {
+                margin-left: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.unavailable {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        background: $white;
+    }
+}
+
+.dropdown-toggle-not-available {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+}

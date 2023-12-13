@@ -1,0 +1,101 @@
+.account-suppliers {
+	background-color: $color-gray-lighter;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 670px;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        width: 100%;
+        min-width: 0;
+        max-width: 48%;
+        height: 100%;
+
+        .image {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__block {
+        z-index: 1;
+        max-width: 520px;
+    }
+
+    &__undertitle {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        font-size: 38px;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        margin-bottom: 35px;
+        font-size: 22px;
+    }
+
+    @include my-media(991) {
+
+        &__img {
+            left: -5%;
+        }
+
+        &__block {
+            max-width: 430px;
+        }
+    }
+
+    @include phone-only {
+
+        &__inner {
+			justify-content: center;
+			height: auto;
+			padding: 40px 0;
+
+            // background-image: none;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__title {
+            font-size: 25px;
+		}
+
+        &__block {
+            max-width: 100%;
+            text-align: center;
+		}
+
+        &__list-block {
+            max-width: 100%;
+        }
+    }
+
+    @include my-media(660) {
+
+        &__title,
+		&__benefits-title,
+		&__slide-title {
+            font-size: 26px;
+        }
+    }
+}

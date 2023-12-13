@@ -1,0 +1,24 @@
+.success-registration-confirm-list {
+    margin-top: 5px;
+
+    &__item {
+        position: relative;
+        margin-bottom: 6px;
+        padding-left: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background: $black-light;
+            border-radius: 50%;
+        }
+    }
+}

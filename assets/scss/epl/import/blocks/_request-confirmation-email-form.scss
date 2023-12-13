@@ -1,0 +1,32 @@
+.request-confirmation-email-form {
+    position: relative;
+
+    &__desc {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black-light;
+    }
+
+    &__submit {
+        width: 100%;
+    }
+
+    .modal-flex {
+
+        &__content {
+            margin-bottom: 0;
+        }
+
+        &__btns-right {
+            width: 100%;
+        }
+    }
+
+    @include phone-only {
+
+        &__desc {
+            font-size: 14px;
+        }
+    }
+}

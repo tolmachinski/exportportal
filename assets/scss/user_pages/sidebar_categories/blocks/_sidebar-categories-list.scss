@@ -1,0 +1,137 @@
+.popup-categories-list {
+    $root: &;
+
+    overflow: auto;
+    width: 300px;
+    max-height: calc(100vh - 5px);
+
+    &__item {
+        position: relative;
+        min-height: 37px;
+        transition: all .2s linear;
+
+        > #{$root} {
+            display: none;
+            max-height: none;
+            padding-left: 30px;
+        }
+
+        &:hover,
+        &.active {
+            background: $color-gray-lighter;
+
+            #{$root} {
+
+                &__name {
+                    color: $color-black-light;
+                }
+            }
+        }
+
+        &.active-toggle {
+
+            > #{$root} {
+                display: block;
+                background: $color-white;
+
+                #{$root} {
+
+                    &__item {
+                        background: $color-white;
+
+                        &:hover {
+                            #{$root} {
+
+                                &__name {
+                                    color: $color-blue2;
+                                }
+                            }
+                        }
+                    }
+
+                    &__name {
+                        color: $color-black-light;
+                    }
+                }
+            }
+        }
+    }
+
+    &__name {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 15px;
+        color: $color-black-light;
+        transition: all .2s linear;
+
+        &--h-95 {
+            align-items: flex-end;
+            height: 95px;
+            padding: 8px 18px 15px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 9px;
+        right: 17px;
+        left: 13px;
+
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+
+        @include p141414;
+
+        color: $color-white;
+    }
+
+    &__icon {
+        font-size: 10px;
+
+        &--left {
+            display: none;
+            margin-right: 10px;
+        }
+
+        &--right {
+            margin-left: 10px;
+        }
+    }
+
+
+    @include my-media(1250) {
+        width: 260px;
+        padding-top: 10px;
+
+        &__name {
+            align-items: unset;
+            padding: 9px 10px 9px 40px;
+
+            &--h-95 {
+                align-items: flex-end;
+                padding: 9px 70px 16px 43px;
+            }
+        }
+
+        &__image {
+            top: 9px;
+            right: 12px;
+            bottom: 12px;
+            left: 38px;
+
+            .image {
+                object-fit: cover;
+                object-position: left;
+            }
+        }
+    }
+}

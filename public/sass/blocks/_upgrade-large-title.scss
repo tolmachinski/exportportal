@@ -1,0 +1,31 @@
+.upgrade-large-title {
+    margin: 100px 0 56px 0;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+
+    &__subtitle {
+        display: block;
+        font-size: 72px;
+        font-weight: 500;
+        letter-spacing: normal;
+    }
+
+    @include my-media(1200){
+        margin: 70px 0 38px 0;
+    }
+
+    @include phone-only{
+        margin: 50px 0 11px 0;
+        font-size: 29px;
+        line-height: 39px;
+
+        &__subtitle {
+            font-size: 29px;
+            line-height: 39px;
+        }
+    }
+
+}

@@ -1,0 +1,320 @@
+.add-info-row-wr{
+    &--pd-20{
+        .add-info-row{
+            padding-top: 10px;
+        }
+    }
+
+    &--mt15 {
+        margin-top: 15px;
+    }
+
+    &--pd-no-first{
+        .add-info-row{
+            &:first-child{
+                padding-top: 0;
+            }
+        }
+    }
+
+    @include phone-only{
+        padding-top: 5px;
+
+        &--pd-20{
+            .add-info-row{
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.add-info-row{
+	$root: &;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -7.5px;
+
+	&__col{
+        position: relative;
+		width: 50%;
+		padding-left: 7.5px;
+		padding-right: 7.5px;
+
+        &--w100pr{
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+        }
+
+		&--130{
+			max-width: 145px;
+        }
+
+        &--180{
+            max-width: 195px;
+        }
+
+        &--320{
+            max-width: 316px;
+        }
+	}
+
+	&__item{
+		padding: 0 15px;
+        line-height: 39px;
+		@include text-nowrap;
+		border-bottom: 1px solid $color-black;
+
+        &--inline {
+            padding: 0;
+            @include p161614;
+            border: 0;
+
+            #{$root} {
+                &__item-name {
+                    display: block;
+                    margin-bottom: 3px;
+                    @include p161614(true);
+                }
+            }
+        }
+    }
+
+    &__item-simple{
+        padding: 0 15px;
+		border-bottom: 1px solid $color-black;
+    }
+
+    &__inline-options {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: -7px;
+        padding-top: 9px;
+        border-top: 1px solid $color-black;
+    }
+
+    &__option {
+        margin-bottom: 7px;
+        @include p161614;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+	&__actions{
+		&--3{
+			display: flex;
+			justify-content: space-between;
+
+			.btn{
+                width: 40px;
+                margin-left: 5px;
+
+                &:first-child{
+                    margin-left: 0;
+                }
+			}
+		}
+	}
+
+	&--variant{
+		display: flex;
+
+		#{$root}{
+			&__item{
+				display: flex;
+				flex: 1;
+				align-items: center;
+				justify-content: space-between;
+				min-width: 0;
+            }
+
+            &__item-half{
+                justify-content: flex-end;
+            }
+
+            &__img{
+                margin-right: 15px;
+            }
+
+            &__img-inner{
+                width: 50px;
+                height: 40px;
+                border: 1px solid $color-gray-light;
+            }
+
+			&__ttl{
+				white-space: normal;
+			}
+
+			&__price-desktop{
+                padding-left: 10px;
+            }
+
+            &__price-mob{
+                display: none;
+                padding-left: 5px;
+            }
+
+			&__actions{
+				margin-left: 15px;
+			}
+		}
+    }
+
+    &--options {
+        #{$root} {
+            &__col {
+                &--130 {
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            margin-top: 17px;
+        }
+
+        &:last-child {
+            padding-bottom: 10px;
+        }
+    }
+
+    @include my-media(991) {
+        &--options {
+            &:last-child {
+                padding-bottom: 2px;
+            }
+        }
+    }
+
+    @include phone-only{
+        flex-wrap: wrap;
+
+        &__col{
+            width: 100%;
+            max-width: 100%;
+
+            &--mod-margin {
+                margin-top: 10px;
+                padding: 0;
+            }
+
+            &--simple{
+                margin-top: 10px;
+
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+
+		&__item{
+			padding: 0;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            font-size: 14px;
+            line-height: 20px;
+
+            &--inline {
+                margin: 0;
+                padding: 0;
+
+                #{$root} {
+                    &__item-name {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+
+        &__item-name{
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &__col-empty{
+            display: none;
+        }
+
+        &__actions{
+            display: flex;
+            justify-content: flex-end;
+
+            .btn{
+                align-self: flex-start;
+            }
+        }
+
+        &__action-col{
+            margin-top: 20px;
+        }
+
+        &__option {
+            margin-bottom: 8px;
+        }
+
+        &--variant{
+            #{$root}{
+                &__item{
+                    flex: 100%;
+                }
+
+                &__item-half{
+                    justify-content: flex-start;
+                    flex: 50%;
+                    border-bottom: 0;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                &__img{
+                    order: 1;
+                }
+
+                &__img-inner{
+                    display: inline-block;
+                }
+
+                &__price-desktop{
+                    display: none;
+                }
+
+                &__price-mob{
+                    display: inline-block;
+                    font-size: 14px;
+                    line-height: 40px;
+                }
+
+                &__actions{
+                    order: 1;
+                }
+            }
+        }
+
+        &--options {
+            &:not(:first-child) {
+                margin-top: 14px;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    @include my-media-interval(768, 800){
+        &__col{
+            &--320{
+                &:not(#{$root}__col--simple){
+                    max-width: 284px;
+                }
+            }
+        }
+    }
+}

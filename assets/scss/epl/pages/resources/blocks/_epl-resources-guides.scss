@@ -1,0 +1,21 @@
+.epl-resources-guides {
+    margin-top: 70px;
+
+    @include tablet-landscape-up {
+
+        .epl-desc-text-b {
+
+            &--mw-650 {
+                max-width: 650px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 62px;
+    }
+
+    @include phone-only {
+        margin-top: 50px;
+    }
+}

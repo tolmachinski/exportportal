@@ -1,0 +1,19 @@
+.notifications-list {
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+    }
+    &__count {
+        color: $color-gray;
+    }
+    .ep-icon {
+        margin-right: 10px;
+        display: inline-block;
+    }
+}

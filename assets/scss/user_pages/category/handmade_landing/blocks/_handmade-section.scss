@@ -1,0 +1,29 @@
+.handmade-section {
+
+    &.container-1420 {
+        margin: 70px auto;
+
+        @include my-media(991) {
+            margin: 60px auto;
+        }
+
+        @include my-media(575) {
+            margin: 50px auto;
+
+            .latest-items {
+
+                &__content {
+                    padding-bottom: 25px;
+
+                    .slick-dots {
+                        bottom: -25px;
+                    }
+                }
+
+                .loading {
+                    min-height: calc(2 * (113px + (100vw - 45px) * 0.75 / 3)) !important;
+                }
+            }
+        }
+    }
+}

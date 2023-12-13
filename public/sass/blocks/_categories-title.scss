@@ -1,0 +1,29 @@
+.categories-title {
+    left: 0;
+    right: 0;
+    font-weight: 300;
+
+    @include my-media(1200){
+        left: 0;
+        right: 0;
+        font-weight: 300;
+        .info-header__ttl-name {
+            font-size: 120px;
+        }
+    }
+
+    @include phone-only{
+        .info-header__ttl-name {
+            font-size: 75px;
+        }
+    }
+
+    @include my-media(480){
+        &.info-header__ttl {
+            margin-top: -50px;
+        }
+        .info-header__ttl-name {
+            font-size: 50px;
+        }
+    }
+}

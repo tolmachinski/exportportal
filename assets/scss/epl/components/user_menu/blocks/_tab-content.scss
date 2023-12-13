@@ -1,0 +1,72 @@
+.tab-content {
+
+    &--borders {
+        padding-top: 50px;
+
+        .text-b {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &--toggle {
+        margin-top: 30px;
+        padding-top: 0;
+    }
+
+    &--navigation {
+        margin-top: 20px;
+        padding-top: 0;
+    }
+
+    > .tab-pane {
+        display: none;
+        overflow-y: auto;
+        min-height: 276px;
+        max-height: 276px;
+
+        &.active {
+            display: block;
+            animation: fade .25s forwards ease-in;
+        }
+
+        @keyframes fade {
+
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &--toggle {
+            margin-top: 20px;
+        }
+
+        > .tab-pane {
+            min-height: 265px;
+            max-height: 265px;
+        }
+    }
+
+    @include phone-only {
+
+        &--toggle {
+            margin-top: 15px;
+        }
+
+        &--navigation {
+            margin-top: 15px;
+        }
+
+        > .tab-pane {
+            min-height: 262px;
+            max-height: 262px;
+        }
+    }
+}

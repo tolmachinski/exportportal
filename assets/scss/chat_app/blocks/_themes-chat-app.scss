@@ -1,0 +1,39 @@
+// This class need to hide chat from pending user to generate all for crypto before finish register
+
+.js-hidden-chat {
+
+    .chat-app, // Iframe chat
+    .my-chats-app, // Iframe on page url/chats
+    .chat-app-modal, // Popups
+    #chat-app-room { // Iframe room
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+#chat-app {
+    height: 563px;
+
+    &.minimized {
+        height: 51px;
+    }
+
+    @include my-media(991) {
+
+        &.minimized {
+            display: none;
+        }
+    }
+
+    @include phone-only {
+        height: calc(100% - 101px);
+    }
+
+    @include my-media(670, "max", "height") {
+        max-height: calc(100% - 129px);
+    }
+
+    @media (max-height: 670px) and (max-width: 991px) {
+        max-height: calc(100% - 101px);
+    }
+}

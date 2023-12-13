@@ -1,0 +1,102 @@
+.epl-login-delog {
+    $root: &;
+
+    display: none;
+
+    &--show-simple {
+        width: 100%;
+        max-width: 445px;
+        margin: 0 auto;
+        padding: 0 15px;
+        text-align: center;
+
+        #{$root} {
+
+            &__ttl {
+                display: block;
+            }
+
+            &__txt {
+                line-height: 24px;
+            }
+
+            &__btn {
+                max-width: 370px;
+                margin: 0 auto 10px;
+            }
+        }
+    }
+
+    &__ttl {
+        display: none;
+        margin-bottom: 10px;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+    }
+
+    &__txt {
+        padding-bottom: 18px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black-light;
+
+        &:first-child {
+            padding-bottom: 8px;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__ttl {
+            font-size: 44px;
+            line-height: 50px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__ttl {
+            margin-bottom: 6px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        &__txt {
+            padding-bottom: 12px;
+            font-size: 14px;
+            line-height: 20px;
+
+            &:first-child {
+                padding-bottom: 12px;
+            }
+        }
+
+        &__btn {
+            margin-bottom: 5px;
+        }
+
+        &--show-simple {
+            #{$root} {
+
+                &__txt {
+                    font-size: 16px;
+
+                    &:first-child {
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

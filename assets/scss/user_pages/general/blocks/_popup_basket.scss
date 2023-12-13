@@ -1,0 +1,131 @@
+.popup-basket-wr {
+    overflow: auto;
+    max-height: 400px;
+}
+
+.popup-basket {
+    padding: 20px 0;
+    border-bottom: 1px solid $color-gray-light;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    &__title-name {
+        flex: 1;
+        min-width: 0;
+        margin-right: 10px;
+
+        @include text-nowrap;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    &__total-price {
+        font-weight: 500;
+    }
+
+    @media screen and (max-width: 425px) {
+
+        &__total {
+			flex-direction: column;
+
+			.btn {
+				width: 100% !important;
+			}
+		}
+
+		&__total-price {
+			padding-bottom: 20px;
+			text-align: center;
+		}
+    }
+}
+
+.popup-basket-list {
+    $root: &;
+
+    &__item {
+        padding: 10px 0;
+    }
+
+    &__img {
+        width: 65px;
+        height: 65px;
+    }
+
+    &__text {
+        margin-top: -5px;
+    }
+
+    &__name {
+
+        @include text-nowrap;
+
+        max-width: calc(100% - 24px);
+
+        .link {
+            font-weight: 500;
+            color: $color-black;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__stock-out {
+        margin-top: 5px;
+        padding: 8px 40px 10px 10px;
+        font-size: 14px;
+        line-height: 22px;
+        background: $color-blue2-light;
+    }
+
+    &__additional {
+        height: 24px;
+        color: $color-gray;
+
+        @include text-nowrap;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price {
+        font-weight: 500;
+    }
+
+    &--stock-out {
+        #{$root}__name {
+
+            .link {
+                color: $color-gray;
+            }
+        }
+
+        #{$root}__img {
+            opacity: 0.6;
+        }
+    }
+}
+

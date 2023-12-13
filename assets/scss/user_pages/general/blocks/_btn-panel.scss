@@ -1,0 +1,12 @@
+.btn-panel-right,
+.btn-panel-left {
+    display: none;
+
+    svg {
+        margin-top: 1px;
+    }
+
+    @include phone-only {
+        display: inline-block;
+    }
+}

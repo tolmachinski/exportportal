@@ -1,0 +1,29 @@
+
+.popups-docs{
+	&__row{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__col{
+		width: 50%;
+
+		&:last-child{
+			padding-left: 10px;
+		}
+    }
+
+    @include my-media(660){
+        &__row{
+			display: block;
+		}
+
+		&__col{
+			width: 100%;
+
+			&:last-child{
+				padding-left: 0;
+			}
+		}
+    }
+}

@@ -1,0 +1,105 @@
+.bootstrap-dialog {
+
+	.bootstrap-dialog-title {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 18px;
+		color: $color-black;
+	}
+
+	&.type-default{
+		.bootstrap-dialog-title {
+			color: $color-gray-dark;
+		}
+
+		.modal-header {
+			background-color: $color-white;
+		}
+	}
+
+	&.size-normal{
+		.bootstrap-dialog-title {
+			font-size: 16px;
+		}
+
+		.bootstrap-dialog-close-button {
+			font-size: 20px;
+		}
+
+		.bootstrap-dialog-message {
+			font-size: 14px;
+		}
+	}
+
+	&.size-large{
+		.bootstrap-dialog-title {
+			font-size: 24px;
+		}
+
+		.bootstrap-dialog-close-button {
+			font-size: 30px;
+		}
+
+		.bootstrap-dialog-message {
+			font-size: 18px;
+		}
+	}
+
+	&.type-info{
+		.modal-header {
+			background-color: $color-lblue;
+		}
+	}
+
+	&.type-primary{
+		.modal-header {
+			background-color: $color-blue;
+		}
+	}
+
+	&.type-success{
+		.modal-header {
+			background-color: $color-green;
+		}
+	}
+
+	&.type-warning{
+		.modal-header {
+			background-color: $color-orange;
+		}
+	}
+
+	&.type-danger{
+		.modal-header {
+			background-color: $color-red;
+		}
+	}
+
+	.bootstrap-dialog-close-button {
+		float: right;
+		opacity: 0.9;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 1;
+		}
+	}
+
+	.bootstrap-dialog-button-icon {
+		margin-right: 3px;
+	}
+}
+
+.icon-spin {
+    display: inline-block;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+	}
+    100% {
+        transform: rotate(359deg);
+	}
+}

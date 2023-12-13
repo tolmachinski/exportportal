@@ -1,0 +1,32 @@
+.wr-calendar-orders{
+	max-height: 975px;
+	padding: 20px 0 0 20px;
+    overflow: auto;
+
+    @include my-media(660){
+        padding-left: 0;
+
+		.fc-basic-view .fc-body .fc-row {
+			min-height: 70px;
+		}
+
+		.fc-toolbar .fc-left{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+    }
+
+    @include my-media(425){
+        .fc-event .fc-content {
+            padding: 3px 0;
+        }
+
+        .fc-title{
+            flex-direction: column;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}

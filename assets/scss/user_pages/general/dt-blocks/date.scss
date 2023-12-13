@@ -1,0 +1,15 @@
+.dt-new {
+
+    &__date {
+        max-width: 100px;
+
+        @include p161616;
+    }
+
+    @include my-media(768) {
+
+        &__date {
+            max-width: 100%;
+        }
+    }
+}

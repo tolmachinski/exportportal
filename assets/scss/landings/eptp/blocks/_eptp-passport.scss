@@ -1,0 +1,151 @@
+.eptp {
+
+    &__passport {
+        padding: 101px 0 100px;
+    }
+
+    &__passport-header {
+        margin-bottom: 50px;
+    }
+
+    &__passport-image {
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto 50px;
+
+        img {
+            width: 100%;
+            box-shadow: 0 10px 20px rgb(0 0 0 / 16%);
+        }
+    }
+
+    &__passport-descriptions {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__passport-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &--217 {
+            width: 217px;
+        }
+
+        &--251 {
+            width: 251px;
+        }
+
+        &--259 {
+            width: 259px;
+        }
+
+        &_number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            margin-bottom: 23px;
+            font-size: 26px;
+            color: $color-white;
+            background-color: #16294e;
+            border-radius: 50%;
+        }
+
+        &_title {
+            margin-bottom: 13px;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+    @include my-media(1100) {
+
+        &__passport-description {
+            padding: 0 13px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__passport {
+            padding: 99px 0 70px;
+        }
+
+        &__passport-image {
+            max-width: 708px;
+            margin: 0 auto 50px;
+
+            img {
+                box-shadow: 0 5px 15px rgb(0 0 0 / 16%);
+            }
+        }
+
+        &__passport-descriptions {
+            flex-wrap: wrap;
+            margin: 0 -15px;
+
+            &_column {
+                width: 50%;
+                padding: 0 15px;
+            }
+        }
+
+        &__passport-description {
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 0;
+
+            &_number {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+
+    @include my-media(660) {
+
+        &__passport {
+            padding: 50px 0 20px;
+        }
+
+        &__passport-header {
+            margin-bottom: 30px;
+        }
+
+        &__passport-title {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        &__passport-image {
+            margin: 0 auto 30px;
+        }
+
+        &__passport-descriptions {
+            margin: 0;
+
+            &_column {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        &__passport-description {
+
+            &_number {
+                width: 45px;
+                height: 45px;
+                margin-bottom: 17px;
+            }
+
+            &_title {
+                font-size: 18px;
+            }
+        }
+    }
+}

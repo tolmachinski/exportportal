@@ -1,0 +1,11 @@
+.b2b-page {
+    margin-top: 49px;
+
+    @include my-media(991) {
+        margin-top: 29px;
+    }
+
+    @include phone-only {
+        margin-top: 14px;
+    }
+}

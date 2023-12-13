@@ -1,0 +1,14 @@
+.spersonal-btns {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .btn-block+.btn-block {
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    @include phone-only {
+        margin-bottom: 5px;
+    }
+}

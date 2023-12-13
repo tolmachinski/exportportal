@@ -1,0 +1,15 @@
+.products-categories-popular-wr {
+    overflow: hidden;
+    margin-top: 7px;
+    padding-right: 8px;
+
+    @include my-media(991) {
+        margin-top: 8px;
+        padding-bottom: 25px;
+    }
+
+    @include phone-only {
+        margin-top: 0;
+        padding-right: 0;
+    }
+}

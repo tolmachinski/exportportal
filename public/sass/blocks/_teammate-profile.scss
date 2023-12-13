@@ -1,0 +1,70 @@
+.teammate-profile {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    &__sidebar {
+        width: 100%;
+        max-width: 200px;
+    }
+    &__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        width: 200px;
+		height: 200px;
+		overflow: hidden;
+        border-radius: 50%;
+		border: 5px solid $color-blue2;
+
+        .image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__name {
+        @include text-nowrap;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    &__position {
+        @include text-nowrap;
+        color: $color-gray;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content {
+        width: calc(100% - 240px);
+        padding-left: 50px;
+    }
+    .ep-middle-text {
+        margin-top: 20px;
+    }
+
+    @include my-media(660){
+        padding: 0;
+        padding-right: 40px;
+        &__sidebar {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        &__content {
+            width: 100%;
+            padding: 30px 0 0;
+        }
+    }
+
+    @include my-media(425){
+        padding: 15px;
+    }
+}

@@ -1,0 +1,151 @@
+.register-users-banner {
+    $root: &;
+
+    margin-top: 50px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        padding: 30px 31px 30px 69px;
+        background: $color-gray-lighter;
+    }
+
+    &__text-wrap {
+        margin-right: 30px;
+    }
+
+    &__ttl {
+
+        @include h302620;
+    }
+
+    &__txt {
+        margin-top: 14px;
+
+        @include p181816;
+    }
+
+    &__img-wrap {
+        display: flex;
+    }
+
+    &__img-first, &__img-second {
+        height: 226px;
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            @include object-fit(cover);
+
+            @include lazy-image(530, true);
+        }
+    }
+
+    &__img-first {
+        width: 225px;
+        margin-right: 15px;
+    }
+
+    &__img-second {
+        width: 300px;
+    }
+
+    @include my-media(1300) {
+
+        &__wrap {
+            padding: 30px;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 30px;
+
+        &__wrap {
+            flex-flow: column wrap;
+            padding: 50px 30px;
+        }
+
+        &__text-wrap {
+            max-width: 638px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &__img-wrap {
+            margin-top: 30px;
+        }
+
+        &__img-first, &__img-second {
+            height: 268px;
+        }
+
+        &__img-first {
+            width: 268px;
+        }
+
+        &__img-second {
+            width: 355px;
+        }
+    }
+
+    @include phone-only {
+
+        &__ttl {
+            font-size: calcFluidFontSize(20, 26, 320, 767);
+            line-height: 1.21;
+        }
+
+        &__txt {
+            font-size: calcFluidFontSize(16, 18, 320, 767);
+            line-height: 1.21;
+        }
+
+        &__img-first, &__img-second {
+            height: auto;
+        }
+
+        &__img-first {
+            width: auto;
+
+            img {
+                aspect-ratio: 268/268;
+            }
+        }
+
+        &__img-second {
+            width: auto;
+
+            img {
+                aspect-ratio: 355/268;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+        margin-top: 25px;
+
+        &__wrap {
+            padding: 27px 15px 30px;
+        }
+
+        &__txt {
+            margin-top: 5px;
+        }
+
+        &__img-wrap {
+            margin-top: 18px;
+        }
+    }
+
+    @include my-media(375) {
+
+        &__wrap {
+            padding: 31px 15px 30px;
+        }
+
+        &__img-first {
+            margin-right: 7px;
+        }
+    }
+}

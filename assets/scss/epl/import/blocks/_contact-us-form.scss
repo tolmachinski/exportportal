@@ -1,0 +1,36 @@
+.contact-us-form {
+    position: relative;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__col {
+        width: calc(50% - 7.5px);
+
+        &--w100pr {
+            width: 100% !important;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__col {
+            width: calc(50% - 5px);
+        }
+    }
+
+    @include phone-only {
+
+        &__row {
+            margin: 0;
+        }
+
+        &__col {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

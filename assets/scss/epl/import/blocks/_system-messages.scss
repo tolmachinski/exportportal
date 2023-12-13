@@ -1,0 +1,129 @@
+@import "../../import/_all_imports";
+
+.system-messages {
+    position: fixed;
+    top: 70px;
+    right: 216px;
+    z-index: $zIndexSystemMessages;
+    width: 360px;
+    padding: 5px;
+    color: $black-light;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba($black, 0.16);
+
+    &__ttl {
+        position: relative;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+
+        .ep-icon {
+            position: absolute;
+            top: -10px;
+            right: -5px;
+            padding: 20px 18px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &__card {
+        position: relative;
+        margin-top: 5px;
+        padding: 14px;
+        border-radius: 5px;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+
+        &:first-child {
+            margin-top: 2px;
+        }
+
+        &--message-error,
+        &--error {
+            background-color: $red-light;
+        }
+
+        &--message-success,
+        &--success {
+            background-color: $green-light;
+        }
+
+        &--message-info,
+        &--info {
+            background-color: $blue-light;
+        }
+
+        &--message-warning,
+        &--warning {
+            background: $orange-light;
+        }
+    }
+
+    &__card-ttl {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 5px;
+
+        strong {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: capitalize;
+        }
+
+        .ep-icon {
+            position: absolute;
+            top: 0;
+            right: -2px;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &__card-txt {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @include my-media(1200) {
+        top: 60px;
+        right: 45px;
+    }
+
+    @include phone-only {
+        right: 10px;
+
+        &__ttl {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__card {
+            padding-top: 12px;
+
+            &:first-child {
+                margin-top: 4px;
+            }
+        }
+
+        &__card-ttl {
+            padding-bottom: 2px;
+
+            strong {
+                font-size: 14px;
+            }
+        }
+
+        &__card-txt {
+            font-size: 14px;
+        }
+    }
+
+    @include my-media(425) {
+        width: 300px;
+    }
+}

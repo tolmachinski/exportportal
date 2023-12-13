@@ -1,0 +1,234 @@
+.mblog-list {
+    $root: &;
+
+    &__item {
+        display: flex;
+        margin-top: 15px;
+        border: 1px solid $gray-light;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 393px;
+        height: 169px;
+        cursor: pointer;
+    }
+
+    &__img-item {
+        width: 100%;
+        height: 100%;
+
+        @include object-fit(cover, center);
+    }
+
+    &__detail {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        padding: 13px 14px 10px 15px;
+    }
+
+    &__category {
+        display: flex;
+    }
+
+    &__category-name {
+        font-weight: 500;
+        color: $gray;
+        text-transform: uppercase;
+
+        @include p141412;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__ttl {
+        margin-top: 3px;
+
+        @include h181816;
+
+        @include text-nowrap;
+    }
+
+    &__ttl-link {
+
+        @include h181816;
+
+        color: $black;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__date {
+
+        @include p141412;
+
+        color: $gray;
+    }
+
+    &__short-description {
+        margin: 6px 0 2px;
+
+        @include p161616;
+
+        @include text-line-ellipsis;
+    }
+
+    &__more {
+
+        @include p161616;
+
+        font-weight: 500;
+    }
+
+    @include my-media(580, 'min') {
+
+        &__item {
+
+            &--first {
+                display: block;
+
+                #{$root} {
+
+                    &__img {
+                        overflow: hidden;
+                        width: 100%;
+                        height: auto;
+                        margin-right: 0;
+                    }
+
+                    &__img-item {
+                        width: 100%;
+                        height: auto;
+
+                        &[src*="no-image"] {
+                            max-height: 450px !important;
+                        }
+                    }
+
+                    &__detail {
+                        padding: 28px 29px;
+                    }
+
+                    &__ttl {
+                        margin: 4px 0 3px;
+                    }
+
+                    &__ttl,
+                    &__ttl-link {
+
+                        @include h262018;
+                    }
+
+                    &__date {
+
+                        @include p161616;
+                    }
+
+                    &__short-description {
+                        display: block;
+                        margin: 11px 0 3px;
+
+                        @include p181816;
+                    }
+
+                    &__more {
+
+                        @include p181816;
+
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        @include my-media(1024) {
+
+            &__item {
+
+                &--first {
+                    #{$root} {
+
+                        &__ttl {
+                            margin: 3px 0 2px;
+                        }
+
+                        &__detail {
+                            padding: 12px 15px 13px 14px;
+                        }
+
+                        &__short-description {
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include my-media(834) {
+
+        &__img {
+            width: 318px;
+        }
+
+        &__item {
+            margin-top: 10px;
+            margin-top: 15px;
+        }
+    }
+
+    @include my-media(768) {
+
+        &__img {
+            width: 251px;
+        }
+    }
+
+    @include my-media(580) {
+
+        &__item {
+            display: block;
+            margin-top: 10px;
+        }
+
+        &__img {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+        }
+
+        &__img-item {
+            height: auto;
+        }
+
+        &__ttl {
+            margin-bottom: 2px;
+
+            @include text-line-ellipsis(false, 2);
+
+            white-space: normal;
+        }
+
+        &__date {
+            display: block;
+        }
+
+        &__short-description {
+            margin-top: 8px;
+            -webkit-line-clamp: 3;
+        }
+
+        &__detail {
+            padding: 9px 8px 5px 9px;
+        }
+    }
+}

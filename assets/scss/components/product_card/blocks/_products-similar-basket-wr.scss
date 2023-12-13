@@ -1,0 +1,113 @@
+.products-similar-basket-wr {
+    position: relative;
+    overflow: hidden;
+    margin: -7.5px 0;
+    padding: 0 20px 25px;
+
+    .slick-prev {
+        left: 7px;
+    }
+
+    .slick-next {
+        right: 0;
+    }
+
+    &:not(:hover) {
+
+        .slick-arrow {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    .products {
+
+        &--slider-full {
+            margin: 0 0 0 -7.5px;
+        }
+    }
+
+    @include my-media(991) {
+        padding: 0 12px 25px;
+
+        .products {
+
+            &--slider-full {
+                margin: 0 -7.5px;
+            }
+
+            &__item {
+                min-width: calc((100vw - 40px) / 3);
+                max-width: none;
+            }
+
+            &__img {
+
+                .image {
+                    height: calc((100vw - 91px) * 0.75 / 3) !important;
+                }
+            }
+        }
+
+        .slick-slide {
+            width: calc((100vw - 40px) / 3);
+        }
+
+        .slick-dots {
+            bottom: -20px;
+        }
+    }
+
+    @include phone-only {
+        margin: -2.5px 0;
+        padding: 0 7px 25px;
+
+        .products {
+
+            &--slider-full {
+                margin: 0 -2.5px;
+            }
+
+            &__item {
+                min-width: calc((100vw - 26px) / 3);
+                max-width: none;
+            }
+
+            &__img {
+
+                .image {
+                    height: calc((100vw - 47px) * 0.75 / 3) !important;
+                }
+            }
+        }
+
+        .slick-slide {
+            width: calc((100vw - 26px) / 3);
+        }
+
+        .slick-dots {
+            bottom: -26px;
+        }
+    }
+
+    @include my-media(475) {
+
+        .products {
+
+            &__item {
+                min-width: calc((100vw - 25px) / 2);
+            }
+
+            &__img {
+
+                .image {
+                    height: calc((100vw - 39px) * 0.75 / 2) !important;
+                }
+            }
+        }
+
+        .slick-slide {
+            width: calc((100vw - 25px) / 2);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.giveaway-nav {
+    position: absolute;
+    top: 54px;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        .image {
+            width: 60px;
+            height: 72px;
+        }
+    }
+
+    &__logo-txt {
+        width: 135px;
+        margin-left: 10px;
+        font-size: 35px;
+        font-weight: bold;
+        line-height: 1;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+
+    @include my-media(991) {
+        position: static;
+
+        &__logo {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+
+            .image {
+                width: 32px;
+                height: 38px;
+            }
+        }
+
+        &__logo-txt {
+            width: 70px;
+            margin-left: 5px;
+            font-size: 18px;
+            color: $color-black;
+        }
+    }
+}

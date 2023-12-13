@@ -1,0 +1,30 @@
+.dashboard-statistic {
+
+	&__item {
+		display: inline-flex;
+		justify-content: space-between;
+        width: 300px;
+		margin: 9px 0;
+		font-size: 16px;
+		font-weight: normal;
+
+		span {
+			padding-right: 10px;
+			color: $gray;
+
+			@include text-nowrap;
+		}
+
+		i {
+			font-style: normal;
+			color: $gray;
+		}
+	}
+
+    @include phone-extra-small {
+
+        &__item {
+            width: 100%;
+        }
+    }
+}

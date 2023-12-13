@@ -1,0 +1,8 @@
+.info-dialog {
+    color: $color-blue2;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-blue2-hover;
+    }
+}

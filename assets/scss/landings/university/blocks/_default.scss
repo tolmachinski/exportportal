@@ -1,0 +1,121 @@
+.epu-section {
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 755px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+    &__link {
+        align-self: center;
+        width: 100%;
+        max-width: 250px;
+        margin-top: 13px;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 805px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @include my-media(571, "min") {
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        &__info {
+            flex: 0 1 48%;
+            align-items: flex-start;
+            margin-bottom: 0;
+        }
+
+        &__image {
+            flex: 0 1 52.1%;
+        }
+
+
+        &__link {
+            align-self: flex-start;
+            margin-top: 29px;
+        }
+    }
+
+    @include my-media(768, "min") {
+
+        &__title {
+            margin-bottom: 14px;
+        }
+
+        &__info {
+            padding: 2px 30px 0 15px;
+        }
+    }
+
+    @include my-media(992, "min") {
+
+        &__info {
+            padding: 3px 40px 0 15px;
+        }
+
+        &__image {
+            margin-right: -4px;
+        }
+    }
+
+    @include my-media(1200, "min") {
+
+        &__title {
+            margin-bottom: 17px;
+        }
+
+        &__info {
+            padding: 3px 96px 0 15px;
+        }
+    }
+}
+
+
+
+.benefits-of-epu,
+.why-join-epu {
+
+    &__heading {
+        width: 100%;
+        margin: 0 auto 18px;
+        padding: 0 15px;
+    }
+
+    @include my-media(768, "min") {
+
+        &__heading {
+            margin: 0 auto 29px;
+        }
+    }
+
+    @include my-media(992, "min") {
+
+        &__heading {
+            margin: 0 auto 49px;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+.epl-header-line {
+    $root: &;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zIndexNav;
+    background: $white;
+    border-bottom: 1px solid $gray-light;
+
+    &__background {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba($black, 0.6);
+
+        &.active {
+            left: -8px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+    }
+
+    &__logo {
+        min-width: 204px;
+
+        .link {
+            display: block;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__or {
+        display: none;
+    }
+
+    &__signin {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    &__register {
+        min-width: 116px;
+    }
+
+    &__zoho {
+        display: none;
+    }
+
+    &--hide-lg {
+        display: none;
+    }
+
+    @include my-media(1200) {
+
+        &__logo {
+            min-width: auto;
+        }
+    }
+
+    @include my-media(991) {
+        position: fixed;
+        top: 61px;
+        bottom: 0;
+        left: -300px;
+        display: block;
+        overflow: auto;
+        width: 300px;
+        transition: all .25s ease-in;
+
+        .epuser-line {
+            display: none;
+        }
+
+        &__inner {
+            display: block;
+            min-width: auto;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__actions {
+            padding-top: 40px;
+        }
+
+        &__register,
+        &__signin {
+            min-width: auto;
+            padding: 0 !important;
+            font-size: 18px !important;
+            line-height: 26px !important;
+            color: $blue;
+            border: none;
+        }
+
+        &__or {
+            display: block;
+            padding: 0 15px !important;
+            font-size: 18px !important;
+        }
+
+        &__zoho {
+            display: block;
+            padding-top: 32px;
+        }
+
+        &__zoho-btn {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            font-size: 16px;
+            line-height: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .ep-icon {
+                margin-right: 10px;
+                font-size: 18px;
+            }
+
+            svg {
+                margin-right: 10px;
+            }
+        }
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    @include phone-only {
+        left: -220px;
+        width: 220px;
+
+        &__actions {
+            padding-top: 26px;
+        }
+
+        &__register,
+        &__signin {
+            font-size: 16px !important;
+            line-height: 22px !important;
+        }
+
+        &__or {
+            padding: 0 4px !important;
+            font-size: 16px !important;
+        }
+
+        &__zoho {
+            padding-top: 18px;
+        }
+    }
+
+    @include touch {
+
+        &__background {
+
+            &.active {
+                left: 0;
+            }
+        }
+    }
+}

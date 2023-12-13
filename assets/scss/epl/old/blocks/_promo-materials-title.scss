@@ -1,0 +1,15 @@
+.promo-materials-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    &__txt {
+        font-size: 18px;
+    }
+
+    @include phone-only {
+        padding-top: 0;
+    }
+}

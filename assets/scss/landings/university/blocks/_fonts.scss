@@ -1,0 +1,90 @@
+.epu-section {
+
+    &__title {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include my-media(768, "min") {
+
+        &__title {
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @include my-media(992, "min") {
+
+        &__title {
+            font-size: 50px;
+            line-height: 55px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+.benefits-of-epu,
+.why-join-epu {
+
+    @include my-media(768, "min") {
+
+        &__title,
+        &__subtitle {
+            text-align: center;
+        }
+    }
+}
+
+.benefits-of-epu {
+
+    &__info-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    &__list {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include my-media(768, "min") {
+
+        &__info-title {
+            font-size: 26px;
+            line-height: 28px;
+        }
+
+        &__list {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @include my-media(992, "min") {
+
+        &__info-title {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 36px;
+        }
+
+        &__list {
+            font-size: 20px;
+        }
+    }
+}

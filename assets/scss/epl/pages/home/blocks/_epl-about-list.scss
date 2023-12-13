@@ -1,0 +1,82 @@
+.epl-about-list {
+    $root: &;
+
+    width: 300px;
+
+    &__item {
+        margin-top: 27px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__icon {
+        fill: $blue;
+    }
+
+    &__ttl {
+        margin-top: 14px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $black;
+    }
+
+    &__text {
+        margin-top: 7px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    @include my-media(1024) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 60px;
+
+        &__item {
+            flex: 1;
+            width: 33.33%;
+            margin-top: 0;
+            padding-left: 30px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        &__icon {
+            height: 35px;
+        }
+
+        &__ttl {
+            margin-top: 9px;
+        }
+    }
+
+    @include phone-only {
+        display: block;
+        text-align: center;
+        padding-top: 30px;
+
+        &__item {
+            width: 100%;
+            margin-top: 27px;
+            padding: 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &__icon {
+            height: auto;
+        }
+
+        &__ttl {
+            margin-top: 14px;
+        }
+    }
+}

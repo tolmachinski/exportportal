@@ -1,0 +1,68 @@
+.mep-header-bottom {
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    display: none;
+    width: 100%;
+    min-width: 320px;
+    min-height: 50px;
+
+    &__restricted {
+        position: absolute;
+        top: 1px;
+        left: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: $color-red;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+
+        svg {
+            fill: $color-red !important;
+        }
+    }
+
+    &__user-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 32px;
+        height: 32px;
+        border: 1px solid $color-gray-light;
+        border-radius: 50%;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            margin: 0 -100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+	@include my-media(991) {
+		display: block;
+
+        &.fancybox-margin2 {
+
+            .main-user-line,
+            .mep-header-bottom-nav {
+                margin-right: 0;
+                padding-right: 8px;
+            }
+        }
+	}
+
+    @include touch {
+
+        &.fancybox-margin2 {
+
+            .main-user-line,
+            .mep-header-bottom-nav {
+                padding-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+.companies {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0 -5px;
+	background: $color-white;
+
+	&-wr {
+		width: 33.33%;
+		padding: 5px;
+	}
+
+	&__item {
+		position: relative;
+		border: 1px solid $color-gray-light;
+
+		@include fs-additional;
+	}
+
+	&__img-wr {
+        display: flex;
+        align-items: center;
+		margin-right: 20px;
+        background: $color-gray-lighter;
+    }
+
+	&__img {
+        width: 133px;
+        height: 133px;
+	}
+
+	&__detail {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-width: 0;
+        padding: 17px 20px 15px 0;
+		color: $color-gray;
+	}
+
+	&__ttl {
+
+		@include fs-names;
+
+		@include text-nowrap;
+
+		.link {
+			color: $color-black;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__group {
+		min-width: 0;
+		margin-right: 10px;
+		color: $color-green;
+
+		@include text-nowrap;
+	}
+
+	&__date {
+
+		@include text-nowrap;
+	}
+
+	&__country {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		min-width: 0;
+		margin-right: 10px;
+
+		.image {
+			width: 24px;
+			height: 24px;
+			margin-right: 5px;
+		}
+
+		.text {
+			flex: 1;
+			width: 100%;
+			min-width: 0;
+
+			@include text-nowrap;
+
+			line-height: 25px;
+			color: $color-black;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.dropdown-toggle {
+
+			@include text-nowrap;
+		}
+	}
+
+	&--2 {
+
+		.companies {
+
+			&-wr {
+				width: 50%;
+				padding: 0 10px 10px 0;
+
+				&:nth-child(2n) {
+					padding-left: 0;
+				}
+			}
+		}
+    }
+
+    @include my-media(840) {
+
+        &__ttl {
+
+            &--mw-207 {
+                width: 100%;
+                max-width: 207px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__ttl {
+
+            &--mw-207 {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include my-media(425) {
+
+        &__img {
+            width: 80px;
+            height: 80px;
+        }
+
+        &__detail {
+            padding: 5px 5px 5px 0;
+        }
+    }
+
+	@include ie-only {
+
+		&__detail {
+			flex: 1;
+		}
+	}
+}
+
+.index-companies {
+
+    .companies {
+
+        @include tablet-landscape-up {
+
+            .companies-wr {
+                width: 50%;
+            }
+        }
+
+        @include phone-only {
+
+            .companies-wr {
+                display: none;
+                width: 100%;
+
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

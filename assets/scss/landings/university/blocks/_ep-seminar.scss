@@ -1,0 +1,18 @@
+.ep-seminar {
+
+    @include my-media(768, "min") {
+        margin-top: -1px;
+
+        &__info {
+            padding: 2px 36px 0 15px;
+        }
+    }
+
+    @include my-media(991, "min") {
+        margin-top: -3px;
+
+        &__info {
+            padding: 2px 96px 0 15px;
+        }
+    }
+}

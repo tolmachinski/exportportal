@@ -1,0 +1,58 @@
+.upgrade-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray-light;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    &__btn {
+
+        .btn {
+            min-width: 130px;
+        }
+    }
+
+    @include my-media(991) {
+        align-items: flex-end;
+
+        &__desc {
+            padding-right: 7px;
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+
+    @include phone-only {
+        display: block;
+        margin-top: 18px;
+
+        &__info {
+            padding-left: 7px;
+        }
+
+        &__desc {
+            margin-bottom: 14px;
+            padding-right: 0;
+            line-height: 22px;
+        }
+
+        &__btn {
+            padding: 0 8px;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

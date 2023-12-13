@@ -1,0 +1,9 @@
+.progress {
+    display: flex;
+    overflow: hidden; // force rounded corners by cropping it
+    height: 1rem;
+    font-size: 14px;
+    line-height: 0;
+    background-color: $gray-lighter;
+    border-radius: 3px;
+}

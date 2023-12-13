@@ -1,0 +1,23 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/guideline/_elements-guideline";
+
+@import "./../../plug/slick-1-8-1/slick";
+
+@import "./../../plug/slick-1-8-1/slick-dots";
+
+@import "./../../components/product_card/_products";
+
+@import "./../../components/product_card/blocks/_products-blog-wr";
+
+@import "./blocks/_container-blog-detail";
+
+@import "./blocks/_mblog-detail";
+
+@import "./blocks/_mblog-recommended";
+
+@import "./../blog/blocks/_mblog-title";

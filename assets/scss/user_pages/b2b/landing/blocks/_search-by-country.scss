@@ -1,0 +1,146 @@
+.search-by-country {
+    position: relative;
+
+    .ajax-loader {
+        background-color: $color-gray-light !important;
+    }
+
+    &__map {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 50px;
+        background-color: $color-gray-lighter;
+    }
+
+    &__map-info {
+        display: flex;
+        flex-direction: column;
+        width: 353px;
+        margin: 0 50px 0 0;
+        padding: 27px 30px 27px 28px;
+        background-color: $color-white;
+        border: 2px solid $color-gray-light;
+    }
+
+    &__map-title {
+        margin: 0 0 13px;
+
+        @include h201816;
+    }
+
+    &__map-item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 13px;
+    }
+
+    &__map-icon {
+        margin: 0 10px 0 0;
+    }
+
+
+    &__map-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 290px;
+        margin: 0 3px 0 0;
+
+        @include p181816;
+
+        color: $color-black;
+    }
+
+    &__map-country {
+        overflow: hidden;
+        margin: 0 4px 0 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__map-counter {
+        color: $color-gray;
+    }
+
+    &__link {
+        margin: 5px 0 0;
+
+        @include p181816(true);
+
+        color: $color-blue2;
+        transition: all .15s linear;
+
+        svg {
+            position: relative;
+            bottom: 1px;
+            margin-left: 16px;
+            fill: $color-blue2;
+        }
+    }
+
+    &__map-image {
+        width: 100%;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__map {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            padding: 33px 30px 30px;
+        }
+
+        &__map-image {
+            margin: 0 0 29px;
+        }
+
+        &__map-info {
+            width: 100%;
+            margin: 0;
+            padding: 17px 10px 17px 18px;
+        }
+
+        &__map-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__map-item {
+            width: 50%;
+            padding: 0 10px 0 0;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__map {
+            flex-direction: column-reverse;
+            padding: 15px;
+        }
+
+        &__map-image {
+            margin: 0 0 15px;
+        }
+
+        &__map-info {
+            padding: 12px 13px 11px;
+        }
+
+        &__map-title {
+            margin: 0 0 12px;
+        }
+
+        &__map-item {
+            width: 100%;
+            margin: 0 0 7px;
+            padding: 0;
+        }
+    }
+}

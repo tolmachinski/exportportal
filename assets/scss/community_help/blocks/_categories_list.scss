@@ -1,0 +1,50 @@
+.sidebar-categories-list {
+    margin-top: 25px;
+    margin-bottom: 12px;
+
+    &__item {
+        display: flex;
+		justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &__link {
+        flex: 1;
+        min-width: 0;
+        margin-right: 10px;
+        line-height: 18px;
+        color: $color-black;
+
+        @include text-nowrap;
+    }
+
+    &__counter {
+        color: $color-gray;
+    }
+
+    @include my-media(991) {
+
+        &__heading {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+
+    @include phone-only {
+
+        &__heading {
+            font-size: 18px;
+        }
+    }
+
+    @include my-media(576) {
+        margin-top: 15px;
+        margin-bottom: 14px;
+
+        &__heading {
+            margin-bottom: 17px;
+        }
+    }
+}

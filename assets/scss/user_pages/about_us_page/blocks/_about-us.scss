@@ -1,0 +1,496 @@
+.about-us {
+    $root: &;
+
+    margin-top: 100px;
+    color: $color-black;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__col {
+        width: 50%;
+        max-width: 960px;
+
+        &--805 {
+            width: 42.208%;
+            max-width: 805px;
+        }
+
+        &--885 {
+            width: 46%;
+            max-width: 885px;
+        }
+
+        &--1035 {
+            width: 54%;
+            max-width: 1035px;
+        }
+
+        &--1105 {
+            width: 57.792%;
+            max-width: 1105px;
+        }
+    }
+
+    &__heading {
+        margin: 101px 0 49px;
+        text-align: center;
+
+        #{$root} {
+
+            &__desc {
+                margin-top: 16px;
+            }
+        }
+
+        &--members,
+        &--smes {
+            margin-bottom: 48px;
+        }
+
+        &--smes {
+            margin-top: 97px;
+        }
+
+        &--videos {
+            margin-bottom: 46px;
+        }
+    }
+
+    &__bg {
+        overflow: hidden;
+
+        .image {
+            width: 100%;
+            height: auto;
+        }
+
+        &--mnw-1035 {
+
+            .image {
+                min-width: 1035px;
+                height: unset;
+            }
+        }
+
+        &--mnw-960 {
+
+            .image {
+                min-width: 960px;
+                height: unset;
+            }
+        }
+
+        &--smes {
+            max-width: 1070px;
+            margin-right: auto;
+
+            .image {
+                min-width: 1075px;
+                height: unset;
+            }
+        }
+    }
+
+    &__info {
+        max-width: 655px;
+        margin-left: auto;
+        margin-right: 87px;
+        padding-left: 7px;
+
+        &--left,
+        &--right {
+            max-width: 510px;
+            margin-right: 90px;
+            padding-top: 0;
+            padding-left: 15px;
+
+            #{$root} {
+
+                &__desc {
+                    margin-top: 13px;
+                }
+
+                &__link {
+                    margin-top: 13px;
+                }
+            }
+        }
+
+        &--right {
+            max-width: 530px;
+            margin-left: 70px;
+            margin-right: auto;
+            padding-right: 15px;
+        }
+    }
+
+    &__ttl {
+
+        @include h503826;
+
+        &--320 {
+            max-width: 320px;
+        }
+
+        &--smes {
+            max-width: 545px;
+            margin: 0 auto;
+        }
+
+        &--members {
+
+            @include h302620;
+        }
+    }
+
+    &__desc {
+
+        @include p181816;
+
+        margin: 15px auto 0;
+        color: $color-black-light;
+
+        &--benefits {
+            max-width: 630px;
+        }
+
+        &--members {
+            max-width: 970px;
+        }
+
+        &--smes {
+            max-width: 1035px;
+        }
+
+        p+p {
+            margin-top: 13px;
+        }
+    }
+
+    &__btn {
+        width: 250px;
+        margin-top: 14px;
+    }
+
+    &__link {
+
+        @include p181816;
+
+        display: inline-block;
+        margin-top: 23px;
+    }
+
+    @include my-media(1560) {
+
+        &__info {
+            padding-left: 15px;
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__col {
+
+            &--805,
+            &--1105 {
+                width: 100%;
+                max-width: unset;
+            }
+
+            &--885 {
+                width: 53%;
+            }
+
+            &--1035 {
+                width: 47%;
+                padding-right: 15px;
+            }
+
+            &--w50pr {
+                width: 50%;
+            }
+        }
+
+        &__bg {
+
+            &--center {
+                display: flex;
+                justify-content: center;
+            }
+
+            &--mnw-1035 {
+
+                .image {
+                    min-width: 348px;
+                    max-width: 500px;
+                    height: auto;
+                }
+            }
+
+            &--smes {
+
+                picture {
+                    padding-left:15px;
+                }
+
+                .image {
+                    min-width: 369px;
+                    height: auto;
+                }
+            }
+        }
+
+        &__desc {
+
+            &--benefits {
+                max-width: unset;
+            }
+        }
+
+        &__info {
+            max-width: 100%;
+            margin-bottom: 50px;
+            margin-right: 0;
+            padding: 0 15px;
+            text-align: center;
+
+            &--left,
+            &--right {
+                text-align: left;
+            }
+        }
+
+        &__ttl {
+
+            &--320 {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 70px;
+
+        &__bg {
+
+            &--mnw-960 {
+
+                .image {
+                    min-width: unset;
+                    height: auto;
+                }
+            }
+
+            &--right {
+                padding-right: 15px;
+            }
+
+            &--left {
+                padding-left: 15px;
+            }
+        }
+
+        &__info {
+
+            &--left,
+            &--right {
+                margin-bottom: 0;
+                padding-top: 0;
+
+                #{$root} {
+
+                    &__desc {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            &--left {
+                padding-right: 20px;
+            }
+
+            &--right {
+                margin-left: 0;
+                padding-right: 15px;
+            }
+        }
+
+        &__ttl {
+
+            &--smes {
+                max-width: unset;
+            }
+        }
+
+        &__desc {
+            margin-top: 14px;
+
+            p+p {
+                margin-top: 13px;
+            }
+
+            &--smes {
+                max-width: 750px;
+            }
+        }
+
+        &__heading {
+            margin: 69px 0 49px;
+            text-align: center;
+
+            #{$root} {
+
+                &__desc {
+                    margin-top: 13px;
+                }
+            }
+
+            &--members {
+                margin-top: 70px;
+            }
+
+            &--smes {
+                margin-top: 68px;
+            }
+        }
+
+        &__link {
+            margin-top: 10px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 31px;
+
+        &__row {
+
+            &--reverse-sm {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &__col {
+            width: 100%;
+
+            &--1035 {
+                padding-left: 15px;
+            }
+        }
+
+        &__bg {
+
+            &--center-sm {
+                display: flex;
+                justify-content: center;
+            }
+
+            &--mnw-1035,
+            &--smes {
+
+                .image {
+                    min-width: unset;
+                    max-width: unset;
+                }
+            }
+
+            &--smes {
+
+                picture {
+                    padding-right: 15px;
+                }
+            }
+
+            &--left,
+            &--right {
+                padding: 0 15px;
+            }
+        }
+
+        &__info {
+            margin-bottom: 29px;
+
+            &--left,
+            &--right {
+                padding-top: 13px;
+
+                #{$root} {
+
+                    &__desc {
+                        margin-top: 3px;
+                    }
+
+                    &__link {
+                        margin-top: 7px;
+                    }
+                }
+            }
+
+            &--right {
+                margin-left: 0;
+            }
+        }
+
+        &__ttl {
+            text-align: left;
+
+            &--smes {
+                max-width: unset;
+            }
+
+            &--225 {
+                max-width: 225px;
+            }
+        }
+
+        &__desc {
+            max-width: unset;
+            margin-top: 9px;
+            padding-right: 0;
+            text-align: left;
+
+            p+p {
+                margin-top: 6px;
+            }
+        }
+
+        &__heading {
+            margin: 50px 0 32px;
+            text-align: center;
+
+            #{$root} {
+
+                &__desc {
+                    margin-top: 9px;
+                    padding-right: 0;
+                }
+            }
+
+            &--members {
+                margin-bottom: 29px;
+            }
+
+            &--videos {
+                margin-top: 19px;
+                margin-bottom: 28px;
+            }
+
+            &--smes {
+                margin-bottom: 28px;
+            }
+        }
+
+        &__btn {
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        &__link {
+            margin-top: 8px;
+        }
+    }
+}

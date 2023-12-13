@@ -1,0 +1,21 @@
+.input-group-prepend {
+    display: flex;
+    margin-right: -1px;
+
+    // Ensure buttons are always above inputs for more visually pleasing borders.
+    // This isn't needed for `.input-group-text` since it shares the same border-color
+    // as our inputs.
+
+    .btn {
+        position: relative;
+        z-index: $zIndexInputGroupBtn;
+
+        &:focus {
+            z-index: $zIndexInputGroupBtnOnFocus;
+        }
+    }
+
+    .btn+.btn {
+        margin-left: -1px;
+    }
+}

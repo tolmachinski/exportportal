@@ -1,0 +1,46 @@
+.ajax-loader-lock {
+    overflow: hidden !important;
+    width: auto;
+    margin-right: 8px;
+}
+
+.ajax-loader {
+    z-index: 4;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+    background: rgb(255 255 255 / 90%) !important;
+
+    &__fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    &__absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+	&__icon {
+		width: 80px;
+		height: 80px;
+		background: url(#{$pathImages}loader.svg) center center no-repeat;
+	}
+
+	&__text {
+		padding-left: 10px;
+		font-size: 26px;
+		color: $color-gray;
+	}
+
+    &--gray {
+        background-color: $color-gray-light !important;
+    }
+}

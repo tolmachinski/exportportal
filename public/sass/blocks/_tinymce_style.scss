@@ -1,0 +1,37 @@
+.tinymce-textarea-mobile{
+    @include phone-extra-small{
+        .mce-tinymce{
+            iframe{
+                height: 100px!important;
+            }
+        }
+    }
+
+}
+
+[data-ephox-mobile-fullscreen-style]{
+    bottom: 0;
+    right: 0;
+}
+
+body[data-ephox-mobile-fullscreen-style],
+.tinymce-mobile-android-scroll-reload{
+    .modal,
+    .fancybox-overlay{
+        display: block!important;
+        opacity: 1!important;
+    }
+}
+
+.tinymce-mobile-outer-container{
+    &:not(.tinymce-mobile-fullscreen-maximized){
+        .tinymce-mobile-editor-socket{
+            height: 100px!important;
+        }
+    }
+}
+
+span[type="button"][data-alloy-id],
+div[type="button"][data-alloy-id]{
+    -webkit-appearance: none;
+}

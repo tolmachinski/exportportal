@@ -1,0 +1,143 @@
+.hover-card {
+    $this: &;
+    position: relative;
+    width: calc(33.333333% - 20px);
+    height: 393px;
+    max-width: max-content;
+    margin-right: 30px;
+    margin-bottom: 30px;
+	border: 1px solid $color-gray-light;
+
+    &:nth-child(n + 4) {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(3n + 3) {
+        margin-right: 0;
+    }
+
+	&.active,
+    &:hover {
+        #{$this}__title-block {
+            min-height: 100%;
+            padding-top: 60px;
+            transition: all 0.25s ease-out;
+        }
+        #{$this}__text {
+            opacity: 1.0;
+            max-height: 100%;
+            margin-top: 20px;
+            transition: all 0.35s linear;
+        }
+        #{$this}__link {
+            display: block;
+            opacity: 1.0;
+            transition: all 0.35s linear;
+        }
+	}
+
+    &__image {
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+		position: relative;
+
+        img {
+            width: 455px;
+            margin-left: -10px;
+        }
+	}
+
+    &__title-block {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        padding: 0 50px;
+        font-size: 26px;
+        font-weight: 500;
+        min-height: 120px;
+        max-height: 120px;
+        position: absolute;
+        background-color: rgba(255,255,255,0.9);
+	}
+
+    &__text {
+        max-height: 0;
+        overflow: hidden;
+        color: $color-gray;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0;
+        text-transform: none;
+        transition: none;
+        width: 100%;
+        display: block;
+	}
+
+    &__link {
+        opacity: 0;
+        display: none;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+        text-transform: none;
+	}
+
+	&--highlight{
+		#{$this}__title-block {
+			background: rgba(33,129,248,0.95);
+			color: $color-white;
+		}
+
+		#{$this}__text{
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		#{$this}__link {
+            color: $color-white;
+		}
+    }
+
+    @include my-media(991) {
+        width: calc(50% - 15px);
+
+        &:nth-child(4) {
+            margin-bottom: 30px;
+        }
+
+        &:nth-child(3n + 3) {
+            margin-right: 30px;
+        }
+
+        &:nth-child(2n + 2) {
+            margin-right: 0;
+        }
+    }
+
+    @include phone-only{
+        &__title-block {
+            padding: 0 15px;
+        }
+    }
+
+    @include my-media(660){
+        width: 100%;
+        margin: 0 0 30px !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        &__image {
+            img {
+                width: 566px;
+            }
+        }
+    }
+}

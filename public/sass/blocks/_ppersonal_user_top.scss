@@ -1,0 +1,9 @@
+.ppersonal-user-top{
+	padding-bottom: 30px;
+	margin-bottom: 40px;
+    border-bottom: 1px solid $color-gray-light;
+
+    @include phone-only{
+        padding-bottom: 0;
+    }
+}

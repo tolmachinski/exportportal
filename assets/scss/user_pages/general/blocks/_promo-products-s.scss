@@ -1,0 +1,152 @@
+.promo-products-s {
+    $root: &;
+
+    position: relative;
+    display: none;
+
+    &__item {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    &__bg {
+        position: relative;
+        width: 100%;
+        margin-bottom: 8px;
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    &__ttl {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 28px;
+        color: $color-white;
+    }
+
+    &__desc {
+        margin-top: 5px;
+
+        @include p181816;
+
+        color: $color-white;
+    }
+
+    &__btn {
+        display: block;
+        width: 250px;
+        margin: 34px auto 0;
+    }
+
+    .products {
+        margin: 0 0 0 -7.5px;
+    }
+
+    .loading {
+        min-height: 296px;
+    }
+
+    .slick-dots {
+        bottom: -20px;
+    }
+
+    @include my-media(1200) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include my-media(991) {
+
+        .loading {
+            min-height: calc(126px + (100vw - 66px) * 0.75 / 3);
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            margin-top: 30px !important;
+        }
+
+        &__info {
+            padding: 10px;
+        }
+
+        &__desc {
+            margin-top: 0;
+        }
+
+
+        &__btn {
+            margin-top: 40px;
+        }
+
+        .products {
+            margin: 0 0 0 -2.5px;
+        }
+
+        .loading {
+            min-height: calc(117px + (100vw - 45px) * 0.75 / 3);
+        }
+
+        .slick-dots {
+            bottom: -26px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        .loading {
+            min-height: calc(111px + (100vw - 45px) * 0.75 / 3);
+        }
+    }
+
+    @include my-media(475) {
+
+        &__ttl {
+            margin-top: 5px;
+        }
+
+        &__desc {
+            margin-top: 10px;
+            line-height: 24px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+
+        .loading {
+            min-height: calc(2 * (117px + (100vw - 40px) * 0.75 / 2));
+        }
+    }
+
+    @include my-media(424) {
+
+        .loading {
+            min-height: calc(2 * (111px + (100vw - 40px) * 0.75 / 2));
+        }
+    }
+
+    @include my-media(359) {
+
+        .loading {
+            min-height: calc(2 * (101px + (100vw - 40px) * 0.75 / 2));
+        }
+    }
+}

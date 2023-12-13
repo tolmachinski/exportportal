@@ -1,0 +1,78 @@
+.popup-system-banner {
+    $root: &;
+
+    position: fixed;
+    right: 64px;
+    bottom: 10px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    pointer-events: none;
+
+    &--top {
+        top: 129px;
+        overflow: auto;
+    }
+
+    &--epl {
+        right: 0;
+        left: 0;
+        flex-direction: column-reverse;
+        min-width: 320px;
+        max-width: none;
+        margin: 0 45px;
+
+        .pseudo-modal {
+            margin-left: auto;
+            border-radius: 5px;
+        }
+
+        .input-label {
+            margin: 20px 0 10px !important;
+        }
+    }
+
+    &__item {
+        margin-top: 5px;
+        pointer-events: auto;
+    }
+
+    @include my-media(991) {
+        right: 15px;
+        bottom: 55px;
+
+        &--top {
+            top: 50px;
+        }
+
+        &--epl {
+            right: 0;
+            bottom: 10px;
+        }
+    }
+
+    @include phone-only {
+
+        &--epl {
+            margin: 0 10px;
+        }
+    }
+
+    @include phone-extra-small {
+        right: 5px;
+        left: 5px;
+        max-width: unset;
+
+        &--epl {
+            right: 0;
+            bottom: 5px;
+            left: 0;
+
+            .pseudo-modal {
+                min-width: 290px;
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+// stylelint-disable no-invalid-position-at-import-rule
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/fonts-guideline";
+
+@import "../../user_pages/import/variables";
+
+.giveaway-section,
+.giveaway-intro {
+
+    @include retina-display(1.5) {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+}
+
+.giveaway-winner {
+    position: relative;
+    min-height: 938px;
+
+    &__bg {
+        position: absolute;
+        top: -102px;
+        right: 0;
+        bottom: 90px;
+        left: 0;
+        z-index: -1;
+        display: block;
+
+        .image {
+            width: 100%;
+            height: 977px;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        margin-top: 3px;
+
+        @include h503826;
+
+        text-align: center;
+    }
+
+    @include my-media(1200) {
+        min-height: 656px;
+
+        &__bg {
+
+            .image {
+                height: 725px;
+            }
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__bg {
+
+            .image {
+                height: auto;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__bg {
+            top: -70px;
+            bottom: 0;
+        }
+    }
+
+    @include phone-only {
+
+        &__bg {
+            top: -48px;
+        }
+    }
+
+
+    @include my-media(525) {
+        min-height: 410px;
+    }
+}
+
+
+@import "./blocks/_giveaway-intro";
+
+@import "./blocks/_giveaway-container";

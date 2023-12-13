@@ -1,0 +1,81 @@
+.wr-select2-h50,
+.wr-select-city-b {
+    $selection: ".select2-selection";
+
+    #{$selection} {
+
+        &--single {
+            overflow: hidden;
+            height: 50px;
+            border: 1px solid $gray-lighten !important;
+            border-radius: 5px;
+
+            #{$selection} {
+
+                &__placeholder {
+                    color: $black-light;
+                }
+
+                &__rendered {
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    line-height: 48px;
+                    color: $black-light;
+                }
+
+                &__arrow {
+                    height: 48px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+
+        &.invalid-field {
+            border: 1px solid $red !important;
+        }
+    }
+
+    .select2-container {
+        #{$selection} {
+
+            &--single {
+                #{$selection} {
+
+                    &__rendered {
+                        padding-right: 35px;
+
+                        @include phone-only {
+                            padding-left: 15px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--default {
+            #{$selection} {
+
+                &--single {
+                    #{$selection} {
+
+                        &__arrow {
+                        width: 35px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--disabled {
+            #{$selection} {
+
+                &__rendered,
+                &__arrow {
+                    background-color: $gray-lighter !important;
+                }
+            }
+        }
+    }
+}

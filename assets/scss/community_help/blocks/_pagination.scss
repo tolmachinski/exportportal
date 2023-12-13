@@ -1,0 +1,46 @@
+.pagination {
+    float: right;
+    margin-bottom: 0;
+
+    &--right {
+        float:left;
+    }
+
+	li {
+		float:left;
+		margin-left: 5px;
+
+		&.active span {
+			color: $color-white;
+			background-color: $color-blue2;
+		}
+
+		.ep-icon {
+			font-size: 9px;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	span,
+	a {
+		float:left;
+		height: 40px;
+		padding: 0 17px;
+		font-size: 16px;
+		line-height: 40px;
+		color: $color-black;
+		background: $color-white;
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-blue2;
+		}
+    }
+
+    @include my-media(991) {
+        margin-top: 10px;
+    }
+}

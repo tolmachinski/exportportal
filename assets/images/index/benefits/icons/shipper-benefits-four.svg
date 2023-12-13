@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" viewBox="0 0 45 45">
+  <defs>
+    <clipPath>
+      <rect width="45" height="45" transform="translate(1050 5815)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(-1050 -5815)" clip-path="url(#clip-path)">
+    <g transform="translate(1050.101 5815)">
+      <path d="M45.756,24.4H23.809V40.672h15.43l3.87,4.507V40.672h3.267V25.108a.7.7,0,0,0-.62-.7ZM29,34.088a1.634,1.634,0,1,1,.084,0Zm6.115,0a1.554,1.554,0,1,1,.084,0Zm6.1,0a1.634,1.634,0,1,1,.084,0Z" transform="translate(-3.436 -3.395)" fill="none"/>
+      <path d="M7.924,33.613H7.774a.184.184,0,0,1-.168-.184v-6.7H2.965V4.479A1.675,1.675,0,0,1,4.641,2.8H34.294A1.675,1.675,0,0,1,35.97,4.479V18.016h1.776V2.452a1.391,1.391,0,0,0-1.374-1.391H2.547A1.391,1.391,0,0,0,1.173,2.452V28.587H5.8V34.92a1.407,1.407,0,0,0,2.5.921l6.216-7.254h2.965V26.744H13.738Z" transform="translate(-1.173 -1.061)" fill="#2181f8"/>
+      <path d="M47.587,22.431H21.854V42.25h16.4l4.808,5.6a.921.921,0,0,0,.72.352.972.972,0,0,0,.988-.972V42.2H48.04V22.883a.452.452,0,0,0-.452-.452Zm-1.324,2.48V40.475H43v4.574l-3.87-4.507H23.613V24.207H45.56a.7.7,0,0,1,.7.7Z" transform="translate(-3.241 -3.198)" fill="#2181f8"/>
+      <rect width="24.963" height="1.776" transform="translate(5.981 8.511)" fill="#2181f8"/>
+      <rect width="17.239" height="1.776" transform="translate(5.981 12.649)" fill="#2181f8"/>
+      <circle cx="1.592" cy="1.592" r="1.592" transform="translate(24.058 27.492)" fill="#2181f8"/>
+      <circle cx="1.592" cy="1.592" r="1.592" transform="translate(30.173 27.492)" fill="#2181f8"/>
+      <circle cx="1.592" cy="1.592" r="1.592" transform="translate(36.271 27.492)" fill="#2181f8"/>
+    </g>
+  </g>
+</svg>

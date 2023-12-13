@@ -1,0 +1,40 @@
+// bootstrap 4-5-2
+
+a {
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+b,
+strong {
+    font-weight: 500;
+}
+
+address,
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+
+svg,
+img {
+    vertical-align: top;;
+}
+
+button {
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.badge {
+    font-weight: 500;
+}

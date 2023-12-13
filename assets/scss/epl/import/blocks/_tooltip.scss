@@ -1,0 +1,115 @@
+.tooltip {
+    $root: &;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $zIndexPopover;
+    display: none;
+    min-width: max-content;
+    max-width: 286px;
+    padding: 0 5px;
+
+    &__arrow-wrap {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        left: 0;
+        width: 50px;
+        height: 10px;
+        margin: auto;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 4.5px;
+        width: 10px;
+        height: 10px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: $white;
+            border-top: 1px solid $gray-light;
+            border-left: 1px solid $gray-light;
+        }
+
+        &--mob {
+            top: auto;
+            bottom: -5px;
+        }
+    }
+
+    &__body {
+        width: max-content;
+        font-size: 14px;
+        line-height: 18px;
+        color: $black-light;
+        word-wrap: break-word;
+        background-clip: padding-box;
+        background-color: $white;
+        border: 1px solid $gray-light;
+        border-radius: 5px;
+    }
+
+    &--top {
+        #{$root} {
+
+            &__arrow {
+
+                &::before {
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+    }
+
+    &--right {
+        #{$root} {
+
+            &__arrow {
+
+                &::before {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &--bottom {
+        #{$root} {
+
+            &__arrow {
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &--left {
+        #{$root} {
+
+            &__arrow {
+
+                &::before {
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.tooltip-messages {
+
+    &__arrow {
+        top: -4.5px;
+    }
+}

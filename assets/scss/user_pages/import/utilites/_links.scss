@@ -1,0 +1,26 @@
+.links-black {
+
+	.link {
+		color: $color-black !important;
+
+		&:hover {
+			color: $color-blue2 !important;
+		}
+	}
+}
+
+.link-black {
+	color: $color-black !important;
+
+	&:hover {
+		color: $color-blue2 !important;
+	}
+}
+
+.link-white {
+	color: $color-white !important;
+
+	&:hover {
+		color: $color-blue2 !important;
+	}
+}

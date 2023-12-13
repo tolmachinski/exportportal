@@ -1,0 +1,29 @@
+.search-by-category {
+
+    .categories-group-main {
+
+        &__item {
+            height: 134px;
+        }
+    }
+
+    @include my-media(991) {
+
+        .categories-group-main {
+
+            &__item {
+                height: 111px;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        .categories-group-main {
+
+            &__item {
+                height: 88px;
+            }
+        }
+    }
+}

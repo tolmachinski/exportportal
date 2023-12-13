@@ -1,0 +1,17 @@
+.directory-page{
+	.companies-wr{
+        width: 50%;
+    }
+
+    @include my-media(1100){
+        .companies-wr{
+			width: 100%;
+		}
+    }
+
+    @include phone-only{
+        .companies-wr{
+            width: 100%;
+		}
+    }
+}

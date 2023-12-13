@@ -1,0 +1,150 @@
+.eptp {
+
+    &__what-is {
+        padding: 100px 0;
+    }
+
+    &__what-is-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__what-is-content {
+        width: 100%;
+        max-width: 500px;
+        margin-right: 50px;
+        padding-top: 2px;
+    }
+
+    &__what-is-title {
+        text-align: left;
+    }
+
+    &__what-is-text {
+        text-align: left;
+    }
+
+    &__what-is-images {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 570px;
+    }
+
+    &__what-is-image {
+        width: 100%;
+    }
+
+    &__what-is-picture {
+        width: 100%;
+
+        &--w100pr {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        &--w277 {
+            width: 277px;
+        }
+
+        &--w278 {
+            width: 278px;
+            margin-right: 15px;
+        }
+    }
+
+    @include my-media(1160) {
+
+        &__what-is-images {
+            justify-content: space-between;
+        }
+
+        &__what-is-picture {
+
+            &--w277 {
+                width: 48.5%;
+            }
+
+            &--w278 {
+                width: 48.5%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__what-is {
+            padding: 99px 0 100px;
+        }
+
+        &__what-is-container {
+            flex-direction: column;
+        }
+
+        &__what-is-content {
+            max-width: 100%;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-top: 0;
+            text-align: center;
+        }
+
+        &__what-is-title {
+            text-align: center;
+        }
+
+        &__what-is-text {
+            text-align: center;
+        }
+
+        &__what-is-images {
+            max-width: 100%;
+        }
+
+        &__what-is-picture {
+
+            &--w277 {
+                width: 48.9%;
+            }
+
+            &--w278 {
+                width: 49%;
+            }
+        }
+    }
+
+    @include my-media(767) {
+
+        &__what-is {
+            padding: 50px 0;
+        }
+
+        &__what-is-content {
+            margin-bottom: 20px;
+        }
+    }
+
+    @include my-media(500) {
+
+        &__what-is-picture {
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            &--w100pr {
+                margin-top: 0;
+            }
+
+            &--w277 {
+                width: 100%;
+            }
+
+            &--w278 {
+                width: 100%;
+            }
+        }
+    }
+}

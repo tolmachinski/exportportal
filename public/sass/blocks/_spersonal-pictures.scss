@@ -1,0 +1,123 @@
+.spersonal-pictures{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		width: 50%;
+		padding-bottom: 15px;
+
+		&:nth-child(odd){
+			padding-right: 7.5px;
+		}
+
+		&:nth-child(even){
+			padding-left: 7.5px;
+		}
+	}
+
+	&__wr{
+		border: 1px solid $color-gray-light;
+	}
+
+	&__img{
+		position: relative;
+		height: 295px;
+
+		&:hover{
+			.video-play{
+				&__circle{
+					border-top: 3px solid $color-blue2;
+					border-right: 3px solid $color-blue2;
+					animation: spin 2s linear infinite;
+				}
+			}
+		}
+
+		.link{
+			height: 100%;
+		}
+
+		.image{
+			height: 100%;
+		}
+
+		&--w{
+			width: 135px;
+		}
+	}
+
+	&__desc{
+		padding: 10px 15px;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__ttl{
+		padding-right: 15px;
+		@include text-nowrap;
+		@include fs-names;
+
+		.link{
+
+		}
+	}
+
+	&__bottom{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 5px;
+	}
+
+	&__category{
+		padding-right: 15px;
+		@include fs-category;
+		color: $color-gray;
+		@include text-nowrap;
+	}
+
+	&__comment{
+		color: $color-gray;
+		white-space: nowrap;
+    }
+
+    @include my-media(480){
+        &__item{
+            width: 100%;
+
+            &:nth-child(odd){
+                padding-right: 0;
+            }
+
+            &:nth-child(even){
+                padding-left: 0;
+            }
+        }
+    }
+
+    @include my-media(425){
+        &__img{
+			margin: 0;
+		}
+
+		&__img{
+			&--w{
+				width: auto;
+
+				&.mh-100{
+					max-height: unset !important;
+				}
+			}
+		}
+    }
+
+    @include ie-only{
+        &__desc2{
+            max-width: 200px;
+        }
+    }
+}

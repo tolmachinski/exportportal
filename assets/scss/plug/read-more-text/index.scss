@@ -1,0 +1,15 @@
+@import "./../../import/_scss_functions";
+@import "./../../import/guideline/fonts-guideline";
+
+.read-more-btn {
+    @include p181816;
+    margin: 19px 0px 0px 0px;
+
+    @include my-media(991) {
+        margin: 18px 0px 0px 0px;
+    }
+
+    @include my-media(575) {
+        margin: 7px 0px 0px 0px;
+    }
+}

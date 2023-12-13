@@ -1,0 +1,110 @@
+.ui-datepicker-pinned {
+	position: absolute !important;
+    display: block;
+
+	&.ui-datepicker-modal {
+		top: 101px !important;
+		right: 15px !important;
+		left: 15px !important;
+		width: auto !important;
+		min-width: 250px;
+		box-sizing: border-box;
+	}
+}
+
+.ui-datepicker {
+
+	&.dtfilter-ui-datepicker {
+		width: auto !important;
+
+		table {
+			margin: 0;
+			font-size: 12px;
+			color: $black;
+		}
+
+		td {
+			padding: 0;
+
+			.ui-state-default,
+			a {
+				display: block;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+			}
+		}
+
+		.ui-datepicker-header {
+			height: 50px;
+			padding: 9px 0;
+		}
+
+		.ui-widget-header {
+			font-weight: 500;
+			background: $white;
+			border: 1px solid $white;
+		}
+
+		.ui-datepicker-title {
+			margin: 0 2em;
+			color: $black;
+		}
+
+		.ui-state-default {
+			color: $black;
+			background: $white;
+		}
+
+		.ui-slider-handle {
+			color: $black;
+			background: $blue;
+		}
+
+		.ui-state-active {
+			color: $white;
+			background-color: $blue;
+			border: none;
+		}
+
+		.ui-datepicker-other-month {
+			background-color: $white;
+		}
+
+		.ui-state-hover {
+			color: $white;
+			background-color: $blue;
+		}
+
+		.ui_tpicker_time {
+			height: 30px !important;
+		}
+
+		.ui_tpicker_time_input {
+			width: 100% !important;
+		}
+
+		.ui-datepicker-prev-hover,
+		.ui-datepicker-next-hover {
+			top: 9px;
+		}
+
+		.ui-datepicker-prev,
+		.ui-datepicker-next {
+			top: 9px;
+			height: 1.9em;
+		}
+
+		select.ui-datepicker-year,
+		select.ui-datepicker-month {
+			width: 47%;
+			height: 30px;
+			margin: 0 2px;
+			padding-left: 5px;
+			padding-right: 25px;
+			font-size: 14px;
+			line-height: 28px;
+			background: $white url(#{$pathImages4}arrow-select-new2.png) right center no-repeat;
+		}
+	}
+}

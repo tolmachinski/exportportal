@@ -1,0 +1,7 @@
+.age-verification-disclaimer {
+    margin-top: 15px;
+
+    @include my-media(768) {
+        margin-top: 10px;
+    }
+}

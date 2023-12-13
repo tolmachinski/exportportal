@@ -1,0 +1,27 @@
+.search-btn-input{
+    $root: &;
+
+    &__txt{
+        border-right: 0!important;
+
+        &:focus{
+            + #{$root}{
+                &__subbmit{
+                    border-color: $color-blue2;
+                }
+            }
+        }
+    }
+
+    &__subbmit{
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        border: 1px solid $color-black;
+        border-left: 0;
+
+        .ep-icon{
+            color: $color-black;
+        }
+    }
+}

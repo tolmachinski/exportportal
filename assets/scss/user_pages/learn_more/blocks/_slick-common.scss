@@ -1,0 +1,116 @@
+.learnmore-check,
+.learnmore-slider-tour {
+
+    .slick-arrow {
+
+        @include flex-center;
+
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        color: $color-gray-light;
+        background: $color-white;
+        cursor: pointer;
+        border: 1px solid $color-gray-light;
+        outline: none;
+        transform: translateY(-50%);
+        transition: all .1s linear;
+
+        @media (min-width: 991px) {
+
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        padding-left: 7px;
+        text-align: center;
+
+        li {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+
+
+            button {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 12px;
+                height: 12px;
+                font-size: 0;
+                line-height: 0;
+                color: transparent;
+                background: $color-white;
+                cursor: pointer;
+                border: 1px solid $color-black;
+                border-radius: 50%;
+                outline: none;
+                transition: all .1s linear;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                }
+
+                @media (min-width: 991px) {
+
+                    &:hover {
+                        background: $color-black;
+                    }
+                }
+            }
+        }
+
+        li.slick-active {
+
+            button {
+                background: $color-black;
+            }
+        }
+    }
+
+    @media (min-width: 991px) {
+
+        .slick-arrow {
+
+            @media (min-width: 991px) {
+
+                &:hover {
+                    color: $color-black;
+                }
+            }
+        }
+
+        .slick-dots {
+
+            li {
+
+                button {
+
+                    @media (min-width: 991px) {
+
+                        &:hover {
+                            background: $color-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

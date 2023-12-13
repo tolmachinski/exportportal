@@ -1,0 +1,53 @@
+module.exports = [
+    {
+        label: "Seller variant verified",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 1,
+    },
+    {
+        label: "Seller variant certified",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 2,
+    },
+    {
+        label: "Seller with mobile sidebar",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 1,
+        openMobileSidebarMenu: true,
+    },
+    {
+        label: "Seller logged, add feedback popup",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 1,
+        authentication: "buyer",
+        moreActionItem: "feedback",
+    },
+    {
+        label: "Seller logged, follow user popup",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 1,
+        authentication: "buyer",
+        moreActionItem: "follow",
+    },
+    {
+        label: "Seller logged, share popup",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 1,
+        authentication: "buyer",
+        moreActionItem: "share",
+    },
+    {
+        label: "Seller logged, report popup",
+        url: "/backstop_test",
+        jsFileName: "seller",
+        backstopVariant: 1,
+        authentication: "buyer",
+        moreActionItem: "report",
+    },
+];

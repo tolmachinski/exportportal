@@ -1,0 +1,17 @@
+.sidebar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    &__hidden {
+        display: none;
+    }
+
+    @include phone-only{
+        &__hidden {
+            display: flex;
+        }
+    }
+
+}

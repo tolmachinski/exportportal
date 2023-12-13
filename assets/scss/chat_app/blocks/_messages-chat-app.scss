@@ -1,0 +1,17 @@
+#chat-app-room {
+    left: 370px;
+    height: 435px;
+
+    @include my-media(670, "max", "height") {
+        max-height: calc(100% - 129px);
+    }
+
+    @media (max-height: 670px) and (max-width: 991px) {
+        max-height: calc(100% - 101px);
+    }
+
+    @include phone-only {
+        left: 0;
+        height: calc(100% - 101px);
+    }
+}

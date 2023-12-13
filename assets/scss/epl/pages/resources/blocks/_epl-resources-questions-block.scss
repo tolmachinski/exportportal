@@ -1,0 +1,28 @@
+.epl-resources-questions-block {
+    padding: 70px 0;
+
+    @include tablet-landscape-up {
+
+        .epl-desc-text-b {
+
+            &--mw-650 {
+                max-width: 650px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        padding: 61px 0;
+    }
+
+    @include phone-only {
+        padding: 51px 0;
+
+        .epl-desc-text-b {
+
+            &__ttl {
+                margin-bottom: 13px;
+            }
+        }
+    }
+}

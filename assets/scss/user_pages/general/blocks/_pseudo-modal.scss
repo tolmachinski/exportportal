@@ -1,0 +1,179 @@
+.pseudo-modal {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    max-width: 540px;
+    height: 100%;
+    min-height: 1px;
+    padding: 30px;
+    color: $color-white;
+    background: $color-black;
+
+    &__hidden {
+        display: none;
+    }
+
+    &__title {
+        position: relative;
+        flex: 0 0 auto;
+        padding-bottom: 20px;
+        padding-right: 30px;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 1;
+        margin: -14px -13px 0 0;
+        padding: 10px 10px 5px 15px;
+        color: $color-white;
+
+        &:hover {
+            opacity: 0.8;
+            color: $color-white;
+        }
+    }
+
+    &__content {
+        flex: 1;
+		height: 100%;
+		min-height: 1px;
+		overflow-y: auto;
+		margin-bottom: 30px;
+
+		> .input-label {
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		.form-group {
+			margin-bottom: 0;
+        }
+
+        > .form-group {
+
+            &:first-child {
+
+				.input-label {
+                    margin-top: 0;
+                }
+			}
+        }
+
+        .input-label {
+            color: $color-white;
+        }
+    }
+
+    &__footer {
+		display: flex;
+		flex: 0 0 auto;
+		flex-wrap: wrap;
+		align-items: center;
+		min-height: 1px;
+		padding-top: 15px;
+		border-top: 1px solid $color-gray-light;
+
+		.btn {
+			min-width: 130px;
+			margin-left: 10px;
+
+			@include text-nowrap;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__footer-left {
+		display: flex;
+		align-items: center;
+	}
+
+	&__footer-right {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+    }
+
+    &--hide-content {
+        min-width: 414px;
+
+        #{$root} {
+
+            &__hidden {
+                display: none;
+            }
+
+            &__title {
+                padding-top: 5px;
+                padding-bottom: 10px;
+                line-height: 24px;
+            }
+
+            &__content {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+	@include ie-only {
+
+		&__content {
+			flex: 0 1 auto;
+		}
+	}
+
+	@include phone-only {
+        padding: 15px;
+
+        &__title {
+            padding-right: 15px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+		&__content {
+			margin-bottom: 20px;
+		}
+
+		&__btns {
+
+			.btn {
+				min-width: 110px;
+			}
+		}
+    }
+
+    @include phone-extra-small {
+
+        &--hide-content {
+            min-width: 310px;
+            max-width: 408px;
+
+            #{$root} {
+
+                &__title {
+                    padding-top: 0;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    @include ie-only {
+        flex: 0 0 auto;
+    }
+}

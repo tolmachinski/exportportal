@@ -1,0 +1,9 @@
+.mblog-title {
+    margin-bottom: 15px;
+
+    @include h262018;
+
+    @include my-media(1024) {
+        margin-bottom: 14px;
+    }
+}

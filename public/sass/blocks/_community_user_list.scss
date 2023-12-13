@@ -1,0 +1,240 @@
+.community-user-list{
+    $root: &;
+
+    &__item{
+        padding: 30px 0;
+        border-bottom: 1px solid $color-gray-light;
+
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+
+    &__img{
+		width: 75px;
+		height: 75px;
+		margin-right: 15px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		.image{
+			max-width: 100%;
+		}
+    }
+
+    &__img-mobile{
+        display: none;
+    }
+
+    &__subject{
+        font-size: 18px;
+        line-height: 24px;
+	}
+
+	&__subject-name{
+        word-wrap: break-word;
+        font-weight: 500;
+		color: $color-black;
+
+		@include ie-only{
+			display: block;
+		}
+    }
+
+    &__info-user-line{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+    }
+
+    &__info-user-line-col{
+        display: flex;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    &__uname{
+        // flex: 1;
+        padding-right: 5px;
+        @include text-nowrap;
+
+        .link{
+            color: $color-black;
+        }
+	}
+
+    &__date{
+		color: $color-gray;
+    }
+
+    &__info-additional{
+        padding-right: 5px;
+        font-size: 14px;
+        line-height: 19px;
+        color: $color-gray;
+    }
+
+    &__message{
+        padding: 10px 0;
+        line-height: 22px;
+		word-wrap: break-word;
+    }
+
+    &__info-filters-line{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    &__info-filters{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex: 1;
+        @include text-nowrap;
+    }
+
+    &__category{
+        @include text-nowrap;
+        color: $color-black;
+
+        &:hover{
+            color: $color-blue2;
+        }
+    }
+
+    &__delimeter-circle{
+        width: 5px;
+        height: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background: $color-gray-light;
+    }
+
+    &__flag{
+		display: flex;
+		align-items: center;
+        margin-right: 5px;
+        color: $color-black;
+        @include text-nowrap;
+
+        &:hover{
+            color: $color-blue2;
+        }
+
+        .image{
+            margin-top: -1px;
+        }
+	}
+
+	&__flag-name{
+		margin-left: 5px;
+		@include text-nowrap;
+    }
+
+    &__replies{
+        .link{
+            color: $color-gray;
+
+            &:hover{
+                color: $color-blue2;
+            }
+        }
+    }
+
+    &__ansers{
+
+    }
+
+    &__ansers-item{
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid $color-gray-light;
+    }
+
+    &__ansers-info-user-line{
+        display: flex;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    &__ansers-info-additional{
+        padding-right: 5px;
+        font-size: 14px;
+        line-height: 19px;
+        color: $color-gray;
+    }
+
+    &__ansers-date{
+        color: $color-gray;
+    }
+
+    &__ansers-message{
+        padding: 10px 0 0 0;
+        line-height: 22px;
+		word-wrap: break-word;
+    }
+
+    @include my-media(991){
+        &__img{
+           display: none;
+        }
+
+        &__img-mobile{
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            .image{
+                max-width: 100%;
+            }
+        }
+
+        &__info-user-line-col{
+            flex-wrap: wrap;
+        }
+
+        &__message{
+            padding-bottom: 6px;
+        }
+
+        &__uname{
+            width: 100%;
+        }
+    }
+
+    @include phone-only{
+        &__item{
+            padding: 20px 0;
+        }
+
+        &__flag-name{
+            display: none;
+        }
+
+        &__ansers-item{
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    }
+
+    @include phone-extra-small{
+        &__info-filters-line{
+            display: block;
+        }
+
+        &__replies{
+            margin-top: 10px;
+        }
+
+        &__category{
+            max-width: 75%;
+        }
+    }
+}

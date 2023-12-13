@@ -1,0 +1,212 @@
+.promo-banner-wr {
+    position: relative;
+
+    &--home {
+        margin-top: 40px;
+    }
+
+    &--blogs {
+        margin-top: 30px;
+
+        @include my-media(1200) {
+            display: none;
+        }
+    }
+
+    &--item-detail {
+        margin-top: 40px;
+    }
+
+    &--about {
+        margin-top: 101px;
+
+        @include my-media(991) {
+            margin-top: 70px;
+        }
+
+        @include phone-only {
+            margin-top: 50px;
+        }
+    }
+
+    &--why-ep {
+        margin-top: 100px;
+
+        @include my-media(991) {
+            margin-top: 70px;
+        }
+
+        @include phone-only {
+            margin-top: 45px;
+        }
+    }
+
+    &--features {
+        margin-top: 100px;
+
+        @include my-media(991) {
+            margin-top: 70px;
+        }
+    }
+
+    &--help {
+        margin-top: 70px;
+
+        @include my-media(991) {
+            margin: 70px 0 -25px;
+        }
+
+        @include phone-only {
+            margin: 50px 0 -50px;
+        }
+    }
+
+    &--faq {
+        margin-top: 50px;
+
+        @include phone-only {
+            margin: 50px 0 -50px;
+        }
+    }
+
+    &--community {
+        margin-bottom: 50px;
+
+        @include my-media(991) {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        @include phone-only {
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+
+    &--contact {
+        margin-top: 40px;
+
+        @include my-media(991) {
+            margin-bottom: -25px;
+        }
+
+        @include phone-only {
+            margin: 30px 0 -50px;
+        }
+    }
+
+    &--register {
+        margin-bottom: 50px;
+
+        @include my-media(991) {
+            margin-bottom: 70px;
+            padding-top: 20px;
+        }
+
+        @include phone-extra-small {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.promo-banner {
+    $root: &;
+
+    &:not(.slick-initialized) {
+
+        > div {
+
+            &:nth-child(1n+2) {
+                display:none;
+            }
+        }
+
+        + .promo-banner {
+
+            &__arrows {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+        display: inline-block;
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+    }
+
+    &__picture {
+        display: block;
+    }
+
+    &__image {
+        min-width: 200px;
+        max-width: 100%;
+    }
+
+    &__arrows {
+        height: 1px;
+        margin: 0 auto;
+    }
+
+    &__arrows-prev,
+    &__arrows-next {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: -15px;
+        font-size: 16px;
+        color: $color-gray;
+        cursor: pointer;
+        transform: translateY(-50%);
+
+        &:hover {
+            color: $color-blue2;
+        }
+    }
+
+    &__arrows-prev {
+        left: 12px;
+    }
+
+    &__arrows-next {
+        right: 12px;
+    }
+
+    &__arrows--300 {
+        #{$root} {
+
+            &__arrows-prev {
+                left: 2px;
+            }
+
+            &__arrows-next {
+                right: 2px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__arrows-prev {
+            left: 2px;
+        }
+
+        &__arrows-next {
+            right: 2px;
+        }
+    }
+}

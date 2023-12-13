@@ -1,0 +1,120 @@
+.select-account-list {
+    $root: &;
+
+    &__item {
+        margin-top: 15px;
+    }
+
+    &__inner {
+        position: relative;
+        align-items: center;
+        padding: 9px;
+        cursor: pointer;
+        border: 1px solid $color-gray-light;
+
+        &:hover {
+            border-color: $color-blue2;
+        }
+    }
+
+    &__restricted {
+        position: absolute;
+        top: 7px;
+        left: 57px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: $color-red;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+    }
+
+    &__image {
+        overflow: hidden;
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+        border: 1px solid $color-gray-light;
+        border-radius: 50%;
+
+        .ep-icon {
+            font-size: 21px;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        line-height: 22px;
+
+        @include text-nowrap;
+    }
+
+    &__company {
+        color: $color-gray;
+
+        @include text-nowrap;
+    }
+
+    &__group {
+
+        @include text-nowrap;
+    }
+
+    &__txt {
+        font-size: 400;
+        line-height: 22px;
+
+        @include text-nowrap;
+    }
+
+    &--mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -7.5px;
+
+        #{$root} {
+
+            &__item {
+                width: 50%;
+                margin-top: 0;
+                padding: 7.5px;
+            }
+
+            &__image {
+                width: 65px;
+                height: 65px;
+            }
+
+            &__name {
+                padding-bottom: 2px;
+                line-height: 21px;
+            }
+
+            &__company {
+                padding-bottom: 2px;
+                line-height: 21px;
+            }
+
+            &__group {
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        &--mobile {
+            margin: 0 -5px;
+
+            #{$root} {
+
+                &__item {
+                    width: 100%;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

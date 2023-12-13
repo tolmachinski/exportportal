@@ -1,0 +1,11 @@
+.account-registration-terms {
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 0;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include phone-only {
+        padding-top: 0;
+    }
+}

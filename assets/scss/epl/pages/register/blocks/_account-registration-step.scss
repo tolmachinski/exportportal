@@ -1,0 +1,7 @@
+.account-registration-step {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

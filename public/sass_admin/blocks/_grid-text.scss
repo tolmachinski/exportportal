@@ -1,0 +1,11 @@
+.grid-text{
+	@include display-grid;
+	@include grid-template-columns(1fr);
+
+	&__item{
+		min-width: 0;
+		@include grid-row(1,1);
+		@include grid-column(1,1);
+		word-wrap: break-word;
+	}
+}

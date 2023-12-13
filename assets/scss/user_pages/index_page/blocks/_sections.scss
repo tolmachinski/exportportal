@@ -1,0 +1,11 @@
+.home-section {
+    margin: 70px auto;
+
+    @include my-media(991) {
+        margin: 60px auto;
+    }
+
+    @include my-media(575) {
+        margin: 50px auto;
+    }
+}

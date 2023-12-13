@@ -1,0 +1,23 @@
+.minfo-perpage {
+    font-size: 0;
+    font-weight: normal;
+
+    &__ttl {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-gray;
+    }
+
+    &__select {
+        width: auto;
+        height: auto;
+        padding: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-black;
+        cursor: pointer;
+        border: none;
+    }
+}

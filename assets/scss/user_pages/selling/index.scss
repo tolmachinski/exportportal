@@ -1,0 +1,22 @@
+
+$pathImages: '../../../images/';
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/_fonts";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/guideline/_elements-guideline";
+
+@import "../general/selling_buying_blocks/info-header";
+
+@import "../general/selling_buying_blocks/benefits";
+
+@import "./blocks/banner";
+
+@import "../general/selling_buying_blocks/userinfo-scheme";
+
+@import "../general/selling_buying_blocks/bottom-view";

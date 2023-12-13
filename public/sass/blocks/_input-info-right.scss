@@ -1,0 +1,69 @@
+.input-info-right{
+    $root: &;
+    display: flex;
+    align-items: flex-start;
+
+    &__btn{
+        min-width: 250px;
+    }
+
+    &__txt{
+        flex: 1;
+        min-width: 1px;
+        width: 100%;
+        padding-left: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-gray;
+    }
+
+    @include tablet-landscape-up{
+        &__btn{
+            min-width: auto;
+        }
+    }
+
+    @include my-media(991){
+        &--btn{
+            display: block;
+
+            #{$root}{
+                &__btn{
+                    display: block;
+                    width: 100%;
+                }
+
+                &__txt{
+                    padding-top: 5px;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    @include phone-only{
+        display: block;
+
+        &__btn{
+            display: block;
+            width: 100%;
+        }
+
+        &__txt{
+            padding-top: 5px;
+            padding-left: 0;
+        }
+    }
+}
+
+.input-info-sub{
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-blue2;
+
+    @include phone-only{
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

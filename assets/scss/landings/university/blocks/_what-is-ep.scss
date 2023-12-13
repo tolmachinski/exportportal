@@ -1,0 +1,85 @@
+.what-is-ep {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 503px;
+    margin-top: -2px;
+    padding: 30px 15px;
+
+
+    &__content {
+        z-index: 1;
+        width: 100%;
+        max-width: 100%;
+        padding: 17px 15px 15px;
+        text-align: center;
+        background-color: $color-white;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 0;
+        transform: translateX(-50%);
+    }
+
+    &__title {
+        padding: 0 47px;
+    }
+
+    &__link {
+        margin-top: 13px;
+    }
+
+    @include my-media(571, "min") {
+        justify-content: center;
+        height: 470px;
+        margin-top: -1px;
+        padding: 30px;
+
+        &__content {
+            max-width: 414px;
+        }
+
+        &__title {
+            padding: 0;
+        }
+
+        &__link {
+            margin-top: 19px;
+        }
+    }
+
+    @include my-media(768, "min") {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &__content {
+            padding: 31px 30px 30px;
+            transform: translateX(0%);
+        }
+    }
+
+    @include my-media(992, "min") {
+        justify-content: center;
+        align-items: center;
+        margin-top: -3px;
+
+        &__content {
+            max-width: 585px;
+            padding: 33px 30px 30px;
+            transform: translateX(-30%);
+        }
+    }
+
+    @include my-media(1200, "min") {
+        height: 750px;
+
+        &__content {
+            transform: translateX(-50%);
+        }
+    }
+}

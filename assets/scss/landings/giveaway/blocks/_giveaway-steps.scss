@@ -1,0 +1,253 @@
+.giveaway-steps {
+    margin-top: 32px;
+
+    &__divider {
+        position: relative;
+        margin: 0 200px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 28px;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 10px;
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 7 10' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3.5' cy='3.5' r='1.75' fill='" + $color-blue2 + "'/%3e%3c/svg%3e") top repeat-x;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: calc(33.33333% - 20px);
+        min-height: 368px;
+        text-align: center;
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+
+        @include h302620;
+
+        color: $color-white;
+        background: $color-blue2;
+        border-radius: 50%;
+    }
+
+    &__info {
+        min-height: 120px;
+    }
+
+    &__title {
+        margin-top: 30px;
+
+        @include h262018;
+    }
+
+    &__description {
+        margin-top: 10px;
+
+        @include p181816;
+    }
+
+    &__date {
+        font-weight: 500;
+    }
+
+    &__image {
+
+        .image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    @include my-media(1400) {
+
+        &__divider {
+
+            &::after {
+                top: 22px;
+            }
+        }
+
+        &__item {
+            width: calc(33.33333% - 15px);
+        }
+
+        &__number {
+            width: 50px;
+            height: 50px;
+            font-size: 26px;
+            line-height: 32px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @include my-media(1100) {
+
+        &__divider {
+            margin: 0 184px;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__description {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 30px;
+
+        &__divider {
+            margin: 0;
+
+            &::after {
+                top: 91px;
+                left: calc(50% + 36px);
+                width: 10px;
+                height: 310px;
+                background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3' cy='3' r='1.5' fill='" + $color-blue2 + "'/%3e%3c/svg%3e") top repeat-y;
+            }
+        }
+
+        &__content {
+            flex-direction: column;
+            max-width: 738px;
+            margin: 0 auto;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+            min-height: 150px;
+            margin-top: 15px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &__number {
+            order: 2;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            order: 3;
+            justify-content: center;
+            max-width: 290px;
+            text-align: left;
+        }
+
+        &__image {
+            order: 1;
+            margin-top: 0;
+        }
+
+        &__title {
+            margin-top: 0;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        &__description {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__date {
+            display: inline-block;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 15px;
+
+        &__divider {
+            display: none;
+        }
+
+        &__item {
+            position: relative;
+            flex-direction: column;
+            margin-top: 13px;
+        }
+
+        &__number {
+            position: absolute;
+            top: 100px;
+            z-index: 1;
+            width: 39px;
+            height: 39px;
+            font-size: 20px;
+            line-height: 26px;
+            border: 2px solid $color-white;
+        }
+
+        &__info {
+            justify-content: flex-start;
+            max-width: 100%;
+            min-height: auto;
+            margin-top: 22px;
+            text-align: center;
+        }
+
+        &__image {
+            height: 120px;
+
+            .image {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__description {
+            max-width: 325px;
+            margin-top: 3px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__description {
+            max-width: 250px;
+            margin: 3px auto 0;
+        }
+    }
+}

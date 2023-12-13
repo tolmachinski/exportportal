@@ -1,0 +1,128 @@
+/* margin */
+$i: 0;
+
+@while $i <= 10 {
+.m-#{$i} {
+margin:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin left */
+$i: 0;
+
+@while $i <= 50 {
+.ml-#{$i} {
+margin-left:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin right */
+$i: 0;
+
+@while $i <= 40 {
+.mr-#{$i} {
+margin-right:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin top */
+$i: 0;
+
+@while $i <= 90 {
+.mt-#{$i} {
+margin-top:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin bottom */
+$i: 0;
+
+@while $i <= 90 {
+.mb-#{$i} {
+margin-bottom:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin minus top */
+$i: 0;
+
+@while $i <= 30 {
+.mmt-#{$i} {
+margin-top:-#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin minus right */
+$i: 5;
+
+@while $i <= 15 {
+.mmr-#{$i} {
+margin-right:-#{$i}px !important;}
+
+ $i: $i + 1;}
+
+/* margin minus left */
+$i: 15;
+
+@while $i <= 20 {
+.mml-#{$i} {
+margin-left:-#{$i}px !important;}
+
+ $i: $i + 1;}
+
+.m-auto {
+ margin-left: auto !important;
+ margin-right: auto !important;}
+
+@include my-media(991) {
+
+	.mb-15-sm-max {
+		margin-bottom: 15px;
+	}
+}
+
+@include my-media(576) {
+
+    .no-gutters-sm {
+        margin: 0 !important;
+    }
+}
+
+@include my-media(576, 'min') {
+
+	.mr-sm-auto {
+        margin-right: auto !important;
+    }
+
+    .mt-sm-0 {
+        margin-top: 0 !important;
+    }
+
+    .mr-sm-0 {
+        margin-right: 0 !important;
+    }
+
+    .mb-sm-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .ml-sm-0 {
+        margin-left: 0 !important;
+    }
+
+    .mt-sm-15 {
+        margin-top: 15px !important;
+    }
+
+    .mr-sm-15 {
+        margin-right: 15px !important;
+    }
+
+    .mb-sm-15 {
+        margin-bottom: 15px !important;
+    }
+
+    .ml-sm-15 {
+        margin-left: 15px !important;
+	}
+}

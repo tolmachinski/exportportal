@@ -1,0 +1,49 @@
+.popup-categories-mep {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 100%;
+    background: $color-white;
+
+    &.active {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .popup-categories-group {
+        display: block;
+        height: auto;
+    }
+
+    .popup-categories-selected {
+
+        &__col {
+            margin-top: 3px;
+            padding-left: 0;
+
+            &.active {
+
+                .popup-categories-list {
+
+                    &__name {
+                        justify-content: unset;
+                        padding: 10px 30px 10px 10px;
+                        color: $color-black-light !important;
+                        background: $color-gray-lighter;
+                    }
+
+                    &__icon {
+
+                        &--left {
+                            display: block;
+                        }
+
+                        &--right {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

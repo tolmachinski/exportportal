@@ -1,0 +1,50 @@
+.epl-header-mobile-line {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zIndexMobileLine;
+    display: none;
+    background: $white;
+    border-bottom: 1px solid $gray-light;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 60px;
+        margin: 0 -10px;
+    }
+
+    &__btn {
+        padding: 10px;
+    }
+
+    &__user-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 37px;
+        height: 37px;
+        margin-right: 10px;
+        border: 1px solid $gray-light;
+        border-radius: 50%;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            margin: 0 -100%;
+
+            @include object-fit(cover, center)
+        }
+    }
+
+    .link {
+        display: block;
+    }
+
+    @include my-media(991) {
+        display: block;
+    }
+}

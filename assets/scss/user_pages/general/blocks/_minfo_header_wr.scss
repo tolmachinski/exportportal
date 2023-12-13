@@ -1,0 +1,15 @@
+.minfo-header-wr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 50px;
+
+    @include phone-only {
+        padding: 0 0 20px;
+    }
+
+    @include my-media(480) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

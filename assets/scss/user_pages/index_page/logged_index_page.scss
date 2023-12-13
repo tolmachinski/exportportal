@@ -1,0 +1,86 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../plug/slick-1-8-1/slick";
+
+@import "../../plug/slick-1-8-1/slick-arrow";
+
+@import "../../plug/slick-1-8-1/slick-dots";
+
+// --- Header --- //
+
+@import "./blocks/_header-banner";
+
+@import "./blocks/_header-call-to-register";
+
+// --- Sections --- //
+
+@import "./blocks/_sections";
+
+// --- Content --- //
+
+@import "../../components/product_card/_products";
+
+@import "./blocks/_featured_items";
+
+@import "./blocks/_just-for-you-items";
+
+@import "./blocks/_golden-categories";
+
+@import "./blocks/_updates_from_ep";
+
+@import "./blocks/_benefits";
+
+@import "./blocks/_picks-of-month";
+
+@import "./blocks/_latest_items";
+
+@import "./blocks/_top_products";
+
+@import "./blocks/_world-magazine";
+
+@import "./blocks/_exclusive_deals";
+
+@import "./blocks/_blogs";
+
+@import "./blocks/_security";
+
+@import "./blocks/_add-items-card";
+
+@import "./blocks/_start-steps";
+
+@import "./blocks/_order-process";
+
+@import "./blocks/_selling-methods";
+
+@import "./blocks/_practices-guide";
+
+@import "./blocks/_help-methods";
+
+@import "./blocks/_ep-customer-reviews";
+
+@import "./blocks/_promo-card";
+
+@import "./blocks/_members-benefits";
+
+// --- Popup write review --- //
+
+@import "../../components/popups/write_review/index.scss";
+
+@import "../general/blocks/_youtube-play-icon";
+
+// Critical
+
+@include retina-display(1.5) {
+
+    .home-section,
+    .header-slider {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+}

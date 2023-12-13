@@ -1,0 +1,39 @@
+.user-guides-videos {
+    margin-top: 28px;
+
+    &__header {
+        position: relative;
+        text-align: center;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 2px;
+            background: $color-gray-light;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__ttl {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-gray;
+        background: $color-gray-lighter;
+    }
+
+    @include phone-only {
+        margin-top: 10px;
+
+        &__ttl {
+            padding: 0 5px;
+        }
+    }
+}
+

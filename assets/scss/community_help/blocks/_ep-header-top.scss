@@ -1,0 +1,164 @@
+.ep-header-top {
+    $root: &;
+
+    display: none;
+    min-height: 37px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 25px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-black;
+    }
+
+    &__menu-list {
+        display: flex;
+    }
+
+    &__menu-item {
+        min-height: 27px;
+        padding: 5px 15px;
+
+        &:hover {
+            #{$root} {
+
+                &__link {
+                    color: $color-blue2;
+                }
+
+                &__dropdown {
+
+                    .dropdown-toggle {
+                        color: $color-blue2;
+
+                        svg {
+                            fill: $color-blue2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu-link {
+        color: $color-black;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__actions-icon {
+        margin-right: 7px;
+    }
+
+    &__actions-link {
+        margin-right: 10px;
+        padding: 5px 10px;
+        color: $color-black;
+
+        &:hover {
+            color: $color-blue2;
+
+            &__actions-delimiter {
+                color: $color-blue2;
+            }
+        }
+
+        &:last-child {
+            margin-right: 5px;
+        }
+    }
+
+    &__actions-preferences-link {
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-black-light;
+        text-transform: uppercase;
+        background: none;
+
+        &:hover {
+            color: $color-blue2;
+
+            #{$root} {
+
+                &__delimiter {
+                    color: $color-blue2;
+                }
+            }
+        }
+    }
+
+    &__actions-delimiter {
+        color: $color-gray;
+    }
+
+    @include my-media(991) {
+        position: fixed;
+        top: 51px;
+        right: -270px;
+        bottom: 50px;
+        z-index: 1002;
+        overflow: auto;
+        width: 267px;
+        height: auto;
+        max-height: calc(100vh - 100px);
+        padding: 13px 20px 14px;
+        background: $white;
+
+        &.active {
+            right: 0;
+            display: block;
+        }
+
+        &__content {
+            display: block;
+            min-width: auto;
+            padding: 0;
+        }
+
+        &__actions {
+            display: none;
+        }
+
+        &__menu-list {
+            display: block;
+        }
+
+        &__menu-item {
+            min-height: auto;
+            padding: 6px 0;
+
+            &--mobile {
+                display: block;
+            }
+        }
+
+        &__menu-link {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    @include phone-only {
+        top: -330px;
+        right: 0;
+        bottom: unset;
+        width: 100%;
+        text-align: center;
+
+        &.active {
+            top: 50px;
+            right: unset;
+        }
+    }
+}

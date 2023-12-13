@@ -1,0 +1,39 @@
+.user-dispute-notices{
+	height: 250px;
+	overflow-y: auto;
+
+	&__item{
+		padding: 5px 0;
+		border-bottom: 1px solid $color-gray-light;
+		line-height: 1.5;
+	}
+
+	&__ttl{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__name{
+		padding-right: 15px;
+	}
+
+	&__date{
+		font-size: 12px;
+		color: $color-gray-light;
+    }
+
+    @include my-media(425){
+        &__ttl{
+			flex-direction: column;
+		}
+
+		&__date{
+			order: 0;
+		}
+
+		&__name{
+			order: 1;
+			padding-right: 0;
+		}
+    }
+}

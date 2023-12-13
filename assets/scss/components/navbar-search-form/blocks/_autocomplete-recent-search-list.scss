@@ -1,0 +1,53 @@
+.autocomplete-recent-search-list {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background: $color-gray-lighter;
+        }
+    }
+
+    &__text {
+        flex: 1;
+        width: 100%;
+        padding: 5px 0 5px 20px;
+        text-align: left;
+        color: darken($color-blue2, 15%);
+
+        @include text-nowrap;
+
+        background: transparent;
+    }
+
+    &__remove-btn {
+        flex: 0 0 auto;
+        width: 28px;
+        height: 28px;
+        margin: 0 12px 0 5px;
+        color: $color-gray;
+        background: transparent;
+
+        &:hover {
+            color: $color-black-light;
+        }
+
+        .ep-icon {
+            pointer-events: none;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__text {
+            padding-left: 14px;
+        }
+
+        &__remove-btn {
+            margin-right: 6px;
+        }
+    }
+}

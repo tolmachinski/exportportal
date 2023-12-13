@@ -1,0 +1,22 @@
+.community-sidebar-title {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 22px;
+    line-height: 27px;
+    color: $color-black;
+    border-bottom: 1px solid $color-gray-light;
+
+    @include my-media(991) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    @include phone-only {
+        padding-bottom: 15px;
+    }
+
+    @include my-media(576) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}

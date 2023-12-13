@@ -1,0 +1,45 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../plug/slick-1-8-1/slick";
+
+@import "../../plug/slick-1-8-1/slick-arrow";
+
+@import "../../plug/slick-1-8-1/slick-dots";
+
+// --- Header --- //
+
+@import "./blocks/_header-banner";
+
+@import "./blocks/_header-call-to-register";
+
+// --- Sections --- //
+
+@import "./blocks/_sections";
+
+// --- Content --- //
+
+@import "../../components/product_card/_products";
+
+@import "./blocks/_featured_items";
+
+@import "./blocks/_golden-categories";
+
+@import "./blocks/_updates_from_ep";
+
+@import "./blocks/_benefits";
+
+@import "./blocks/_picks-of-month";
+
+@import "./blocks/_latest_items";
+
+@import "./blocks/_top_products";
+
+@import "./blocks/_exclusive_deals";
+
+@import "./blocks/_blogs";
+
+@import "./blocks/_security";

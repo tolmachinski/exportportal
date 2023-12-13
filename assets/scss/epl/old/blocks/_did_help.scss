@@ -1,0 +1,49 @@
+.did-help {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-weight: normal;
+
+	&__txt {
+		padding-right: 25px;
+		color: $gray;
+	}
+
+	.didhelp-btn {
+		padding-right: 20px;
+		font-size: 0;
+
+		&.disabled {
+
+			.ep-icon_arrow-line-up,
+			.ep-icon_arrow-line-down {
+				color: $blue;
+			}
+
+			&:hover {
+				cursor: default;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.ep-icon_arrow-line-down,
+			.ep-icon_arrow-line-up {
+				color: $blue;
+			}
+		}
+	}
+
+	.ep-icon_arrow-line-up,
+	.ep-icon_arrow-line-down {
+		font-size: 14px;
+		line-height: 20px;
+		color: $gray;
+	}
+
+	.counter-b {
+		padding-right: 5px;
+		font-size: 16px;
+	}
+}

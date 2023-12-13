@@ -1,0 +1,38 @@
+.vacancy {
+    &__image-block {
+        padding-right: 15px;
+    }
+    &__image {
+        padding: 50px 0;
+        max-width: 425px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $color-gray;
+        background-color: $color-gray-lighter;
+        img {
+            width: 80%;
+        }
+    }
+    .btn {
+        width: 49%;
+    }
+    .dropdown {
+        width: 49%;
+        display: inline-block;
+        .btn {
+            width: 100%;
+        }
+    }
+
+    @include my-media(991){
+        max-width: 425px;
+        margin: 0 auto 30px;
+        .btn {
+            width: 100%;
+        }
+        .dropdown {
+            width: 100%;
+        }
+    }
+}

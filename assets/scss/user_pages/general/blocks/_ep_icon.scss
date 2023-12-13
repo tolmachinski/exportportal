@@ -1,0 +1,13 @@
+.ep-icon {
+    vertical-align: middle;
+
+	&_menu-circles {
+		padding: 0 5px;
+		font-size: 20px;
+	}
+
+	&--rotate {
+		transform: rotate(45deg);
+		transform-origin: 50% 50%;
+	}
+}

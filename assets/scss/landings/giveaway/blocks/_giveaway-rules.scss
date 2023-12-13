@@ -1,0 +1,150 @@
+.giveaway-rules {
+    margin-top: 30px;
+    text-align: center;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    &__item {
+        width: calc(20% - 12px);
+        max-width: 272px;
+        padding: 30px;
+        background: $color-white;
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+
+        svg {
+            fill: $color-blue2;
+        }
+    }
+
+    &__title,
+    &__terms {
+        margin-top: 30px;
+        color: $color-black;
+    }
+
+    &__title {
+
+        @include h262018;
+    }
+
+    &__description,
+    &__terms {
+
+        @include p181816;
+
+        color: $color-black-light;
+    }
+
+
+    &__description {
+        margin-top: 10px;
+        padding-right: 15px;
+    }
+
+    &__btn {
+        width: 300px;
+        margin-top: 14px;
+        background: $color-white;
+    }
+
+    @include my-media(1450) {
+
+        &__items {
+            justify-content: center;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        &__item {
+            width: calc(33.33333% - 10px);
+            margin-right: 10px;
+
+            &:nth-child(n + 4) {
+                margin-top: 10px;
+            }
+
+            &:nth-child(3n),
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include my-media(991) {
+
+        &__item {
+            max-width: 239px;
+
+            &:nth-child(n + 4) {
+                margin-top: 7px;
+            }
+        }
+
+        &__description {
+            margin-top: 6px;
+            padding-right: 0;
+        }
+    }
+
+    @include touch {
+
+        &__item {
+            width: calc(33.33333%);
+        }
+    }
+
+    @include phone-only {
+        margin-top: 14px;
+
+        &__items {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 100%;
+            max-width: none;
+            margin: 0 0 10px;
+            text-align: center;
+
+            &:nth-child(n + 4) {
+                margin-top: 0;
+            }
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__title {
+            margin-top: 14px;
+
+            br {
+                display: none;
+            }
+        }
+
+        &__terms {
+            margin-top: 18px;
+        }
+
+        &__btn {
+            width: 290px;
+        }
+    }
+}

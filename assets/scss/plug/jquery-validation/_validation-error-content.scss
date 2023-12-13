@@ -1,0 +1,15 @@
+.validation-error-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: none !important;
+    min-height: 40px;
+    padding: 11px 20px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    text-overflow: unset;
+    background: $red-light;
+    border-radius: 5px;
+}

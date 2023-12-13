@@ -1,0 +1,19 @@
+.wr-select-buy-b{
+	.select2-selection--single{
+		height: 40px;
+
+		.select2-selection__rendered{
+			height: 38px;
+			line-height: 38px;
+			white-space: normal;
+		}
+
+		.select-buy-dropdown{
+			padding-top: 2px;
+		}
+
+		.select2-selection__arrow{
+			height: 38px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+i.ico-pay-method {
+	display:inline-block;
+	*display:inline;
+	width: 32px;
+	height: 20px;
+	background: url(#{$pathImages}icons-method-transfer.png) 0 0 no-repeat;
+	zoom: 1;
+
+	&.i-visa {
+		background-position:0 0;
+	}
+
+	&.i-master-card {
+		background-position:-32px 0;
+	}
+
+	&.i-western-union {
+		background-position:-64px 0;
+	}
+
+	&.i-money-gram {
+		background-position:-96px 0;
+	}
+
+	&.i-paypal {
+		background-position:-128px 0;
+	}
+
+	&.i-wire-transfer {
+		background-position:-160px 0;
+	}
+
+	&.i-credit-card {
+		background-position:-192px 0;
+	}
+}

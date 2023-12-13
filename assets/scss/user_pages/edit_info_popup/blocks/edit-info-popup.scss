@@ -1,0 +1,153 @@
+.edit-info-popup {
+    $root: &;
+
+
+    .tabs-circle__txt {
+        margin-top: 11px;
+    }
+
+    &__row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ep-label {
+
+        &--mb-3 {
+            margin: 19px 0 3px;
+        }
+    }
+
+    .input-group {
+        flex-wrap: nowrap;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 48.7%;
+    }
+
+    &__documents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-top: 1px solid $color-gray-light;
+        border-bottom: 1px solid $color-gray-light;
+
+        &+& {
+            border-top: none;
+        }
+    }
+
+    &__text {
+        margin-bottom: 13px;
+        line-height: 22px;
+        color: $color-gray;
+    }
+
+    &__note {
+        font-size: 14px;
+        line-height: 19px;
+        color: $color-gray;
+    }
+
+    &__map {
+        margin-top: 9px;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__legal-checkbox {
+        margin-top: 11px;
+    }
+
+    &-actions {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid $color-gray-light;
+
+        .btn {
+            min-width: 130px;
+            margin-left: 10px;
+
+            @include text-nowrap;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        &__left {
+            display: flex;
+            align-items: center;
+        }
+
+        &__right {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        @include phone-extra-small {
+            margin-top: 20px;
+        }
+    }
+
+    .inputs-40 .wr-select2-h50 .select2-selection--single .select2-selection__rendered {
+        font-size: 16px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+        color: $color-black;
+    }
+
+    @include phone-extra-small {
+
+        .tabs-circle {
+            margin-bottom: 0;
+        }
+
+        &__row {
+
+            &--fdc {
+                flex-direction: column;
+            }
+        }
+
+        &__column {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__documents {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 8px 0 10px;
+
+            &-text {
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            .bg-gray-lighter {
+                margin-bottom: 0;
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}

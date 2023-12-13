@@ -1,0 +1,15 @@
+.ep-icon-svg {
+    display: inline-block;
+    fill: currentcolor;
+    shape-rendering: auto;
+}
+
+.wr-ep-icon-svg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &--h26 {
+        height: 26px;
+    }
+}

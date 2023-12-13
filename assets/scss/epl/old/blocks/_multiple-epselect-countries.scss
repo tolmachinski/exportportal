@@ -1,0 +1,115 @@
+.multiple-epselect-countries {
+	$root: &;
+
+	position: relative;
+
+	&__input {
+		height: 50px;
+		padding-left: 20px;
+		padding-right: 44px;
+		line-height: 48px;
+		background: $white url(#{$pathImages4}arrow-select-new.png) right center no-repeat;
+		cursor: pointer;
+		border: 1px solid $gray-light;
+        border-radius: 5px;
+		appearance: none;
+	}
+
+	&__list-wr {
+		position: absolute;
+		top: 50px;
+		right: 0;
+		left: 0;
+		z-index: 1000;
+		display: none;
+		margin-top: -1px;
+		background: $white;
+		border: 1px solid $black;
+	}
+
+	&__list {
+		max-height: 250px;
+		padding: 5px 8px;
+		overflow-x: auto;
+
+		label {
+			display: inline-flex;
+			align-items: center;
+			height: 40px;
+			margin-bottom: 0;
+			cursor: pointer;
+
+			.name {
+				padding-left: 5px;
+			}
+		}
+
+		.nochildrens {
+
+			.ep-icon {
+				display: none;
+			}
+		}
+	}
+
+	.parent {
+
+		&.disabled {
+
+			.name {
+				color: $gray-light;
+			}
+
+			.ep-icon {
+				color: $gray-light;
+			}
+		}
+	}
+
+	&__top {
+		position: relative;
+		border-bottom: 1px solid $gray-lighter;
+
+		label {
+    		height: auto;
+			min-height: 40px;
+			margin-bottom: 0;
+			padding-right: 27px;
+		}
+
+		.ep-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding-left: 10px;
+			font-size: 16px;
+			line-height: 40px;
+			cursor: pointer;
+		}
+
+        .custom-checkbox__text {
+            margin-top: 3px;
+        }
+	}
+
+	&__inner {
+		display: none;
+		padding-left: 15px;
+	}
+
+	@include my-media(991) {
+
+		&__input {
+			height: 40px;
+			padding-left: 10px;
+			padding-right: 34px;
+			line-height: 38px;
+			background: $white url(#{$pathImages4}arrow-select-new2.png) right center no-repeat;
+		}
+
+		&__list-wr {
+			top: 40px;
+		}
+	}
+}
+

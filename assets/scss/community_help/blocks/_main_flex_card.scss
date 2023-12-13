@@ -1,0 +1,23 @@
+.main-flex-card {
+
+	@include my-media(991) {
+        flex-direction: column;
+
+		&__fixed-left {
+			width: 270px;
+			margin-right: 0;
+		}
+
+		&__fixed-right {
+			width: 300px;
+			margin-left: 0;
+        }
+
+        &__flex-md {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+	}
+}

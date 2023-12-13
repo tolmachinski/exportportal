@@ -1,0 +1,43 @@
+.spersonal-library{
+	padding-top: 30px;
+
+	&__item{
+		padding-bottom: 40px;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__ttl{
+		@include fs-ttl;
+	}
+
+	&__params{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 14px;
+	}
+
+	&__category{
+		@include fs-category;
+        color: $color-gray;
+        padding-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+	}
+
+	&__date{
+		color: $color-gray;
+	}
+
+	&__text{
+		padding-top: 15px;
+		word-wrap: break-word;
+		line-height: 22px;
+	}
+}

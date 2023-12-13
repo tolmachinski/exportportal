@@ -1,0 +1,33 @@
+.popup-categories-selected {
+
+    &__row {
+        display: flex;
+    }
+
+    &__col {
+        width: 315px;
+        padding-left: 15px;
+    }
+
+    @include my-media(1250) {
+
+        &__row {
+            display: block;
+            padding-top: 0;
+        }
+
+        &__col {
+            width: 100%;
+
+            &--center {
+                padding: 0;
+                border-left: 0;
+            }
+
+            &--last {
+                padding: 0;
+                border-left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.widget-cookie-container {
+    max-width: 408px;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-color: $color-black;
+
+    &__text {
+        margin-bottom: 5px;
+        font-size: 15px;
+        line-height: 21px;
+        color: $color-white;
+    }
+
+    &__link {
+        font-size: 15px;
+        color: $color-white;
+        text-decoration: none;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &__button {
+        display: block;
+        margin-top: 16px;
+	}
+
+	@media screen and (max-width: 425px) {
+		padding: 15px;
+		font-size: 15px;
+
+		&__text {
+			display: inline;
+		}
+
+		&__button {
+			margin-top: 10px;
+			font-size: 14px !important;
+		}
+	}
+
+	@media screen and (max-height: 330px) {
+		padding: 15px;
+		font-size: 15px;
+
+		&__text {
+			display: inline;
+		}
+
+		&__button {
+			margin-top: 10px;
+			font-size: 14px !important;
+		}
+	}
+}

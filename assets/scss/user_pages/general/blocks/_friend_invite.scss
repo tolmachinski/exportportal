@@ -1,0 +1,163 @@
+.friend-invite {
+
+    &__radio {
+      display: block;
+      margin-bottom: 13px;
+    }
+
+    &__message-type {
+      padding-left: 5px;
+      font-size: 16px;
+      line-height: 26px;
+      cursor: pointer;
+    }
+
+    &__message {
+      margin-bottom: 32px;
+    }
+
+    &__success {
+      padding-top: 16px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+
+      .ep-icon {
+        left: 20px;
+      }
+
+      &-text {
+        padding-left: 6px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-black-light;
+      }
+
+      &-email {
+        margin-bottom: 8px !important;
+        padding-left: 26px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+        color: $color-black;
+      }
+
+      &-wrong_email {
+        margin-right: 10px;
+        padding-left: 26px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-black-light;
+      }
+
+      &-contact_us {
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-blue2;
+      }
+    }
+
+    .pages-socials-list {
+      padding-top: 4px;
+
+      &__item {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+      }
+    }
+
+    &__subject {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-black;
+    }
+
+    &__modal {
+
+      .modal-content {
+        max-width: 407px;
+        max-height: 350px;
+      }
+
+      .modal-dialog-centered {
+        justify-content: center;
+        padding-left: 0;
+      }
+    }
+
+      @include phone-only {
+
+      &__modal {
+
+        .modal-content {
+          max-width: 310px;
+          max-height: 272px;
+          padding-left: 16px;
+          padding-right: 15px;
+
+          .info-bootstrap-dialog .modal-footer {
+            padding: 15px 0 0 !important;
+          }
+        }
+
+        .modal-title {
+          padding-top: 6px;
+          font-size: 18px !important;
+          line-height: 22px !important;
+        }
+
+        .ep-icon_remove-stroke {
+          font-size: 20px !important;
+        }
+      }
+
+      .pages-socials-list {
+        padding-top: 2px;
+
+        &__item {
+          margin-right: 9px;
+        }
+      }
+
+      &__radio {
+        margin-bottom: 11px;
+      }
+
+      &__success {
+        padding-top: 8px;
+        padding-bottom: 6px;
+        padding-left: 9px;
+
+        .ep-icon {
+          display: none !important;
+        }
+
+        &-text,
+        &-email,
+        &-wrong_email,
+        &-contact_us {
+          padding-left: 0;
+          font-size: 14px !important;
+          line-height: 22px !important;
+        }
+
+        &-email {
+          margin-bottom: 6px !important;
+        }
+
+        &-thank_txt {
+          display: block;
+        }
+      }
+    }
+  }

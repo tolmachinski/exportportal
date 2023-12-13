@@ -1,0 +1,13 @@
+.flex-card {
+    display: flex;
+
+    &__fixed {
+        margin-right: 15px;
+    }
+
+    &__float {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+    }
+}

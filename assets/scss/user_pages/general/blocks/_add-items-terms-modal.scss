@@ -1,0 +1,35 @@
+.add-items-terms-modal {
+
+    .modal-footer {
+        margin-top: 14px;
+    }
+
+    .bootstrap-dialog-footer {
+        margin: 0;
+    }
+
+    @include my-media(991) {
+
+        .modal-dialog {
+            padding: 0;
+        }
+    }
+
+    @include phone-only {
+
+        .modal-dialog {
+            padding: 0 10px;
+        }
+
+        .modal-footer {
+            margin-top: 20px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        .modal-content {
+            height: auto;
+        }
+    }
+}

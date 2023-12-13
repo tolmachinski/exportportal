@@ -1,0 +1,62 @@
+.dtfilter-popup{
+	.datepicker-init{
+		padding-right: 33px;
+		background: url("../plug/jquery-ui-1-12-1-custom/img/calendar_icon.svg") 90% center no-repeat;
+	}
+
+	.dt-filter-reset-buttons{
+		margin-top: 20px;
+		padding-left: 58px;
+		padding-right: 58px;
+	}
+
+	.filter-plugin-list{
+		margin-top: -4px;
+	}
+
+	.dt-filter{
+		&__param {
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			padding-right: 25px;
+			margin-top: 12px;
+
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+
+		&__param-name{
+			max-width: 125px;
+			padding-right: 10px;
+			color: $color-gray;
+		}
+
+		&__param-val{
+			min-width: 0;
+		}
+
+		&__param-remove{
+			position: absolute;
+			top: 0;
+			right: 0;
+			line-height: 22px;
+			color: $color-black;
+		}
+	}
+
+	.tab-content > .tab-pane{
+		display: block;
+    }
+
+
+    @include phone-only{
+        .tab-content{
+            > .tab-pane:not(.active){
+                display: none;
+            }
+        }
+    }
+
+}

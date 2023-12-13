@@ -1,0 +1,45 @@
+.account-registration-actions {
+    $root: &;
+
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 1px;
+    margin-top: 14px;
+
+    .btn {
+        width: 150px;
+        margin-left: 10px;
+
+        @include text-nowrap;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+
+    @include phone-extra-small {
+        margin-top: 15px;
+
+        .btn {
+            width: 140px;
+
+            &--w150-sm {
+                width: 150px;
+            }
+        }
+    }
+}

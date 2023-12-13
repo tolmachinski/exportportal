@@ -1,0 +1,274 @@
+.shipping-methods {
+    $root: &;
+
+    margin: 50px auto;
+
+    &__item {
+        display: flex;
+        margin: 0 0 15px;
+        padding: 49px;
+        border: 1px solid $color-gray-light;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__item-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 50px 0 0;
+        border-radius: 50%;
+    }
+
+    &__item-title {
+
+        @include h262018;
+
+        margin: 0 0 14px;
+    }
+
+    &__item-body {
+        position: relative;
+    }
+
+    &__item-text {
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow-y: hidden;
+        height: auto;
+        max-height: 94px;
+
+        @include p181816;
+
+        text-overflow: ellipsis;
+
+        p+p {
+            margin: 24px 0 0;
+        }
+    }
+
+    &__item-alias {
+        text-transform: uppercase;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 -15px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 15px;
+        padding: 50px 90px;
+        background-color: $color-gray-lighter;
+        text-align: center;
+
+        #{$root} {
+
+            &__title {
+                margin: 0 0 9px;
+            }
+        }
+    }
+
+    &__icon {
+        width: 75px;
+        height: 75px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $color-blue2;
+        }
+
+        margin: 0 0 31px;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    &__title {
+        margin: 0 0 25px;
+
+        @include h423024;
+
+        text-align: center;
+    }
+
+    &__text {
+
+        @include p181816;
+
+        margin: 0 0 29px;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -5px 45px;
+    }
+
+    &__tabs-link {
+        margin: 5px;
+        padding: 15px 25px 13px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $color-black;
+        background-color: $color-gray-lighter;
+        border-radius: 25px;
+    }
+
+    &__tabs-alias {
+        text-transform: uppercase;
+    }
+
+    @include my-media(992, "min") {
+
+        &__tabs-link {
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-blue2;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__column {
+            padding: 50px 20px;
+        }
+    }
+
+    @include my-media(991) {
+        margin: 30px auto;
+
+        &__title {
+            margin: 0 0 13px;
+        }
+
+        &__tabs {
+            margin: 0 -5px 25px;
+        }
+
+        &__item {
+            padding: 29px 29px 28px;
+        }
+
+        &__item-image {
+            margin: 0 30px 0 0;
+        }
+
+        &__item-text {
+            -webkit-line-clamp: 5;
+            max-height: 118px;
+        }
+
+        &__row {
+            flex-direction: column;
+            margin: 0;
+        }
+
+        &__column {
+            width: 100%;
+            margin: 0;
+            margin: 0 0 15px;
+
+            #{$root} {
+
+                &__title {
+                    margin: 0 0 8px;
+                }
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 0 30px;
+        }
+    }
+
+    @include phone-only {
+
+        &__item-text {
+            -webkit-line-clamp: 8;
+            max-height: 173px;
+
+            p+p {
+                margin: 22px 0 0;
+            }
+        }
+    }
+
+    @include my-media(575) {
+
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            margin: 0 0 10px;
+            padding: 29px 14px 12px;
+        }
+
+        &__item-image {
+            margin: 0 0 29px;
+        }
+
+        &__item-title {
+            margin: 0 0 8px;
+        }
+
+        &__column {
+            margin: 0 0 10px;
+            padding: 30px 15px;
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 0 15px;
+        }
+
+        &__text {
+            margin: 0 0 13px;
+        }
+
+        &__btn {
+            max-width: 260px;
+        }
+
+        &__tabs {
+            margin: 0 -2.5px 28px;
+        }
+
+        &__title {
+            margin: 0 0 11px;
+        }
+
+        &__tabs-link {
+            margin: 2.5px;
+            padding: 10px 25px 8px;
+        }
+
+        .practices-guide {
+            margin: 30px auto;
+        }
+    }
+}

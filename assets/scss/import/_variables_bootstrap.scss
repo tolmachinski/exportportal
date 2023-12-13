@@ -1,0 +1,36 @@
+// bootstrap variables 4-5-2
+$border-radius:          0 !default;
+$border-radius-lg:       0 !default;
+$border-radius-sm:       0 !default;
+$nav-link-padding-y:     .2rem !default;
+$input-btn-padding-y:    .875rem !default;
+$input-btn-padding-x:    .75rem !default;
+$input-btn-line-height:  1.25 !default;
+$input-placeholder-color: $color-gray !default;
+$font-family-sans-serif: roboto, "Segoe UI", arial, sans-serif;
+
+// Popover maximum width
+$popover-max-width: 334px !default;
+$gray-100: $color-gray-lighter;
+$gray-200: $color-gray-light;
+$gray-800: $color-black-light;
+$gray-900: $color-black;
+$blue:    $color-blue2;
+$link-hover-color: $blue-hover;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     $color-red;
+$orange:  $color-orange;
+$yellow:  #ffc107 !default;
+$green:   $color-green;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$progress-bg: $gray-100 !default;
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1001 !default;
+$zindex-tooltip:                    1070 !default;

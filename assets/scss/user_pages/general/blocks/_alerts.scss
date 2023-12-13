@@ -1,0 +1,90 @@
+.default-alert-b,
+.warning-alert-b,
+.error-alert-b,
+.info-alert-b,
+.success-alert-b {
+	position: relative;
+	padding: 13px 16px 13px 47px;
+    font-size: 16px;
+    line-height: 24px;
+	color: $color-black;
+
+	> .ep-icon {
+		position: absolute;
+		top: 16px;
+		left: 20px;
+    }
+
+    .ep-tinymce-text {
+
+        ul,
+        ol {
+
+            li {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &--fs16 {
+        font-size: 16px !important;
+        line-height: 22px;
+
+        .ep-tinymce-text {
+            line-height: 22px;
+
+            ul,
+            ol {
+                line-height: 22px !important;
+            }
+        }
+    }
+
+    &--lh22 {
+        line-height: 22px;
+    }
+
+    @include phone-only {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 22px;
+
+        > .ep-icon {
+            display: none;
+        }
+
+        &--fs16 {
+            padding: 8px 10px !important;
+        }
+
+        &--lh22 {
+            line-height: 19px;
+        }
+    }
+}
+
+.default-alert-b {
+	background: $color-gray-lighter;
+}
+
+.warning-alert-b {
+	background: $color-orange-light;
+}
+
+.error-alert-b {
+	background: $color-red-light;
+}
+
+.info-alert-b {
+	background: $color-blue2-light;
+}
+
+.success-alert-b {
+	background: $color-green-light;
+}
+
+.txt-alert-b {
+	font-size: 14px;
+	line-height: 18px;
+	color: $color-gray;
+}

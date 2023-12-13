@@ -1,0 +1,42 @@
+.cr-user-history{
+	padding-top: 30px;
+
+	&__item{
+		padding-bottom: 50px;
+	}
+
+	&__ttl{
+		display: flex;
+		justify-content: space-between;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 500;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		padding: 25px 0 25px 0;
+	}
+
+	&__name{
+
+	}
+
+	&__date{
+		color: $color-black;
+	}
+
+	&__skills{
+		padding: 20px 0 0 50px;
+	}
+
+	&__skills-item{
+		padding-bottom: 5px;
+	}
+
+	&__short{
+		max-height: 120px;
+		overflow: hidden;
+	}
+}

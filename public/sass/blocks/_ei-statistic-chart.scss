@@ -1,0 +1,74 @@
+.ei-statistic-chart{
+	padding: 50px 45px 0 0;
+
+	&__item{
+		display: flex;
+		align-items: flex-end;
+		min-height: 24px;
+	}
+
+
+	&__percent{
+		width: 62px;
+		padding-right: 10px;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: normal;
+		text-align: right;
+	}
+
+	&__line{
+		flex: 1;
+		width: 100%;
+		border-left: 1px solid $color-gray-light;
+	}
+
+	&__name{
+		padding-left: 10px;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 20px;
+		color: $color-gray;
+	}
+
+	&__bg{
+        display: inline-block;
+        width: 0px;
+		height: 10px;
+        background: $color-blue2;
+        transition: all 2s cubic-bezier(0, 0, 0.2, 1);
+	}
+
+
+	&__grid{
+		display: flex;
+
+		&-white{
+			position: relative;
+			width: 63px;
+			height: 10px;
+			border-right: 1px solid $color-gray-light;
+		}
+
+		&-points{
+			display: flex;
+			flex: 1;
+			width: 100%;
+		}
+
+		&-line{
+			position: relative;
+			width: 50%;
+			border-right: 1px solid $color-gray-light;
+			border-bottom: 1px solid $color-gray-light;
+		}
+
+		.nr{
+			position: absolute;
+			right: -14px;
+			bottom: -25px;
+			font-size: 12px;
+			color: $color-gray;
+		}
+	}
+}

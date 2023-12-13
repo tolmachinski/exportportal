@@ -1,0 +1,10 @@
+.help-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4px;
+
+    @include my-media(991) {
+        margin-top: 0;
+    }
+}

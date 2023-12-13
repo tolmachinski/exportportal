@@ -1,0 +1,141 @@
+.userinfo-scheme {
+    margin-top: 72px;
+
+    &__ttl {
+
+        @include h423024;
+
+        text-align: center;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+        padding-top: 30px;
+    }
+
+    &__col {
+        display: flex;
+        width: 33.33%;
+        padding: 10px;
+
+        .btn {
+            max-width: 100%;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-right: 30px;
+        border: 1px solid $color-gray-light;
+    }
+
+    &__icon-wrap {
+        position: relative;
+        min-width: 120px;
+        height: 120px;
+        margin: 15px 19px 15px 30px;
+        background: $color-blue2;
+        border-radius: 50%;
+
+        .image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__select-shipper-icon {
+        margin-left: 6px;
+    }
+
+    &__name {
+
+        @include p181816;
+    }
+
+    @include my-media (1100) {
+
+        &__col {
+            width: 50%;
+        }
+    }
+
+    @include my-media (991) {
+        margin-top: 50px;
+
+        &__row {
+            margin: -7.5px -8px;
+            padding-top: 19px;
+        }
+
+        &__col {
+            padding: 7.5px 8px;
+        }
+
+        &__wrap {
+            padding-right: 10px;
+        }
+
+        &__icon-wrap {
+            margin: 15px;
+        }
+
+        &__name {
+            margin: 14px 0;
+        }
+    }
+
+    @include my-media (575) {
+        margin-top: 30px;
+
+        &__row {
+            margin: -2.5px -8px;
+        }
+
+        &__col {
+            width: 100%;
+            padding: 2.5px 8px;
+        }
+
+        &__wrap {
+            padding-right: 14px;
+        }
+
+        &__icon-wrap {
+            min-width: 90px;
+            height: 90px;
+            margin: 25px 15px;
+
+            .image {
+                width: 50%;
+            }
+        }
+
+        &__icon-sheild, &__icon-paper {
+            width: 43% !important;
+        }
+
+        &__select-shipper-icon {
+            width: 49%;
+            margin-left: 4px;
+        }
+
+        &__card-lock-icon {
+            margin-top: 3px;
+        }
+
+        &__icon-box {
+            width: 65% !important;
+        }
+
+        &__name {
+            margin: 14px 0;
+        }
+    }
+}

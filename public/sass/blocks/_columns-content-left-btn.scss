@@ -1,0 +1,7 @@
+#columns-content-left-btn{
+    display: none;
+
+    @include my-media(660){
+        display: inline-block;
+    }
+}

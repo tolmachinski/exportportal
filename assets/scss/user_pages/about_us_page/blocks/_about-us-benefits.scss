@@ -1,0 +1,99 @@
+.about-us-benefits {
+    max-width: 525px;
+    max-height: 886px;
+    margin-left: auto;
+    padding: 0 50px 0 15px;
+
+    &__item {
+        position: relative;
+        margin-bottom: 49px;
+        padding-left: 91px;
+        text-align: left;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__ttl {
+
+        @include h262018;
+
+        max-width: 150px;
+    }
+
+    &__desc {
+
+        @include p181816;
+
+        margin-top: 4px;
+    }
+
+    @include my-media (991) {
+        padding-right: 35px;
+
+        &__item {
+            margin-bottom: 49px;
+            padding-top: 0;
+            padding-left: 44px;
+        }
+
+        &__icon {
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        &__ttl {
+            max-width: unset;
+        }
+
+        &__desc {
+            margin-top: 7px;
+        }
+    }
+
+    @include phone-only {
+        max-width: unset;
+        margin-bottom: 28px;
+        margin-left: 0;
+        padding-right: 15px;
+
+        &__item {
+            position: unset;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 22px;
+            padding-left: 0;
+        }
+
+        &__icon {
+            position: relative;
+            top: -4px;
+        }
+
+        &__ttl {
+            width: calc(100% - 30px);
+            padding-left: 10px;
+        }
+
+        &__desc {
+            margin-top: 10px;
+        }
+    }
+}

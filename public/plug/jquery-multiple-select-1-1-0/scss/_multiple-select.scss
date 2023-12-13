@@ -1,0 +1,200 @@
+.ms-parent {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.ms-choice {
+    display: block;
+    width: 100%;
+	padding: 0 20px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid $color-black;
+    text-align: left;
+    white-space: nowrap;
+    background-color: $color-white;
+	color: $color-black;
+	line-height: 50px;
+    height: 50px;
+
+	&.disabled {
+		background-color: #f4f4f4;
+		background-image: none;
+		border: 1px solid #ddd;
+		cursor: default;
+	}
+
+	> span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 20px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+		padding-left: 20px;
+        padding-right: 20px;
+
+		&.placeholder {
+			color: $color-black;
+		}
+	}
+
+	> div {
+		position: absolute;
+		top: 1px;
+		bottom: 1px;
+		right: 0;
+		width: 44px;
+		// background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select-new.png') left 5px no-repeat;
+
+		// &.open {
+		// 	background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select-new.png') right 5px no-repeat;
+		// }
+		
+			&:after,
+			&:before {
+				position: absolute;
+				top: 50%;
+				height: 0;
+				width: 0;
+				border: solid transparent;
+				content: " ";
+				pointer-events: none;
+				margin-top: -2px;
+				margin-right: 13px;
+			}
+		
+			&:after {
+				right: 6px;
+				border-color: rgba(255, 255, 255, 0);
+				border-top-color: #ffffff;
+				border-width: 3px;
+			}
+		
+			&:before {
+				right: 5px;
+				border-color: rgba(33, 33, 33, 0);
+				border-top-color: #212121;
+				border-width: 4px;
+			}
+
+	}
+}
+
+.ms-drop {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    margin-top: -1px;
+    padding: 0;
+    position: absolute;
+    z-index: 1000;
+    background: $color-white;
+    color: #000;
+    border: 1px solid #aaa;
+
+	&.bottom {
+		top: 100%;
+		@include box-shadow(0 4px 5px rgba(0, 0, 0, .15));
+	}
+
+	&.top {
+		bottom: 100%;
+		@include box-shadow(0 -4px 5px rgba(0, 0, 0, .15));
+	}
+
+
+	ul {
+		overflow: auto;
+		margin: 0;
+		padding: 5px 8px;
+
+		> li {
+			padding-left: 20px;
+			line-height: 20px;
+			list-style: none;
+			display: list-item;
+			background-image: none;
+			position: static;
+
+			&:first-child{
+				padding-left: 0;
+			}
+
+			.disabled {
+				opacity: .35;
+				filter: Alpha(Opacity=35);
+			}
+
+			&.multiple {
+				display: block;
+				float: left;
+
+				label {
+					width: 100%;
+					display: block;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+
+			&.group {
+				clear: both;
+				padding-left: 0;
+			}
+
+			label {
+				padding: 0;
+				font-weight: normal;
+				display: block;
+				white-space: nowrap;
+				color: $color-black;
+
+				&.optgroup {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	input[type="checkbox"] {
+		vertical-align: middle;
+	}
+
+	.ms-no-results {
+		display: none;
+	}
+}
+
+.ms-search {
+    display: inline-block;
+    margin: 0;
+    min-height: 26px;
+    padding: 4px;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 10000;
+
+//	input {
+//		width: 100%;
+//		height: auto !important;
+//		min-height: 24px;
+//		padding: 0 20px 0 5px;
+//		margin: 0;
+//		outline: 0;
+//		font-size: 12px;
+//		border: 1px solid #aaa;
+//		background: $color-white url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px;
+//		background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+//		background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+//		background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+//		background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+//		background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px, -ms-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+//		background: url('../plug/jquery-multiple-select-1-1-0/img/multiple-select.png') no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+//	}
+}

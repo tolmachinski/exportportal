@@ -1,0 +1,98 @@
+.vacancies-list {
+    &__image-block {
+        padding-right: 15px;
+	}
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 147px;
+        height: 128px;
+        cursor: pointer;
+        overflow: hidden;
+        border: 1px solid $color-gray;
+		background-color: $color-gray-lighter;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include object-fit(cover, bottom);
+        }
+	}
+
+    &__item {
+        margin-bottom: 50px;
+        display: flex;
+	}
+
+    &__name {
+		display: inline-block;
+		margin-top: -5px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-black;
+        @include text-nowrap;
+	}
+
+    &__desc {
+        overflow: hidden;
+        max-height: 125px;
+        font-size: 16px;
+        line-height: 26px;
+	}
+
+    &__country {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__country-name {
+        margin-left: 10px;
+	}
+
+    &__btn-t1 {
+        display: none;
+	}
+
+	&__country-block{
+		margin: 12px 0 15px 0;
+		color: $color-gray;
+    }
+
+    @media screen and (max-width: 660px) {
+        &__item {
+            display: block;
+        }
+        &__image-block {
+            padding-right: 0;
+            margin: 0 auto;
+            margin: 0 auto 20px;
+        }
+        &__image {
+            width: 200px;
+            height: 181px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__name{
+            width: 100%;
+            display: block;
+        }
+        &__name,
+        &__desc,
+        &__link,
+        &__country-block {
+            text-align: center;
+        }
+        &__btn-t1 {
+            width: 100%;
+            max-width: 146px;
+            margin: 20px auto 0;
+            display: block;
+        }
+        &__btn-t2 {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.dashboard-container {
+    min-width: 320px;
+    max-width: 1500px;
+    min-height: 500px;
+	padding-top: 50px;
+
+    &--oh {
+        overflow: hidden;
+    }
+
+    @include my-media(991) {
+
+        &--tablet-padding-top-0 {
+            padding-top: 0;
+        }
+    }
+
+    @include phone-only {
+        min-height: 200px;
+        padding-top: 10px;
+
+        &--tablet-padding-top-0 {
+            padding-top: 0;
+        }
+    }
+}

@@ -1,0 +1,205 @@
+<base href="{base_url}">
+		
+<style>
+	/*.icons-colors {
+		margin-bottom:40px;
+		width: 30%;
+		float: left;
+		padding: 0;
+	}
+	.icons-colors__item{
+		float: left;
+		width: 80px;
+		height: 80px;
+		padding: 10px;
+		font-size: 10px;
+		line-height: 1.4;
+		text-align: center;
+		background-color: #f9f9f9;
+		border: 2px solid #fff;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.icons-colors__item i {
+		position: relative;
+		top: 1px;
+		width: 40px;
+		height: 40px;
+		display:block;
+		margin: 0 auto;
+	}
+	.icons-colors__item span {
+		display: block;
+		height: 32px;
+		padding-top: 5px;
+		text-align: center;
+		word-wrap: break-word;
+		font-size: 12px;
+		color: #7E7E7E;
+	}
+	.icons-colors__item:hover,
+	.icons-colors__item.active{
+		border: 2px solid #214658;
+	}*/
+	body {
+		margin:0;
+		padding-top:50px;
+		background:#fff;
+		color:#222;
+		font-family: Arial, sans-serif;
+	}
+	h1 {
+		margin:0 0 20px;
+		font-size:32px;
+		font-weight:normal;
+	}
+	.icons {
+		margin-bottom:40px;
+		/*width: 70%;*/
+		float: left;
+		padding: 0;
+	}
+	.icons__item{
+		float: left;
+		width: 80px;
+		height: 80px;
+		padding: 10px;
+		font-size: 10px;
+		line-height: 1.4;
+		text-align: center;
+		background-color: #f9f9f9;
+		border: 2px solid #fff;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.icons__item i {
+		position: relative;
+		top: 1px;
+		font-size: 40px;
+	}
+	.icons__item span {
+		display: block;
+		height: 32px;
+		padding-top: 5px;
+		text-align: center;
+		word-wrap: break-word;
+		font-size: 12px;
+		color: #7E7E7E;
+	}
+	.icons__item:hover,
+	.icons__item.active{
+		border: 2px solid #214658;
+	}
+	footer {
+		margin-top:40px;
+		font-size:14px;
+		color:#999;
+	}
+	.icons-header-fixed{
+		position: fixed;
+		height: 40px;
+		width: 100%;
+		top: 0;
+		background: #333333;
+		color: #fff;
+		line-height: 40px;
+		z-index: 1;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 15px;
+	}
+	.icons-header__color{
+		width: 30%;
+		float: left;
+	}
+	.icons-header__icon{
+		width: 70%;
+		float: left;
+	}
+	<%= styles %>
+</style>
+<!--
+<ul class="icons-colors" id="icons-colors">
+	<li class="icons-colors__item"><i class="bg-blue"></i> <span>txt-blue</span></li>
+	<li class="icons-colors__item"><i class="bg-blue-light"></i> <span>txt-blue-light</span></li>
+	<li class="icons-colors__item"><i class="bg-blue-lighter"></i> <span>txt-blue-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-blue-dark"></i> <span>txt-blue-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-blue-darker"></i> <span>txt-blue-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-lblue"></i> <span>txt-lblue</span></li>
+	<li class="icons-colors__item"><i class="bg-lblue-light"></i> <span>txt-lblue-light</span></li>
+	<li class="icons-colors__item"><i class="bg-lblue-lighter"></i> <span>txt-lblue-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-lblue-dark"></i> <span>txt-lblue-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-lblue-darker"></i> <span>txt-lblue-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-green"></i> <span>txt-green</span></li>
+	<li class="icons-colors__item"><i class="bg-green-light"></i> <span>txt-green-light</span></li>
+	<li class="icons-colors__item"><i class="bg-green-lighter"></i> <span>txt-green-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-green-dark"></i> <span>txt-green-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-green-darker"></i> <span>txt-green-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-orange"></i> <span>txt-orange</span></li>
+	<li class="icons-colors__item"><i class="bg-orange-light"></i> <span>txt-orange-light</span></li>
+	<li class="icons-colors__item"><i class="bg-orange-lighter"></i> <span>txt-orange-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-orange-dark"></i> <span>txt-orange-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-orange-darker"></i> <span>txt-orange-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-yellow"></i> <span>txt-yellow</span></li>
+	<li class="icons-colors__item"><i class="bg-yellow-light"></i> <span>txt-yellow-light</span></li>
+	<li class="icons-colors__item"><i class="bg-yellow-lighter"></i> <span>txt-yellow-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-yellow-dark"></i> <span>txt-yellow-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-yellow-darker"></i> <span>txt-yellow-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-red"></i> <span>txt-red</span></li>
+	<li class="icons-colors__item"><i class="bg-red-light"></i> <span>txt-red-light</span></li>
+	<li class="icons-colors__item"><i class="bg-red-lighter"></i> <span>txt-red-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-red-dark"></i> <span>txt-red-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-red-darker"></i> <span>txt-red-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-gray"></i> <span>txt-gray</span></li>
+	<li class="icons-colors__item"><i class="bg-gray-light"></i> <span>txt-gray-light</span></li>
+	<li class="icons-colors__item"><i class="bg-gray-lighter"></i> <span>txt-gray-lighter</span></li>
+	<li class="icons-colors__item"><i class="bg-gray-dark"></i> <span>txt-gray-dark</span></li>
+	<li class="icons-colors__item"><i class="bg-gray-darker"></i> <span>txt-gray-darker</span></li>
+
+	<li class="icons-colors__item"><i class="bg-black"></i> <span>txt-black</span></li>
+	<li class="icons-colors__item"><i class="bg-white"></i> <span>txt-white</span></li>
+</ul>
+-->
+
+<div class="icons-header-fixed">
+	<!--<div class="icons-header__color">Color: <span>none</span></div>-->
+	<div class="icons-header__icon"><code>&lt;i class=&quot;ep-icon ep-icon_<span id="name">name</span>&quot;&gt;&lt;/i&gt;</code></div>
+</div>
+
+<ul class="icons" id="icons">
+	<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+		<li class="icons__item" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i> <span><%= glyph %></span></li>
+	<% } %>
+</ul>
+
+<script type="text/javascript" src="{base_url}public/plug/jquery-1-12-0/jquery-1.12.0.min.js"></script>
+<script>
+	var color = '';
+	var oldColor = '';
+	var icon = "";
+	$(document).ready(function(){
+
+		$('body').on('click', '#icons-colors li', function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			color = $(this).find('span').text();
+			$('.icons-header__color span').text(color);
+			$('#icons').removeClass(oldColor).addClass(color);
+			oldColor = $(this).find('span').text();
+			var $iconCodeName = $('.icons-header__icon #name');
+			$iconCodeName.text(icon+' '+color);
+		});
+
+		$('body').on('click', '#icons li', function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			icon = $(this).data('name');
+			$('.icons-header__icon #name').text(icon+' '+color);
+		})
+	});
+</script>

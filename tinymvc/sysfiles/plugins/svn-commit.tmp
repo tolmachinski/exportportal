@@ -1,0 +1,4 @@
+add dsn config property as valid dsn
+--This line, and those below, will be ignored--
+
+M    tinymvc_pdo.php

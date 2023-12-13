@@ -1,0 +1,61 @@
+.pagination {
+    float: right;
+
+    &--right {
+        float: left;
+    }
+
+    li {
+        float: left;
+        margin-left: 5px;
+
+        &.active span {
+            color: $color-white;
+            background-color: $color-blue2;
+        }
+
+        .ep-icon {
+            position: relative;
+            top: -2px;
+            font-size: 11px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    span,
+    a {
+        float: left;
+        height: 40px;
+        padding: 0 17px;
+        font-size: 16px;
+        line-height: 40px;
+        color: $color-black;
+        background: $color-white;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-blue2;
+        }
+    }
+
+    @include my-media(480) {
+
+        &__next,
+        &__prev {
+            display: none;
+        }
+    }
+
+    @include my-media(425) {
+
+        span,
+        a {
+            height: 33px;
+            padding: 0 11px;
+            line-height: 33px;
+        }
+    }
+}

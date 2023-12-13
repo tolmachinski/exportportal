@@ -1,0 +1,84 @@
+.spersonal-pic-comments{
+
+	&__item{
+		padding-bottom: 25px;
+	}
+
+	&__img{
+		width: 76px;
+		height: 76px;
+		margin-right: 20px;
+		border-radius: 50%;
+
+		.image{
+			max-height: 100%;
+		}
+	}
+
+	&__name{
+		@include fs-names;
+
+		.link{
+			color: $color-black;
+		}
+	}
+
+	&__text{
+		padding-top: 10px;
+		word-wrap: break-word;
+	}
+
+	&__bottom{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 10px;
+	}
+
+	&__date{
+		color: $color-gray;
+    }
+
+    &__res{
+        padding-left: 25px;
+
+        &-item{
+            padding-top: 25px;
+        }
+
+        &-img{
+            width: 55px;
+            height: 55px;
+            margin-right: 20px;
+            border-radius: 50%;
+
+            .image{
+                max-height: 100%;
+            }
+        }
+
+        &-name{
+            @include fs-names;
+
+            .link{
+                color: $color-black;
+            }
+        }
+
+        &-text{
+            padding-top: 10px;
+            word-wrap: break-word;
+        }
+
+        &-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        &-date{
+            color: $color-gray;
+        }
+    }
+}

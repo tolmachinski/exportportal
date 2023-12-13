@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Прямоугольник_352" data-name="Прямоугольник 352" width="50" height="50" transform="translate(1518 7481)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Группа_масок_45" data-name="Группа масок 45" transform="translate(-1518 -7481)" clip-path="url(#clip-path)">
+    <g id="Page-1" transform="translate(1518 7481)">
+      <g id="lso">
+        <rect id="Rectangle" width="50" height="50" fill="#fff"/>
+        <g id="Сгруппировать_752" data-name="Сгруппировать 752" transform="translate(5 20.678)">
+          <g id="Group" transform="translate(0 0)">
+            <g id="Сгруппировать_751" data-name="Сгруппировать 751" transform="translate(11.646)">
+              <path id="Path" d="M.013.171h2.03V6.754H6.537V8.24H.013Z" transform="translate(-0.013 0.087)" fill="#424142"/>
+              <path id="Path-2" data-name="Path" d="M7.1,5.822A2.815,2.815,0,0,0,9.816,7.09c.493,0,2.04-.08,2.04-1.063,0-.583-.561-.72-1-.8-.332-.069-1.995-.32-2.374-.389C7.74,4.7,5.86,4.348,5.86,2.519a2.2,2.2,0,0,1,.321-1.143C6.858.29,8.348,0,9.632,0a5.822,5.822,0,0,1,2.925.629,3.373,3.373,0,0,1,1.341,1.3l-1.926.48a1.494,1.494,0,0,0-.711-.662,3.983,3.983,0,0,0-1.629-.309c-.893,0-1.811.172-1.811.937,0,.525.47.663,1.077.8.333.068,1.983.343,2.362.422.94.172,2.533.515,2.533,2.286,0,2.594-3.1,2.686-4.116,2.686A4.56,4.56,0,0,1,5.252,6.3Z" transform="translate(2.659 0.002)" fill="#424142"/>
+              <path id="Shape" d="M14.295,4.35a2.631,2.631,0,0,0,.516,1.692A2.629,2.629,0,0,0,17.173,7.15a2.706,2.706,0,0,0,2.9-2.835,2.768,2.768,0,0,0-2.981-2.857,2.767,2.767,0,0,0-2.8,2.891m6.983-2.777a4.138,4.138,0,0,1,.871,2.64c0,2.572-1.674,4.377-4.942,4.377s-5-1.771-5-4.286c0-2.777,2-4.183,4.655-4.3a5.441,5.441,0,0,1,4.415,1.565" transform="translate(6.206 0)" fill="#424142"/>
+            </g>
+            <g id="Path-3" data-name="Path" transform="translate(0 0.259)">
+              <path id="Контур_934" data-name="Контур 934" d="M3.446,4.42H8.9V2.947H3.1Z" transform="translate(1.583 1.449)" fill="#0379a9"/>
+              <path id="Контур_935" data-name="Контур 935" d="M5.007,5.877H8.1V4.4H4.666Z" transform="translate(2.379 2.192)" fill="#0379a9"/>
+              <path id="Контур_936" data-name="Контур 936" d="M0,.036.341,1.509H10.48V.036Z" transform="translate(0 -0.036)" fill="#0379a9"/>
+              <path id="Контур_937" data-name="Контур 937" d="M1.885,2.965H9.693V1.492H1.544Z" transform="translate(0.787 0.707)" fill="#0379a9"/>
+            </g>
+          </g>
+          <text id="TM" transform="translate(38.957 7.644)" fill="#424142" font-size="1" font-family="ArialMT, Arial"><tspan x="0" y="0">TM</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

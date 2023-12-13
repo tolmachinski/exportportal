@@ -1,0 +1,7 @@
+select.form-control:not([size]):not([multiple]){
+    @include my-media(991){
+        height: 40px;
+        padding: 0 34px 0 10px;
+        border: 1px solid $color-black;
+    }
+}

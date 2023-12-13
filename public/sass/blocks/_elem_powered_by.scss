@@ -1,0 +1,32 @@
+.elem-powered-by{
+	$this: &;
+
+	display: inline-flex;
+	align-items: center;
+	align-self: flex-end;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	color: $color-black;
+
+	&__txt{
+		margin-right: 10px;
+		color: $color-gray;
+	}
+
+	&__icon{
+		margin-right: 13px;
+		font-size: 22px;
+		color: $color-black;
+	}
+
+	&__name{
+		margin-right: 9px;
+		font-size: 18px;
+	}
+
+	&__info{
+		font-size: 20px;
+		color: $color-blue2;
+	}
+}

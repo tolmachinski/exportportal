@@ -1,0 +1,145 @@
+.question-detail {
+
+    &__title {
+        margin-bottom: 17px;
+        font-size: 26px;
+        line-height: 30px;
+        color: $color-black;
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+
+    &__img {
+		overflow: hidden;
+		width: 42px;
+		height: 42px;
+		margin-right: 10px;
+		background: $color-gray-lighter;
+		border-radius: 50%;
+
+		.image {
+			max-width: 100%;
+		}
+    }
+
+    &__additional {
+        padding-right: 4px;
+        color: $color-gray;
+    }
+
+    &__uname {
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-black;
+
+        @include text-nowrap;
+    }
+
+    &__date {
+        display: block;
+        color: $color-gray;
+
+        @include text-nowrap;
+    }
+
+    &__message {
+        margin: 12px 0 6px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-black;
+		word-break: break-word;
+        word-wrap: break-word;
+    }
+
+    &__row {
+		display: flex;
+		align-items: center;
+        font-size: 14px;
+        line-height: 19px;
+        color: $color-black;
+    }
+
+    &__category {
+        position: relative;
+        max-width: 300px;
+        padding-right: 10px;
+        color: $color-black;
+
+        @include text-nowrap;
+    }
+
+    &__delimiter {
+        width: 5px;
+        height: 5px;
+        background-color: $color-gray-light;
+        border-radius: 50%;
+    }
+
+    &__flag {
+		display: flex;
+		align-items: center;
+        padding: 0 10px;
+	}
+
+	&__flag-name {
+        padding-left: 5px;
+        color: $color-black;
+
+        @include text-nowrap;
+	}
+
+    @include my-media(991) {
+        margin-top: 16px;
+
+        &__title {
+            margin-bottom: 13px;
+            font-size: 24px;
+        }
+
+        &__uname {
+            line-height: 1.5;
+        }
+
+        &__message {
+            margin: 13px 0 7px;
+            padding-right: 5px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 0;
+    }
+
+    @include my-media(576) {
+        margin-bottom: 40px;
+
+        &__title {
+            margin-top: 2px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__img {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__uname {
+            display: block;
+            font-size: 14px;
+        }
+
+        &__message {
+            margin-bottom: 3px;
+        }
+
+        &__flag {
+            padding: 0 4px;
+        }
+
+        &__flag-name {
+            display: none;
+        }
+    }
+}

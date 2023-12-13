@@ -1,0 +1,77 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/_fonts";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/guideline/_elements-guideline";
+
+@import "../../plug/slick-1-8-1/slick";
+
+@import "../../plug/slick-1-8-1/slick-arrow";
+
+@import "../../plug/slick-1-8-1/slick-dots";
+
+@import "./../../components/product_card/_products";
+
+@import "./../../components/product_card/_products-mini";
+
+@import "./../general/blocks/_popular-products-s";
+
+@import "./../general/blocks/_promo-products-s";
+
+@import "./../general/blocks/_detail-info";
+
+@import "./../general/blocks/_title-public";
+
+@import "./../general/blocks/_spinner-custom";
+
+@import "./../general/blocks/_wr-video-link";
+
+@import "./../general/blocks/_product-comments";
+
+@import "./../general/blocks/_did-help";
+
+@import "./blocks/_product";
+
+@import "./blocks/_product-gallery";
+
+@import "./blocks/_product-sidebar";
+
+@import "./blocks/_similar-items";
+
+@import "./blocks/_product-info";
+
+@import "./blocks/_product-detail";
+
+// old styles for .did-help
+
+.did-help {
+
+    &__txt {
+        margin-right: 25px !important;
+        line-height: 1.5 !important;
+    }
+
+    .didhelp-btn {
+        margin-right: 20px !important;
+
+        .ep-icon_arrow-line-up,
+        .ep-icon_arrow-line-down {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+        }
+    }
+
+    .counter-b {
+        margin-right: 5px !important;
+        line-height: 1.5 !important;
+    }
+
+    .ep-icon_arrow-line-up,
+    .ep-icon_arrow-line-down {
+        margin-left: 0 !important;
+    }
+}

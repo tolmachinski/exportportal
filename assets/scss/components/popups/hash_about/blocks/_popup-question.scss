@@ -1,0 +1,57 @@
+.popup-question {
+    width: 408px;
+    padding: 30px;
+    background-color: $color-white;
+    border: 1px solid $color-black-light;
+    box-shadow: 0 3px 10px rgba($color-black, 0.16);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sub-title {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    &__button {
+        white-space: nowrap;
+
+        &:hover {
+            color: $color-white;
+
+            .ep-icon {
+                color: $color-white !important;
+            }
+        }
+
+        &--like {
+
+            &:hover {
+                background-color: $color-blue2;
+            }
+        }
+
+        &--dislike {
+
+            &:hover {
+                background-color: $color-red;
+            }
+        }
+
+        .ep-icon {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+    }
+
+    @include phone-extra-small {
+        width: auto;
+
+        &__hide-txt {
+            display: none;
+        }
+    }
+}

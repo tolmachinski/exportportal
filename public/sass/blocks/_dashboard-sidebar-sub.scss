@@ -1,0 +1,58 @@
+.dashboard-sidebar-sub{
+	display: none;
+	padding-bottom: 25px;
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 0;
+		cursor: pointer;
+		line-height: 30px;
+
+		&:hover,
+		&.active{
+			color: $color-blue2;
+		}
+	}
+
+	&__text{
+		display: flex;
+		align-items: center;
+		flex: 1;
+		width: 100%;
+		min-width: 0;
+
+		.txt{
+			@include text-nowrap;
+		}
+
+		span{
+			line-height: 18px;
+		}
+	}
+
+	&__icon{
+		min-width: 30px;
+		padding-right: 8px;
+		font-size: 17px;
+		color: $color-gray !important;
+	}
+
+	&__counter{
+		width: 30px;
+		text-align: right;
+		color: $color-gray;
+    }
+
+    @include my-media(991){
+        &__text{
+			margin-right: 5px;
+			@include text-nowrap;
+
+			span{
+				@include text-nowrap;
+			}
+		}
+    }
+}

@@ -1,0 +1,106 @@
+.sidebar {
+    $root: &;
+
+    grid-area: sidebar;
+    width: 300px;
+    height: 100%;
+    margin-right: 50px;
+
+    &--right {
+        margin: 0 0 0 50px;
+    }
+
+    &__inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__heading {
+        display: none;
+        padding: 14px 30px;
+
+        @include p161614;
+
+        background: $color-gray-lighter;
+
+        .ep-icon {
+            margin-right: 8px;
+            font-size: 10px;
+        }
+    }
+
+    &__content {
+        background: $color-white;
+    }
+
+    &__calendar-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 30px;
+
+        svg {
+            margin: 0 10px 0 0;
+            fill: $color-white;
+        }
+    }
+
+    &__close-btn {
+        display: flex;
+        align-items: center;
+        background: $color-gray-lighter;
+    }
+
+    @include my-media(1200) {
+        &:not(#{$root}--show-md) {
+
+            @include toggle-sidebar($root);
+        }
+
+        &.animate {
+            transition: transform .6s ease-in-out;
+        }
+    }
+
+    @include my-media(991) {
+
+        &--show-md {
+            width: 220px;
+            margin-right: 15px;
+        }
+    }
+
+    @include phone-only {
+
+        &__heading {
+            padding: 14px 15px;
+
+            @include p181816;
+        }
+
+        &__content {
+            padding: 30px 25px 30px 15px !important;
+        }
+
+        &--show-md {
+
+            @include toggle-sidebar($root);
+        }
+    }
+
+    @include my-media(425) {
+
+        &__inner {
+            max-width: none !important;
+        }
+    }
+}
+
+.sidebar-opened {
+    overflow: hidden;
+    padding-right: 8px;
+
+    @include touch {
+        padding-right: 0;
+    }
+}

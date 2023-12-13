@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+$imagepath: "../../public/img/bloggers";
+$fontpath: "../fonts";
+
+@mixin fontface($name, $file, $weight: normal, $style: normal){
+    @font-face {
+      font-family: "#{$name}";
+      src: url('#{$fontpath}/#{$file}.eot');
+      src: url('#{$fontpath}/#{$file}.eot?#iefix') format('embedded-opentype'),
+           url('#{$fontpath}/#{$file}.woff') format('woff'),
+           url('#{$fontpath}/#{$file}.ttf') format('truetype'),
+           url('#{$fontpath}/#{$file}.svg?#webfont') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+    }
+  }
+
+@include fontface(Source-regular, sourceserifpro-regular, normal);
+@include fontface(Typewriter-bold, americantypewriter-bold, normal);
+@include fontface(Typewriter-semibold, americantypewriter-semibold, normal);
+@include fontface(Roboto-light, Roboto-Light, normal);
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input,textarea {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Source-regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,a:hover, {
+    transition: all 0.34s linear;
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+    color: #898989;
+    font-family: 'Source-regular', sans-serif;
+}
+::-moz-placeholder {
+    color: #898989;
+    font-family: 'Source-regular', sans-serif;
+}
+:-ms-input-placeholder {
+    color: #898989;
+    font-family: 'Source-regular', sans-serif;
+}
+
+.content-form {
+    width: 100%;
+    display: flex;
+    max-width: 530px;
+    margin: 30px auto 0;
+    align-items: center;
+    .input {
+        width: 100%;
+        height: 40px;
+        padding: 0 18px;
+        margin-right: 25px;
+        border-radius: 10px;
+        border: 2px solid #000;
+        background-color: transparent;
+    }
+    .button {
+        color: #000;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        max-width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        border: 2px solid #000;
+        background-color: transparent;
+        &:hover {
+            color: #fff;
+            background-color: #000;
+        }
+    }
+    &--modal {
+        width: 90%;
+        min-width: 220px;
+        max-width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        input {
+            margin-top: 20px;
+            margin-right: 0;
+            max-width: 100%;
+        }
+        input[type='checkbox'] {
+            width: 20px;
+            height: 20px;
+            max-width: none;
+            margin-right: auto;
+        }
+        button {
+            width: 100%;
+            max-width: 100%;
+        }
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            padding: 18px;
+            resize: none;
+            height: 200px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            background-color: transparent;
+        }
+        .upload {
+            color: #000;
+            width: 100%;
+            height: 40px;
+            cursor: pointer;
+            max-width: 220px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            background-color: transparent;
+            &:hover {
+                color: #fff;
+                background-color: #000;
+            }
+        }
+    }
+}
+
+.fancybox-skin {
+    border-radius: 0 !important;
+}
+
+//.fancybox-inner {
+//    overflow-x: hidden !important;
+//}
+
+.modal-title {
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    a {
+        cursor: pointer;
+        font-size: 30px;
+    }
+    span {
+        color: #fff;
+    }
+}
+
+.blogger-preloader-wrapper {
+    position: relative;
+    overflow: hidden !important;
+}
+
+.blogger-preloader-wrapper-fixed {
+    position: initial;
+    overflow: hidden !important;
+    .bloggers-preloader {
+        position: fixed;
+    }
+}
+
+#fancybox-loading div {
+    width: 0;
+    height: 0;
+}
+
+.bloggers-preloader {
+    top: 0;
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

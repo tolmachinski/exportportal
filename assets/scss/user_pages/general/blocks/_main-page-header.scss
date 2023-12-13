@@ -1,0 +1,115 @@
+.main-page-header {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: 1420px;
+    height: 400px;
+    margin: 0 auto 20px;
+    padding: 0 100px;
+
+    &__container {
+        width: 100%;
+        padding: 2px 0 0;
+
+        &--small {
+            max-width: 430px;
+        }
+
+        &--center {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+
+            #{$root} {
+
+                &__title {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        @include h503826;
+
+        color: $color-white;
+    }
+
+    &__description {
+        width: 100%;
+        max-width: 610px;
+        margin-bottom: 29px;
+
+        @include p181816;
+
+        color: $color-white;
+    }
+
+    &__btn {
+        min-width: 250px;
+    }
+
+    @include my-media(991) {
+        align-items: flex-end;
+        height: 600px;
+        padding: 0 100px 50px;
+
+        &__container {
+            text-align: center;
+
+            &--small {
+                max-width: 100%;
+            }
+        }
+
+        &__description {
+            max-width: 100%;
+            margin-bottom: 19px;
+        }
+    }
+
+    @include phone-only {
+        margin: 0 auto 15px;
+        padding: 0 15px 30px;
+
+        &__description {
+            margin-bottom: 13px;
+        }
+    }
+
+    @include phone-extra-small {
+        height: 414px;
+
+        &__btn {
+            min-width: 100%;
+        }
+    }
+
+    @include retina-display(1.5) {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+}

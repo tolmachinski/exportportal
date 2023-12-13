@@ -1,0 +1,54 @@
+.select-country-code-group {
+
+    .select-country-code {
+
+        &:not(.select2-hidden-accessible) {
+            width:124.14px;
+            padding-right: 30px;
+        }
+    }
+
+    .select2-selection {
+
+		&__rendered {
+
+			span {
+				padding-right: 5px;
+			}
+		}
+	}
+
+    @include my-media(992) {
+
+        .select-country-code {
+
+            :not(.select2-hidden-accessible) {
+                width:119.14px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        .select-country-code {
+
+            &:not(.select2-hidden-accessible) {
+                width:77px;
+            }
+        }
+
+        .select2-selection {
+
+            &__rendered {
+
+                .select-country-flag {
+                    margin-right: 0;
+                }
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}

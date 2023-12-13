@@ -1,0 +1,150 @@
+@import "../../../import/scss_functions";
+
+@import "../../../import/_colors";
+
+.switch-account {
+    $root: &;
+
+    width: 270px;
+    height: 100%;
+    font-weight: 400;
+    border-right: 1px solid $color-gray-light;
+    border-left: 1px solid $color-gray-light;
+
+    &__another {
+        position: relative;
+        align-items: center;
+        height: 80px;
+        padding: 0 15px;
+        color: $color-gray-light;
+        border-bottom: 1px solid $color-gray-light;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &:hover {
+            color: $color-gray-light;
+            background: $color-gray-lighter;
+        }
+
+        i {
+            color: $color-black;
+        }
+    }
+
+    &__another-image {
+        overflow: hidden;
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+        background: $color-white;
+        border: 1px solid $color-gray-light !important;
+        border-color: $color-gray-light !important;
+        border-radius: 50%;
+    }
+
+    &__another-restricted {
+        position: absolute;
+        top: 17px;
+        left: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14px;
+        height: 14px;
+        fill: $color-red;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+    }
+
+    &__another-info {
+        flex: 1;
+    }
+
+    &__another-name {
+        line-height: 21px;
+        color: $color-black;
+
+        @include text-nowrap;
+    }
+
+    &__another-company {
+        font-size: 14px;
+        line-height: 19px;
+        color: $color-gray;
+
+        @include text-nowrap;
+    }
+
+    &__another-group {
+        font-size: 14px;
+        line-height: 19px;
+
+        @include text-nowrap;
+    }
+
+    &__current {
+        position: relative;
+        display: block;
+        min-height: 226px;
+        padding: 32px 15px 20px;
+        color: $color-black;
+        border-bottom: 1px solid $color-gray-light;
+        text-align: center;
+
+        &:hover {
+            color: inherit;
+        }
+
+        + #{$root} {
+
+            &__another {
+                border-bottom: 1px solid $color-gray-light;
+            }
+        }
+    }
+
+    &__current-restricted {
+        position: absolute;
+        top: 25px;
+        right: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        fill: $color-red;
+        border: 5px solid $color-white;
+        border-radius: 50%;
+    }
+
+    &__current-img {
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 10px;
+        background: $color-white;
+        border: 1px solid $color-gray-light;
+        border-radius: 50%;
+    }
+
+    &__current-name {
+        font-weight: 500;
+
+        @include text-nowrap;
+    }
+
+    &__current-company {
+        font-size: 14px;
+        color: $color-gray;
+
+        @include text-nowrap;
+    }
+
+    &__current-group {
+        font-size: 14px;
+
+        @include text-nowrap;
+    }
+}

@@ -1,0 +1,21 @@
+.epu-section {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 52px;
+
+    @include retina-display(1.5) {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+
+    @include my-media(768, "min") {
+        margin: 0 auto 71px;
+    }
+
+    @include my-media(992, "min") {
+        margin: 0 auto 103px;
+    }
+}

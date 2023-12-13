@@ -1,0 +1,13 @@
+.autocomplete-suggestion {
+
+    &.active+.autocomplete-recent-search {
+        margin-top: 11px;
+    }
+
+    @include my-media(991) {
+
+        &.active {
+            margin-top: 1px;
+        }
+    }
+}

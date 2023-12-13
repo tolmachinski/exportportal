@@ -1,0 +1,15 @@
+.validation-error {
+    position: relative;
+
+    &--bottom {
+        .validation-error-content {
+            bottom: -40px !important;
+        }
+    }
+
+    &.show {
+        .validation-error-content {
+            display: block !important;
+        }
+    }
+}

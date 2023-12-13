@@ -1,0 +1,41 @@
+.add-items-terms-and-conditions-form {
+    &__item {
+        margin-top: 29px;
+        padding-right: 5px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-black-light;
+    }
+
+    .checkbox-list {
+        margin-top: 12px;
+        padding-right: 30px;
+
+        &__txt {
+            padding-left: 10px;
+            @include p141414;
+        }
+    }
+
+    @include phone-only {
+        &__item {
+            margin-top: 20px;
+            padding-right: 0;
+        }
+
+        .checkbox-list {
+            padding-right: 0;
+
+            &__txt {
+                padding-top: 0;
+            }
+        }
+    }
+}

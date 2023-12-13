@@ -1,0 +1,260 @@
+.amb-navigation {
+    $root: &;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: 0 1px 10px rgba($color-black-light, 0.3);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 27px 34px 24px;
+        transition: $fast-transition;
+
+        @media only screen and (max-width: $break-lg) {
+            padding: 20px;
+        }
+    }
+
+    &__logo {
+
+        @include flex-my(center, space-between);
+
+        width: 100%;
+        max-width: 235px;
+        color: $color-black;
+    }
+
+    &__logo-image {
+        width: 52px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__logo-text {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: letterspacing(75, 16);
+        text-transform: uppercase;
+    }
+
+    &__row {
+
+        @include flex-my(center, flex-end);
+
+        width: calc(100% - 235px);
+        padding-left: 10px;
+        letter-spacing: letterspacing(70, 16);
+        text-transform: uppercase;
+    }
+
+    &__list {
+
+        @include flex-my(center, flex-end);
+
+        margin-left: 28px;
+    }
+
+    &__list-item {
+        padding-left: 14px;
+        padding-right: 14px;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-black;
+        letter-spacing: letterspacing(60, 16);
+    }
+
+    &.js-active {
+        z-index: 2;
+        background-color: $color-white;
+        transition: $fast-transition;
+
+        #{$root}__container {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: $fast-transition;
+        }
+    }
+
+    @media only screen and (max-width: $break-lg) {
+
+        &__logo-text {
+            margin-left: 15px;
+        }
+    }
+
+    @media only screen and (max-width: $break-md) {
+
+        &__logo {
+            justify-content: flex-start;
+            max-width: 80px;
+        }
+
+        &__logo-text {
+            display: none;
+        }
+
+        &__list-item {
+            padding-right: 0;
+        }
+    }
+
+    @media only screen and (max-width: $break-sm) {
+        background-color: $color-white;
+
+        &__container {
+            flex-wrap: nowrap;
+            padding: 10px 15px;
+        }
+
+        &__row {
+            justify-content: flex-end;
+            width: calc(100% - 200px);
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        &__list-item {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        &__list {
+            margin-left: 0;
+        }
+    }
+
+    @media only screen and (max-width: $break-xs) {
+
+        &__row {
+            width: 100%;
+            margin-top: 0;
+            font-size: 12px;
+        }
+
+        &__logo {
+            max-width: 70px;
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+    }
+
+    @media only screen and (min-width: $break-sm) {
+        transition: $fast-transition;
+    }
+}
+
+
+
+.ambassador {
+
+    &__navigation {
+        $root: &;
+
+        &.js-active {
+            #{$root}-container {
+                padding-top: 14px;
+                padding-bottom: 14px;
+            }
+        }
+    }
+
+    &__navigation-container {
+        padding: 14px 34px 14px 29px;
+    }
+
+    &__navigation-logo {
+        max-width: 240px;
+
+        &_image {
+            width: 54px;
+            height: 62px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    // 6px ​18px 8px 15px
+
+    @include my-media(991) {
+
+        &__navigation-container {
+            padding: 14px 18px 13px 14px;
+        }
+
+        &__navigation-row {
+            padding-top: 1px;
+            line-height: 20px;
+        }
+
+        &__navigation-list {
+            margin-top: 1px;
+        }
+
+        &__navigation-list-item {
+            line-height: 22px;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__navigation {
+            $root: &;
+
+            &.js-active {
+                #{$root}-container {
+                    padding-top: 11px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+
+        &__navigation-container {
+            padding: 11px 14px 12px;
+        }
+
+        &__navigation-row {
+            letter-spacing: 0.8px;
+        }
+
+        &__navigation-logo {
+            max-width: 80px;
+        }
+
+        &__navigation-list {
+            margin-top: 0;
+        }
+
+        &__navigation-list-item {
+            padding-left: 9px;
+            padding-right: 0;
+        }
+
+        &__navigation-link {
+            letter-spacing: 0.8px;
+        }
+    }
+}

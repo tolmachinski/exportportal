@@ -1,0 +1,211 @@
+.dwn-materials {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 15px 0;
+
+    &__info {
+        width: calc(100% - 324px);
+        padding: 35px 70px 31px 30px;
+        background-color: $color-gray-lighter;
+    }
+
+    &__cover {
+        display: block;
+        width: 324px;
+        background-color: $color-gray-lighter;
+        box-shadow: 10px 15px 30px rgba($color-black, 0.3);
+
+        img {
+            width: 100%;
+        }
+
+        &.animated {
+            position: absolute;
+            right: 15px;
+            transition: all 0.35s ease-out;
+        }
+    }
+
+    &__content {
+        font-size: 18px;
+        line-height: 26px;
+
+        p {
+            padding-top: 10px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 638px;
+            padding-top: 13px;
+        }
+
+        li {
+            display: flex;
+            width: 50%;
+            padding-right: 30px;
+            font-size: 16px;
+            line-height: 22px;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 8px;
+            }
+
+            &::before {
+                content: "";
+                display: inline-block;
+                min-width: 7px;
+                height: 7px;
+                margin-top: 5px;
+                margin-right: 9px;
+                background-color: $color-blue2;
+                border-radius: 50%;
+                vertical-align: top;
+            }
+        }
+
+        h2, h3 {
+            padding-top: 26px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        max-width: 350px;
+        margin-top: 28px;
+
+        a.btn,
+        .btn:first-child {
+            width: calc(50% - 5px);
+        }
+
+        .btn:last-child {
+            width: calc(50% - 5px);
+        }
+    }
+
+    @include my-media(991) {
+        position: relative;
+
+        &__info {
+            width: calc(100% - 122px);
+            padding: 32px 180px 31px 30px;
+        }
+
+        &__cover {
+            position: absolute;
+            right: 15px;
+            width: 272px;
+        }
+
+        &__content {
+
+            p {
+                line-height: 24px;
+            }
+
+            li {
+                width: 100%;
+                padding-right: 0;
+                line-height: 21px;
+
+                &::before {
+                    margin-top: 7px;
+                }
+
+                &:nth-child(3) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        &__actions {
+            margin-top: 14px;
+        }
+
+        h2, h3 {
+            padding-top: 29px;
+        }
+    }
+
+    @include my-media(600) {
+        flex-direction: column-reverse;
+        margin: 30px 15px 31px;
+        padding: 0;
+        background-color: $color-gray-lighter;
+
+        &__info {
+            width: 100%;
+            padding: 15px;
+            background-color: transparent;
+        }
+
+        &__cover {
+            position: static;
+            width: 133px;
+            margin-top: 30px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__content {
+
+            p {
+                padding-top: 9px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            h2, h3 {
+                padding-top: 23px;
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+            ul {
+                padding-top: 9px;
+            }
+
+            li {
+
+                &::before {
+                    margin-top: 10px;
+                }
+
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    margin-bottom: 9px;
+                }
+            }
+        }
+
+        &__actions {
+            flex-direction: column;
+            max-width: 100%;
+            margin-top: 15px;
+
+            a.btn,
+            .btn:first-child,
+            .btn:last-child {
+                width: 100%;
+            }
+
+            .btn:last-child {
+                margin-top: 5px;
+            }
+        }
+    }
+}

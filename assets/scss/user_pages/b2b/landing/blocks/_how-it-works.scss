@@ -1,0 +1,277 @@
+.how-it-works {
+    $root: &;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -15px 29px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: calc(25% - 30px);
+        margin: 0 15px;
+        text-align: center;
+
+        &:first-child {
+            #{$root} {
+
+                &__delimiter {
+
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            #{$root} {
+
+                &__delimiter {
+
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__delimiter {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+            width: 50%;
+            height: 9px;
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3.5' cy='3.5' r='1.75' fill='"+ $color-blue2 + "'/%3e%3c/svg%3e") repeat-x;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            right: calc(50% + 18.5px);
+            width: 50%;
+            background-position: left;
+        }
+
+        &::after {
+            left: calc(50% + 11.5px);
+            width: 50%;
+            background-position: right;
+        }
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+
+        @include h302620;
+
+        color: $color-white;
+        background: $color-blue2;
+        border-radius: 50%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 14px;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%
+    }
+
+    &__ttl {
+
+        @include h201816;
+
+        margin: 0 0 3px;
+    }
+
+    &__desc {
+        flex: 1;
+
+        @include p181816;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    @include my-media(991) {
+
+        &__list {
+            flex-direction: column;
+            margin: 0 0 30px;
+        }
+
+        &__item {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin: 0 0 15px;
+            text-align: left;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__img {
+            width: 369px;
+        }
+
+        &__delimiter {
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 170px;
+            margin: 0 15px;
+
+            &::before,
+            &::after {
+                left: calc(50% + 1px);
+                width: 9px;
+                height: 50%;
+                background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3.5' cy='3.5' r='1.75' fill='"+ $color-blue2 + "'/%3e%3c/svg%3e") repeat-y;
+                transform: translateX(-50%);
+            }
+
+            &::before {
+                top: -2px;
+                right: unset;
+            }
+
+            &::after {
+                top: calc(50% + 10px);
+            }
+        }
+
+        &__number {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__info {
+            width: calc(50% - 80px);
+            margin-top: 0;
+        }
+
+        &__btn {
+            max-width: 350px;
+        }
+    }
+
+    @include phone-only {
+
+        &__list {
+            flex-direction: row;
+            margin: 0 -7.5px 30px;
+        }
+
+        &__item {
+            flex-direction: column;
+            width: calc(50% - 15px);
+            margin: 0 7.5px 12px;
+            text-align: center;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+
+        &__delimiter {
+            width: 100%;
+            height: auto;
+            margin: 0;
+
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
+
+        &__number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            width: 54px;
+            height: 54px;
+            border: 2px solid $color-white;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        &__info {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &__ttl {
+            margin: 0 0 2px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__list {
+            flex-direction: column;
+            margin: 0 0 13px;
+        }
+
+        &__item {
+            width: 100%;
+            margin: 0 0 18px;
+            text-align: left;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__number {
+            width: 39px;
+            height: 39px;
+        }
+
+        &__info {
+            margin-top: 22px;
+        }
+    }
+}

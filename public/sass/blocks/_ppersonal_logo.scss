@@ -1,0 +1,27 @@
+.ppersonal-logo{
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+
+    &__inner{
+        position: relative;
+        padding-top: calc(100% - 20px);
+        overflow: hidden;
+        border: 10px solid $color-gray-lighter;
+        border-radius: 50%;
+    }
+
+	.image{
+		height: 100%;
+		@include img-center;
+		left: -100%;
+		right: -100%;
+    }
+
+    &__edit{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,45 @@
+.epl-resources-guide-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__select {
+        width: calc(50% - 10px);
+        margin: 20px 0 0;
+
+        .input-label {
+            margin-top: 0;
+        }
+    }
+
+    &__btn {
+        width: calc(50% - 10px);
+        margin-left: 20px;
+    }
+
+    @include phone-only {
+
+        &__select {
+            width: calc(50% - 5px);
+        }
+
+        &__btn {
+            width: calc(50% - 5px);
+            margin-left: 10px;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__select {
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        &__btn {
+            width: 100%;
+            margin: 10px 0 0;
+        }
+    }
+}

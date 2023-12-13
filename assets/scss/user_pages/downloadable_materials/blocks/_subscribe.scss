@@ -1,0 +1,11 @@
+.subscribe--downloadable {
+    margin-top: 70px;
+
+    @include my-media(991) {
+        margin-top: 50px;
+    }
+
+    @include phone-only {
+        margin-top: 30px;
+    }
+}

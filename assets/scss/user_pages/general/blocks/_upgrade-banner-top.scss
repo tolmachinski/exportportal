@@ -1,0 +1,139 @@
+.upgrade-banner-top {
+    position: relative;
+    z-index: 1003;
+    overflow: hidden;
+    min-height: 70px;
+    background: $color-gray-lighter;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    &__image {
+        display: block;
+        margin-right: 50px;
+
+        .image {
+            max-width: 100%;
+        }
+    }
+
+    &__info {
+        flex: 1;
+        width: 100%;
+        padding-right: 15px;
+    }
+
+    &__ttl {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        padding-top: 1px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        min-width: 187px;
+    }
+
+    &__close {
+        padding: 12px 25px;
+        font-size: 20px;
+        color: $color-black;
+        background: transparent;
+    }
+
+    @include my-media(1200) {
+
+        &__inner {
+            padding-left: 15px;
+        }
+
+        &__image {
+            margin-right: 20px;
+        }
+    }
+
+    @include my-media(1024) {
+        margin-bottom: 0;
+
+        &__inner {
+            padding: 0;
+        }
+
+        &__image {
+            margin-right: 15px;
+        }
+
+        &__ttl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__btn {
+            min-width: 130px;
+        }
+
+        &__close {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+
+    @include my-media(660) {
+        min-height: 188px;
+        padding-bottom: 15px;
+
+        &.animate {
+            padding-bottom: 0;
+        }
+
+        &__inner {
+            display: block;
+        }
+
+        &__image {
+            margin: 0;
+            text-align: center;
+        }
+
+        &__info {
+            padding: 13px 15px 1px;
+        }
+
+        &__ttl {
+            line-height: 24px;
+        }
+
+        &__actions {
+            padding-left: 15px;
+        }
+
+        &__btn {
+            flex: 1;
+            width: 100%;
+        }
+    }
+
+    @include my-media(630) {
+        min-height: 208px;
+    }
+
+    @include my-media(330) {
+        min-height: 228px;
+    }
+}

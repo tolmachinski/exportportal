@@ -1,0 +1,14 @@
+.pagination-wr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    &--right {
+        justify-content: flex-end;
+    }
+
+    &--left {
+        justify-content: flex-start;
+    }
+}

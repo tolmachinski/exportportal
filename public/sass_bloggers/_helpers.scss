@@ -1,0 +1,101 @@
+.w-auto{width:auto !important;}
+.h-auto{ height: auto !important; }
+.m-auto{ margin-left: auto !important; margin-right: auto !important;}
+.mw-100pr{ max-width: 100% !important; }
+.mnw-100pr{ max-width: 100% !important; }
+.mh-100pr{ max-height: 100% !important; }
+.mnh-100pr{ max-height: 100% !important; }
+
+/* WIDTH percentage*/
+$i: 0;
+@for $i from 0 through 100 {.w-#{$i}pr{width:$i*1% !important;}}
+
+/* WIDTH */
+$i: 0;
+@while $i <= 1000 {.w-#{$i}{width:#{$i}px!important;} $i: $i + 5;}
+
+/*min width*/
+$i: 60;
+@while $i <= 1000 {.mnw-#{$i}{min-width:#{$i}px!important;} $i: $i + 5;}
+
+/*max width*/
+$i: 0;
+@while $i <= 1000 {.mw-#{$i}{max-width:#{$i}px!important;} $i: $i + 5;}
+
+/* HEIGHT percentage*/
+$i: 0;
+@for $i from 0 through 100 {.h-#{$i}pr{height:$i*1% !important;}}
+
+/* height */
+$i: 0;
+@while $i <= 1000 {.h-#{$i}{height:#{$i}px!important;} $i: $i + 5;}
+
+/*min height*/
+$i: 0;
+@while $i <= 1000 {.mnh-#{$i}{min-height:#{$i}px!important;} $i: $i + 5;}
+
+/*max height*/
+$i: 0;
+@while $i <= 1000 {.mh-#{$i}{max-height:#{$i}px!important;} $i: $i + 5;}
+
+/*padding*/
+$i: 0;
+@while $i <= 100 {.p-#{$i}{padding:#{$i}px!important;} $i: $i + 1;}
+
+/*padding left*/
+$i: 0;
+@while $i <= 100 {.pl-#{$i}{padding-left:#{$i}px!important;} $i: $i + 1;}
+
+/*padding right*/
+$i: 0;
+@while $i <= 100 {.pr-#{$i}{padding-right:#{$i}px!important;} $i: $i + 1;}
+
+/*padding top*/
+$i: 0;
+@while $i <= 100 {.pt-#{$i}{padding-top:#{$i}px!important;} $i: $i + 1;}
+
+/*padding bottom*/
+$i: 0;
+@while $i <= 50 {.pb-#{$i}{padding-bottom:#{$i}px!important;} $i: $i + 1;}
+
+/*margin*/
+$i: 0;
+@while $i <= 100 {.m-#{$i}{margin:#{$i}px!important;} $i: $i + 1;}
+
+/*margin left*/
+$i: 0;
+@while $i <= 100 {.ml-#{$i}{margin-left:#{$i}px!important;} $i: $i + 1;}
+
+/*margin right*/
+$i: 0;
+@while $i <= 100 {.mr-#{$i}{margin-right:#{$i}px!important;} $i: $i + 1;}
+
+/*margin top*/
+$i: 0;
+@while $i <= 100 {.mt-#{$i}{margin-top:#{$i}px!important;} $i: $i + 1;}
+
+/*margin bottom*/
+$i: 0;
+@while $i <= 100 {.mb-#{$i}{margin-bottom:#{$i}px!important;} $i: $i + 1;}
+
+.pull-left{ float: left !important; }
+.pull-right{ float: right !important; }
+
+.visible-h{ visibility:hidden; }
+.visible-v{ visibility: visible; }
+.display-n{ display:none; }
+.display-n_i{ display:none !important; }
+.display-b{ display:block; }
+.display-b_i{ display:block !important; }
+.display-t{ display:table; }
+.display-tc{ display:table-cell; }
+.display-i{ display:inline; }
+.display-i_i{ display:inline !important; }
+.display-ib{ display:inline-block; }
+.display-ib_i{ display:inline-block !important; }
+.hidden-b{ overflow:hidden !important; }
+
+.overflow-y-a{overflow-y: auto !important;}
+.overflow-y-s{overflow-y: scroll !important;}
+.overflow-x-s{overflow-x: scroll !important;}
+.overflow-x-h{overflow-x: hidden !important;}

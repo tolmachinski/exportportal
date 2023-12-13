@@ -1,0 +1,18 @@
+.community-content {
+
+    &-all {
+        padding-top: 33px;
+
+        @include my-media(991) {
+            padding-top: 0;
+        }
+    }
+}
+
+.main-flex-card.community-flex-card {
+    flex-direction: row-reverse;
+
+    @include my-media(991) {
+        flex-direction: column-reverse;
+    }
+}

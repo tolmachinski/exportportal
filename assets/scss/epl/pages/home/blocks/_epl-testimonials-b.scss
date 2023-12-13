@@ -1,0 +1,43 @@
+.epl-testimonials-b {
+    position: relative;
+    min-height: 683px;
+    padding-top: 71px;
+    padding-bottom: 70px;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $zIndexBg;
+        overflow: hidden;
+
+        .image {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include my-media(1024) {
+        min-height: 663px;
+        padding-top: 62px;
+        padding-bottom: 60px;
+    }
+
+    @include phone-only {
+        padding-top: 51px;
+        padding-bottom: 50px;
+
+        .epl-desc-text-b {
+
+            &__ttl {
+                margin-bottom: 13px;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+        min-height: 691px;
+    }
+}

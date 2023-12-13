@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "module": "esnext",
+        "target": "esnext",
+        "checkJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "@plug/*": ["./public/plug/*"],
+            "@images/*": ["./assets/images/*"],
+            "@fonts/*": ["./assets/fonts/*"],
+            "@scss/*": ["./assets/scss/*"],
+            "@src/*": ["./assets/js/*"],
+            "@node/*": ["./node_modules/*"]
+        }
+    },
+    "noEmit": true,
+    "typeAcquisition": {
+        "include": [
+            "jquery"
+        ]
+    },
+    "include": [
+        "assets/js",
+        "public/plug"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*",
+        "add_classes",
+        "public",
+        "gulp",
+        "temp",
+        "cache",
+        ".vscode"
+    ]
+}

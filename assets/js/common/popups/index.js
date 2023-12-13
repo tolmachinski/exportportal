@@ -1,0 +1,10 @@
+export { default as modalDefault } from "@src/common/popups/types/modal-default";
+export { default as modalMep } from "@src/common/popups/types/modal-mep";
+export { default as modalAddItem } from "@src/common/popups/types/modal-add-item";
+export { default as modalWithValidation } from "@src/common/popups/types/modal-with-validation";
+export { default as modalLang } from "@src/common/popups/types/modal-select-lang";
+export { default as modalGallery } from "@src/common/popups/types/modal-gallery";
+export { default as modalContentPopup } from "@src/common/popups/types/modal-content-popup";
+export { default as modalVideo } from "@src/common/popups/types/modal-video";
+export { default as modalSidebar } from "@src/common/popups/types/modal-sidebar";
+export { default as modalIframe } from "@src/common/popups/types/modal-iframe";

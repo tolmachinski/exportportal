@@ -1,0 +1,67 @@
+.dwn-share-form {
+
+    &__input-group {
+        display: flex;
+    }
+
+    @include my-media(575) {
+        margin-top: -5px;
+
+        &__input-group {
+            flex-direction: column;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 5px;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.dwn-socials {
+
+    &__label {
+        padding-top: 18px;
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 6px;
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &--facebook {
+            background-color: $color-facebook;
+        }
+
+        &--twitter {
+            background-color: $color-twitter;
+        }
+
+        &--linkedin {
+            background-color: $color-linkedin;
+        }
+    }
+
+    @include my-media(575) {
+
+        &__label {
+            padding-top: 12px;
+            font-size: 17px;
+        }
+    }
+}

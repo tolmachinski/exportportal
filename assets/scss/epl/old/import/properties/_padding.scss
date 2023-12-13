@@ -1,0 +1,112 @@
+.pt-30 {
+ padding-top: 30px !important;
+ }
+
+.pt-20 {
+ padding-top: 20px !important;
+ }
+
+.pt-15 {
+ padding-top: 15px !important;
+ }
+
+.pt-10 {
+ padding-top: 10px !important;
+ }
+
+.pt-3 {
+ padding-top: 3px !important;
+ }
+
+.pt-0 {
+ padding-top: 0 !important;
+ }
+
+.pr-20 {
+ padding-right: 20px !important;
+ }
+
+.pr-10 {
+ padding-right: 10px !important;
+ }
+
+.pr-5 {
+ padding-right: 5px !important;
+ }
+
+.pr-0 {
+ padding-right: 0 !important;
+ }
+
+.pl-15 {
+ padding-left: 15px !important;
+ }
+
+.pl-14 {
+ padding-left: 14px !important;
+ }
+
+.pl-10 {
+ padding-left: 10px !important;
+ }
+
+.pl-5 {
+ padding-left: 5px !important;
+ }
+
+.pb-50 {
+ padding-bottom: 50px !important;
+ }
+
+.pb-20 {
+ padding-bottom: 20px !important;
+ }
+
+.pb-15 {
+ padding-bottom: 15px !important;
+ }
+
+.pb-10 {
+ padding-bottom: 10px !important;
+ }
+
+.pb-0 {
+ padding-bottom: 0 !important;
+ }
+
+.p-0 {
+ padding: 0 !important;
+ }
+
+@include my-media(991) {
+
+	.pb-15-lg {
+		padding-bottom: 15px;
+    }
+
+    .pr-0-sm-max {
+		padding-right: 0;
+	}
+}
+
+@include phone-only {
+
+	.pb-15-xs {
+		padding-bottom: 15px;
+    }
+
+	.pb-15-md {
+		padding-bottom: 15px;
+	}
+
+	.pb-10-md {
+		padding-bottom: 10px !important;
+	}
+}
+
+@include my-media(576) {
+
+    .p-0-sm {
+		padding: 0 !important;
+    }
+}

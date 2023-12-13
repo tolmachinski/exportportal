@@ -1,0 +1,13 @@
+@import "../../../import/scss_functions";
+
+@import "../../../import/_colors";
+
+@import "./blocks/_popup-question";
+
+@import "../hash_blog/blocks/_popup-blog";
+
+@import "../hash_blog/blocks/_popups-footer";
+
+.mnw-170 {
+    min-width: 170px !important;
+}

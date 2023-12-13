@@ -1,0 +1,92 @@
+.categories-handcraft-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1170px;
+    height: 100px;
+    background: linear-gradient(-90deg, $color-gray-lighter, $color-gray-lighter 56%, rgba($color-gray-lighter, 0) 69%);
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding: 25px 50px;
+    }
+
+    &__title {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 30px 0 0;
+
+        @include h201816;
+
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    @include my-media(991) {
+        background: linear-gradient(-90deg, $color-gray-lighter, $color-gray-lighter 76%, rgba($color-gray-lighter, 0) 96%);
+
+        &__info {
+            padding: 25px;
+        }
+
+        &__title {
+            max-width: 278px;
+            margin: 0 25px 0 0;
+        }
+
+        &__btn {
+            max-width: 210px;
+        }
+    }
+
+    @include phone-only {
+
+        &__title {
+            max-width: 244px;
+        }
+    }
+
+    @include my-media(575) {
+        flex-direction: column;
+        height: initial;
+        background: $color-gray-lighter;
+
+        &__picture {
+            position: static;
+            z-index: 1;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__info {
+            flex-direction: column;
+            padding: 14px 15px 15px;
+            text-align: center;
+        }
+
+        &__title {
+            margin: 0 0 8px;
+        }
+
+        &__btn {
+            max-width: 200px;
+        }
+    }
+}

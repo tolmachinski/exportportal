@@ -1,0 +1,122 @@
+// Header modification with banner or maintenance mod for chat
+
+.html {
+    $root: &;
+
+    &--banner {
+
+        #chat-app, #chat-app-room {
+
+            @media(min-width: 768px) and (max-height: 745px) {
+                max-height: calc(100% - 182px);
+            }
+
+            @media(min-width: 992px) and (max-height: 773px) {
+                max-height: calc(100% - 199px);
+            }
+        }
+    }
+
+    &--maintenance {
+
+        #chat-app, #chat-app-room {
+
+            @media(min-width: 768px) and (max-height: 704px) {
+                max-height: calc(100% - 141px);
+            }
+
+            @media(min-width: 992px) and (max-height: 732px) {
+                max-height: calc(100% - 169px);
+            }
+        }
+    }
+
+    &--banner#{$root}--maintenance {
+
+        #chat-app, #chat-app-room {
+
+            @media(min-width: 768px) and (max-height: 785px) {
+                max-height: calc(100% - 222px);
+            }
+
+            @media(min-width: 992px) and (max-height: 813px) {
+                max-height: calc(100% - 239px);
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &--banner {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 182px);
+            }
+        }
+
+        &--maintenance {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 141px);
+            }
+        }
+
+        &--banner#{$root}--maintenance {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 222px);
+            }
+        }
+    }
+
+    @include my-media(660) {
+
+        &--banner {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 289px);
+            }
+        }
+
+        &--banner#{$root}--maintenance {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 329px);
+            }
+        }
+    }
+
+    @include my-media(630) {
+
+        &--banner {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 309px);
+            }
+        }
+
+        &--banner#{$root}--maintenance {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 349px);
+            }
+        }
+    }
+
+    @include my-media(330) {
+
+        &--banner {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 329px);
+            }
+        }
+
+        &--banner#{$root}--maintenance {
+
+            #chat-app, #chat-app-room {
+                height: calc(100% - 369px);
+            }
+        }
+    }
+}

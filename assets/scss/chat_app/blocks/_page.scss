@@ -1,0 +1,8 @@
+.my-chats-app {
+    width: 100%;
+    height: 743px;
+
+    @include phone-only {
+        height: 840px;
+    }
+}

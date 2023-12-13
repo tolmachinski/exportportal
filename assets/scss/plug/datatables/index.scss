@@ -1,0 +1,7 @@
+@import "../../import/scss_functions";
+@import "../../import/colors";
+
+$mainDataTableSortingImgPath: "../../../images/plugins/datatables/";
+@import "./_datatables";
+@import "./_jquery.dataTables";
+@import "./_main_data_table";

@@ -1,0 +1,15 @@
+.input-group{
+    &--adaptive{
+        @media screen and (max-width: 660px) {
+            display: block;
+
+            .form-control{
+                width: 100%;
+
+                &:first-child{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

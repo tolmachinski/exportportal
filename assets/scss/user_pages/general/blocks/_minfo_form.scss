@@ -1,0 +1,23 @@
+.minfo-form {
+    position: relative;
+    margin-bottom: 30px;
+
+    &__input {
+        margin-bottom: 12px;
+        border: 2px solid $color-blue2;
+    }
+
+    &__input2 {
+        margin-bottom: 10px;
+        border: 1px solid $color-black;
+    }
+
+    &__btn {
+        cursor: pointer;
+    }
+
+    &__btn2 {
+        font-size: 16px;
+        cursor: pointer;
+    }
+}

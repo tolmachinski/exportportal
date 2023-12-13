@@ -1,0 +1,31 @@
+.content-upgrade {
+    margin: 0 auto;
+	max-width: 1590px;
+
+    &__select {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+
+    &__select-title {
+        color: $color-green;
+	}
+
+    &__column {
+		flex: 1;
+        width: 50%;
+		min-width: 160px;
+		max-width: 285px;
+		padding: 5px;
+
+		&:last-child{
+			width: 40%;
+		}
+	}
+
+    .circle-segment{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,57 @@
+.event-countdown {
+    display: flex;
+
+    &__item {
+        padding: 10px 16px 0;
+        text-align: center;
+        border-right: 1px solid $color-gray-light;
+
+        &:last-child {
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+
+    &__numbers {
+        margin-bottom: 5px;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-gray;
+        text-transform: uppercase;
+    }
+
+    @include my-media(1200) {
+        margin-bottom: 31px;
+
+        &__item {
+            padding-top: 2px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    @include phone-only {
+        margin-bottom: 28px;
+
+        &__item {
+            padding: 0 12px;
+        }
+
+        &__numbers {
+            font-size: 20px;
+            line-height: 22px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+    }
+}

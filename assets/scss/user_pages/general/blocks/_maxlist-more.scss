@@ -1,0 +1,47 @@
+.maxlist-more {
+    $root: &;
+
+    margin-top: 7px;
+
+    &__btn {
+        display: block;
+
+        @include p161614;
+
+        color: $color-blue2;
+        background: none;
+        outline: none;
+
+        &::before {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12"><g transform="translate(0.349 51.35)"><path d="M.133,5.357l4.084,4.5a.431.431,0,0,0,.649,0,.54.54,0,0,0,0-.713L1.106,5,4.865.861a.541.541,0,0,0,0-.714.431.431,0,0,0-.649,0L.132,4.643A.547.547,0,0,0,.133,5.357Z" transform="translate(0 -51)" fill="' + $color-blue2 + '"/><path d="M4.541,10a.438.438,0,0,0,.325-.148.541.541,0,0,0,0-.713L1.106,5,4.865.861a.541.541,0,0,0,0-.714.431.431,0,0,0-.649,0L.132,4.643a.547.547,0,0,0,0,.714l4.084,4.5A.437.437,0,0,0,4.541,10m0,.35a.782.782,0,0,1-.583-.262l-4.084-4.5a.9.9,0,0,1,0-1.184l4.084-4.5a.781.781,0,0,1,1.167,0,.888.888,0,0,1,0,1.185L1.579,5,5.125,8.9a.887.887,0,0,1,0,1.184A.783.783,0,0,1,4.541,10.35Z" transform="translate(0 -51)" fill="' + $color-blue2 +'"/></g></svg>');
+            display: inline-block;
+            margin: 0 10px 0 3px;
+            transform: rotate(-90deg);
+        }
+
+        &:hover {
+            color: $color-blue2-hover;
+
+            &::before {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12"><g transform="translate(0.349 51.35)"><path d="M.133,5.357l4.084,4.5a.431.431,0,0,0,.649,0,.54.54,0,0,0,0-.713L1.106,5,4.865.861a.541.541,0,0,0,0-.714.431.431,0,0,0-.649,0L.132,4.643A.547.547,0,0,0,.133,5.357Z" transform="translate(0 -51)" fill="' + $color-blue2-hover + '"/><path d="M4.541,10a.438.438,0,0,0,.325-.148.541.541,0,0,0,0-.713L1.106,5,4.865.861a.541.541,0,0,0,0-.714.431.431,0,0,0-.649,0L.132,4.643a.547.547,0,0,0,0,.714l4.084,4.5A.437.437,0,0,0,4.541,10m0,.35a.782.782,0,0,1-.583-.262l-4.084-4.5a.9.9,0,0,1,0-1.184l4.084-4.5a.781.781,0,0,1,1.167,0,.888.888,0,0,1,0,1.185L1.579,5,5.125,8.9a.887.887,0,0,1,0,1.184A.783.783,0,0,1,4.541,10.35Z" transform="translate(0 -51)" fill="' + $color-blue2-hover +'"/></g></svg>');
+            }
+        }
+
+        &--less {
+
+            &::before {
+                margin: 0 13px 0 0;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    @include phone-only {
+        margin-top: 9px;
+
+        &__btn {
+
+            @include p181816;
+        }
+    }
+}

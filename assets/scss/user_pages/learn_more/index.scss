@@ -1,0 +1,35 @@
+$pathImages: '../../../images/';
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/_fonts";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/guideline/_elements-guideline";
+
+@import "../../plug/slick-1-8-1/slick";
+
+@import "../general/blocks/youtube-play-icon";
+
+@import "./blocks/slick-common";
+
+@import "./blocks/header-learnmore";
+
+@import "./blocks/learnmore-list";
+
+@import "./blocks/learnmore-useful-info";
+
+@import "./blocks/learnmore-check";
+
+@import "./blocks/subsribe-learnmore";
+
+@import "../register_page/blocks/register_users_blocks";
+
+@import "./blocks/slider-tour-learn-more";
+
+@import "./blocks/social-block-learnmore";
+
+@import "./blocks/lernmore-register";

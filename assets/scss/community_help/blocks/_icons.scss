@@ -1,0 +1,104 @@
+@font-face {
+    font-family: categories-icons;
+    src:  url('../../../fonts/categories-icons.eot?5op3x0');
+    src:  url('../../../fonts/categories-icons.eot?5op3x0#iefix') format('embedded-opentype'), url('../../../fonts/categories-icons.ttf?5op3x0') format('truetype'), url('../../../fonts/categories-icons.woff?5op3x0') format('woff'), url('../../../fonts/categories-icons.svg?5op3x0#categories-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: categories-icons !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon {
+    vertical-align: middle;
+    font-size: 20px;
+    color: $color-black;
+    transition: all 0.2s;
+
+    &-buying_and_selling {
+        font-size: 46px;
+
+        &::before {
+ content: '\e905';
+ }
+    }
+
+    &-documentation {
+        font-size: 43px;
+
+        &::before {
+ content: '\e901';
+ }
+    }
+
+    &-experts_panel {
+        font-size: 41px;
+
+        &::before {
+ content: '\e902';
+ }
+    }
+
+    &-new_to_ep {
+        font-size: 44px;
+
+        &::before {
+ content: '\e903';
+ }
+    }
+
+    &-shipping_and_logistics {
+        font-size: 32px;
+
+        &::before {
+ content: '\e900';
+ }
+    }
+
+    &-technical_issues {
+        font-size: 44px;
+
+        &::before {
+ content: '\e904';
+ }
+    }
+
+    @include my-media(576) {
+
+        &-buying_and_selling {
+            font-size: 30px;
+        }
+
+        &-shipping_and_logistics {
+            font-size: 20px;
+        }
+
+        &-documentation {
+            font-size: 27px;
+        }
+
+        &-experts_panel {
+            font-size: 24px;
+        }
+
+        &-technical_issues {
+            font-size: 27px;
+        }
+
+        &-new_to_ep {
+            font-size: 30px;
+        }
+    }
+  }

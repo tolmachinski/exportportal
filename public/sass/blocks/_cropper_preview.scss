@@ -1,0 +1,10 @@
+.cropper-preview{
+    width: 125px;
+    height: 125px;
+    border: 1px solid $color-gray-light;
+
+    &--product{
+        width: 130px;
+        height: 104px;
+    }
+}

@@ -1,0 +1,46 @@
+parameters:
+    phpVersion: 70400
+    tmpDir: temp
+    level: 0
+    paths:
+        - add_classes
+        - tinymvc
+    excludes_analyse:
+        - .phan
+        - .vscode
+        - assets
+        - cache
+        - estimates
+        - fonts
+        - gulp
+        - languages
+        - node_modules
+        - public
+        - security_files
+        - temp
+        - var
+        - vector
+        - vector_admin
+        - vendor
+    scanDirectories:
+        - '%currentWorkingDirectory%/vendor'
+    scanFiles:
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_assets.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_file_system.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_files.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_http.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_img.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_input.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_output.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_recursive.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_translations.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/plugins/tinymvc_script_widgets.php'
+        - '%currentWorkingDirectory%/tinymvc/myapp/constants/constants.php'
+        - '%currentWorkingDirectory%/index.php'
+    ignoreErrors:
+        - '#Constant (__FILES_URL|__IMG_URL|__SITE_URL|__BLOG_URL|__SHIPPER_URL|__FORUM_URL|__CURRENT_URL|__ANALYTIC_API_URL|__BLOGGERS_URL) not found#'
+        - '#Constant (__CURRENT_SUB_DOMAIN|__CURRENT_SUB_DOMAIN_URL) not found#'
+        - '#Constant (__CACHE_ENABLE|__CACHE_FOLDER) not found#'
+        - '#Constant (__JS_COOKIE_DOMAIN) not found#'
+        - '#Constant (__HTTP_HOST_ORIGIN|__HTTP_S|__SITE_LANG_SPEC|__SITE_LANG) not found#'
+        - '#Constant (DEBUG_MODE|TMVC_MYAPPDIR|TMVC_BASEDIR|APP_ROOT|JAMALANG) not found#'

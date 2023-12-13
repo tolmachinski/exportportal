@@ -1,0 +1,266 @@
+.practices-guide {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 209px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 15px;
+        background: $color-blue2;
+    }
+
+    &--buyer {
+        #{$root} {
+
+            &__content {
+                padding: 40px 50px 40px 250px;
+            }
+
+            &__title {
+
+                @include h262018;
+            }
+
+            &__info {
+                width: calc(50% + 172px);
+                padding-right: 85px;
+            }
+
+            &__btn {
+                width: calc(50% - 200px);
+                margin-top: 0;
+            }
+        }
+    }
+
+    &--ff {
+        #{$root} {
+
+            &__title {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            &__btn {
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 164px;
+        padding: 25px 50px 25px 250px;
+        background: $color-blue-background;
+    }
+
+    &__info {
+        width: calc(50% + 201px)
+    }
+
+    &__title {
+
+        @include h302620;
+
+        color: $color-white;
+    }
+
+    &__description {
+        margin-top: 3px;
+
+        @include p181816;
+
+        color: $color-white;
+    }
+
+    &__btn {
+        width: calc(50% - 229px);
+        margin: 5px 0 0 10px;
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 70px;
+        z-index: 1;
+        display: block;
+        width: 148px;
+        height: 209px;
+        margin-top: 8px;
+        transform: translateY(-50%);
+    }
+
+    @include my-media(1199) {
+
+        &::after {
+            height: 10px;
+        }
+
+        &--buyer {
+            #{$root} {
+
+                &__info {
+                    width: 100%;
+                }
+
+                &__title {
+
+                    @include h302620;
+                }
+
+                &__btn {
+                    width: 100%;
+                    max-width: 360px;
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        &--ff {
+            #{$root} {
+
+                &__btn {
+                    margin: 15px 0 0;
+                }
+            }
+        }
+
+        &__content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 261px;
+        }
+
+        &__image {
+            margin-top: 5px;
+        }
+
+        &__info {
+            width: 100%;
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: 360px;
+            margin: 15px 0 0;
+        }
+    }
+
+    @include my-media(991) {
+
+        &--buyer {
+            #{$root} {
+
+                &__content {
+                    padding: 50px 50px 40px 254px;
+                }
+
+                &__info {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        &__content {
+            padding-left: 254px;
+        }
+
+        &__image {
+            left: 50px;
+            width: 154px;
+            height: 217px;
+        }
+
+        &__description {
+            margin-top: 8px;
+        }
+    }
+
+    @include phone-only {
+
+        &--buyer {
+            #{$root} {
+
+                &__content {
+                    padding: 30px 15px 30px 190px;
+                }
+            }
+        }
+
+        &__content {
+            min-height: 235px;
+            padding: 30px 15px 30px 190px;
+        }
+
+        &__image {
+            left: 15px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &::after {
+            content: none;
+        }
+
+        &--buyer {
+            #{$root} {
+
+                &__content {
+                    padding: 15px;
+                }
+
+                &__btn {
+                    margin-top: 13px;
+                }
+            }
+        }
+
+        &--ff {
+            #{$root} {
+
+                &__btn {
+                    margin-top: 13px;
+                }
+            }
+        }
+
+        &__content {
+            justify-content: flex-start;
+            align-items: center;
+            min-height: auto;
+            padding: 15px;
+        }
+
+        &__image {
+            position: static;
+            width: 190px;
+            height: 268px;
+            margin-top: 15px;
+            transform: none;
+        }
+
+        &__info {
+            margin-top: 14px;
+            text-align: center;
+        }
+
+        &__description {
+            margin-top: 3px;
+        }
+
+        &__btn {
+            margin-top: 13px;
+        }
+    }
+}

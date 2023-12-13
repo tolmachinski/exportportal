@@ -1,0 +1,174 @@
+@import "../../import/scss_functions";
+@import "../../import/_colors";
+@import "../../import/guideline/fonts-guideline";
+
+.multiple-epselect{
+	$root: &;
+	position: relative;
+
+	&__input{
+		height: 50px;
+		padding-right: 44px;
+		padding-left: 20px;
+		@include text-nowrap;
+		line-height: 48px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: 1px solid $color-black;
+		background: $color-white url(../../../images/arrow-select-new.png) right center no-repeat;
+		cursor: pointer;
+	}
+
+	&__list-wr{
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		margin-top: -1px;
+		border: 1px solid $color-black;
+		background: $color-white;
+	}
+
+	&__list{
+        display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		max-height: 250px;
+		padding: 5px 10px;
+		overflow-x: auto;
+
+		label{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			height: 34px;
+			margin-bottom: 0;
+			cursor: pointer;
+
+			.name{
+				flex: 1;
+                margin-top: 2px;
+                @include p161616;
+			}
+		}
+
+		.nochildrens{
+			.ep-icon{
+				display: none;
+			}
+		}
+	}
+
+	&__parent{
+		order: 2;
+		width: 100%;
+
+		@include ie-only{
+            flex: 1 1 100%;
+		}
+
+		&.disabled{
+			.name{
+				color: $color-gray-light;
+			}
+
+			.ep-icon{
+				color: $color-gray-light;
+            }
+
+            #{$root}{
+                &__top{
+
+                    label{
+                        cursor: default;
+                    }
+                }
+            }
+        }
+
+        &.checked{
+            #{$root}{
+                &__counted{
+                    color: $color-blue2;
+                }
+            }
+		}
+
+		&--all{
+			order: 0;
+		}
+	}
+
+	&__top{
+		position: relative;
+		border-bottom: 1px solid $color-gray-lighter;
+
+		label{
+			min-height: 40px;
+    		height: auto;
+			padding: 10px 0;
+			margin-bottom: 0;
+		}
+    }
+
+    &__toggle{
+        padding-right: 10px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover{
+            color: $color-blue2;
+        }
+    }
+
+    &__counted{
+		width: 100%;
+		padding-top: 5px;
+        padding-left: 26px;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-gray;
+    }
+
+	&__inner{
+		display: none;
+        padding-top: 8px;
+		padding-left: 27px;
+
+		label{
+			flex-wrap: nowrap;
+		}
+
+		.name{
+			flex: 1;
+		}
+	}
+
+	&-wr{
+		&--open-top{
+			#{$root}{
+				&__list-wr{
+					top: -250px !important;
+				}
+			}
+		}
+	}
+
+	@include my-media(991){
+		&__input{
+			height: 40px;
+			padding-right: 34px;
+			padding-left: 10px;
+			line-height: 38px;
+			background: $color-white url(../../../images/arrow-select-new2.png) right center no-repeat;
+		}
+
+		&__list-wr{
+			top: 40px;
+		}
+	}
+}

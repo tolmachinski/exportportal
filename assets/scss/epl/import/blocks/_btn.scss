@@ -1,0 +1,254 @@
+.btn {
+    display: inline-block;
+    padding: 10px 12px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $black-light;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: none;
+    }
+
+    // Disabled comes first so active can properly restyle
+
+    &.disabled,
+    &:disabled {
+      opacity: .65;
+      box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled) {
+      cursor: pointer;
+    }
+
+    &.btn-lg {
+        padding: 15px 32px;
+    }
+
+    &.btn-sm {
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &.btn-upper {
+        text-transform: uppercase;
+    }
+
+    &.btn-medium {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+    }
+
+    &.btn-mnw-200 {
+        min-width: 200px;
+    }
+
+    @include phone-only {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        font-size: 16px;
+        line-height: 24px;
+
+        &.btn-lg {
+            padding: 11px 32px;
+        }
+
+        &.btn-medium {
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+    }
+
+    @include my-media(425) {
+
+        &.btn-mnw-200 {
+            min-width: 100%;
+        }
+    }
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $blue;
+    border-color: $blue;
+
+    &:hover {
+        color: $white;
+        background-color: $blue-hover;
+        border-color: $blue-hover;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $white;
+        background-color: $blue;
+        border-color: $blue;
+    }
+}
+
+.btn-default,
+.btn-light {
+    color: $black;
+    background-color: $gray-lighter;
+    border-color: $gray-lighter;
+
+    &:hover {
+        color: $black;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $black;
+        background-color: $gray-lighter;
+        border-color: $gray-lighter;
+    }
+}
+
+.btn-dark {
+    color: $white;
+    background-color: $black-light;
+    border-color: $black-light;
+
+    &:hover {
+        color: $white;
+        background-color: $black;
+        border-color: $black;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $white;
+        background-color: $black;
+        border-color: $black;
+    }
+}
+
+.btn-success {
+    color: $white;
+    background-color: $green;
+    border-color: $green;
+
+    &:hover {
+        color: $white;
+        background-color: $green-hover;
+        border-color: $green-hover;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $white;
+        background-color: $green;
+        border-color: $green;
+    }
+}
+
+.btn-danger {
+    color: $white;
+    background-color: $red;
+    border-color: $red;
+
+    &:hover {
+        color: $white;
+        background-color: $red-hover;
+        border-color: $red-hover;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $white;
+        background-color: $red;
+        border-color: $red;
+    }
+}
+
+.btn-outline-primary {
+    color: $blue;
+    border-color: $blue;
+
+    &:hover {
+        color: $blue-hover;
+        border-color: $blue-hover;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $blue;
+        background-color: $blue;
+        border-color: $blue;
+    }
+}
+
+.btn-outline-dark {
+    color: $black;
+    border-color: $black;
+
+    &:hover {
+        color: $white;
+        background-color: $black-light;
+        border-color: $black-light;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $black;
+        background-color: $black;
+        border-color: $black;
+    }
+}
+
+.btn-outline-white {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+        color: $blue;
+        background-color: $white;
+        border-color: $white;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $black;
+        background-color: $black;
+        border-color: $black;
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-fancybox {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: $blue;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        color: $blue-hover;
+    }
+}

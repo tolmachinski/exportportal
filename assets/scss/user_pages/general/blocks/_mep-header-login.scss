@@ -1,0 +1,155 @@
+.mep-header-login {
+    position: relative;
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+
+        .link {
+            font-weight: normal;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+        padding: 0 10px 13px;
+        border-bottom: 1px solid $color-gray-light;
+
+        .link {
+            padding: 5px;
+            font-size: 18px;
+            color: $color-black;
+
+            &--social {
+                margin-left: 30px;
+                color: $color-black-light;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+
+            &--text {
+                display: flex;
+                align-items: center;
+
+                .ep-icon {
+                    color: $color-gray;
+                }
+            }
+
+            &--ticket {
+
+                @include ie-only {
+                    display: none;
+                }
+            }
+
+            &--right {
+                margin-right: -5px;
+            }
+
+            &--left {
+                margin-left: -5px;
+            }
+
+            &__text {
+                margin-left: 10px;
+                padding-left: 0;
+                font-size: 16px;
+                line-height: 1;
+            }
+        }
+    }
+
+    &__menu-l,
+    &__menu-r {
+        display: flex;
+        align-items: center;
+	}
+
+	&__content {
+        max-width: 400px;
+        margin: 0 auto;
+		padding-top: 16px;
+	}
+
+    &__form {
+
+        input[type=email],
+        input[type=text],
+        input[type=password] {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__ttl {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    &__or {
+        font-weight: normal;
+        color: $color-gray;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+
+        > span {
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-black-light;
+        }
+	}
+
+	&__switch-account {
+        display: none;
+		padding-top: 30px;
+	}
+
+    @include my-media(991) {
+
+        &__menu {
+
+            .link--social {
+                margin-left: 20px;
+            }
+        }
+    }
+
+	@include phone-only {
+
+        &__menu {
+            padding-right: 10px;
+
+            .link {
+
+                &--social {
+                    margin-left: 10px;
+                }
+
+                &--text {
+
+                    .ep-icon {
+                        color: $color-black;
+                    }
+                }
+
+                &__text {
+                    display: none;
+                }
+            }
+        }
+
+		&__switch-account {
+			padding-top: 20px;
+        }
+	}
+}

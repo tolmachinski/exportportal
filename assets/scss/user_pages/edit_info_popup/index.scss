@@ -1,0 +1,17 @@
+
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/guideline/_elements-guideline";
+
+$assets_link_images_select2: '../../../images/plugins/select2-4-0-3/';
+
+@import "../../plug/select2-4-0-3/_select2-4-0-3";
+
+@import "../general/blocks/_wr_select2";
+
+@import 'blocks/edit-info-popup.scss';

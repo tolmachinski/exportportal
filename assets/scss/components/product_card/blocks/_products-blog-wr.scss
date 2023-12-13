@@ -1,0 +1,136 @@
+.products-blog-wr {
+    position: relative;
+    padding: 15px 20px 14px 15px;
+    background-color: $color-gray-lighter;
+
+    &__more {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 9px;
+        margin-right: -5px;
+    }
+
+    &__more-link {
+
+        @include p121212;
+
+        color: $black-light;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .products {
+        margin: -5px;
+
+        &__item {
+            min-width: 246px;
+            max-width: 246px;
+            padding: 5px;
+        }
+
+        &__inner {
+            top: 5px;
+            right: 5px;
+            left: 5px;
+        }
+    }
+
+    @include my-media(991) {
+        padding: 15px 15px 14px;
+
+        &__more {
+            margin-top: 26px;
+            margin-right: 0;
+        }
+
+        .products {
+
+            &__inner {
+                top: 0;
+                right: 0;
+                left: 0;
+            }
+
+            &__item {
+                min-width: calc((100vw - 19px) / 3);
+                max-width: none;
+            }
+
+            &__img {
+
+                .image {
+                    height: calc((100vw - 91px) * 0.75 / 3) !important;
+                }
+            }
+        }
+
+        .slick-slide {
+            width: calc((100vw - 19px) / 3);
+        }
+
+        .slick-dots {
+            bottom: -23px;
+        }
+    }
+
+    @include phone-only {
+        padding: 15px 15px 62px;
+
+        &__more {
+            margin-top: 9px;
+        }
+
+        &__more-link {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .products {
+            margin: -2.5px;
+
+            &__item {
+                min-width: calc((100vw - 25px) / 3);
+                padding: 2.5px;
+            }
+
+            &__img {
+
+                .image {
+                    height: calc((100vw - 59px) * 0.75 / 3) !important;
+                }
+            }
+        }
+
+        .slick-slide {
+            width: calc((100vw - 25px) / 3);
+        }
+
+        .slick-dots {
+            bottom: -21px;
+        }
+    }
+
+    @include my-media(475) {
+
+        .products {
+
+            &__item {
+                min-width: calc((100vw - 25px) / 2);
+            }
+
+            &__img {
+
+                .image {
+                    height: calc((100vw - 39px) * 0.75 / 2) !important;
+                }
+            }
+        }
+
+        .slick-slide {
+            width: calc((100vw - 25px) / 2);
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.sticky-banner {
+    $root: &;
+
+    position: fixed;
+    top: 503px;
+    left: 0;
+    z-index: 10;
+
+    &:hover {
+        #{$root} {
+
+            &__item {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__item {
+        position: absolute;
+        top: -145px;
+        left: 0;
+        z-index: 10;
+        opacity: 0;
+        width: 290px;
+        background-color: $color-white;
+        box-shadow: 5px 5px 20px rgba($color-black, 0.3);
+        transform: translateX(-290px);
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 160px;
+
+        .image {
+            max-width: 100%;
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: none;
+        color: $color-white;
+    }
+
+    &__description {
+        padding: 0 25px 30px;
+    }
+
+    &__title {
+        padding: 15px 15px 2px;
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        margin-bottom: 11px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        left: -99px;
+        z-index: 1;
+        min-width: 240px !important;
+        margin: 0 !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        box-shadow: 5px 5px 20px rgba($color-black, 0.3);
+        transform: rotate(-90deg);
+        transition: all 0.3s ease-in-out;
+    }
+
+    @include my-media(1366) {
+
+        &__close-btn {
+            display: block;
+        }
+    }
+
+    @include my-media(1024) {
+        top: 400px;
+    }
+
+    @include my-media(991) {
+        top: 354px;
+
+        &__item {
+            width: 294px;
+        }
+
+        &__title {
+            padding: 15px 20px 2px;
+        }
+
+        &__btn {
+            left: -80px;
+            min-width: 200px !important;
+        }
+    }
+
+    @include phone-only {
+        display: none;
+    }
+}

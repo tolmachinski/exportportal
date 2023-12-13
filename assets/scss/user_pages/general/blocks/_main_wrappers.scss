@@ -1,0 +1,114 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    font-family: Roboto, "Segoe UI", Arial, sans-serif;
+    color: $color-black;
+
+    &.modal-open {
+
+        .modal-backdrop {
+            left: -8px;
+        }
+
+        .mep-header-bottom-nav,
+        .ep-header--fixed .ep-header-bottom,
+        .fixed-rigth-block,
+        .popup-system-banner {
+            margin-right: 8px;
+        }
+
+        .fixed-rigth-block {
+
+            &__item--scrollup {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    @include touch {
+
+        &.modal-open {
+
+            .modal-backdrop {
+                left: 0;
+            }
+
+            .mep-header-bottom-nav,
+            .ep-header--fixed .ep-header-bottom,
+            .fixed-rigth-block,
+            .popup-system-banner {
+                margin-right: 0;
+            }
+
+            .fixed-rigth-block {
+
+                &__item--scrollup {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+html,
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+html {
+
+    &.fancybox-lock,
+    &.fancybox-lock2 {
+        margin-right: 8px;
+
+        body.modal-open {
+            padding-right: 0 !important;
+
+            .modal-backdrop {
+                left: 0;
+            }
+        }
+
+        .ep-header--fixed .ep-header-bottom,
+        .mep-header-bottom-nav,
+        .fixed-rigth-block,
+        .popup-system-banner {
+            margin-right: 8px;
+        }
+
+        .fixed-rigth-block {
+
+            &__item--scrollup {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    @include touch {
+
+        &.fancybox-lock,
+        &.fancybox-lock2 {
+            margin-right: 0;
+
+            .ep-header--fixed .ep-header-bottom,
+            .mep-header-bottom-nav,
+            .fixed-rigth-block,
+            .popup-system-banner {
+                margin-right: 0;
+            }
+
+            .fixed-rigth-block {
+
+                &__item--scrollup {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    @include my-media(320) {
+        width: 100%;
+        height: 100%;
+    }
+}

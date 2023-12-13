@@ -1,0 +1,40 @@
+.filter-block {
+
+    &__ttl {
+
+        @include h181816;
+
+        color: $color-black;
+
+        &--margin {
+            padding-bottom: 15px;
+        }
+
+        &--mb-14 {
+            margin: 0 0 14px;
+        }
+    }
+
+    &__checkbox-item {
+        padding: 8px 0;
+    }
+
+    &__btn {
+        margin-top: 15px;
+    }
+
+
+    &:not(:last-child) {
+        margin-bottom: 27px;
+    }
+
+    @include phone-only {
+
+        &__ttl {
+
+            &--margin {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

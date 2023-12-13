@@ -1,0 +1,213 @@
+.iradiobox,
+.icheckbox{
+	$root: &; 
+	width: 17px;
+	min-width: 17px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	// border: 1px solid $color-gray;
+
+	@media screen and (max-width: 425px) {
+		width: 25px;
+		height: 25px;
+		min-width: 25px;
+	}
+
+	.iCheck-helper{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 9px;
+		height: 9px;
+		display: inline-block;
+		opacity: 1 !important;
+		border: 1px solid $color-black !important;
+
+		@media screen and (max-width: 425px) {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&.checked{
+		.iCheck-helper{			
+			&:before{
+				content: "";
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				width: 10px;
+				height: 10px;
+				background: #999;
+
+				@media screen and (max-width: 425px) {
+					top: 3px;
+					left: 3px;
+					width: 17px;
+					height: 17px;
+				}
+			}
+		}
+		
+	}
+
+	&.indeterminate{
+		.iCheck-helper{			
+			&:before{
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 1px;
+				right: 1px;
+				height: 2px;
+				margin-top: -1px;
+				background: #999;
+			}
+		}
+	}
+
+	// .validengine-border{
+	// 	~ .iCheck-helper{
+	// 		border-color: $color-red !important;
+	// 	}
+	// }
+
+	&--20{
+		.iCheck-helper{
+			width: 17px;
+			height: 17px;
+
+			@media screen and (max-width: 425px) {
+				width: 25px;
+				height: 25px;
+			}
+		}
+
+		&.checked{
+			.iCheck-helper{
+				&:before{
+					width: 9px;
+					height: 9px;
+
+					@media screen and (max-width: 425px) {
+						width: 17px;
+						height: 17px;
+					}
+				}
+			}
+		}
+	}
+
+	&--green{
+		.iCheck-helper{
+			border-color: $color-green;
+		}
+
+		&.checked{
+			+ label{color: $color-black !important;}
+			.iCheck-helper{
+				&:before{
+					background: $color-green;
+				}
+			}
+		}
+	}
+
+	&--gray{
+		.iCheck-helper{
+			border-color: $color-black;
+		}
+
+		&.checked{
+			.iCheck-helper{
+				border-color: $color-gray-light;
+			
+				&:before{
+					background: $color-gray-light;
+				}
+			}
+		}
+	}
+
+	&--black{
+		.iCheck-helper{
+			border-color: $color-black;
+		}
+
+		&.checked{
+			.iCheck-helper{
+				&:before{
+					background: $color-black;
+				}
+			}
+		}
+	}
+
+	&--white{
+		.iCheck-helper{
+			border-color: $color-white;
+		}
+		
+		&.checked{
+			.iCheck-helper{
+				&:before{
+					background: $color-white;
+				}
+			}
+		}
+	}
+
+	&--blue{
+		.iCheck-helper{
+			border-color: $color-black;
+		}
+		
+		&.checked{
+			.iCheck-helper{
+				border-color: $color-blue2 !important;
+
+				&:before{
+					background: $color-blue2;
+				}
+			}
+		}
+	}
+
+	&--radio{
+		.iCheck-helper{
+			border-radius: 50%;
+
+			&:before{
+				border-radius: 50%;
+			}
+		}
+	}
+
+	&.disabled{
+		border-color: $color-gray-light !important;
+
+		.iCheck-helper{
+			border-color: $color-gray-light !important;
+			
+			&:before{
+				background: $color-gray-light !important;
+			}
+		}
+	}
+}
+
+.iradiobox{
+	.iCheck-helper{
+		border-radius: 50%;
+		
+		&:before{
+			border-radius: 50%;
+		}
+	}
+}

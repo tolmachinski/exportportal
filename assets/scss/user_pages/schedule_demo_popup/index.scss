@@ -1,0 +1,15 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+$assets_link_images_select2: '../../../images/plugins/select2-4-0-3/';
+
+@import "../../plug/select2-4-0-3/select2-4-0-3";
+
+@import "../general/blocks/_wr_select2";
+
+@import "../register_forms/blocks/account-select2-lazy-loader";
+
+@import "../import/utilites/_select-country-code-group";
+
+@import "./blocks/_schedule-demo-popup";

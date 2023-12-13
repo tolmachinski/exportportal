@@ -1,0 +1,8 @@
+.easb {
+	display: flex;
+
+	&__direction {
+		unicode-bidi:bidi-override;
+		direction:rtl;
+	}
+}

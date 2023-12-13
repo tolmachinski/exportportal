@@ -1,0 +1,1 @@
+<?php app()->view->display('new/about/bottom_partnership_view'); ?>

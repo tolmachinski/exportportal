@@ -1,0 +1,104 @@
+.mep-user-nav {
+    $root: &;
+
+    padding-top: 10px;
+
+    &--full {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        #{$root} {
+
+            &__item {
+                display: block;
+                width: 236px;
+                min-height: unset;
+                margin-right: 15px;
+                background: $color-white;
+
+                &:nth-child(3n + 3) {
+                    margin-right: 0;
+                }
+            }
+
+            &__links {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 262px;
+        padding-bottom: 10px;
+        white-space: nowrap;
+    }
+
+    &__ttl {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__links {
+        width: 236px;
+        margin-right: 15px;
+        background: $color-white;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__links-item {
+        display: flex;
+        justify-content: flex-start;
+
+        .ep-icon {
+            padding-right: 15px;
+            color: $color-gray;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: $color-black;
+
+            div {
+                display: flex;
+                align-items: center;
+                line-height: 15px;
+            }
+
+            &[data-name="group"] {
+
+                .ep-icon_arrow-line-up {
+                    color: $color-green;
+                }
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &--full {
+            display: block;
+
+            #{$root} {
+
+                &__item {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__item {
+            display: block;
+            min-height: 271px;
+        }
+    }
+}

@@ -1,0 +1,453 @@
+.start-steps {
+    $root: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
+
+    &--buying {
+        #{$root} {
+
+            &__item {
+                width: calc(20% - 30px);
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: calc(33.33333% - 30px);
+        margin: 0 15px;
+        text-align: center;
+
+        &:first-child {
+            #{$root} {
+
+                &__delimiter {
+
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            #{$root} {
+
+                &__delimiter {
+
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__video {
+        position: relative;
+
+        &:hover {
+
+            .youtube-play-icon {
+
+                svg {
+                    fill: $color-youtube-darken;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__delimiter {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+            width: 50%;
+            height: 9px;
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3.5' cy='3.5' r='1.75' fill='"+ $color-blue2 + "'/%3e%3c/svg%3e") repeat-x;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            right: calc(50% + 18.5px);
+            width: 50%;
+            background-position: left;
+        }
+
+        &::after {
+            left: calc(50% + 11.5px);
+            width: 50%;
+            background-position: right;
+        }
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+
+        @include h302620;
+
+        color: $color-white;
+        background: $color-blue2;
+        border-radius: 50%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 14px;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%
+    }
+
+    &__ttl {
+
+        @include h201816;
+    }
+
+    &__desc {
+        flex: 1;
+        margin-top: 8px;
+
+        @include p181816;
+    }
+
+    &__link {
+        display: block;
+        margin-top: 8px;
+
+        @include h181816;
+
+        color: $color-blue2;
+        transition: all 0.15s linear;
+
+        svg {
+            position: relative;
+            bottom: 1px;
+            margin-left: 11px;
+            fill: $color-blue2;
+        }
+
+        &:hover {
+            color: $color-blue2;
+            text-decoration: underline;
+        }
+    }
+
+    .youtube-play-icon {
+        width: 50px;
+        height: 46px;
+
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @include my-media(1199) {
+
+        &--buying {
+            margin: -15px;
+
+            #{$root} {
+
+                &__item {
+                    flex-direction: column;
+                    width: calc(33.33333% - 30px);
+                    margin: 15px;
+                }
+
+                &__delimiter {
+                    margin-top: 0;
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+
+                &__number {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 1;
+                    width: 54px;
+                    height: 54px;
+                    border: 2px solid $color-white;
+                    transform: translate3d(-50%, -50%, 0);
+                }
+
+                &__info {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    @include my-media(991) {
+        flex-direction: column;
+        margin: 0;
+
+        &--buying {
+            margin: 0;
+
+            #{$root} {
+
+                &__item {
+                    flex-direction: row;
+                    width: 100%;
+                    margin: 15px 0 0;
+                }
+
+                &__delimiter {
+
+                    &::before,
+                    &::after {
+                        content: "";
+                    }
+                }
+
+                &__number {
+                    position: static;
+                    width: 50px;
+                    height: 50px;
+                    border: none;
+                    transform: none;
+                }
+
+                &__info {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &__item {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin: 15px 0 0;
+            text-align: left;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        &__img {
+            width: 369px;
+        }
+
+        &__delimiter {
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 207px;
+            margin: 0 15px;
+
+            &::before,
+            &::after {
+                left: calc(50% + 1px);
+                width: 9px;
+                height: 50%;
+                background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3.5' cy='3.5' r='1.75' fill='"+ $color-blue2 + "'/%3e%3c/svg%3e") repeat-y;
+                transform: translateX(-50%);
+            }
+
+            &::before {
+                top: -2px;
+                right: unset;
+            }
+
+            &::after {
+                top: calc(50% + 10px);
+            }
+        }
+
+        &__number {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__info {
+            width: calc(50% - 80px);
+            margin-top: 0;
+        }
+    }
+
+    @include phone-only {
+        flex-direction: row;
+        margin: 0 -7.5px;
+
+        &--buying {
+            margin: 0 -7.5px;
+
+            #{$root} {
+
+                &__item {
+                    flex-direction: column;
+                    width: calc(50% - 15px);
+                    margin: 12px 7.5px 0;
+                }
+
+                &__delimiter {
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+
+                &__number {
+                    position: absolute;
+                    width: 54px;
+                    height: 54px;
+                    border: 2px solid $color-white;
+                    transform: translate3d(-50%, -50%, 0);
+                }
+
+                &__info {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &__item {
+            flex-direction: column;
+            width: calc(50% - 15px);
+            margin: 12px 7.5px 0;
+            text-align: center;
+
+            &:first-child {
+                margin-top: 12px;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+
+        &__delimiter {
+            width: 100%;
+            height: auto;
+            margin: 0;
+
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
+
+        &__number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            width: 54px;
+            height: 54px;
+            border: 2px solid $color-white;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        &__info {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &__ttl {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__desc {
+            margin-top: 3px;
+        }
+
+        &__link {
+            margin-top: 7px;
+        }
+
+        .youtube-play-icon {
+            height: 40px;
+        }
+    }
+
+    @include phone-extra-small {
+        flex-direction: column;
+        margin: 0;
+
+        &--buying {
+            #{$root} {
+
+                &__item {
+                    width: 100%;
+                    margin: 13px 0 0;
+                }
+            }
+        }
+
+        &__item {
+            width: 100%;
+            margin: 13px 0 0;
+            text-align: left;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include my-media(425) {
+
+        &--buying {
+            #{$root} {
+
+                &__number {
+                    width: 39px;
+                    height: 39px;
+                }
+
+                &__info {
+                    margin-top: 22px;
+                }
+            }
+        }
+
+        &__number {
+            width: 39px;
+            height: 39px;
+        }
+
+        &__info {
+            margin-top: 22px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.autologout-modal {
+    padding-bottom: 30px;
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        height: 40px;
+        margin: 0;
+    }
+
+    &__label-txt {
+        padding-left: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black;
+    }
+
+    .modal-flex {
+
+        &__btns {
+            margin: 0;
+        }
+
+        &__btns-left {
+            width: 50%;
+        }
+    }
+}

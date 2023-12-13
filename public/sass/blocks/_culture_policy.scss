@@ -1,0 +1,181 @@
+.culture-and-policy {
+    padding-top: 90px;
+    &__title {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 35px;
+        margin-bottom:  40px;
+        text-transform: uppercase;
+    }
+    &__txt {
+        font-size: 20px;
+        line-height: 35px;
+        word-break: break-word;
+    }
+
+    @media screen and (max-width: 991px) {
+        &__txt {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__title {
+            text-align: center;
+        }
+        &__txt {
+            text-align: center;
+        }
+    }
+}
+
+.cp-double-blocks {
+    margin-top: 100px;
+    &__image {
+        width: 100%;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 0 30px 0 70px;
+    }
+    &__info-title {
+        font-size: 30px;
+        line-height: 38px;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+        strong {
+            display: block;
+        }
+    }
+    &__info-text {
+        font-size: 18px;
+        line-height: 32px;
+        word-break: break-word;
+    }
+    [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include my-media(1200){
+        &__info-title {
+            font-size: 26px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &__info {
+            padding: 0 15px;
+        }
+        &__info-title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 15px;
+        }
+        &__info-text {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__info {
+            padding: 50px 15px;
+        }
+        &__info-title {
+            text-align: center;
+        }
+        &__info-text {
+            text-align: center;
+        }
+        [class*="col-"] {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.cp-laws {
+    padding-top: 90px;
+    background-color: $color-gray-lighter;
+    &__main-title-block {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    &__main-title {
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    &__main-subtext {
+        text-align: center;
+    }
+    &__image-block {
+        display: flex;
+        align-items: flex-end;
+        max-width: 370px;
+        height: 390px;
+        overflow: hidden;
+        position: relative;
+        padding: 30px;
+    }
+    .image {
+        top: 0;
+        left: -115px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 0;
+        position: absolute;
+    }
+    &__image-title {
+        z-index: 1;
+        position: relative;
+        color: $color-white;
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__text {
+        padding: 30px;
+    }
+
+    @media screen and (max-width: 991px) {
+        &__image-title {
+            font-size: 22px;
+        }
+        &__text {
+            padding: 30px 15px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        &__image-block {
+            max-width: 100%;
+        }
+        &__image-title {
+            font-size: 30px;
+            text-align: center;
+        }
+        &__text {
+            padding: 30px 0;
+            text-align: center;
+        }
+        .image {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    @media screen and (max-width: 660px) {
+        .image {
+            width: auto;
+        }
+    }
+}

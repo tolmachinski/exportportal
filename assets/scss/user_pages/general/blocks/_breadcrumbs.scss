@@ -1,0 +1,200 @@
+.breadcrumbs {
+    $root: &;
+
+    position: relative;
+    min-height: 20px;
+    margin: 23px 0;
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        display: flex !important;
+        align-items: center;
+        overflow: hidden;
+        margin-right: 30px;
+        line-height: 1.2;
+        color: $color-blue2;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        > #{$root} {
+
+            &__item {
+                & ~ #{$root}__item {
+                    padding-left: 14px;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &::after {
+            content: "/";
+            position: absolute;
+            top: 1px;
+            right: -10.5px;
+            color: $color-gray;
+        }
+
+        &:last-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &::after {
+                content: "";
+            }
+
+            .link {
+                color: $color-black-light;
+
+                &:hover {
+                    color: $color-black-light;
+                    cursor: default;
+                }
+            }
+        }
+
+        .link {
+            display: block;
+            overflow: hidden;
+            color: $color-gray;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @include p161614;
+
+            &:hover {
+                color: $color-blue2;
+            }
+        }
+
+        &--max {
+
+            .link {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__referer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+
+        @include p161614;
+
+        color: $color-black;
+
+        &:hover,
+        &:focus {
+            color: $color-blue2;
+
+            .crafted-arrow {
+                margin-bottom: 2px;
+                border-color: $color-blue2;
+            }
+        }
+
+        .crafted-arrow {
+            margin-bottom: 2px;
+            margin-right: 1px;
+        }
+
+        i {
+            padding-right: 5px;
+            font-size: 11px;
+        }
+    }
+
+    @include my-media(991) {
+        margin: 16px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 2;
+            width: 67px;
+            height: 16px;
+            box-shadow: inset -60px -9px 38px -19px rgba($color-white,0.9);
+            transform: translateY(-50%);
+        }
+
+        &__inner {
+            overflow: auto;
+            margin-right: 0;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &__item {
+
+            &:last-child {
+                overflow: unset;
+                text-overflow: unset;
+                white-space: unset;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__inner {
+            > #{$root} {
+
+                &__item {
+                    & ~ #{$root}__item {
+                        padding-left: 12px;
+                    }
+                }
+            }
+        }
+
+        &__item {
+
+            &--hide {
+                display: none;
+
+                +#{$root}__item {
+                    padding-left: 0;
+
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
+
+            &::after {
+                top: 0;
+                right: -9.5px;
+            }
+        }
+
+        &__referer {
+
+            &:hover,
+            &:focus {
+
+                .crafted-arrow {
+                    margin-bottom: 0;
+                }
+            }
+
+            .crafted-arrow {
+                margin: -1px 2px 0;
+            }
+        }
+    }
+}

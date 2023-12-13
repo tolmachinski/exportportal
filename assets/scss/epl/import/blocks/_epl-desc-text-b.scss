@@ -1,0 +1,79 @@
+.epl-desc-text-b {
+    $root: &;
+
+    &__ttl {
+        margin-bottom: 20px;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+    }
+
+    &__ttl-block {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &--tac {
+        text-align: center;
+    }
+
+    &--white {
+        color: $white;
+
+        #{$root} {
+
+            &__ttl {
+                color: $white;
+            }
+        }
+    }
+
+    &--mw-650 {
+       max-width: 650px;
+       margin: 0 auto;
+    }
+
+    @include my-media(1200) {
+
+        &__ttl {
+            font-size: 44px;
+            line-height: 50px;
+        }
+    }
+
+    @include my-media(1024) {
+
+        &--mw-650 {
+            max-width: 750px;
+         }
+    }
+
+    @include phone-only {
+
+        &__ttl {
+            margin-bottom: 15px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        &__ttl-block {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        &__text {
+            margin-bottom: 15px;
+        }
+
+        br {
+            display: none;
+        }
+    }
+}

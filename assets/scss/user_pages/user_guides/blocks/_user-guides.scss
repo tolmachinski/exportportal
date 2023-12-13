@@ -1,0 +1,142 @@
+.user-guides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+
+    &__item {
+        display: flex;
+        width: 100%;
+        margin-top: 50px;
+        background: $color-gray-lighter;
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__detail {
+        padding: 50px;
+    }
+
+    &__ttl {
+        margin-bottom: 10px;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 28px;
+        color: $color-black;
+    }
+
+    &__desc {
+        margin-bottom: 27px;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-black;
+    }
+
+    &__info {
+        margin-bottom: 20px;
+    }
+
+    &__info-ttl {
+        margin-bottom: 12px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $color-black;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .btn {
+            width: 300px;
+        }
+
+        &--100pr {
+
+            .btn {
+                width: 100% !important;
+            }
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__item {
+            flex-direction: column;
+            max-width: 738px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__item {
+            margin-top: 30px;
+        }
+
+        &__img {
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &__detail {
+            padding: 30px;
+        }
+
+        &__btns {
+
+            .btn {
+                width: 330px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            margin-top: 30px;
+        }
+
+        &__detail {
+            padding: 30px 15px 10px;
+        }
+
+        &__ttl {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__desc {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__info {
+            margin-bottom: 14px;
+        }
+
+        &__info-ttl {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__btns {
+            display: block;
+
+            .btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

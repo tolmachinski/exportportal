@@ -1,0 +1,66 @@
+.minfo-sidebar-params {
+
+    &__item {
+        padding-bottom: 15px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__ttl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 24px;
+    }
+
+    &__name {
+        color: $color-gray;
+    }
+
+    &__close {
+        padding: 5px 0 5px 5px;
+        color: $color-gray;
+    }
+
+    &__sub {
+        padding-left: 15px;
+    }
+
+    &__sub-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .validengine-border {
+
+            .select2-selection--multiple,
+            .select2-selection--single {
+                height: 38px !important;
+                min-height: 38px !important;
+                border: none !important;
+
+                .select2-selection__arrow {
+                    height: 36px !important;
+                }
+            }
+        }
+    }
+
+    &__sub-ttl {
+        line-height: 24px;
+
+        @include text-nowrap;
+    }
+
+    &__sub-close {
+        padding: 5px 0 5px 5px;
+        color: $color-black;
+    }
+}

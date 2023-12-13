@@ -1,0 +1,119 @@
+.about-us-smes {
+    max-width: 450px;
+    margin-right: auto;
+    padding: 0 15px 0 14px;
+
+    &__item {
+        position: relative;
+        margin-bottom: 48px;
+        padding-left: 91px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--mw-415 {
+            max-width: 415px;
+        }
+
+        &--mw--400 {
+            max-width: 400px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        width: 60px;
+        height: 60px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__ttl {
+
+        @include h181816;
+
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__count {
+
+        @include h503826;
+
+        margin-right: 5px;
+        color: $color-blue2;
+    }
+
+    &__desc {
+
+        @include p181816;
+
+        margin-top: 0;
+    }
+
+
+    @include my-media(991) {
+        padding: 0 17px 0 13px;
+
+        &__item {
+            margin-bottom: 30px;
+            padding-top: 0;
+            padding-left: 40px;
+        }
+
+        &__icon {
+            top: 6px;
+            left: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        &__desc {
+            margin-top: 3px;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 29px;
+        margin-left: 0;
+        padding-top: 0;
+        padding-left: 15px;
+
+        &__item {
+            position: unset;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-left: 0;
+
+            &:last-child {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__icon {
+            position: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__ttl {
+            position: relative;
+            top: 3px;
+            width: calc(100% - 30px);
+            padding-left: 10px;
+        }
+
+        &__desc {
+            margin-top: 7px;
+        }
+    }
+}

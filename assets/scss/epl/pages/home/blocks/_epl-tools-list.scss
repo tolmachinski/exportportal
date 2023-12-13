@@ -1,0 +1,96 @@
+.epl-tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: -15px;
+    padding-top: 32px;
+
+    &__item {
+        display: flex;
+        width: 33.33%;
+        height: 100%;
+        min-height: 337px;
+        padding: 15px;
+    }
+
+    &__inner {
+        padding: 68px 29px 19px;
+        border: 2px solid $gray-light;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    &__icon {
+        fill: $blue;
+    }
+
+    &__ttl {
+        margin-top: 28px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $black;
+    }
+
+    &__text {
+        margin-top: 7px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $gray;
+    }
+
+    @include my-media(1024) {
+        padding-top: 12px;
+
+        &__item {
+            width: 50%;
+            padding: 15px;
+        }
+
+        &__inner {
+            padding: 58px 19px 20px;
+        }
+
+        &__text {
+            line-height: 22px;
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            min-height: auto;
+        }
+
+        &__inner {
+            min-height: 278px;
+            padding: 48px 14px 20px;
+        }
+
+        &__ttl {
+            margin-top: 13px;
+        }
+
+        &__text {
+            margin-top: 6px;
+            line-height: 24px;
+        }
+    }
+
+    @include phone-extra-small {
+        display: block;
+        margin: 0;
+        padding-top: 12px;
+
+        &__item {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

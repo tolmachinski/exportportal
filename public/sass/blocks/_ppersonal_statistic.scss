@@ -1,0 +1,68 @@
+.ppersonal-statistic{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		flex: 1;
+        max-width: 25%;
+		padding-right: 10px;
+		padding-bottom: 10px;
+
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+
+	&__name{
+		display: block;
+		padding-bottom: 5px;
+		font-size: 20px;
+		line-height: 22px;
+		font-weight: 500;
+	}
+
+	&__nr,
+    &__btn {
+        font-size: 26px;
+        line-height: 32px;
+		font-weight: 500;
+		color: $color-blue2;
+    }
+
+    &__btn {
+        background: none;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    @include phone-only{
+        display: block;
+		text-align: center;
+
+		&__item{
+			display: flex;
+			justify-content: space-between;
+            width: 100%;
+            max-width: 100%;
+			padding-right: 0;
+			padding-bottom: 0;
+			margin-bottom: 5px;
+			border-bottom: 1px solid $color-gray-light;
+
+			&:last-child{
+                margin-bottom: 0;
+				border-bottom: none;
+			}
+
+			br{
+				display: none;
+			}
+		}
+
+		&__nr{
+			line-height: 26px;
+		}
+    }
+}

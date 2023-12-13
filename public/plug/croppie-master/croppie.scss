@@ -1,0 +1,304 @@
+@import "../../../assets/scss/import/_scss_functions";
+
+.popup-croppie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 1px;
+}
+
+.croppie-circle{
+    .cr-viewport,
+    .cr-resizer {
+        border-radius: 50%;
+    }
+}
+
+.croppie-container {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+
+    .cr-image {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 0 0;
+        max-height: none;
+        max-width: none;
+    }
+
+    .cr-boundary {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cr-viewport,
+    .cr-resizer {
+        position: absolute;
+        border: 2px solid #fff;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    .cr-resizer {
+        z-index: 2;
+        box-shadow: none;
+        pointer-events: none;
+    }
+
+    .cr-resizer-vertical,
+    .cr-resizer-horisontal {
+        position: absolute;
+        pointer-events: all;
+
+        &::after,
+        &::after {
+            display: block;
+            position: absolute;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background: #fff;
+            width: 10px;
+            height: 10px;
+            content: '';
+        }
+    }
+
+    .cr-resizer-vertical {
+        bottom: -5px;
+        cursor: row-resize;
+        width: 100%;
+        height: 10px;
+
+        &::after {
+            left: 50%;
+            margin-left: -5px;
+        }
+    }
+
+    .cr-resizer-horisontal {
+        right: -5px;
+        cursor: col-resize;
+        width: 10px;
+        height: 100%;
+
+        &::after {
+            top: 50%;
+            margin-top: -5px;
+        }
+    }
+
+    .cr-original-image {
+        display: none;
+    }
+
+    .cr-vp-circle {
+        border-radius: 50%;
+    }
+
+    .cr-overlay {
+        z-index: 1;
+        position: absolute;
+        cursor: move;
+        touch-action: none;
+    }
+
+    .cr-slider-wrap {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        margin: 15px auto 0 auto;
+        text-align: center;
+    }
+
+    .cr-image,
+    .cr-overlay,
+    .cr-viewport {
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    @include my-media(568){
+        .cr-slider-wrap {
+            position: absolute;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 0;
+            background: rgba(204, 204, 204, 0.6);
+        }
+
+        .cr-slider-wrap {
+            bottom: 0;
+            top: auto;
+        }
+    }
+
+    @include my-media(375, 'max', 'height'){
+        .cr-slider-wrap {
+            position: absolute;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 0;
+            background: rgba(204, 204, 204, 0.6);
+        }
+
+        .cr-slider-wrap {
+            top: 0;
+            bottom: auto;
+        }
+    }
+}
+
+.croppie-result {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+    }
+}
+
+.cr-slider {
+    -webkit-appearance: none;
+    /*removes default webkit styles*/
+	/*border: 1px solid white; *//*fix for FF unable to apply focus style bug */
+    width: 300px;
+    /*required for proper track sizing in FF*/
+    max-width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+        outline: none;
+
+        &::-ms-fill-lower {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        &::-ms-fill-upper {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &:-moz-focusring {
+        outline: 1px solid white;
+        outline-offset: -1px;
+    }
+
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 3px;
+        background: #2181F8;
+        border: 0;
+        border-radius: 3px;
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #2181F8;
+        margin-top: -6px;
+    }
+
+    &::-moz-range-track {
+        width: 100%;
+        height: 3px;
+        background: #2181F8;
+        border: 0;
+        border-radius: 3px;
+    }
+
+    &::-moz-range-thumb {
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #2181F8;
+        margin-top: -6px;
+    }
+
+    &::-ms-track {
+        width: 100%;
+        height: 5px;
+        background: transparent;
+        border-color: #2181F8;
+        /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+        border-color: transparent;/*leave room for the larger thumb to overflow with a transparent border */
+        border-width: 6px 0;
+        color: transparent;/*remove default tick marks*/
+    }
+
+    &::-ms-fill-lower {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    &::-ms-fill-upper {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    &::-ms-thumb {
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #2181F8;
+        margin-top:1px;
+    }
+}
+
+.cr-rotate-controls {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+    z-index: 1;
+
+    button {
+        border: 0;
+        background: none;
+    }
+
+    i:before {
+        display: inline-block;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+    }
+}
+
+.cr-rotate-l i:before {
+	content: '↺';
+}
+
+.cr-rotate-r i:before {
+	content: '↻';
+}

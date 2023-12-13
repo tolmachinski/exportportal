@@ -1,0 +1,82 @@
+//old
+.wr-ajax-loader{
+	padding: 15px 0;
+	z-index: 5;
+	position: absolute;
+	background: #fff;
+	display: none;
+}
+
+.ajax-loader{
+	i{
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		background: url(../img/loader.gif) center center no-repeat;
+	}
+
+	p{
+		text-align: center;
+		line-height: 80px;
+
+		&.middle-b{
+			top: 50%;
+			width: 100%;
+			position: absolute;
+			text-align: center;
+			margin-top: -40px;
+		}
+	}
+
+	span{
+		font-size: 26px;
+		padding-left: 10px;
+		color: $color-gray-light;
+	}
+}
+//old
+
+//new
+.ajax-loader-lock{
+    width: auto;
+    margin-right: 8px;
+    overflow: hidden !important;
+}
+
+.ajax-loader{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    z-index: 4;
+    background: rgba(255, 255, 255, 0.9)!important;
+
+    &__fixed{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+    }
+
+    &__absolute{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+	&__icon{
+		width: 80px;
+		height: 80px;
+		background: url(../img/loader.svg) center center no-repeat;
+	}
+
+	&__text{
+		padding-left: 10px;
+		font-size: 26px;
+		color: $color-gray;
+	}
+}
+//new

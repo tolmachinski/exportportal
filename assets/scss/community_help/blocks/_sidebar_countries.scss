@@ -1,0 +1,74 @@
+.sidebar-countries-list {
+    margin-top: 25px;
+    margin-bottom: 14px;
+
+    &__item {
+        display: flex;
+		justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 30px;
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+
+    &__link {
+        color: $color-black;
+    }
+
+	&__flag {
+		display: flex;
+        flex: 1;
+        align-items: center;
+        max-width: 90%;
+        padding-right: 10px;
+    }
+
+    &__flag-name {
+        flex: 1;
+        min-width: 0;
+        padding-left: 10px;
+        line-height: 18px;
+        color: $color-black;
+
+        @include text-nowrap;
+    }
+
+    &__counter {
+        color: $color-gray;
+    }
+
+    @include my-media(991) {
+        width: 100%;
+        min-width: 236px;
+
+        &__heading {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+
+    @include phone-only {
+        width: 100%;
+        margin-top: 15px;
+
+        &__heading {
+            font-size: 18px;
+        }
+    }
+
+    @include my-media(576) {
+        margin-bottom: 15px;
+
+        &__heading {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include ie-only {
+
+        &__flag {
+            max-width: none !important;
+        }
+    }
+}

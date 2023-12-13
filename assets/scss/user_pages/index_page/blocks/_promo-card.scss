@@ -1,0 +1,151 @@
+.promo-card {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    min-height: 302px;
+    background: $color-blue-background;
+
+    &--buyer {
+        min-height: 273px;
+
+        #{$root} {
+
+            &__info {
+                padding-right: 20px;
+            }
+
+            &__title {
+
+                @include h262018;
+            }
+        }
+    }
+
+    &__info {
+        width: calc(50% - 30px);
+        padding: 20px 10px 20px 50px;
+    }
+
+    &__title {
+
+        @include h302620;
+
+        color: $color-white;
+    }
+
+    &__description {
+        margin-top: 12px;
+
+        @include p181816;
+
+        color: $color-white;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 360px;
+        margin-top: 30px;
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: calc(50% + 30px);
+        height: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    @include my-media(1199) {
+
+        &__picture {
+            width: 507px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &--buyer {
+            #{$root} {
+
+                &__title {
+
+                    @include h302620;
+                }
+            }
+        }
+
+        &__picture {
+            position: static;
+            width: 100%;
+        }
+
+        &__info {
+            width: 100%;
+            padding: 25px 50px 50px;
+        }
+
+        &__description {
+            margin-top: 7px;
+        }
+
+        &__btn {
+            margin-top: 14px;
+        }
+    }
+
+    @include phone-only {
+
+        &__image {
+            height: 233px;
+            object-position: right;
+        }
+
+        &__info {
+            width: 100%;
+            padding: 25px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &--buyer {
+            #{$root} {
+
+                &__info {
+                    padding-right: 15px;
+                }
+            }
+        }
+
+        &__info {
+            padding: 26px 15px 15px;
+        }
+
+        &__description {
+            margin-top: 3px;
+        }
+
+        &__btn {
+            margin-top: 13px;
+        }
+
+        &__image {
+            height: auto;
+            min-height: 233px;
+            object-position: center;
+        }
+    }
+}

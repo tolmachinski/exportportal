@@ -1,0 +1,72 @@
+<div class="container-fluid-modal">
+    <label class="input-label"><?php echo translate("general_dt_filters_entity_search_label_text"); ?></label>
+    <input type="text"
+        <?php echo addQaUniqueIdentifier('popup__filter-panel__form_search-input'); ?>
+        name="keywords"
+        id="filter-keywords"
+        class="dt_filter keywords"
+        placeholder="<?php echo translate("general_dt_filters_entity_search_placeholder", null, true); ?>"
+        data-title="<?php echo translate("general_dt_filters_entity_search_title", null, true); ?>"
+        maxlength="50">
+
+    <label class="input-label"><?php echo translate("general_dt_filters_entity_category_label_text"); ?></label>
+    <select
+        class="dt_filter minfo-form__input2 mb-0"
+        <?php echo addQaUniqueIdentifier('popup__filter-panel__form_category-select'); ?>
+        id="filter-categories"
+        data-title="<?php echo translate("general_dt_filters_entity_category_title", null, true); ?>"
+        name="pictures_category">
+        <option data-default="true" value=""><?php echo translate("general_dt_filters_entity_category_option_all_text"); ?></option>
+        <?php foreach($pictures_categories as $category) { ?>
+            <option value="<?php echo $category['id_category']; ?>"><?php echo $category['category_title']; ?></option>
+        <?php } ?>
+    </select>
+
+    <label class="input-label"><?php echo translate("general_dt_filters_entity_created_date_label_text_alternate"); ?></label>
+    <div class="row">
+        <div class="col-12 col-lg-6 mb-15-sm-max">
+            <input type="text"
+                <?php echo addQaUniqueIdentifier('popup__filter-panel__form_created-from-input'); ?>
+                name="created_from"
+                id="filter-created-from"
+                class="datepicker-init create_from dt_filter"
+                placeholder="<?php echo translate("general_dt_filters_entity_date_from_placeholder", null, true); ?>"
+                data-title="<?php echo translate("general_dt_filters_entity_created_date_from_title", null, true); ?>"
+                readonly>
+        </div>
+        <div class="col-12 col-lg-6">
+            <input type="text"
+                <?php echo addQaUniqueIdentifier('popup__filter-panel__form_created-to-input'); ?>
+                name="created_to"
+                id="filter-created-to"
+                class="datepicker-init create_to dt_filter"
+                placeholder="<?php echo translate("general_dt_filters_entity_date_to_placeholder", null, true); ?>"
+                data-title="<?php echo translate("general_dt_filters_entity_created_date_to_title", null, true); ?>"
+                readonly>
+        </div>
+    </div>
+
+    <label class="input-label"><?php echo translate("general_dt_filters_entity_updated_date_label_text_alternate"); ?></label>
+    <div class="row">
+        <div class="col-12 col-lg-6 mb-15-sm-max">
+            <input type="text"
+                <?php echo addQaUniqueIdentifier('popup__filter-panel__form_updated-from-input'); ?>
+                name="updated_from"
+                id="filter-updated-from"
+                class="datepicker-init updated_from dt_filter"
+                placeholder="<?php echo translate("general_dt_filters_entity_date_from_placeholder", null, true); ?>"
+                data-title="<?php echo translate("general_dt_filters_entity_updated_date_from_title", null, true); ?>"
+                readonly>
+        </div>
+        <div class="col-12 col-lg-6">
+            <input type="text"
+                <?php echo addQaUniqueIdentifier('popup__filter-panel__form_updated-to-input'); ?>
+                name="updated_to"
+                id="filter-updated-to"
+                class="datepicker-init updated_to dt_filter"
+                placeholder="<?php echo translate("general_dt_filters_entity_date_to_placeholder", null, true); ?>"
+                data-title="<?php echo translate("general_dt_filters_entity_updated_date_to_title", null, true); ?>"
+                readonly>
+        </div>
+    </div>
+</div>

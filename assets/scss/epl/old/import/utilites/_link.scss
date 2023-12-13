@@ -1,0 +1,12 @@
+.link-black {
+	color: $black !important;
+
+	&:hover {
+		color: $blue !important;
+	}
+}
+
+.link-ajax {
+	color: $blue;
+	cursor: pointer;
+}

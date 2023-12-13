@@ -1,0 +1,88 @@
+.active-filters-params {
+    margin-top: 13px;
+
+    &__item {
+        margin-top: 8px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__name {
+
+        @include p161614;
+
+        color: $color-gray;
+        word-break: break-word;
+    }
+
+    &__sub {
+        margin-top: 6px;
+    }
+
+    &__sub-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__sub-name {
+
+        @include p161614;
+
+        color: $color-black-light;
+        word-break: break-word;
+    }
+
+    &__sub-remove-btn {
+        height: 22px;
+        padding: 5px 0 5px 5px;
+        color: $color-black;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+
+        svg {
+            display: block;
+            width: 11px;
+            height: 11px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__clear-btn {
+        margin-top: 10px;
+    }
+
+    @include phone-only {
+        margin-top: 17px;
+
+        &__item {
+            margin-top: 13px;
+        }
+
+        &__sub {
+            margin-top: 3px;
+        }
+
+        &__sub-item {
+            margin-top: 13px;
+        }
+
+        &__sub-remove-btn {
+            height: 19px;
+            padding-left: 8px;
+        }
+
+        &__clear-btn {
+            margin-top: 14px;
+        }
+    }
+}

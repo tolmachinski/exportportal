@@ -1,0 +1,100 @@
+.featured-items {
+    position: relative;
+
+    &__content {
+        overflow: hidden;
+        margin: -8px 0;
+
+        &:not(:hover) {
+
+            .slick-arrow {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        .loading {
+            min-height: 350px;
+        }
+    }
+
+    .slick-prev {
+        left: 7px;
+    }
+
+    .slick-next {
+        right: 8px;
+    }
+
+    @include my-media(991) {
+
+        &__content {
+            margin: -5px 0;
+            padding-bottom: 24px;
+
+            .slick-dots {
+                bottom: -21px;
+            }
+
+            .loading {
+                min-height: calc(158px + (100vw - 66px) * 0.75 / 3);
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__content {
+            margin: -1.5px 0 -13.5px;
+            padding-bottom: 30px;
+
+            .slick-dots {
+                bottom: -25px;
+            }
+
+            .loading {
+                min-height: calc(119px + (100vw - 45px) * 0.75 / 3);
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__content {
+
+            .loading {
+                min-height: calc(113px + (100vw - 45px) * 0.75 / 3);
+            }
+        }
+    }
+
+    @include my-media(475) {
+
+        &__content {
+
+            .loading {
+                min-height: calc(2 * (119px + (100vw - 40px) * 0.75 / 2));
+            }
+        }
+    }
+
+    @include my-media(424) {
+
+        &__content {
+
+            .slick-dots {
+                bottom: -25px;
+            }
+        }
+    }
+
+    @include my-media(359) {
+
+        &__content {
+
+            .loading {
+                min-height: calc(2 * (101px + (100vw - 40px) * 0.75 / 2));
+            }
+        }
+    }
+}

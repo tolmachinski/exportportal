@@ -1,0 +1,45 @@
+.dashboard-nav-full {
+
+    &__item {
+        margin: 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray-light;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+
+    &__ttl {
+        padding-bottom: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $black;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    &__list-item {
+        width: 33.33%;
+    }
+
+    @include phone-only {
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__list-item {
+            width: 100%;
+        }
+    }
+}

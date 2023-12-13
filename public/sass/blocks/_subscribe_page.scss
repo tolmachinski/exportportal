@@ -1,0 +1,87 @@
+.subscribe-view {
+    display: flex;
+	justify-content: flex-end;
+    background: url("../img/subscribe/subscribe.jpg") center center no-repeat;
+    background-size: cover;
+    &__backdrop {
+        width: 50%;
+        min-height: 705px;
+        background-color: rgba(0,0,0,0.6);
+    }
+    &__form {
+        max-width: 470px;
+        margin: 221px 15px 0 65px;
+    }
+    &__headline {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 15px;
+        font-size: 26px;
+        line-height: 28px;
+        margin: 60px auto 52px;
+        color: #000000;
+    }
+    &__info {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 95%;
+        margin-bottom: 14px;
+        color: #ffffff;
+    }
+    &__label {
+        margin-top: 21px;
+        margin-bottom: 20px;
+    }
+    &__terms {
+        text-decoration: underline;
+    }
+
+    @include tablet-landscape-up {
+        background: url("../img/subscribe/subscribe_sm.jpg") left center no-repeat;
+        background-size: cover;
+        &__headline {
+            max-width: 740px;
+        }
+        &__backdrop {
+            width: 100%;
+            min-height: 457px;
+        }
+        &__form {
+            max-width: 500px;
+            padding: 0 15px;
+            margin: 130px auto 0 auto;
+        }
+        &__headline {
+            font-size: 20px;
+            line-height: 32px;
+            margin: 26px auto 25px;
+        }
+        &__info {
+            max-width: 100%;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    @include phone-extra-small{
+        background: url("../img/subscribe/subscribe_xs.jpg") left center no-repeat;
+        background-size: cover;
+        &__backdrop {
+            min-height: 340px;
+        }
+        &__headline {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 14px auto;
+        }
+        &__form {
+            margin: 55px auto 0;
+        }
+        &__info {
+            margin-bottom: 15px;
+        }
+        &__label {
+            margin-top: 24px;
+        }
+    }
+}

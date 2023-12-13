@@ -1,0 +1,259 @@
+.upgrade-packages{
+    $root: &;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -18px;
+
+    &__item{
+        max-width: 502px;
+        width: 33.33%;
+        padding: 18px;
+
+        &--verified{
+
+            #{$root}{
+                &__item-inner{
+                    border-color: $color-green;
+                }
+
+                &__title{
+                    background: $color-green;
+                }
+
+                &__benefits{
+                    border-color: $color-green;
+                }
+
+                &__benefits-ico-ok{
+                    color: $color-green;
+                }
+            }
+        }
+    }
+
+    &__item-inner{
+        position: relative;
+        border: 2px solid $color-orange;
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80px;
+        color: $color-white;
+        text-align: center;
+        background: $color-orange;
+
+        @include ie-only{
+            height: 80px;
+        }
+    }
+
+    &__title-save-wr{
+        position: absolute;
+        top: -22px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    &__title-save{
+        display: inline-block;
+        height: 39px;
+        padding: 0 37px;
+        color: $color-blue2;
+        line-height: 40px;
+        font-weight: 500;
+        text-transform: uppercase;
+        border: 2px solid $color-orange;
+        background: $color-white;
+        border-radius: 20px;
+    }
+
+    &__title-txt{
+        font-size: 26px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    &__subtitle{
+
+    }
+
+    &__content{
+        padding: 35px 48px 30px 48px;
+        text-align: center;
+
+        .btn{
+            min-width: 270px;
+        }
+    }
+
+    &__price{
+        display: flex;
+        justify-content: center;
+        min-height: 52px;
+    }
+
+    &__price-number{
+        font-size: 50px;
+        line-height: 52px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__price-txt{
+        padding-left: 5px;
+        color: $color-gray;
+        text-align: left;
+    }
+
+    &__price-period{
+        padding-top: 5px;
+    }
+
+    &__price-total{
+
+    }
+
+    &__desc{
+        min-height: 82px;
+        padding: 3px 0 5px 0;
+        line-height: 22px;
+    }
+
+    &__benefits{
+        padding: 20px 50px;
+        border-top: 2px solid $color-orange;
+    }
+
+    &__benefits-list{
+
+    }
+
+    &__benefits-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 9px 0;
+    }
+
+    &__benefits-name{
+        display: flex;
+        align-items: center;
+        line-height: 21px;
+    }
+
+    &__benefits-ico-ok{
+        margin-right: 10px;
+        color: $color-orange;
+        font-size: 14px;
+    }
+
+    &__benefits-ico-info{
+        color: $color-gray-light;
+    }
+
+    @include my-media(1200){
+        display: block;
+        margin: 0;
+
+        &__item{
+            width: 100%;
+            max-width: 466px;
+            padding: 0;
+            margin: 0 auto 30px auto;
+
+            &--year{
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @include phone-only{
+        &__item{
+            margin-bottom: 13px;
+
+            &--year{
+                margin-top: 30px;
+
+                #{$root}{
+                    &__title{
+                        padding-top: 25px;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &__content{
+            padding: 20px 15px;
+
+            .btn{
+                min-width: 260px;
+            }
+        }
+
+        &__benefits{
+            padding: 10px 15px;
+        }
+
+        &__title-save-wr{
+            top: -15px;
+        }
+
+        &__title-save{
+            height: 30px;
+            padding: 0 19px;
+            font-size: 12px;
+            line-height: 26px;
+            border-radius: 15px;
+        }
+
+        &__title{
+            min-height: 50px;
+        }
+
+        &__title-txt{
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &__price-number{
+            min-height: auto;
+            font-size: 40px;
+            line-height: 42px;
+        }
+
+        &__price{
+            min-height: auto;
+        }
+
+        &__price-period{
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__price-total{
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__desc{
+            min-height: auto;
+            padding-bottom: 9px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__benefits-item{
+            padding: 5.5px 0;
+        }
+
+        &__benefits-name{
+            font-size: 14px;
+        }
+    }
+}

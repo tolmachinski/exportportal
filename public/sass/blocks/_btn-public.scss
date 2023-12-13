@@ -1,0 +1,11 @@
+.btn-public{
+	min-width: 290px;
+	padding: 15px 25px;
+	white-space: initial;
+
+    &--mw-100p {
+        min-width: auto;
+        width: 290px;
+        max-width: 100%;
+    }
+}

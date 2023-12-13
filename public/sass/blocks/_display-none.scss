@@ -1,0 +1,5 @@
+@include my-media-interval(768, 991){
+    .d-none-tablet-max-991{
+        display: none;
+    }
+}

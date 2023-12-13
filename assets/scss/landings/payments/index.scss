@@ -1,0 +1,41 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../user_pages/import/variables";
+
+// Fonts on all landing
+
+@import "./blocks/_fonts";
+
+// Some scss what work on more then one secton
+
+@import "./blocks/_defaults";
+
+// How its work
+
+@import "./blocks/_how-its-work";
+
+@import "./blocks/_popup-dialog";
+
+// Gain access
+
+@import "./blocks/_gain-access";
+
+// Become partner
+
+@import "./blocks/_become-partner";
+
+// Questions
+
+@import "./blocks/_questions";
+
+@import "../../user_pages/general/blocks/_contact-us-popup";
+
+// What is ep
+
+@import "./blocks/_what-is-ep";
+
+@import "../../user_pages/import/utilites/customeRadioBtn";
+
+@import "../../user_pages/import/utilites/customeCheckbox";

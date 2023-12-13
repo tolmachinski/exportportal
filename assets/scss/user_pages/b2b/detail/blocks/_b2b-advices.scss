@@ -1,0 +1,147 @@
+.b2b-advices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 28px 29px 26px;
+        border: 1px solid $color-gray-light;
+
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+    }
+
+    &__add-btn {
+        padding: 0;
+
+        @include p161614;
+
+        color: $color-blue2;
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+
+        .ep-icon_plus-circle {
+            margin-right: 5px;
+        }
+    }
+
+    &__heading {
+        display: flex;
+    }
+
+    &__user-img {
+        margin: 2px 10px 0 0;
+
+        .image {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__user-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $color-black;
+        word-break: break-all;
+
+        @include text-line-ellipsis(false, 1);
+
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    &__date {
+        margin-top: 2px;
+
+        @include p141414;
+
+        color: $color-gray;
+    }
+
+    &__text {
+        margin-top: 8px;
+
+        @include p161614;
+
+        color: $color-black-light;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 11px;
+    }
+
+    &__load-more {
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    &__btn {
+        position: relative;
+        min-width: 250px;
+    }
+
+    &__empty {
+        width: 100%;
+        padding: 13px 20px;
+        background: $color-gray-lighter;
+
+        .ep-icon {
+            margin-top: 3px;
+            margin-right: 10px;
+        }
+    }
+
+    .dropdown {
+        margin-right: -5px;
+    }
+
+    @include my-media(991) {
+
+        &__item {
+            padding: 18px 19px 16px;
+        }
+    }
+
+    @include phone-only {
+
+        &__item {
+            padding: 8px 9px 6px;
+
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+
+        &__footer {
+            margin-top: 10px;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__load-more {
+            margin-top: 10px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import "./../../../import/scss_functions";
+
+@import "./../../../import/_colors";
+
+@import "./../../../import/_fonts";
+
+@import "./../../../import/guideline/_fonts-guideline";
+
+@import "./../../../import/guideline/_elements-guideline";
+
+// Plugins
+
+@import "./../../../plug/slick-1-8-1/slick";
+
+@import "./../../../plug/slick-1-8-1/slick-arrow";
+
+@import "./../../../plug/slick-1-8-1/slick-dots";
+
+// General styles
+
+@import "./../../../components/product_card/_products";
+
+@import "./../../../components/read-more-text/_read-more-text";
+
+@import "./../../general/blocks/_did-help";
+
+
+// Main styles
+
+@import "./blocks/_b2b-detail";
+
+@import "./blocks/_b2b-section";
+
+@import "./blocks/_b2b-pictures";
+
+@import "./blocks/_b2b-user-items";
+
+@import "./blocks/_b2b-other-request";
+
+@import "./../blocks/_b2b-card";
+
+@import "./blocks/_b2b-partners";
+
+@import "./blocks/_b2b-followers";
+
+@import "./blocks/_b2b-advices";
+

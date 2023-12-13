@@ -1,0 +1,11 @@
+.panel-left{
+	&.is-active{
+		transform: translateX(0%);
+	}
+}
+
+.panel-right{
+	&.is-active{
+		transform: translateX(0%);
+	}
+}

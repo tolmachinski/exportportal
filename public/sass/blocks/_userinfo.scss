@@ -1,0 +1,451 @@
+/* userinfo */
+.userinfo-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 655px;
+    color: $color-white;
+
+    .container-center-sm {
+        width: 100%;
+    }
+
+    &__detail {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__inner {
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        min-width: 320px;
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 65px 15px;
+    }
+
+    &__detail-bottom {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__ttl {
+        width: 100%;
+        padding-bottom: 20px;
+        font-size: 5vw;
+        line-height: 5vw;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+    &__txt {
+        flex: 1;
+        min-width: 0;
+        margin-right: 90px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    &__subtitle {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 26px;
+        line-height: 28px;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        @include object-fit(cover, center);
+    }
+
+    @include my-media(991) {
+        &__txt {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+
+    @include phone-only {
+        height: 495px;
+
+        &__inner{
+            align-content: center;
+            padding: 40px 15px;
+            height: 100%;
+        }
+
+        &__detail{
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__detail-bottom{
+            flex-direction: column;
+        }
+
+        &__ttl {
+            font-size: 45px;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        &__txt {
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+        }
+    }
+
+    @include my-media(480) {
+        &__ttl {
+            font-size: 32px;
+            line-height: 34px;
+        }
+
+        &__txt {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+.userinfo-delivery {
+    position: relative;
+    margin-top: 100px;
+
+    .image {
+        width: 100%;
+        height: 100%;
+        @include object-fit(cover, top);
+    }
+
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        &--bottom {
+            >.container-center-sm {
+                position: relative;
+                height: 100%;
+            }
+        }
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 55%;
+        margin: 100px 0 0 auto;
+        color: $color-white;
+
+        &--bottom {
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            width: 100%;
+
+            .userinfo-delivery {
+                &__txt {
+                    width: 80%;
+                    text-align: center;
+                }
+            }
+
+            .btn {
+                margin-top: 30px !important;
+            }
+        }
+
+        &--left {
+            width: 40%;
+            margin: 100px auto 0 0;
+        }
+
+        &--mr {
+            width: 40%;
+            margin-right: 170px;
+        }
+    }
+
+    &__ttl {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+    &__txt {
+        width: 100%;
+        padding-top: 30px;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+    }
+
+    .btn {
+        margin-top: 70px;
+    }
+
+    @include my-media(1200) {
+        &__detail--left {
+            width: 40%;
+            margin: 50px auto 0 0;
+        }
+    }
+
+    @include my-media(991) {
+        &__txt {
+            font-size: 21px;
+            line-height: 24px;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+
+        &__detail {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 50px 0;
+
+            &--bottom {
+                position: static;
+                text-shadow: 1px 1px 1px $color-black;
+            }
+        }
+
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &__info {
+            position: static;
+        }
+    }
+
+    @include phone-only {
+        margin-top: 55px;
+
+        &__detail {
+            align-items: center;
+            width: 100%;
+            margin: 0;
+        }
+
+        &__info {
+            &--white {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            &--black {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &__txt {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+    }
+
+    @include my-media(480) {
+        &__detail {
+            &--bottom {
+                bottom: 50px;
+
+                .userinfo-delivery {
+                    &__txt {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.userinfo-scheme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 72px 0;
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 33.33%;
+        height: 250px;
+        padding: 0 25px;
+        border-right: 1px solid $color-gray-light;
+        border-bottom: 1px solid $color-gray-light;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        .ep-icon {
+            font-size: 60px;
+            height: 55px;
+        }
+
+        .btn {
+            max-width: 100%;
+        }
+    }
+
+    &__name {
+        padding: 31px 30px 3px 30px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__box {
+        &::before {
+            display: block;
+            margin-top: -7px;
+            font-size: 72px;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        color: $color-blue2;
+        cursor: pointer;
+        &:hover {
+            color: $color-blue2-hover;
+        }
+    }
+
+    .btn {
+        margin: 50px auto 0;
+    }
+
+    @include my-media(991) {
+        margin: 72px 0 100px 0;
+
+        .ep-icon {
+            font-size: 56px;
+        }
+
+        .btn {
+            margin: 48px auto 0;
+        }
+
+        &__name {
+            padding: 28px 24px 3px 24px;
+        }
+    }
+
+    @include phone-only {
+        margin: 43px 0 50px 0;
+
+        .ep-icon {
+            font-size: 60px;
+        }
+
+        &__row {
+            flex-direction: column;
+        }
+
+        &__col {
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+            padding: 15px 0;
+            border: none;
+        }
+
+        &__name {
+            padding: 22px 24px 3px 24px;
+        }
+
+        .btn {
+            margin: 17px 0 auto;
+        }
+    }
+
+    @include my-media(480) {
+        .btn {
+            min-width: 290px;
+        }
+    }
+}
+
+.userinfo-blueb {
+    min-height: 600px;
+    padding: 180px 0;
+    text-align: center;
+
+    &__ttl {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+    }
+
+    &__txt {
+        max-width: 650px;
+        margin: 0 auto;
+        padding-top: 25px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
+
+    @include my-media(991) {
+        &__txt {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+
+    @include phone-only {
+        text-align: center;
+
+        &__txt {
+            width: auto;
+        }
+    }
+}
+
+/* END userinfo */

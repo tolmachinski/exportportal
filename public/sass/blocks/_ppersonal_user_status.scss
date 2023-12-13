@@ -1,0 +1,11 @@
+.ppersonal-user-status{
+	padding-bottom: 14px;
+    font-size: 18px;
+    line-height: 21px;
+	font-weight: 500;
+    text-transform: uppercase;
+
+    @include phone-only{
+        padding-bottom: 10px;
+    }
+}

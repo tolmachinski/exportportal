@@ -1,0 +1,50 @@
+
+.community-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    select {
+        max-width: 270px;
+        border: none;
+    }
+
+    input {
+        max-width: 430px;
+        border: none;
+    }
+
+    @include my-media(1200) {
+
+        select,
+        input {
+            max-width: calc((100vw - 213px) / 3);
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 0;
+
+        select,
+        input {
+            max-width: calc((100vw - 48px) / 3);
+            height: 50px;
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 9px;
+
+            button {
+                min-width: calc((100vw - 48px) / 3) !important;
+            }
+        }
+    }
+
+    @include phone-only {
+        display: none;
+    }
+}

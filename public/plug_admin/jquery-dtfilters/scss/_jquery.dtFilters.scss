@@ -1,0 +1,75 @@
+.dt-filter{
+	&__param-name{
+
+	}
+}
+
+.filter-plugin-list{
+	li{
+		max-width: 100%;
+		min-height: 30px;
+		position: relative;
+		float: left;
+		margin: 0 10px 10px 0;
+		padding: 0 35px 0 5px;
+		background: #EAEBFF;
+		border: 1px solid $color-gray-light;
+		border-right: none;
+		font-size: 12px;
+		line-height: 30px;
+	}
+
+	.dt-filter-delete{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 30px;
+		border-left: 1px solid $color-gray-light;
+		border-top: 1px solid $color-blue;
+		background: $color-blue;
+		color: $color-white;
+		font-weight: bold;
+		line-height: 27px;
+		text-align: center;
+
+		&:hover{
+			border-top: 1px solid $color-red;
+			background: $color-red;
+			color: $color-white;
+		}
+
+		.ep-icon_remove{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -6px 0 0 -6px;
+			font-size: 12px;
+		}
+	}
+}
+
+.dt-filter-apply,
+.dt-filter-reset{
+	display: block;
+	float: left;
+	height: 30px;
+	padding: 0 7px;
+	margin: 0 10px 10px 0;
+	background: $color-blue;
+	font-size: 12px;
+	color: $color-white;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.dt-filter-reset:hover{
+	background: $color-red;
+	color: $color-white;
+}
+
+.dt-filter-apply.active,
+.dt-filter-apply:hover{
+	background: $color-green;
+	color: $color-white;
+}

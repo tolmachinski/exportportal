@@ -1,0 +1,217 @@
+.ep-header-search {
+    flex: 1 1 auto;
+    height: 40px;
+    background: $color-gray-lighter;
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__dropdown-icon {
+        margin-left: 5px;
+    }
+
+    &__hide-block {
+        display: none;
+    }
+
+    .dropdown {
+        min-width: fit-content;
+        font-size: 14px;
+        line-height: 20px;
+
+        &:focus {
+            border: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            right: -1px;
+            display: block;
+            width: 1px;
+            height: 25px;
+            background: $color-gray-light;
+        }
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        min-width: 95px;
+        padding: 10px 20px;
+        color: $color-black-light;
+
+        svg {
+            fill: $color-black-light;;
+        }
+    }
+
+    .dropdown-menu {
+        top: 10px !important;
+        left: 20px !important;
+        width: 160px;
+        padding: 10px 0 5px;
+        box-shadow: 0 3px 6px rgba($color-black, 0.25);
+        transform: translate3d(-20px, 30px, 0) !important;
+    }
+
+    .dropdown-item {
+        min-height: 34px;
+        padding: 5px 15px 5px 30px;
+        line-height: 24px;
+    }
+
+    .autocomplete {
+        flex: 1 1 auto;
+        margin-right: 0;
+        padding-left: 5px;
+
+        &__input {
+            font-size: 14px;
+            line-height: 18px;
+            color: $color-black-light !important;
+            background: none;
+            border: none;
+
+            &:focus {
+                border: none;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                box-shadow: 0 0 0 100px $color-gray-lighter inset !important;
+            }
+        }
+    }
+
+    &__btn {
+        min-width: 110px;
+        max-height: 40px;
+        margin-left: auto;
+        padding: 0.65rem .75rem !important;
+        font-size: 14px !important;
+    }
+
+    &__btn-icon {
+        margin-right: 5px;
+        fill: $color-white;
+    }
+
+    @include my-media(1200) {
+
+        &__btn {
+            min-width: 50px;
+        }
+
+        &__btn-icon {
+            margin-right: 0;
+        }
+
+        &__btn-txt {
+            display: none;
+        }
+    }
+
+    @include my-media(991) {
+        height: auto;
+        margin: 5px 0;
+        padding: 15px;
+        background: $color-white;
+
+        &__form {
+            background: $color-white;
+        }
+
+        .dropdown {
+            min-width: 200px;
+            border: 1px solid $color-black-light;
+
+            &::after {
+                display: none;
+            }
+        }
+
+
+        .dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 200px;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .dropdown-menu {
+            width: 200px;
+
+            &.show {
+                max-height: 250px;
+            }
+        }
+
+        .autocomplete {
+            margin: 0 10px;
+            padding-left: 0;
+            border: 1px solid $color-black-light;
+
+            &__input {
+                font-size: 16px;
+
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    box-shadow: 0 0 0 100px $color-white inset;
+                }
+            }
+        }
+
+        &__btn {
+            min-width: 138px;
+            padding: 0.563rem .75rem !important;
+            font-size: 16px !important;
+        }
+
+        &__btn-icon {
+            margin-right: 5px;
+        }
+
+        &__btn-txt {
+            display: inline-block;
+        }
+    }
+
+    @media (max-width: 991px) and (max-height: 425px) {
+
+        .dropdown-menu {
+            overflow: auto;
+            max-height: 160px !important;
+        }
+    }
+
+    @include phone-only {
+        height: auto;
+
+        &__form {
+            flex-direction: column;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+
+        .dropdown {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .autocomplete {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+    }
+}

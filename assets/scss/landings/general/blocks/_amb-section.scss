@@ -1,0 +1,57 @@
+.ambassador {
+
+    &__section-title {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__section-text {
+        margin-left: 1px;
+        font-size: 18px;
+        line-height: 24px;
+
+        // text-align: center;
+    }
+
+    &__join-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 350px;
+        height: 70px;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    @include my-media(991) {
+
+        &__section-text {
+            margin-left: 0;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    @include phone-only {
+
+        &__section-title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__section-text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &__join-btn {
+            max-width: 250px;
+            height: 60px;
+        }
+    }
+}

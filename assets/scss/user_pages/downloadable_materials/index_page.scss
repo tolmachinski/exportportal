@@ -1,0 +1,25 @@
+$assets_link: '../../../../assets/images/';
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+$assets_link_images_select2: '../../../images/plugins/select2-4-0-3/';
+
+@import "../../plug/select2-4-0-3/select2-4-0-3";
+
+@import "../general/blocks/wr_select2";
+
+@import "../general/blocks/_info-block";
+
+@import "blocks/_header";
+
+@import "blocks/_product_block";
+
+@import "blocks/_recommend_block";
+
+@import "../general/blocks/_subscribe";
+
+@import "blocks/_subscribe";
+
+@import "blocks/_share_modal";

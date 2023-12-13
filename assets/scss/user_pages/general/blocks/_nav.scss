@@ -1,0 +1,233 @@
+.nav {
+    $root: &;
+
+	&--p0 {
+
+		.nav-link {
+			padding-left: 0;
+			padding-right: 0;
+		}
+    }
+
+    &--mr50 {
+
+		.nav-link {
+			margin-right: 50px;
+		}
+    }
+
+    &--borders {
+
+        .nav-item {
+            margin-bottom: -2px;
+        }
+
+        .nav-link {
+            padding-top: 17px;
+            padding-bottom: 14px;
+            font-size: 16px;
+            color: $color-gray;
+            border: none;
+            border-bottom: 2px solid transparent;
+
+            &:not(.disabled):focus,
+            &:not(.disabled):hover {
+                color: $color-blue2;
+                border: none;
+                border-bottom: 2px solid $color-blue2;
+            }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+            position: relative;
+            color: $color-blue2;
+            border: none;
+            border-bottom: 2px solid $color-blue2;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 2px;
+                background-color: $color-blue2;
+            }
+        }
+    }
+
+    &--gray {
+
+        .nav-link {
+            color: $color-black !important;
+
+            .ep-icon {
+                margin-right: 5px;
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-gray;
+                vertical-align: top;
+            }
+        }
+    }
+
+    &--inline {
+        position: relative;
+        overflow-y: hidden;
+
+        // border-bottom: 1px solid $color-gray;
+        #{$root} {
+            flex-wrap: nowrap;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-gray;
+        }
+
+        .nav-link {
+            white-space: nowrap;
+        }
+
+        .nav-tabs {
+            border-bottom: none;
+        }
+    }
+
+    &--new {
+
+        .nav-link {
+            padding-top: 0;
+			padding-left: 0;
+            padding-right: 0;
+        }
+
+        .nav-item {
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+		}
+    }
+
+    @include phone-only {
+
+        &--new {
+
+            .nav-item {
+                margin-right: 30px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .nav-link {
+                padding-bottom: 11px;
+            }
+        }
+
+        &--borders {
+
+            .nav-link {
+                padding-top: 10px;
+                padding-bottom: 4px;
+            }
+
+            .nav-item {
+                margin-bottom: 0;
+            }
+        }
+
+        &--mr50 {
+
+            .nav-item {
+                margin-right: 0;
+            }
+
+            .nav-link {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        &--480 {
+
+            .nav-item {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+
+            .nav-link {
+                padding: 7px 0 0;
+            }
+        }
+
+        &--inline {
+            overflow-y: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                display: block;
+                opacity: 1;
+                width: 66px;
+                height: 100%;
+                background: transparent linear-gradient(90deg, #fff0 0%, #fff 100%) 0% 0% no-repeat padding-box;
+                transform: matrix(-1, 0, 0, -1, 0, 0);
+            }
+
+            .nav-tabs {
+                overflow-x: auto;
+            }
+        }
+    }
+}
+
+.nav-item {
+
+    @include phone-only {
+        margin-right: 15px;
+    }
+}
+
+.tab-content {
+
+    &--borders {
+        padding-top: 50px;
+
+        .text-b {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &--new {
+        padding-top: 30px;
+    }
+
+    @include phone-extra-small {
+        padding-top: 20px;
+
+        &--archive {
+            padding-top: 30px;
+        }
+
+        &--pt-0 {
+            padding-top: 0;
+        }
+    }
+}

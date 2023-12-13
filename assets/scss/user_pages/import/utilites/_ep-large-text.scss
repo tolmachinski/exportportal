@@ -1,0 +1,17 @@
+.ep-large-text {
+    font-size: 18px;
+    font-weight: normal;
+	line-height: 32px;
+	color: $color-black;
+	word-wrap: break-word;
+
+    p {
+		margin-bottom: 33px;
+		font-size: 18px !important;
+		line-height: 32px !important;
+	}
+
+    strong {
+        font-weight: 500;
+    }
+}

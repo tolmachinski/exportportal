@@ -1,0 +1,11 @@
+.upgrade-circle{
+    margin-top: -55px;
+
+	@include ie-only{
+		overflow: hidden;
+    }
+
+    @include my-media(991) {
+        display: none;
+    }
+}

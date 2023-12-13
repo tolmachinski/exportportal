@@ -1,0 +1,17 @@
+%epl-headline {
+    margin-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 58px;
+    color: $color-black-light;
+    letter-spacing: 3.3px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media only screen and (max-width: $break-xs) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}

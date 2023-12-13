@@ -1,0 +1,50 @@
+.company-block {
+    display: flex;
+    padding: 6px;
+    margin-bottom: 15px;
+	border: 1px solid $color-gray-light;
+
+    &:hover {
+        border: 1px solid $color-blue2;
+	}
+
+    &__image {
+        width: 97px;
+        height: 92px;
+        overflow: hidden;
+        margin-right: 10px;
+		border: 1px solid $color-gray-light;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @include object-fit(cover, center);
+        }
+	}
+
+    &__info {
+        width: calc(100% - 115px);
+	}
+
+    &__name {
+        @include text-nowrap;
+        display: block;
+        color: $color-black;
+	}
+
+	&__date {
+		@include text-nowrap;
+		font-size: 14px;
+        color: $color-gray
+	}
+
+    &__ratings {
+        display: flex;
+        justify-content: space-between;
+	}
+
+    &__options-block {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

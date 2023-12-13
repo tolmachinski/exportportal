@@ -1,0 +1,128 @@
+.products-mini {
+
+    &__item {
+        margin-bottom: 10px;
+        color: $gray;
+        border: 1px solid $gray-light;
+
+        @include fs-additional;
+    }
+
+    &__img {
+        position: relative;
+        width: 158px;
+        margin-right: 20px;
+
+        .image {
+            max-height: 120px !important;
+        }
+    }
+
+    &__discount {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 70px;
+        height: 34px;
+        padding: 8px 20px 8px 12px;
+        text-align: center;
+        color: $white;
+        background: $blue;
+        border-radius: 0 17px 17px 0;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+        padding: 10px 15px 10px 0;
+    }
+
+    &__name {
+
+		@include text-line-ellipsis(36);
+
+		line-height: 18px;
+        color: $black;
+
+		@include fs-names;
+
+		&:hover {
+			color: $blue;
+		}
+    }
+
+    &__rating {
+        display: flex;
+        justify-content: space-between;
+
+        @include text-nowrap;
+
+        .rating-symbol-wr {
+
+            @include text-nowrap;
+        }
+    }
+
+    &__counters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price-new {
+        padding-right: 8px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $black;
+
+        @include text-nowrap;
+    }
+
+    &__price-old {
+        color: $gray;
+        text-decoration: line-through;
+    }
+
+    &--2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .products-mini {
+
+            &__wr {
+                width: 50%;
+                padding: 0 10px 10px 0;
+            }
+        }
+	}
+
+	@media screen and (max-width: 991px) {
+
+		&--2 {
+
+			.products-mini {
+
+				&__img {
+					width: 100px;
+				}
+			}
+		}
+	}
+
+	@include ie-only {
+
+		&__detail {
+			flex: 1;
+		}
+	}
+}

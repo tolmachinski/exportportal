@@ -1,0 +1,83 @@
+.widget-leave-feedback {
+
+    &__user-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__user-list-group {
+        display: flex;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__user-list-item {
+        display: flex;
+        margin: 0 20px 0 0;
+        line-height: 19px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__description {
+        height: 150px;
+    }
+
+    @include phone-extra-small {
+
+        &__user-list-group {
+            display: block;
+        }
+
+        &__user-list-item {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.widget-leave-feedback-min {
+
+    &__title {
+        font-size: 16px;
+    }
+
+    &__btn {
+        min-width: 197px;
+        margin-top: 15px;
+    }
+
+    @include phone-extra-small {
+
+        &__btn {
+            min-width: 173px;
+        }
+    }
+}
+
+
+@include phone-extra-small {
+
+    .pseudo-modal {
+
+        &--hide-content {
+
+            .widget-leave-feedback-min {
+
+                &__title {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

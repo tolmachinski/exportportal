@@ -1,0 +1,120 @@
+@import "../../../import/scss_functions";
+
+@import "../../../import/_colors";
+
+@import "../../../import/_fonts";
+
+@import "../../../import/guideline/_fonts-guideline";
+
+.droplist .fancybox-title {
+    padding-bottom: 3px !important;
+}
+
+.droplist-modal {
+
+    &__subttl {
+
+        @include p161614;
+    }
+
+    &__item-wrap {
+        margin-top: 17px;
+    }
+
+    &__item-wrap-title {
+
+        @include p181816(true);
+    }
+
+    &__item-row {
+        display: flex;
+        margin-top: 9px;
+    }
+
+    &__item-img {
+        width: 87px;
+        height: 65px;
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            @include object-fit(cover);
+        }
+    }
+
+    &__item-content {
+        margin-left: 10px;
+
+        @include p161614(true);
+    }
+
+    &__item-title {
+
+        @include text-line-ellipsis($height: 44, $value: 2);
+
+        min-height: 44px;
+    }
+
+    &__choose-title {
+
+        @include p181816(true)
+    }
+
+    &__choose-wrap {
+        margin-top: 18px;
+    }
+
+    &__choose-checkboxes-wrap {
+        margin-top: 16px;
+    }
+
+    &__btn-wrap {
+        justify-content: center;
+
+        .btn {
+            width: 100%;
+            max-width: 160px;
+            max-height: 40px;
+            padding: 0.65rem 0.75rem !important;
+
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+
+        &--edit-modal {
+            margin-top: 6px;
+
+            .btn {
+                max-width: 130px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &__btn-wrap {
+
+            .btn {
+                max-width: 132px;
+            }
+        }
+
+        &__item-title {
+
+            @include text-line-ellipsis($height: 38, $value: 2);
+
+            min-height: 38px;
+        }
+
+        &__item-price {
+            margin-top: 9px;
+        }
+
+        &__item-wrap {
+            padding-bottom: 25px;
+        }
+    }
+}
+

@@ -1,0 +1,114 @@
+.dwn-heading {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+
+    &__ttl {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        font-size: 96px;
+        font-weight: 500;
+        line-height: 127px;
+        color: $color-white;
+        text-transform: uppercase;
+        word-wrap: break-word;
+        text-align: center;
+	}
+
+    picture {
+        background-color: $color-gray-lighter;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include my-media(991) {
+        height: 300px;
+
+        &__ttl {
+            max-width: 600px;
+            font-size: 62px;
+            line-height: 75px;
+        }
+    }
+
+	@include phone-only {
+        height: 300px;
+		padding: 20px 0;
+
+		h1,
+		h2,
+		h3 {
+			color: $color-white;
+		}
+
+		&__container {
+			position: relative;
+            z-index: 1;
+			display: block;
+
+			@include ie-only {
+				position: relative;
+			}
+		}
+
+		&__ttl {
+			max-width: 100%;
+			margin-left: 0;
+			font-size: 40px;
+            line-height: 48px;
+		}
+
+		&__detail {
+			max-width: unset;
+			margin-left: 0;
+		}
+
+		&__form-search {
+			flex-wrap: wrap;
+
+			.btn {
+				width: 100%;
+				margin-top: 10px;
+				margin-left: 0;
+			}
+		}
+
+		&__min-title {
+			font-size: 32px;
+			line-height: 38px;
+		}
+
+		&__detail-additional {
+			padding-top: 25px;
+
+			.btn {
+				width: 100%;
+			}
+		}
+
+		&__detail-additional-ttl {
+			font-size: 16px;
+		}
+    }
+
+    @include my-media(575) {
+        height: 250px;
+
+        &__ttl {
+            font-size: 40px;
+            line-height: 53px;
+        }
+    }
+}

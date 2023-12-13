@@ -1,0 +1,13 @@
+.checkbox-group {
+    display: flex;
+    align-items: center;
+	cursor: pointer;
+
+	&--align-top {
+		align-items: flex-start;
+	}
+
+	&--inline {
+		display: inline-flex;
+	}
+}

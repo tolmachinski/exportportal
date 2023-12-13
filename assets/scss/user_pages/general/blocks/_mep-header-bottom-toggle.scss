@@ -1,0 +1,15 @@
+.mep-header-bottom-toggle {
+    overflow: auto;
+    height: 0;
+    background: $color-white;
+
+    &.active {
+        border-top: 1px solid $color-gray-light;
+    }
+
+    &__item {
+        display: none;
+        height: 100%;
+        padding: 9px 15px 0;
+    }
+}

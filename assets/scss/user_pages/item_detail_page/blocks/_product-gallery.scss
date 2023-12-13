@@ -1,0 +1,248 @@
+.product-gallery {
+    $root: &;
+
+    position: relative;
+    margin-bottom: 50px;
+
+    &__discount {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        min-width: 100px;
+        padding: 10px 25px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+        color: $color-white;
+        background: $color-blue2;
+        border-radius: 22px;
+
+        &--stock-out {
+            background-color: $color-gray;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        min-width: 100px;
+        padding: 10px 25px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+        color: $color-white;
+        background: $color-blue2;
+        border-radius: 22px;
+
+        &--stock-out {
+            background-color: $color-gray;
+        }
+    }
+
+    &__main {
+        height: 340px;
+        border: 1px solid $color-gray-lighter;
+    }
+
+    &__additional-list {
+
+        &:not(.slick-initialized) {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow: hidden;
+
+            #{$root} {
+
+                &__additional-item {
+                    min-width: 104px;
+                }
+            }
+        }
+    }
+
+    &__additional {
+        position: relative;
+        height: 84px;
+        margin: 7px 30px 10px;
+
+        .slick-slider {
+            height: 100%;
+
+            .ep-icon {
+                position: absolute;
+                top: 50%;
+                margin-top: -9px;
+                font-size: 18px;
+                color: $color-black;
+                cursor: pointer;
+            }
+
+            .ep-icon_arrow-left {
+                left: -20px;
+            }
+
+            .ep-icon_arrow-right {
+                right: -20px;
+            }
+        }
+    }
+
+    &__additional-item {
+        width: 104px !important;
+        margin-right: 5px;
+        border: 2px solid $color-gray-lighter;
+
+        &:hover,
+        &.active {
+            border: 2px solid $color-blue2;
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+    }
+
+    .slick-vertical {
+
+        .slick-slide {
+            border: none;
+        }
+    }
+
+    @include phone-only {
+        display: flex;
+        justify-content: center;
+
+        &__main {
+            flex: 1;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        &__additional {
+            width: 100px;
+            height: auto;
+            margin: 20px 0;
+
+            .slick-slider {
+
+                .ep-icon {
+                    right: 0;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    margin: 0 auto;
+                    transform: rotate(90deg);
+                }
+
+                .ep-icon_arrow-left {
+                    top: -19px;
+                }
+
+                .ep-icon_arrow-right {
+                    top: auto;
+                    bottom: -7px;
+                }
+            }
+        }
+
+        &__additional-inner {
+            height: auto;
+
+            li {
+                margin: 0;
+            }
+        }
+
+        &__additional-item {
+            width: 95px !important;
+            border: 1px solid transparent;
+        }
+
+        &__additional-list {
+
+            &:not(.slick-initialized) {
+                display: block;
+                max-height: 328px;
+
+                #{$root} {
+
+                    &__additional-item {
+                        min-width: 95px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include phone-extra-small {
+        display: block;
+        padding-bottom: 25px;
+
+        &__main {
+            margin-right: 0;
+        }
+
+        &__additional {
+            width: auto;
+            height: 84px;
+            margin: 7px 30px 0;
+
+            .slick-slider {
+
+                .ep-icon {
+                    top: 50%;
+                    margin: -9px 0 0;
+                    transform: rotate(0);
+                }
+
+                .ep-icon_arrow-left {
+                    left: -20px;
+                }
+
+                .ep-icon_arrow-right {
+                    right: -20px;
+                    bottom: auto;
+                    left: auto;
+                }
+            }
+        }
+
+        &__additional-item {
+            width: 104px !important;
+            border: 2px solid $color-gray-lighter;
+        }
+
+        &__additional-list {
+
+            &:not(.slick-initialized) {
+                display: flex;
+
+                #{$root} {
+
+                    &__additional-item {
+                        min-width: 104px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include phone-extra-small(min) {
+        max-width: 545px;
+        margin: 0 auto;
+    }
+}

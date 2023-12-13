@@ -1,0 +1,247 @@
+.epuser-line {
+	$root: &;
+
+	display: flex;
+    justify-content: space-between;
+    height: 45px;
+    margin-right: 25px;
+    padding-right: 17px;
+    border-right: 2px solid $color-gray-light;
+
+	&__bl {
+		display: flex;
+		align-items: center;
+
+		&--show {
+			display: none;
+		}
+
+		.dropdown-item {
+			position: relative;
+
+			#{$root} {
+
+				&__circle-sign {
+					top: 4px;
+					right: auto;
+					left: 23px;
+				}
+			}
+		}
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		padding-right: 40px;
+
+		.link {
+			padding: 0 7px;
+			font-size: 25px;
+			color: $color-black;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: 25px;
+		padding: 0 10px;
+		font-size: 16px;
+		font-weight: 300;
+		color: $color-black;
+		letter-spacing: 0.3px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		svg {
+            fill: $color-black-light;
+        }
+
+        &--messages {
+
+            svg {
+                stroke: $color-white;
+                stroke-width: 4;
+			}
+
+            &.disabled {
+
+                svg {
+                    fill: $color-gray-light;
+                }
+            }
+
+			#{$root} {
+
+			    &__circle-sign {
+			        right: -3px;
+			    }
+			}
+        }
+
+		&.active:not(.epuser-line__user) {
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: -7px;
+				bottom: -19px;
+				left: -7px;
+				z-index: 1;
+				border-bottom: 2px solid $color-green;
+			}
+		}
+
+		.ep-icon {
+			font-size: 22px;
+		}
+
+		&--hide {
+			display: none;
+		}
+
+		&--blue {
+			padding: 0 40px;
+			line-height: 60px;
+			color: $color-white;
+			background: $color-blue2;
+
+			&:hover {
+				color: $color-gray-lighter;
+			}
+		}
+	}
+
+	&__logout {
+		margin-left: 65px;
+	}
+
+	&__circle-sign {
+		position: absolute;
+		top: -2px;
+		right: -1px;
+		display: block;
+		width: 14px;
+		height: 14px;
+		border: 2px solid $color-white;
+		border-radius: 7px;
+	}
+
+    &__restricted {
+        position: absolute;
+        top: 0;
+        left: 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: $color-red;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+
+        svg {
+            fill: $color-red;
+        }
+    }
+
+    &__restricted-info-btn {
+        margin-left: 5px;
+        padding: 0 !important;
+        background-color: unset;
+
+        svg {
+            fill: $color-blue2;
+        }
+    }
+
+	&__user {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-right: 35px;
+		padding: 0;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0;
+
+		.ep-icon {
+			margin-left: 7px;
+    		font-size: 10px;
+		}
+
+		#{$root} {
+
+			&__circle-sign {
+				top: 0;
+				right: initial;
+				left: 30px;
+			}
+		}
+	}
+
+	&__user-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		width: 42px;
+		height: 42px;
+		border: 1px solid $color-gray-light;
+		border-radius: 50%;
+
+		.image {
+			width: 100%;
+			height: 100%;
+
+			@include object-fit(cover, center);
+
+			margin: 0 -100%;
+		}
+	}
+
+    &__user-info {
+        padding-left: 10px;
+    }
+
+	&__user-name {
+        display: flex;
+        align-items: center;
+		max-width: 100px;
+		color: $color-black-light;
+    }
+
+    &__user-name-txt {
+
+		@include text-nowrap;
+    }
+
+	&__user-group {
+        display: flex;
+        align-items: center;
+		font-size: 14px;
+		line-height: 19px;
+        background: transparent;
+	}
+
+	@include my-media(1200) {
+
+		&__item {
+			margin-right: 0;
+		}
+
+		&__user {
+			margin-right: 30px;
+		}
+
+		&__logout {
+			margin-left: 0;
+		}
+	}
+
+	@include my-media(991) {
+		display: none;
+	}
+}

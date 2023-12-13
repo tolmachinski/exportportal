@@ -1,0 +1,354 @@
+.edit-info-section {
+    $root: &;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+
+    &__title {
+        margin-bottom: 29px;
+
+        h1 {
+            margin-bottom: 15px;
+
+            @include h423024;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--fdr {
+            flex-direction: row;
+        }
+
+        &--mb-6 {
+            margin-bottom: 6px;
+        }
+
+        &--mb-29 {
+            margin-bottom: 29px;
+        }
+
+
+
+        .ep-label {
+
+            &--mb-9 {
+                margin: 0 0 9px;
+            }
+
+            &--mb-11 {
+                margin: 27px 0 11px;
+            }
+        }
+
+        .textcounter-wrapper {
+            padding-top: 3px;
+        }
+
+        .btn-file {
+            max-width: 125px;
+            padding: .563rem .75rem;
+        }
+
+        .multiple-epselect__input {
+            padding-top: 1px;
+            padding-left: 14px;
+        }
+
+        .txt-blue2 {
+            line-height: 14px;
+        }
+
+        .mce-statusbar .mce-container-body {
+            align-items: center;
+            padding-left: 15px;
+        }
+    }
+
+    &__company-link {
+        display: flex;
+        align-items: center;
+        line-height: 48px;
+        white-space: nowrap;
+
+        .formErrorContent {
+            white-space: normal;
+        }
+    }
+
+    &__textarea {
+
+        &.input-new {
+            line-height: 22px;
+        }
+
+        padding: 8px 14px 5px;
+
+        .textcounter-wrapper {
+            padding-top: 3px;
+        }
+    }
+
+    &__info {
+        margin-bottom: 7px;
+        margin-left: 5px;
+
+        &::before {
+            font-size: 15px;
+        }
+    }
+
+    &__row-checkbox {
+        align-self: flex-start;
+        margin-bottom: 0;
+
+        &+& {
+            margin-top: 6px;
+        }
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 578px;
+
+        &:first-child {
+            margin-right: 15px;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid $color-gray-light;
+            border-collapse: collapse;
+        }
+
+        tr,
+        td {
+            font-family: inherit;
+            border: 1px solid $color-gray-light;
+
+            @include textfield;
+        }
+
+        td {
+            height: 40.5px;
+            padding: 9px 10px 8.5px 14px;
+            vertical-align: middle;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 48.7%;
+    }
+
+    &__table-row {
+
+        &--h-81 {
+            height: 81px;
+            vertical-align: middle;
+        }
+    }
+
+    &__btn {
+        align-self: flex-end;
+        width: 100%;
+        max-width: 200px;
+        margin-top: 15px;
+    }
+
+    &__table-title {
+        width: 26.5%;
+        color: $color-gray;
+    }
+
+    &__table-value {
+        width: 50%;
+    }
+
+    @include my-media(1200) {
+
+        &__table-title {
+            white-space: nowrap;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 61px;
+
+        &__title {
+            margin-bottom: 28px;
+        }
+
+        &__row {
+            flex-direction: column;
+
+            &--fdr-tablet {
+                flex-direction: row;
+            }
+
+            .ep-label {
+
+                &--mb-9 {
+                    margin: 0 0 4px;
+                }
+            }
+
+            .multiple-epselect__input {
+                height: 50px;
+                line-height: 48px;
+            }
+
+            .txt-blue2 {
+                padding-top: 3px !important;
+                line-height: 16px;
+            }
+        }
+
+        #{$root} {
+
+            &__label {
+
+                &--mb-4 {
+                    margin: 0 0 4px;
+                }
+            }
+        }
+
+        &__column {
+            width: 48%;
+        }
+
+        &__table {
+            max-width: 100%;
+
+            &:first-child {
+                margin-bottom: 14px;
+                margin-right: 0;
+            }
+        }
+
+        &__table-title {
+            width: 18.6%;
+            white-space: normal;
+        }
+
+        &__table-row {
+
+            &--h-81 {
+                height: auto;
+            }
+        }
+
+        &__btn {
+            margin-top: 16px;
+            padding: .875rem .75rem;
+
+            &--mt-6 {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    @include phone-only {
+        margin-top: 51px;
+        padding: 0 7.5px;
+
+        &__row {
+
+            &--fdr-tablet {
+                flex-direction: column;
+            }
+
+            &.mb-27 {
+                margin-bottom: 26px !important;
+            }
+
+            &--mb-29 {
+                margin-bottom: 26px;
+            }
+
+            .multiple-epselect__input {
+                height: 40px;
+                line-height: 38px;
+            }
+        }
+
+        &__company-link {
+            line-height: 22px;
+        }
+
+        &__row-checkbox {
+
+            &+& {
+                margin-top: 10px;
+            }
+        }
+
+        &__column {
+            width: 100%;
+        }
+
+        &__title {
+            margin-bottom: 26px;
+
+            h1 {
+                margin-bottom: 7px;
+            }
+        }
+
+        &__table {
+
+            &:first-child {
+                margin-bottom: 13px;
+                margin-right: 0;
+            }
+
+            table {
+                border: none;
+            }
+
+            tr,
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            td {
+                height: 38px;
+                padding: 7px 10px 9.5px 14px;
+                border: none;
+            }
+
+            tr {
+                margin-bottom: 5px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__table-title {
+            color: $color-black-light;
+            background-color: $color-gray-lighter;
+        }
+
+        &__btn {
+            margin-top: 14px;
+            padding: .563rem .75rem;
+        }
+    }
+}

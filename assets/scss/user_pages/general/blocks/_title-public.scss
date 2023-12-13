@@ -1,0 +1,44 @@
+.title-public {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 65px;
+    padding-bottom: 15px;
+
+    &--pt {
+        padding-top: 0;
+    }
+
+    &__txt {
+        min-width: 0;
+        padding-right: 15px;
+        word-wrap: break-word;
+
+        &--26 {
+            font-size: 26px;
+            line-height: 28px;
+        }
+    }
+
+    &--sb {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--sidebar {
+        padding: 51px 0 31px;
+    }
+
+    @include my-media(991) {
+
+        &--sidebar {
+            padding-bottom: 16px;
+        }
+    }
+
+    @include phone-extra-small {
+        padding-bottom: 20px;
+    }
+}

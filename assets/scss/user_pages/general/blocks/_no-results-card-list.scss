@@ -1,0 +1,18 @@
+.no-results-card-list {
+    margin-top: 7px;
+
+    &__item {
+
+        @include p161614;
+
+        color: $color-gray;
+    }
+
+    @include my-media(991) {
+        margin-bottom: 17px;
+    }
+
+    @include phone-only {
+        margin: 3px 0 13px;
+    }
+}

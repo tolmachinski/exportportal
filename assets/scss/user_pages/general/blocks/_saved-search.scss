@@ -1,0 +1,66 @@
+.saved-search {
+	$root: &;
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid $color-gray-light;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+		}
+
+		&:only-child {
+			padding-bottom: 15px;
+		}
+	}
+
+	&__type {
+        margin-right: 10px;
+		padding-right: 10px;
+        font-size: 14px;
+	}
+
+	&__name {
+		min-width: 0;
+		color: $color-black;
+
+		&:hover {
+			#{$root} {
+
+				&__type {
+					color: $color-black;
+				}
+			}
+		}
+    }
+
+    &__top {
+        display: flex;
+    }
+
+	&__date {
+        padding-right: 10px;
+        font-size: 14px;
+		color: $color-gray;
+    }
+
+    @include my-media(425) {
+
+        &__type,
+        &__date {
+            font-size: 12px;
+        }
+
+        &__txt {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+

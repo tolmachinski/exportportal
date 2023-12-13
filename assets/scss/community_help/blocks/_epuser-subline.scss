@@ -1,0 +1,131 @@
+.epuser-subline {
+	position: absolute;
+	top: 70px;
+	right: 0;
+	left: 0;
+	display: none;
+	height: auto;
+	background: $color-white;
+    border-top: 1px solid $color-gray-light;
+	box-shadow: 0 10px 15px rgb(93 93 93 / 30%);
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $color-gray-light;
+	}
+
+	&__ttl {
+		width: 25%;
+		font-size: 18px;
+		font-weight: 500;
+		color: $color-black;
+
+		&:hover {
+			color: $color-black;
+		}
+	}
+
+	&__inner {
+		display: none;
+		max-width: 1170px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.nav-tabs {
+		flex: 1;
+		justify-content: space-between;
+		min-width: 0;
+		font-weight: normal;
+		border-bottom: none;
+
+		.btn {
+			width: 170px;
+		}
+
+		.nav-link {
+			display: inline-block;
+			height: 100%;
+			margin-right: 50px;
+			padding: 0;
+
+			@include text-nowrap;
+
+			line-height: 40px;
+			color: $color-black !important;
+
+			&--orange {
+				color: $color-orange !important;
+
+				&:hover,
+				&.active {
+					border-bottom: 2px solid $color-orange !important;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.tab-content {
+
+		>.tab-pane {
+            min-height: 363px;
+			max-height: 363px;
+			overflow-x: auto;
+		}
+
+		&--toggle {
+			margin-top: 30px;
+			padding-top: 0;
+		}
+
+        &--navigation {
+            margin-top: 20px;
+            padding-top: 0;
+        }
+	}
+
+	@include my-media(1200) {
+
+		.nav-tabs {
+
+			.nav-link {
+				max-width: 120px;
+				margin-right: 15px;
+			}
+		}
+	}
+
+	@include phone-only {
+		padding: 20px 5px 0 !important;
+
+        .tab-content {
+
+            &--navigation {
+                margin-top: 15px;
+            }
+        }
+
+		&__header {
+			position: relative;
+			flex-direction: column;
+			height: auto;
+			padding-bottom: 10px;
+		}
+
+		&__close {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		&__ttl {
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.epl-resources-faq {
+    padding: 70px 0;
+    background: $gray-lighter;
+
+    &__btns {
+        text-align: center;
+    }
+
+    &__categories {
+        width: 100%;
+        max-width: 830px;
+        margin: 0 auto;
+    }
+
+    .epl-desc-text-b {
+
+        &__text {
+            margin-bottom: 0;
+        }
+    }
+
+    .epl-faq-list {
+        margin: 20px auto 30px;
+    }
+
+    @include tablet-landscape-up {
+        padding: 60px 0;
+    }
+
+    @include my-media(991) {
+
+        .epl-faq-list {
+            margin: 15px auto 20px;
+        }
+    }
+
+    @include phone-only {
+        padding: 50px 0;
+
+        .epl-desc-text-b {
+
+            &__ttl {
+                margin-bottom: 13px;
+            }
+        }
+    }
+}

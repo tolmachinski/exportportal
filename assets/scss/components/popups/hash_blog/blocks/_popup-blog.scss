@@ -1,0 +1,67 @@
+.popup-blog {
+    z-index: 10;
+    max-width: 408px;
+    padding: 30px;
+    background-color: $color-white;
+    border: 1px solid $color-black;
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__close {
+        font-size: 16px;
+        color: $color-black;
+    }
+
+    &__sub-title {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: flex-start;
+        width: 50% !important;
+        cursor: pointer;
+    }
+
+    &__list-name {
+
+        @include text-nowrap;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10px;
+    }
+
+    &__sendtext {
+        font-size: 14px;
+    }
+
+    @include my-media(480) {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+
+        &__actions {
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,565 @@
+/*#region glossary*/
+.gl-header {
+	position: relative;
+	padding-top: 110px;
+
+	&__headline {
+		font-size: 60px;
+		font-weight: 300;
+		line-height: 63px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 12px;
+
+		span {
+			display: block;
+			margin: 0 auto;
+			font-size: 60px;
+			line-height: 82px;
+			letter-spacing: 1.2px;
+		}
+	}
+
+	&__container {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 1530px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&__info {
+		z-index: 1;
+		padding-top: 9px;
+		position: relative;
+	}
+
+	&__subline {
+		font-size: 20px;
+		max-width: 450px;
+		line-height: 30px;
+		text-align: center;
+		margin: 27px auto 0;
+		letter-spacing: 0.4px;
+	}
+
+	&__background {
+		top: 0;
+		z-index: 0;
+		width: 100%;
+		height: 870px;
+		position: absolute;
+		background: linear-gradient(white, rgba(255, 255, 255, 0.15)), url("../img/handshake.jpg") no-repeat 25% 100%;
+		background-size: cover;
+	}
+
+	&__video {
+		z-index: 1;
+		width: 100%;
+		height: 515px;
+		max-width: 970px;
+		position: relative;
+		margin: 191px auto 0;
+	}
+
+	@media only screen and (min-width: 1199px) {
+		&__headline {
+			margin-left: 8px;
+			line-height: 70px;
+
+			span {
+				font-size: 72px;
+				max-width: 770px;
+				line-height: 82px;
+				letter-spacing: 1.44px;
+
+				&:first-of-type {
+					padding-top: 8px;
+					padding-left: 12px;
+				}
+
+				&:last-of-type {
+					padding-top: 3px;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		&__video {
+			height: calc(0px + 51.9677093845vw);
+		}
+	}
+
+	@include phone-only{
+		&__headline{
+			font-size: 30px;
+			line-height: 43px;
+
+			span {
+				font-size: 40px;
+				line-height: 42px;
+				margin-top: 15px;
+			}
+		}
+
+		&__background {
+			height: 725px;
+		}
+	}
+
+	@include phone-extra-small{
+		&__headline{
+
+			span {
+				font-size: 33px;
+			}
+		}
+	}
+}
+
+.gl-what {
+	$this: &;
+	padding-top: 113px;
+
+	&__headline {
+		font-size: 60px;
+		font-weight: 300;
+		line-height: 63px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 12px;
+
+		span {
+			display: block;
+			margin: 0 auto;
+			font-size: 60px;
+			line-height: 82px;
+			letter-spacing: 1.2px;
+		}
+	}
+
+	&__headline {
+		font-weight: 300;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 12px;
+
+		span {
+			display: block;
+			margin: 0 auto;
+			letter-spacing: 1.2px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		height: 366px;
+		margin-top: 60px;
+
+		&:last-of-type{
+			#{$this}__info {
+				padding-top: 0;
+				padding-left: 80px;
+			}
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		max-width: 570px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 15px;
+		padding-left: 74px;
+		padding-right: 60px;
+		padding-right: 90px;
+		width: calc(100% - 570px);
+	}
+
+	&__title {
+		font-size: 26px;
+		font-weight: 500;
+		line-height: 36px;
+		letter-spacing: 0;
+	}
+
+	&__text {
+		font-size: 18px;
+		margin-top: 20px;
+		line-height: 32px;
+		letter-spacing: 0.36px;
+	}
+
+	@media only screen and (min-width: 1199px) {
+		&__image {
+			max-width: 400px;
+		}
+
+		&__info {
+			padding-left: 15px;
+			padding-right: 15px;
+			width: calc(100% - 400px);
+		}
+
+		&__row:last-of-type{
+			#{$this}__info {
+				padding-top: 0;
+				padding-left: 15px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		&__image {
+			max-width: 40%;
+		}
+
+		&__info {
+			width: auto;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&__row:last-of-type{
+			#{$this}__info {
+				padding-top: 0;
+				padding-left: 15px;
+			}
+		}
+	}
+
+	@include phone-only{
+		&__headline{
+			font-size: 30px;
+			line-height: 43px;
+
+			span {
+				font-size: 40px;
+				line-height: 42px;
+				margin-top: 15px;
+			}
+		}
+
+		&__row {
+			height: auto;
+			flex-direction: column;
+
+			&:first-of-type{
+				#{$this}{
+					&__image {
+						order: 2;
+					}
+
+					&__info {
+						padding-top: 0;
+						padding-left: 0;
+					}
+				}
+			}
+		}
+
+		&__image {
+			max-width: 100%;
+		}
+
+		&__info {
+			width: 100%;
+			padding: 0 0 15px 0;
+		}
+	}
+}
+
+.gl-discover {
+	padding-top: 100px;
+
+	&__headline {
+		font-size: 60px;
+		font-weight: 300;
+		line-height: 63px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 12px;
+
+		span {
+			display: block;
+			margin: 0 auto;
+			font-size: 60px;
+			line-height: 82px;
+			letter-spacing: 1.2px;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 140px;
+		margin-top: 48px;
+	}
+
+	&__column {
+		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 33.3%;
+	}
+
+	&__abbreviation {
+		font-size: 40px;
+		line-height: 50px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+	}
+
+	&__title {
+		font-size: 20px;
+		margin-top: 12px;
+		line-height: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.4px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 22px;
+		margin-top: 18px;
+		padding: 0 50px;
+		text-align: center;
+	}
+
+	&__link-row {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__link {
+		color: #3498db;
+		font-size: 16px;
+		display: inline-block;
+		margin: 23px 0 40px;
+		letter-spacing: 0.32px;
+
+		&:after {
+			content: "";
+			padding: 4px;
+			margin-left: 8px;
+			border: solid #3498db;
+			display: inline-block;
+			border-width: 0 2px 2px 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__opacity {
+		opacity: 0.5;
+	}
+
+	@media only screen and (min-width: 1199px) {
+		&__headline {
+			padding-left: 12px;
+
+			span {
+				padding-right: 11px;
+			}
+		}
+
+		&__docs {
+			padding-left: 200px;
+		}
+
+		&__contacts {
+			padding-right: 200px;
+		}
+	}
+
+    @include my-media(991) {
+        padding-top: 70px;
+    }
+
+	@include phone-only{
+		&__headline{
+			font-size: 30px;
+			line-height: 43px;
+
+			span {
+				font-size: 40px;
+				line-height: 42px;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	@include phone-extra-small{
+		&__headline{
+			span {
+				font-size: 35px;
+			}
+		}
+	}
+}
+
+.gl-register {
+	padding-top: 126px;
+	padding-bottom: 653px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("../img/meeting.jpg");
+
+	&__headline {
+		font-size: 60px;
+		font-weight: 300;
+		line-height: 63px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 12px;
+
+		span {
+			display: block;
+			margin: 0 auto;
+			font-size: 60px;
+			line-height: 82px;
+			letter-spacing: 1.2px;
+		}
+	}
+
+	&__subline {
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.45px;
+		margin: 20px auto 83px;
+		text-transform: uppercase;
+	}
+
+	&__column {
+		width: calc(25% - 30px);
+		text-align: center;
+		margin: 15px;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 26px;
+		font-weight: 500;
+		margin-top: 15px;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+	}
+
+	&__text {
+		margin-top: 10px;
+		line-height: 20px;
+		color: $color-black;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1040px;
+	}
+
+	&__link {
+		width: 100%;
+		max-width: 360px;
+		height: 70px;
+		margin: 43px auto 0;
+
+		.btn {
+			width: 100%;
+            padding: rem(30px) rem(45px);
+            font-weight: 500;
+            font-size: rem(16px);
+            text-transform: uppercase;
+            white-space: normal;
+		}
+	}
+
+	@media only screen and (min-width: 1199px) {
+		&__text {
+			max-width: 86%;
+			margin: 10px auto;
+		}
+
+		&__headline {
+			margin-left: 20px;
+		}
+
+		&__subline {
+			padding-left: 30px;
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		&__column {
+			width: calc(50% - 30px);
+		}
+
+        &__link {
+            .btn {
+                width: 100%;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+	}
+
+	@include phone-only{
+		padding-bottom: 50px;
+		background-image: none;
+
+		&__headline{
+			font-size: 30px;
+			line-height: 43px;
+
+			span {
+				font-size: 40px;
+				line-height: 42px;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	@include phone-extra-small{
+		&__column {
+			width: calc(100% - 30px);
+		}
+
+		&__headline {
+			letter-spacing: 7px;
+		}
+	}
+}
+/*#endregion glossary*/

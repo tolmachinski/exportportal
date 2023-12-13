@@ -1,0 +1,11 @@
+.ep-matchmaking-section {
+    margin: 70px auto;
+
+    @include my-media(991) {
+        margin: 60px auto;
+    }
+
+    @include phone-only {
+        margin: 50px auto;
+    }
+}

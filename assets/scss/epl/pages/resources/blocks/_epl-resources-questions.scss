@@ -1,0 +1,225 @@
+.epl-resources-questions {
+    margin-top: 47px;
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 830px;
+        margin: 0 auto 12px;
+        padding: 26px 28px;
+        border: 2px solid $gray-light;
+        border-radius: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__inner {
+        overflow: hidden;
+        width: 100%;
+        margin-left: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $black-light;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 7px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $black;
+        transition: color .15s linear;
+
+        &:hover {
+            color: $blue-hover;
+        }
+    }
+
+    &__row,
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__user-img {
+        display: block;
+        width: 75px;
+        height: 75px;
+        margin-top: 2px;
+        border-radius: 50%;
+
+        &--mobile {
+            display: none;
+        }
+    }
+
+    &__user-name {
+        display: block;
+        margin-right: 5px;
+        color: $black-light;
+
+        @include text-nowrap;
+
+        transition: color .15s linear;
+
+        &:hover {
+            color: $blue-hover;
+        }
+    }
+
+    &__ask-date {
+        color: $gray;
+    }
+
+    &__description {
+        margin: 7px 0;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    &__category {
+        max-width: calc(50% - 50px);
+        margin-top: 5px;
+
+        @include text-nowrap;
+    }
+
+    &__additional {
+        margin-right: 5px;
+        color: $gray;
+    }
+
+    &__country {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            margin: 1px 0 0 10px;
+            background: $gray-light;
+            border-radius: 50%;
+        }
+    }
+
+    &__country-flag {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+    }
+
+    &__country-name {
+        max-width: 220px;
+        margin: 5px 0 0 5px;
+
+        @include text-nowrap;
+    }
+
+    &__replies-count {
+        display: block;
+        margin: 5px 0 0 auto;
+        color: $gray;
+        transition: color .15s linear;
+
+        &:hover {
+            color: $blue-hover;
+        }
+    }
+
+    &__btns {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    @include my-media(991) {
+         margin-top: 27px;
+
+        &__user-img {
+            width: 55px;
+            height: 55px;
+        }
+
+        &__country-name {
+            max-width: 200px;
+        }
+    }
+
+    @include phone-only {
+
+        &__inner {
+            margin-left: 0;
+        }
+
+        &__item {
+            margin-bottom: 10px;
+            padding: 18px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__info {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 200px;
+            margin-left: 10px;
+        }
+
+        &__user-img {
+            width: 40px;
+            height: 40px;
+
+            &--desktop {
+                display: none;
+            }
+
+            &--mobile {
+                display: block;
+            }
+        }
+
+        &__ask-date {
+            margin-top: 2px;
+        }
+
+        &__description {
+            margin-top: 14px;
+        }
+
+        &__category {
+            max-width: calc(100% - 180px);
+        }
+
+        &__country-name {
+            display: none;
+        }
+
+        &__btns {
+            margin-top: 20px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__replies-count {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        &__category {
+            max-width: calc(100% - 50px);
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@import "./../../../import/guideline/fonts-guideline";
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    background: $color-gray-lighter;
+
+    &--detail {
+        margin: 50px 0;
+    }
+
+    &__content-wrap {
+        max-width: 480px;
+        padding: 0 30px;
+    }
+
+    &__ttl {
+
+        @include h262018;
+    }
+
+    &__sub-ttl {
+        margin-top: 4px;
+
+        @include p181816;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        max-width: fit-content;
+        margin-top: 8px;
+
+        @include p181816(true);
+
+        color: $color-blue2;
+
+        svg {
+            margin-left: 6px;
+            fill: $color-blue2;
+        }
+
+        &:hover {
+            color: $color-blue2;
+            text-decoration: underline;
+        }
+    }
+
+    &__img-wrap {
+
+        .image {
+            width: 550px;
+            height: 150px;
+
+            @include object-fit(cover);
+        }
+    }
+
+    @include my-media(1300) {
+
+        &__img-wrap {
+
+            .image {
+                width: 430px;
+            }
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__content-wrap {
+            max-width: 100%;
+        }
+
+        &__img-wrap {
+
+            .image {
+                width: 550px;
+            }
+        }
+    }
+
+    @include my-media(900) {
+
+        &__img-wrap {
+            max-width: 330px;
+
+            .image {
+                width: 330px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        &--detail {
+            margin: 28px 0;
+        }
+
+        &__content-wrap {
+            padding: 0 15px;
+        }
+    }
+
+    @include my-media(650) {
+
+        &__img-wrap {
+            width: 100%;
+            max-width: 250px;
+
+            .image {
+                width: 250px;
+            }
+        }
+    }
+
+    @include my-media(575) {
+        flex-direction: column;
+        align-items: initial;
+
+        &__content-wrap {
+            max-width: 100%;
+            padding: 15px 15px 13px;
+        }
+
+        &__sub-ttl {
+            margin-top: 7px;
+        }
+
+        &__img-wrap {
+            max-width: 100%;
+
+            .image {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    }
+
+    @include my-media(475) {
+
+        &__img-wrap {
+
+            .image {
+                height: 140px;
+            }
+        }
+    }
+
+    @include my-media(425) {
+
+        &__img-wrap {
+
+            .image {
+                height: 120px;
+            }
+        }
+    }
+}

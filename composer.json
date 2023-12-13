@@ -1,0 +1,165 @@
+{
+    "name": "uls/exportportal",
+    "description": "Exportportal",
+    "type": "project",
+    "authors": [
+        {
+            "name": "house88",
+            "email": "cravciucandy@gmail.com"
+        }
+    ],
+    "repositories": {
+        "ep-developers": {
+            "type": "composer",
+            "url": "https://gitlab.usalinksystem.net/api/v4/group/33/-/packages/composer"
+        },
+        "djAjax": {
+            "type": "vcs",
+            "url": "https://github.com/djAjax/graphql-qb"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "gitlab-domains": ["gitlab.usalinksystem.net"],
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "ep-developers/composer-plugin": true
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-amqp": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-sodium": "*",
+        "aws/aws-sdk-php": "^3.107",
+        "defuse/php-encryption": "^2.2",
+        "doctrine/collections": "^1.4",
+        "doctrine/dbal": "^2.10",
+        "doctrine/instantiator": "^1.0",
+        "doctrine/migrations": "^3.0",
+        "doctrine/persistence": "^2.1",
+        "docusign/esign-client": "^5.7",
+        "endroid/qr-code": "^4.1",
+        "ep-developers/chat-contracts": "^1.4",
+        "ep-developers/composer-plugin": "^1.0",
+        "ep-developers/doctrine-bridge": "^1.0",
+        "ep-developers/enum-polifyll": "^1.0",
+        "ep-developers/filesystem-bridge": "^0.4",
+        "ep-developers/filesystem-contracts": "^1.1",
+        "ep-developers/legacy-mailer": "^1.1",
+        "ep-developers/legacy-notifier": "^1.0",
+        "ep-developers/mailer-bridge": "^1.0",
+        "ep-developers/matrix-client": "^1.0",
+        "ep-developers/matrix-notifier": "^1.0",
+        "ep-developers/notifier-bridge": "^1.0",
+        "ep-developers/symfony-messenger-bridge": "^1.4",
+        "fnash/graphql-qb": "^1.1",
+        "giggsey/libphonenumber-for-php": "^8.11",
+        "google/apiclient": "^2.0",
+        "guzzlehttp/guzzle": "^6.4",
+        "guzzlehttp/psr7": "^1.5",
+        "himik/simple-graphql-query-builder": "^0.2.4",
+        "hoa/file": "1.17.07.11",
+        "hoa/mime": "~3.0",
+        "html2text/html2text": "^4.2",
+        "intervention/image": "^2.5",
+        "jaybizzle/crawler-detect": "^1.2",
+        "kevinrob/guzzle-cache-middleware": "^3.2",
+        "lcobucci/jwt": "^3.3",
+        "league/iso3166": "^2.1",
+        "league/oauth2-client": "^2.6",
+        "league/oauth2-google": "^3.0",
+        "moneyphp/money": "^3.2",
+        "monolog/monolog": "^2.2",
+        "mpdf/mpdf": "^8.0",
+        "nesbot/carbon": "^2.38",
+        "paragonie/halite": "^4.6",
+        "paypal/paypal-checkout-sdk": "^1.0",
+        "php-imap/php-imap": "^3.0",
+        "phpfastcache/phpfastcache": "^7.1",
+        "phpmailer/phpmailer": "^6.1",
+        "phpoffice/phpspreadsheet": "^1.13.0",
+        "picqer/php-barcode-generator": "^2.1",
+        "psr/log": "^1.1",
+        "psr/simple-cache": "^1.0",
+        "ramsey/uuid": "^4.1",
+        "samdark/sitemap": "^2.2",
+        "sebastian/diff": "^4.0",
+        "spatie/fractalistic": "^2.9",
+        "spatie/image-optimizer": "^1.2",
+        "spatie/schema-org": "^2.12",
+        "stripe/stripe-php": "^7.14",
+        "symfony/amqp-messenger": "^5.2",
+        "symfony/asset": "^5.2",
+        "symfony/cache": "^5.2",
+        "symfony/config": "^5.2",
+        "symfony/console": "^5.2",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/doctrine-messenger": "^5.2",
+        "symfony/dotenv": "^5.2",
+        "symfony/filesystem": "^5.2",
+        "symfony/http-foundation": "^5.2",
+        "symfony/http-kernel": "^5.2",
+        "symfony/lock": "^5.2",
+        "symfony/messenger": "^5.2",
+        "symfony/mime": "^5.2",
+        "symfony/monolog-bridge": "^5.2",
+        "symfony/notifier": "^5.2",
+        "symfony/process": "^5.2",
+        "symfony/property-access": "^5.2",
+        "symfony/property-info": "^5.2",
+        "symfony/serializer": "^5.2",
+        "symfony/string": "^5.2",
+        "symfony/web-link": "^5.2",
+        "symfony/yaml": "^5.2",
+        "zohocrm/php-sdk-archive": "^2.2"
+    },
+    "require-dev": {
+        "jdorn/sql-formatter": "^1.2",
+        "phpunit/phpunit": "^9.5",
+        "symfony/error-handler": "^5.0",
+        "symfony/var-dumper": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "add_classes/"
+        },
+        "classmap": [
+            "tinymvc/myapp/controllers",
+            "tinymvc/myapp/models",
+            "tinymvc/myapp/plugins",
+            "tinymvc/sysfiles"
+        ],
+        "files": [
+            "tinymvc/myapp/plugins/tinymvc_script_http.php",
+            "add_classes/validator.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4" : {
+            "App\\Test\\": "tests/"
+        },
+        "files": [
+            "tinymvc/myapp/plugins/tinymvc_script_input.php",
+            "tinymvc/myapp/plugins/tinymvc_script_output.php"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit",
+        "post-root-package-install": [
+            "@php bin/console app:create-key -O \"tinymvc/myapp/configs/crypto\" -N \"app.key\" -S 1"
+        ],
+        "elastic": [
+            "@php elasticsearch/run.php delete all",
+            "@php elasticsearch/run.php mappings",
+            "@php elasticsearch/run.php index"
+        ]
+    },
+    "extra": {
+        "exportportal": {
+            "app-dir": "tinymvc/myapp"
+        }
+    }
+}

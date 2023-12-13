@@ -1,0 +1,42 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import '../import/_variables';
+
+@import '../../import/guideline/_fonts-guideline';
+
+// #region header desktop
+
+@import './blocks/_header-main-overlay2';
+
+@import './blocks/_ep-header';
+
+@import './blocks/_ep-header-top';
+
+@import './blocks/_ep-header-fixed-top';
+
+@import "./blocks/_user-preferences";
+
+@import "./../../components/navbar-search-form/blocks/_autocomplete";
+
+@import './blocks/_ep-header-bottom';
+
+@import './blocks/_ep-header-search';
+
+@import "./blocks/_breadcrumbs";
+
+// #endregion header desktop
+
+// #region header mobile
+
+@import './blocks/_mep-header-bottom';
+
+@import './blocks/_mep-header-bottom-nav';
+
+@import "./blocks/_menu-burger";
+
+@import './blocks/_mep-header-search-menu';
+
+// #endregion header mobile
+

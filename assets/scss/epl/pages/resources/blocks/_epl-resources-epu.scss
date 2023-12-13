@@ -1,0 +1,56 @@
+.epl-resources-epu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 70px;
+    padding: 15px 0;
+    text-align: center;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $zIndexBg;
+        width: 100%;
+        height: 100%;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .epl-desc-text-b {
+
+        &__text {
+            margin-bottom: 17px;
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        .epl-desc-text-b {
+
+            &--mw-650 {
+                max-width: 650px;
+            }
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 60px;
+    }
+
+    @include phone-only {
+        margin-top: 50px;
+    }
+}

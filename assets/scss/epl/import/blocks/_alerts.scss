@@ -1,0 +1,64 @@
+.default-alert-b,
+.warning-alert-b,
+.error-alert-b,
+.info-alert-b,
+.success-alert-b {
+	position: relative;
+	padding: 13px 16px 13px 47px;
+    font-size: 16px;
+    line-height: 24px;
+	color: $black;
+
+	> .ep-icon {
+		position: absolute;
+		top: 16px;
+		left: 20px;
+    }
+
+    @include phone-only {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 22px;
+
+        > .ep-icon {
+            display: none;
+        }
+    }
+
+    .ep-tinymce-text {
+
+        ul:not(.products),
+        ol:not(.products) {
+
+            li {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.default-alert-b {
+	background: $gray-lighter;
+}
+
+.warning-alert-b {
+	background: $orange-light;
+}
+
+.error-alert-b {
+	background: $red-light;
+}
+
+.info-alert-b {
+	background: $blue-light;
+}
+
+.success-alert-b {
+	background: $green-light;
+}
+
+.txt-alert-b {
+	font-size: 14px;
+	line-height: 18px;
+	color: $gray;
+}

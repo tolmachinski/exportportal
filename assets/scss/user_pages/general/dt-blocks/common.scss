@@ -1,0 +1,26 @@
+.dt-new {
+
+    @include my-media(1301, min) {
+
+        .dn-show-1300 {
+            display: none;
+        }
+    }
+
+    @include my-media(1300) {
+
+        .dn-hide-1300 {
+            display: none;
+        }
+    }
+}
+
+.dtable-all {
+
+    .dt-new {
+
+        &__date {
+            max-width: 100%;
+        }
+    }
+}

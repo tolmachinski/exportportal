@@ -1,0 +1,218 @@
+//== Colors
+$color-blue2: #19d9fc;
+$color-blue2-light: #3498db;
+
+// $color-blue2: #2181F8;
+// $color-blue2-light: #3498db;
+
+//$color-blue:			#3C81A3 !default;						// #3C81A3
+//$color-blue-light:		lighten($color-blue, 30%) !default;		// #9dc7db
+//$color-blue-lighter:	lighten($color-blue, 50%) !default;		// #e8f2f6
+//$color-blue-dark:		darken($color-blue, 10%) !default;		// #2e637e
+//$color-blue-darker:		darken($color-blue, 20%) !default;		// #214658
+
+$color-blue:			#0f6c94 !default;						// #0f6c94
+$color-blue-light:		#2193be;								// #2193be
+$color-blue-lighter:	lighten($color-blue, 50%) !default;		// #abe0f7
+$color-blue-dark:		darken($color-blue, 10%) !default;		// #0a4a66
+$color-blue-darker:		darken($color-blue, 20%) !default;		// #062837
+
+$color-lblue:			#5bc0de !default;						// #5bc0de
+$color-lblue-light:		#baf4fe !default;	// #baf4fe
+$color-lblue-lighter:	lighten($color-lblue, 50%) !default;	// #white
+$color-lblue-dark:		darken($color-lblue, 10%) !default;		// #31b0d5
+$color-lblue-darker:	darken($color-lblue, 20%) !default;		// #2390b0
+
+//$color-green:			#38971f !default;						// #38971f
+$color-green:			#0fd764 !default;						// #38971f
+$color-green-light:		#b7f3d0 !default;	// #b7f3d0
+$color-green-lighter:	lighten($color-green, 50%) !default;	// #ccf3c2
+$color-green-dark:		darken($color-green, 10%) !default;		// #286d16
+$color-green-darker:	darken($color-green, 20%) !default;		// #19420e
+
+$color-orange2:			#fdc101 !default;						// #f0ad4e
+$color-orange:			#f8b202 !default;						// #f0ad4e
+$color-orange-nlight:	#ffcd00 !default;						// #ffcd00
+$color-orange-light:	#fde8b3 !default;	// #fde8b3
+$color-orange-lighter:	lighten($color-orange, 50%) !default;	// #white
+$color-orange-dark:		darken($color-orange, 10%) !default;	// #ec971f
+$color-orange-darker:	darken($color-orange, 20%) !default;	// #c77c11
+
+$color-brown:			#655538 !default;						// #655538
+$color-brown-light:		#FFD488 !default;						// #FFD488
+
+$color-yellow:			#efef58 !default;						// #efef58
+$color-yellow-light:	lighten($color-yellow, 30%) !default;	// #fcfce4
+$color-yellow-lighter:	lighten($color-yellow, 50%) !default;	// #white
+$color-yellow-dark:		darken($color-yellow, 10%) !default;	// #f3f387
+$color-yellow-darker:	darken($color-yellow, 20%) !default;	// #f8f8b5
+
+$color-red:				#ff3644 !default;						// #a94442
+$color-red-light:		#ffc2c7 !default;		// #ffc2c7
+$color-red-lighter:		lighten($color-red, 50%) !default;		// #f9f1f1
+$color-red-dark:		darken($color-red, 10%) !default;		// #c0605e
+$color-red-darker:		darken($color-red, 20%) !default;		// #ce8483
+
+// $color-gray-darker:     lighten($color-black, 13.5%) !default;	// #222
+// $color-gray-dark:       lighten($color-black, 20%) !default;	// #333
+// $color-gray:            #9a9a9a !default;	// #9a9a9a
+// $color-gray-light:      #bdbdbd !default;	// #bdbdbd
+// $color-gray-nlight: 	lighten($color-black, 80%) !default;	// #cccccc
+// $color-gray-nnlight: 	#dddddd !default;						// #dddddd
+// $color-gray-lighter:    lighten($color-black, 93.5%) !default;	// #eee
+// $color-gray-nnlighter:   #fafafa !default;
+// $color-gray-nlighter:   #fbfbfb !default;
+
+$color-black:           #000000 !default;
+$color-gray:            #9e9e9e !default;	// text
+$color-gray-light:      #cccccc !default;	// border
+$color-gray-lighter:    #f2f2f2 !default;	// background
+
+// $color-gray-darker:     lighten($color-black, 13.5%) !default;	// #222
+// $color-gray-dark:       lighten($color-black, 20%) !default;	// #333
+// $color-gray-nlight: 	lighten($color-black, 80%) !default;	// #cccccc
+// $color-gray-nnlight: 	#dddddd !default;						// #dddddd
+// $color-gray-nnlighter:   #fafafa !default;
+// $color-gray-nlighter:   #fbfbfb !default;
+
+$color-google-plus:     #DC4E41;
+$color-facebook:        #3B5998;
+$color-twitter:         #55ACEE;
+$color-pinterest:       #CB2027;
+$color-linkedin:        #0077B5;
+$color-skype:           #12A5F4;
+$color-youtube:         #b31217;
+$color-whatsapp:        #2ab200;
+
+$color-instagram:       radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+						radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+						radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+						radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+						radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+						radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+						radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+						linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+
+
+$color-white:			#ffffff !default;						// #ffffff
+
+//bootstrap variables
+$brand-primary:    $color-blue2 !default;
+
+$border-radius-base:        0 !default;
+$border-radius-large:       0 !default;
+$border-radius-small:       0 !default;
+
+$blue: $color-blue2 !default;
+$gray-200: $color-gray-lighter !default;
+//END bootstrap variables
+
+//bootstrap variables 4.0.0
+$border-radius:          0 !default;
+$border-radius-lg:       0 !default;
+$border-radius-sm:       0 !default;
+
+$nav-link-padding-y:            .2rem !default;
+
+$input-btn-padding-y:       .875rem !default;
+$input-btn-padding-x:       .75rem !default;
+$input-btn-line-height:     1.25 !default;
+
+$input-placeholder-color:        $color-gray !default;
+
+//EOF bootstrap variables 4.0.0
+
+//bootstrap variables 3.3.7 grid
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+//EOF bootstrap variables 3.3.7 grid
+

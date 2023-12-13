@@ -1,0 +1,83 @@
+.account-registration {
+    $root: &;
+
+    display: flex;
+
+    &__content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    &__inner {
+        max-width: 475px;
+        margin: 0 auto;
+        padding-left: 5px;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 30px 0 50px;
+
+        .btn {
+            width: 116px;
+        }
+    }
+
+    &__heading-txt {
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 22px;
+        color: $black-light;
+    }
+
+    &__main-title {
+        margin-bottom: 32px;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+    }
+
+    .popover-password {
+        bottom: 50px;
+    }
+
+    @include desktop-big-up {
+
+        &__heading {
+            margin-right: 228px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__heading {
+            display: none;
+        }
+
+        &__inner {
+            margin-bottom: 60px;
+            padding: 0 2px;
+        }
+
+        &__main-title {
+            font-size: 44px;
+            line-height: 50px;
+        }
+    }
+
+    @include phone-only {
+
+        &__inner {
+            margin-bottom: 50px;
+            padding: 0;
+        }
+
+        &__main-title {
+            margin-bottom: 20px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+}

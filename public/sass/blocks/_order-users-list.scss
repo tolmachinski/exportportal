@@ -1,0 +1,127 @@
+.order-users-list{
+	height: 705px;
+
+	&__item{
+		padding: 20px;
+		border-bottom: 1px solid $color-gray-light;
+		cursor: pointer;
+
+		&:hover,
+		&.active{
+			background: $color-gray-lighter;
+		}
+
+		&--p0{
+			padding: 0;
+			border: none;
+		}
+	}
+
+	&__img{
+		width: 100px;
+		height: 100px;
+		margin-right: 19px;
+		background: $color-white;
+
+		.link{
+			height: 100%;
+		}
+	}
+
+	&__detail{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 100px;
+	}
+
+	&__name{
+		font-weight: 500;
+	}
+
+	&__name-status{
+		position: relative;
+		padding-right: 20px;
+		font-weight: 500;
+
+		.ep-icon{
+			position: absolute;
+			top: 3px;
+    		right: 2px;
+			color: $color-gray;
+		}
+	}
+
+	&__number{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 500;
+
+		.ep-icon{
+			color: $color-gray;
+		}
+	}
+
+	&__price{
+		font-weight: 500;
+	}
+
+	&__date{
+		color: $color-gray;
+	}
+
+	&__company{
+		@include text-nowrap;
+		color: $color-gray;
+
+		.link{
+			color: $color-black;
+		}
+	}
+
+	&__line{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__message{
+		position: relative;
+		height: 26px;
+		margin-top: 5px;
+		padding-right: 18px;
+		overflow: hidden;
+
+		&.active {
+			height: auto;
+		}
+
+		.ep-icon{
+			position: absolute;
+			bottom: 0;
+			right: -5px;
+			padding: 5px;
+		}
+	}
+
+	@include ie-only{
+		&__item{
+			> .flex-card{
+				position: relative;
+
+				> .dropdown{
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+    }
+
+    @include my-media(425){
+        &__item{
+            padding: 10px 5px;
+        }
+    }
+}

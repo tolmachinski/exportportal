@@ -1,0 +1,40 @@
+
+.what-is-epp,
+.how-it-works,
+.gain-access,
+.become-partner,
+.still-questions,
+.what-is-ep {
+    display: flex;
+    overflow: hidden;
+
+    @include retina-display(1.5) {
+
+        img {
+            image-rendering: auto;
+        }
+    }
+}
+
+.how-it-works,
+.gain-access,
+.become-partner,
+.still-questions {
+    margin: 50px auto;
+
+    @include my-media(768, "min") {
+        margin: 70px auto;
+    }
+
+    @include my-media(992, "min") {
+        margin: 100px auto;
+    }
+}
+
+.what-is-epp,
+.how-it-works,
+.gain-access,
+.become-partner,
+.what-is-ep {
+    flex-direction: column;
+}

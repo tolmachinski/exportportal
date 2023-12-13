@@ -1,0 +1,74 @@
+.filter-control-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+
+    &--empty {
+        display: none;
+    }
+
+    @include my-media(1200) {
+        align-items: center;
+
+        &--empty-results {
+            align-items: baseline;
+
+            .filter-btn {
+                display: none;
+            }
+
+            .sort-bar {
+
+                &::before {
+                    content: none;
+                }
+            }
+        }
+
+        &--empty {
+            display: flex;
+        }
+    }
+
+    @include phone-only {
+        margin-bottom: 13px;
+
+        &--empty {
+            margin-bottom: 15px;
+        }
+
+        &--empty-results {
+            align-items: center;
+
+            .filter-btn {
+                display: flex;
+                order: 3;
+                margin-left: 15px;
+            }
+
+            .sort-bar {
+                order: 2;
+                margin-left: auto;
+            }
+        }
+    }
+
+    @include phone-extra-small {
+
+        &--empty-results {
+
+            .filter-result-counter {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .sort-bar {
+                justify-content: flex-start;
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+}

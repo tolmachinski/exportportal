@@ -1,0 +1,37 @@
+.doc-users{
+	&__item{
+		padding: 10px;
+	}
+
+	&__detail{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		flex: 1;
+		width: 100%;
+		min-width: 0;
+	}
+
+	&__input{
+		width: 80px !important;
+		margin-right: 10px;
+		margin-left: 10px;
+		text-align: center;
+	}
+
+	&__txt{
+		@include text-nowrap;
+    }
+
+    @include my-media(425){
+
+		&__txt{
+			width: 100%;
+			padding-bottom: 5px;
+		}
+
+		&__input{
+			margin-left: 0;
+		}
+	}
+}

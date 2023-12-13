@@ -1,0 +1,49 @@
+.public-heading-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 300px;
+    height: 100%;
+    background-color: rgb(255 255 255 / 90%);
+
+    &__link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        min-height: 45px;
+        padding: 0 50px;
+        color: $color-black;
+        cursor: pointer;
+
+        @include p181816;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-blue2;
+        }
+
+        &.active {
+            color: $color-white;
+            background-color: $color-blue2;
+        }
+    }
+
+    @include tablet-landscape-up {
+        min-width: 260px;
+
+        &__link {
+            padding: 0 20px 0 30px;
+        }
+    }
+
+    @include phone-only {
+        display: none;
+        width: auto;
+
+        &__link {
+            padding: 0 15px;
+        }
+    }
+}

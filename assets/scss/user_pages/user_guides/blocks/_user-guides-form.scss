@@ -1,0 +1,48 @@
+.user-guides-form {
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inputs-item {
+        width: 300px;
+
+        .input-label {
+            margin-top: 0;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    @include my-media(991) {
+
+        &__inputs-item {
+            width: 330px;
+        }
+    }
+
+    @include phone-only {
+        padding-top: 5px;
+
+        &__inputs {
+            display: block;
+        }
+
+        &__inputs-item {
+            width: 100%;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__btn {
+            margin-bottom: 4px;
+        }
+    }
+}

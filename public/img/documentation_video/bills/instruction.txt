@@ -1,0 +1,73 @@
+﻿1_bills_blocks
+exportportal.com/user_guide/popup_forms/show_doc/billing_doc?user_type=buyer
+1) Блок с фильтрацией
+Filter block 
+
+2) Блок со всеми статусами
+All statuses block
+
+3) Блок с отфильтроваными билами
+Block with filtered bills
+
+4) Блок с деталями била
+Block with bill's details
+
+----------------------------
+2_bills_filter
+1) Для поиска необходимого билла 
+выбираем из списка 
+интересующий статус и вводим номер билла
+To find the necessary bill, select the bill's status from the list and insert the bill's number
+
+2) езультат поиска отобразится 
+в колонке со списком биллов
+The result will be displayed in the list of bills column 
+
+------------------------------
+3_bill_actions
+1) Экшин увеличения времени 
+для оплаты била
+The action for extending time to pay for the bill
+
+2) Экшин просмотра/ скачивания 
+созданного инвойса
+The action for viewing/downloading the created invoice
+
+3) Экшин оплаты била всеми 
+доступными системами на сайте
+The action for paying the bill by all the available methods
+
+----------------------------
+4_bill_payd
+1) Выбор билла для оплаты
+Select the bill for paying
+
+2) Выбор экшина для оплаты
+Choose the action for paying
+
+3) Можно скачать/просмотреть 
+инвойс по выбранному билу
+You can view/download invoice on the selected bill
+
+4) Выбираем нужную нам оплату
+Choose the necessary payment method
+
+5) Просматриваем данные по биллу
+You can view the bill's details
+
+6) Вводим данные по оплате билла
+Insert the details of the payment
+
+7) Поддтверждаем оплату
+Confirm payment
+
+8) Просматриваем билл в новом 
+статусе "Оплачен"
+You can view the bill in the "Paid" status
+
+----------------------------
+5_bill_confirmed 
+1) После поддтверждения админом
+оплаченного била, наш билл 
+переходит в новый статус "Confirmed"
+After the bill is verified by EP manager, the bill gets the status "Confirmed"

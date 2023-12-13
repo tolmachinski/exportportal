@@ -1,0 +1,33 @@
+.subscribe-benefits-form {
+    margin-top: 28px;
+
+    &__checkbox {
+        margin-bottom: 0;
+        padding-top: 10px;
+        font-weight: 400;
+    }
+
+    .btn {
+        min-width: 130px;
+    }
+
+    @include phone-only {
+        margin-top: 13px;
+
+        .input-group {
+            flex-direction: column;
+        }
+
+        input[type=text] {
+            width: 100%;
+        }
+
+        .input-group-btn {
+
+            .btn-dark {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+    }
+}

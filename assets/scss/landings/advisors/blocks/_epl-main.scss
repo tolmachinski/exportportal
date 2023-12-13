@@ -1,0 +1,22 @@
+.epl-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 195px 0 160px;
+
+	@media screen and (max-width: 1200px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 100px 0;
+		text-align: center;
+	}
+
+	@include phone-only {
+		padding: 75px 0;
+	}
+
+	@media screen and (max-width: 600px) {
+		padding: 50px 0;
+	}
+}

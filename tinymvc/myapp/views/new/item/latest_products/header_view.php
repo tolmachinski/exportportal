@@ -1,0 +1,1 @@
+<h1 class="events-tape__main-title">Latest items</h1>

@@ -1,0 +1,20 @@
+.categories-main-title {
+    margin-top: 50px;
+
+    @include h503826;
+
+    text-align: center;
+
+    @include my-media(991) {
+        margin-top: 28px;
+    }
+
+    @include phone-only {
+        margin-top: 25px;
+    }
+
+    @include my-media(359) {
+        max-width: 240px;
+        margin: -3px auto 0;
+    }
+}

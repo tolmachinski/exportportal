@@ -1,0 +1,28 @@
+.select-buy-dropdown{
+	display: flex;
+	align-items: center;
+	line-height: 35px;
+
+	&__img {
+		max-width: 35px;
+		max-height: 35px;
+        margin-right: 10px;
+
+        [src*=".svg"] {
+            width: 35px;
+		    height: 35px;
+        }
+	}
+
+	&__title{
+		flex: 1;
+		@include text-line-ellipsis(32);
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	&__price{
+		width: 70px;
+		text-align: right;
+	}
+}

@@ -1,0 +1,42 @@
+.cropper-preview{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    border: 1px solid $color-gray-light;
+
+    &__remove{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: $color-gray-lighter;
+        padding: 3px;
+
+        .link{
+            height: 16px;
+            width: 16px;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            color: $color-gray;
+
+            .ep-icon{
+                margin: 0;
+            }
+        }
+    }
+
+    &--product{
+        width: 130px;
+        height: 104px;
+    }
+}
+
+.cropper-preview-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    &__item{
+        padding: 5px;
+    }
+}

@@ -1,0 +1,58 @@
+.terms-tinymce-nav {
+	$root: &;
+
+	top: 0;
+	padding-top: 30px;
+
+	&__tll {
+		margin: 35px 0 20px;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 26px;
+	}
+
+	&__list-item {
+		display: flex;
+		margin-bottom: 15px;
+
+		.ep-icon {
+			margin-top: 3px;
+			margin-right: 20px;
+		}
+
+		.link {
+			font-size: 16px;
+			line-height: 26px;
+			color: $color-black;
+
+			&:hover {
+				color: $color-blue2;
+			}
+		}
+	}
+
+	&--modal {
+		position: relative;
+		padding-top: 0;
+
+		#{$root} {
+
+			&__tll {
+				margin-top: 0;
+				font-size: 24px;
+				line-height: 28px;
+			}
+		}
+	}
+
+	@include phone-only {
+		position: relative;
+		padding-top: 0;
+
+		&__tll {
+			margin-top: 0;
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+}

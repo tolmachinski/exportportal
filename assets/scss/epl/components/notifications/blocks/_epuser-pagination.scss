@@ -1,0 +1,51 @@
+.epuser-pagination {
+
+	a,
+	span {
+		float: left;
+		width: 40px;
+		margin-left: 5px;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 40px;
+		color: $black;
+		text-align: center;
+	}
+
+	a {
+
+		&:hover {
+			color: $white;
+			background: $blue;
+		}
+	}
+
+	.active {
+		color: $white;
+		background: $blue;
+	}
+
+	.ep-icon {
+		font-size: 12px;
+	}
+
+	@include phone-only {
+
+		a,
+		span {
+			width: 25px;
+			line-height: 25px;
+		}
+	}
+}
+
+.epuser-pagination-from {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 40px;
+
+	span {
+		padding: 0 5px;
+		color: $gray;
+	}
+}

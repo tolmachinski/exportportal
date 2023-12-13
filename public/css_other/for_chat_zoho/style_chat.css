@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+body{
+	font-family: 'Roboto', sans-serif!important;
+	font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body .zsiq_floatmain{
+	display: block!important;
+	width: 50px;
+	height: 50px;
+}
+
+div.fdbk_aln textarea,
+.gltr-srno,
+.cmtbx textarea,
+.semail.sqico-smailico,
+.smileydiv,
+.usrinpt .msgarea,
+div.sqfdbk.maskdiv{
+	border-radius: 0!important;
+}
+
+.siq_showload:after{
+	border-radius: 0!important;
+	background: #ffffff!important;
+}
+
+.siq_content .blur_userbg{
+	border-radius: 50%;
+}
+
+.siq_mprv .siqembed{
+	border-radius: 0;
+}
+
+.siq-chat-attender-name {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+#action_icons span {
+	min-width: auto;
+	padding: 0;
+	background: #fff;
+}
+
+#action_icons:before{
+	display: block;
+}
+
+.content .sqico-drpdwn a:focus,
+.msgarea:focus,
+input[type=text]:focus {
+	border-color: #000000;
+}
+
+.cmplogo {
+	margin-left: 0;
+}
+
+.chtcont [purpose=name] {
+	text-transform: lowercase;
+}
+
+.zsiq-newtheme header{
+	border-radius: 0;
+}
+
+.buble_bg .msgbx,
+.loadframe [themeid="9"] header:after,
+.siqc_edt,
+.win_close,
+[themeid="10"] header:after,
+header {
+	background: #2181F8;
+}
+
+.loadframe [themeid="9"] header:after,
+.loadframe header:before {
+	background: #2181F8;
+}
+
+.win_close{
+	right: 0;
+	border-radius: 0;
+}
+
+.siqembed {
+	border-radius: 0;
+}
+
+[themeid="10"] header:after {
+	box-shadow: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0
+}
+
+.content .info_banr {
+	padding: 10px;
+	line-height: 30px;
+	border-radius: 0;
+	background-color: #f0f0f0;
+	width: calc(100% - 20px);
+}
+
+textarea {
+    padding: 0 20px;
+	font-size: 16px;
+	border-radius: 0;
+	background-color: #ffffff;
+	border: solid 1px #000000;
+}
+
+textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 16px;
+  color: #cccccc;
+}
+textarea::-moz-placeholder { /* Firefox 19+ */
+  font-size: 16px;
+  color: #cccccc;
+}
+textarea:-ms-input-placeholder { /* IE 10+ */
+  font-size: 16px;
+  color: #cccccc;
+}
+textarea:-moz-placeholder { /* Firefox 18- */
+  font-size: 16px;
+  color: #cccccc;
+}
+
+textarea::placeholder {
+	font-size: 16px;
+	color: #cccccc;
+}
+
+.siqc_edt {
+	height: 50px;
+	width: 50px;
+	border-radius: 0;
+	box-shadow: 0;
+}
+
+.usrinpt .msgarea{
+	font-size: 16px;
+	color: #000000;
+}
+
+.usrinpt .msgarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	font-size: 16px;
+	color: #cccccc;
+}
+
+.usrinpt .msgarea:-moz-placeholder { /* Firefox 19+ */
+	font-size: 16px;
+	color: #cccccc;
+}
+
+.usrinpt .msgarea::-moz-placeholder { /* Firefox 18- */
+	font-size: 16px;
+	color: #cccccc;
+}
+
+.usrinpt .msgarea:-ms-input-placeholder { /* IE 10+ */
+	font-size: 16px;
+	color: #cccccc;
+}
+
+.usrinpt .msgarea::-ms-input-placeholder {
+    color: #ccc;
+    font-weight: 400;
+}
+
+.usrinpt .msgarea::placeholder {
+	font-size: 16px;
+	color: #cccccc;
+}
+
+.content:not(.siqforms) #msgbox_main div #msgarea{
+	padding: 10px 20px;
+}
+
+[themeid="8"] .content, [themeid="8"] .headercont,
+#bottype_msg+.agntmsg:not(.single_msg) .msgbx{
+	border-radius: 0;
+}
+
+/*START inline*/
+.outerwin input[type="text"],
+.editfields input[type="text"] {
+    border-radius: 0!important;
+    background-color: #ffffff!important;
+    border: solid 1px #000000!important;
+    padding: 0 20px!important;
+    height: 50px!important;
+}
+
+.outerwin input[type="text"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 16px;
+  color: #cccccc;
+}
+.outerwin input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+  font-size: 16px;
+  color: #cccccc;
+}
+.outerwin input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+  font-size: 16px;
+  color: #cccccc;
+}
+.outerwin input[type="text"]:-moz-placeholder { /* Firefox 18- */
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.editfields input[type="text"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 16px;
+  color: #cccccc;
+}
+.editfields input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+  font-size: 16px;
+  color: #cccccc;
+}
+.editfields input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+  font-size: 16px;
+  color: #cccccc;
+}
+.editfields input[type="text"]:-moz-placeholder { /* Firefox 18- */
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.outerwin .errfield[type="text"],
+.editfields .errfield[type="text"]{
+	border: 1px solid #FF3644!important;
+}
+
+.siq-convback.sqico-larrow{
+	margin-right: 10px;
+}
+
+.msgbx,
+.msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+.vismsg .msgbx,
+.vismsg .msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+div.lst_msg .msgbx,
+div.lst_msg .msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+[data-field=message]:not(.single_msg) .siq-visitor-name:not(:empty)+.msgbx,
+[data-field=message]:not(.single_msg) .siq-visitor-name:not(:empty)+.msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+[data-field=message]:not(.single_msg) .siq-user-name:not(:empty)+.msgbx,
+[data-field=message]:not(.single_msg) .siq-user-name:not(:empty)+.msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+.agntmsg.lst_msg .msgbx,
+.agntmsg.lst_msg .msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+div.single_msg .msgbx,
+div.single_msg .msgbx [data-bubble] {
+	border-radius: 0;
+}
+
+footer {
+	padding: 10px 16px;
+}
+
+[data-validate*="required"] + em.req,
+.sqico-drpdwn[data-validate*="required"] .req {
+	display: none;
+    border-left: 2px solid #FF3644!important;
+    border-radius: 0!important;
+    height: 48px!important;
+}
+
+.dspnone,
+.errfield .req,
+.errfield + em.req {
+    display: none;
+}
+
+body .siqc_prochtcls:before,
+body .vismsg .msgbx,
+body .vismsg .msgbx code,
+body .smile_list .siqsmile_li:hover,
+body .smile_list .siqsmile_li.sel,
+body #conv-tab.count .siqc_eletype,
+body .cmpnt-ftr .sqico-tick,
+body .range-point.sel .range-dot,
+body .range-handle,
+body .range-handle1,
+body .range-val,
+body .cmpnt-optn-list div:hover .cmpnt-mul-optn:not(.sqico-tick),
+body .siqc_usrimg img[src=""] + .convrstn-usr,
+body div#conv-tab.count:after,
+body .chat_btn{
+	background: #2181F8!important;
+}
+
+body .siq_showload:after{
+	border-radius: 0!important;
+}
+/*END inline*/

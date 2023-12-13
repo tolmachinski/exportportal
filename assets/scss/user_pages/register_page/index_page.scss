@@ -1,0 +1,15 @@
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+$assets_link_register_page: '../../../../../assets/images/';
+
+@import "./blocks/_register_main_header";
+
+@import "./blocks/_register_banner";
+
+@import "./blocks/_register_users_blocks_new";
+
+@import "./blocks/_footer_advantages";

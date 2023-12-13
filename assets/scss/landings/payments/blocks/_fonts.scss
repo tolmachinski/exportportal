@@ -1,0 +1,55 @@
+// Default titles and description fonts
+
+.how-it-works,
+.gain-access,
+.become-partner,
+.still-questions,
+.what-is-ep {
+
+    &__title, &-title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__description, &__step-description, &__step-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    @include my-media(768, "min") {
+
+        &__title, &-title {
+            font-size: 26px;
+            line-height: 28px;
+        }
+
+        &__description, &__step-description, &__step-title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    @include my-media(1200, "min") {
+
+        &__title, &-title {
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        &__step-title {
+            font-size: 20px;
+        }
+    }
+}
+
+// Benefits li
+
+.become-partner__benefits li {
+    font-size: 16px;
+    line-height: 22px;
+
+    @include my-media(768, "min") {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

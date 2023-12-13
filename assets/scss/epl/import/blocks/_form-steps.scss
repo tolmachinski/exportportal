@@ -1,0 +1,147 @@
+.form-steps {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        position: relative;
+        text-align: center;
+
+        &.active {
+            #{$root} {
+
+                &__point {
+                    background: $blue;
+                    border: 1px solid $blue;
+
+                    .ep-icon {
+                        display: none;
+                    }
+                }
+
+                &__txt {
+                    color: $blue;
+                }
+            }
+        }
+
+        &.complete {
+            #{$root} {
+
+                &__point {
+                    background: $blue;
+                    border: 1px solid $blue;
+
+                    .ep-icon {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &.incomplete {
+            #{$root} {
+
+                &__point {
+                    background: $white;
+                    border: 1px solid $blue;
+                }
+            }
+        }
+
+        &.danger {
+            #{$root} {
+
+                &__point {
+                    background: $red;
+                    border: 1px solid $red;
+                }
+            }
+        }
+
+        &.additional {
+            #{$root} {
+
+                &__point {
+                    background: $blue;
+                    border: 1px solid $blue;
+                }
+            }
+        }
+
+        &:not(.complete).additional {
+            #{$root} {
+
+                &__txt {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    &__inner {
+        position: relative;
+        display: inline-block;
+    }
+
+    &__point {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        color: $white;
+        background: $gray-light;
+        border: 1px solid $gray-light;
+        border-radius: 50%;
+        text-align: center;
+
+        .ep-icon {
+            display: none;
+            vertical-align: middle;
+        }
+    }
+
+    .delimeter {
+        position: absolute;
+        top: 15px;
+        left: -101px;
+        width: 100px;
+        height: 2px;
+        background: $gray-light;
+
+        &.progress {
+            background: $blue;
+        }
+    }
+
+    &__txt {
+        margin-top: 13px;
+        font-size: 16px;
+        line-height: 18px;
+        color: $black;
+    }
+
+    &--pb {
+        padding-bottom: 10px;
+    }
+
+    @include phone-only {
+
+        &--hide-mobile {
+            #{$root} {
+
+                &__txt {
+                    display: none;
+                }
+            }
+        }
+
+        &--pb {
+            padding-bottom: 0;
+        }
+    }
+}

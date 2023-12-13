@@ -1,0 +1,69 @@
+.fees {
+    $root: &;
+
+    &__header {
+        .info-header__ttl-name {
+            font-size: 7vw;
+        }
+    }
+    &__title-block {
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        #{$root}__title {
+            padding: 0;
+            padding-left: 20px;
+        }
+    }
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 32px;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    &__tiny {
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 26px 15px;
+            font-weight: 300;
+            vertical-align: middle;
+            border: 1px solid $color-gray-light;
+        }
+        th:first-child, td:first-child {
+            width: 30%;
+        }
+        strong {
+            font-weight: 500;
+        }
+        ul {
+            margin-bottom: 30px;
+        }
+        li {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 32px;
+            &:before {
+                content: "";
+                height: 16px;
+                min-width: 16px;
+                margin-right: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                border: 2px solid $color-blue2;
+            }
+        }
+    }
+
+    @include my-media(767) {
+        &__cards-item {
+
+            &:before {
+                margin-right: 10px;
+            }
+        }
+    }
+}

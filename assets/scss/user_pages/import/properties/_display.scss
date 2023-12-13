@@ -1,0 +1,51 @@
+.visible-h {
+ visibility:hidden; }
+
+.visible-v {
+ visibility: visible; }
+
+.display-n {
+ display:none; }
+
+.display-n_i {
+ display:none !important; }
+
+.display-b {
+ display:block; }
+
+.display-b_i {
+ display:block !important; }
+
+.display-t {
+ display:table; }
+
+.display-tc {
+ display:table-cell; }
+
+.display-i {
+ display:inline; }
+
+.display-i_i {
+ display:inline !important; }
+
+.display-ib {
+ display:inline-block; }
+
+.display-ib_i {
+ display:inline-block !important; }
+
+.hidden-b {
+ overflow:hidden !important; }
+
+.grid-display {
+
+	@include display-grid;
+}
+
+.d-none-full {
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}

@@ -1,0 +1,37 @@
+.filter-btn {
+    display: none;
+    margin-left: auto;
+    background: none;
+    outline: none;
+
+    &__txt {
+        display: block;
+        margin-top: 2px;
+
+        @include p161614;
+
+        color: $color-black;
+    }
+
+    &__icon {
+        margin-right: 4px;
+    }
+
+    &__counter {
+        margin-left: 3px;
+        color: $color-gray;
+    }
+
+    @include my-media(1200) {
+        display: flex;
+        align-items: center;
+    }
+
+    @include phone-only {
+
+        &__icon {
+            width: 15px;
+            height: 14px;
+        }
+    }
+}

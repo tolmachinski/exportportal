@@ -1,0 +1,78 @@
+.pass-strength-popup {
+    $root: &;
+
+    padding: 20px;
+
+	.progress {
+		height: 5px;
+		margin-bottom: 5px;
+    }
+
+    &__txt {
+        padding-top: 3px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+	&__errors {
+
+		.error-list {
+			padding: 0 0 0 15px;
+            font-size: 18px;
+			list-style: disc;
+
+            li {
+                font-size: 14px;
+                line-height: 16px;
+                color: $color-red;
+            }
+		}
+    }
+
+    &__suggetions {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__suggetions-item {
+        position: relative;
+        display: flex;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 14px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: 6px;
+            height: 6px;
+            margin-top: -4px;
+            background: $color-gray;
+            border-radius: 50%;
+        }
+    }
+
+    &--full {
+        #{$root} {
+
+            &__suggetions-item {
+                width: 100%;
+            }
+        }
+    }
+
+    @include my-media(475) {
+
+        &__suggetions {
+            flex-direction: column;
+        }
+
+        &__suggetions-item {
+            width: 100%;
+        }
+    }
+}

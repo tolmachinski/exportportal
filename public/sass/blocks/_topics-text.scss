@@ -1,0 +1,11 @@
+.topics-text {
+	height: 80px;
+	margin-bottom: 0 !important;
+	overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    @include my-media(991){
+        height: unset;
+    }
+}

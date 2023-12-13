@@ -1,0 +1,55 @@
+.container-center-sm {
+	min-width: 320px;
+	max-width: 1200px;
+	margin:0 auto;
+    padding: 0 15px;
+
+    &--padding-7 {
+
+        @include phone-only {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+    }
+}
+
+.container-center {
+	min-width: 320px;
+	max-width: 1500px;
+	margin: 0 auto;
+    padding: 0 15px;
+
+    &--mw-1500 {
+        max-width: 1500px;
+        padding: 0;
+    }
+
+    @include phone-only {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+
+        .row {
+            margin-left: -7.5px;
+            margin-right: -7.5px;
+
+            >[class*=col-] {
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+            }
+        }
+    }
+}
+
+.container-center2 {
+	min-width: 320px;
+	max-width: 1500px;
+	margin:0 auto;
+    padding: 0 15px;
+}
+
+.container-1420 {
+    min-width: 320px;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

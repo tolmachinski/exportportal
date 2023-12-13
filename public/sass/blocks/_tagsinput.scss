@@ -1,0 +1,5 @@
+div.tagsinput{
+    @include my-media(991){
+        padding: 0 10px;
+    }
+}

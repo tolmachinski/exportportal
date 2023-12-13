@@ -1,0 +1,29 @@
+.fancybox-title-additional {
+	display: flex;
+	align-items: baseline;
+	color: $color-black;
+
+	&__txt {
+
+        @include h302620;
+
+		margin-right: 15px;
+	}
+
+	&__info {
+
+		@include h181614;
+
+        font-weight: 500;
+		color: $color-gray;
+        white-space: nowrap;
+	}
+
+    @include phone-only {
+        display: block;
+
+        &__info {
+            margin-top: 3px;
+        }
+    }
+}

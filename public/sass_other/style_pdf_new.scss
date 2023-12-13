@@ -1,0 +1,230 @@
+@import "../../assets/scss/import/_scss_functions";
+@import "../../assets/scss/import/_colors";
+@import "../../assets/scss/user_pages/import/_my_normalize";
+@import "../../assets/scss/import/guideline/_fonts-guideline";
+@import "../sass/import/_variables";
+
+$color-gray: #9C9C9C;
+@import "../../assets/scss/user_pages/import/_helper";
+
+@include fontface-simple("Roboto", "fonts/Roboto-Bold", bold, normal);
+@include fontface-simple("Roboto", "fonts/Roboto-Regular", normal, normal);
+
+*{
+	box-sizing: border-box;
+	font-family: Roboto, Arial, sans-serif;
+	color: $color-black;
+}
+
+body {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 35px;
+	line-height: 50px;
+	color: $color-black;
+}
+
+@page {
+	header: html_myHeader1;
+	margin-left: 300px;
+	margin-top: 395px;
+	margin-right: 300px;
+}
+
+strong{
+	font-weight: bold;
+}
+
+ul{
+	list-style: circle;
+}
+
+ol{
+	list-style: decimal;
+}
+
+.text-anexa{
+	padding-bottom: 20px;
+	color: $color-blue2;
+	text-align: center;
+}
+
+.title-number{
+	padding-bottom: 28px;
+	font-size: 35px;
+	line-height: 60px;
+	color: $color-gray;
+
+	&__nr{
+		color: $color-black;
+	}
+}
+
+.contract-title{
+	padding-bottom: 28px;
+
+	&__name{
+		font-size: 60px;
+		line-height: 72px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__subline{
+		font-size: 40px;
+		line-height: 60px;
+	}
+}
+
+.card-user{
+	padding: 45px 48px;
+
+	&__ttl{
+		padding-bottom: 25px;
+		font-size: 40px;
+		line-height: 60px;
+		font-weight: bold;
+	}
+
+	&__name{
+		width: 385px;
+		padding-bottom: 25px;
+		font-size: 35px;
+		color: $color-gray;
+	}
+
+	&__val{
+		padding-bottom: 25px;
+		font-size: 35px;
+	}
+
+	&__footer-price{
+		text-align: right;
+		font-size: 35px;
+	}
+
+	&__footer-price-name{
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+.table-items{
+	border: 1px solid $color-black;
+	font-size: 35px;
+	line-height: 50px;
+
+	thead{
+
+	}
+
+	th{
+		padding: 45px 40px;
+		font-size: 30px;
+		line-height: 32px;
+		font-weight: bold;
+		background: #F5F5F5;
+		border: 1px solid $color-black;
+		text-transform: uppercase;
+	}
+
+	td{
+		padding: 40px;
+		border: 1px solid $color-black;
+	}
+
+	tfoot{
+
+		td{
+			padding: 15px 40px;
+			border: none;
+		}
+	}
+
+	&__product-name{
+		padding-bottom: 30px;
+	}
+
+	&__params{
+		padding-top: 10px;
+	}
+
+	&__params-item{
+		font-size: 30px;
+	}
+
+	&__params-name{
+		color: $color-gray;
+		font-weight: bold;
+	}
+
+	&__date{
+		padding-top: 25px;
+		font-size: 30px;
+		color: $color-gray;
+	}
+
+	&__link{
+		padding-top: 25px;
+		font-size: 30px;
+		color: $color-blue2;
+	}
+
+	&__tfoot-name{
+		font-weight: bold;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+.list{
+	font-size: 35px;
+	line-height: 60px;
+
+	&__ttl{
+		padding-bottom: 15px;
+		padding-left: 40px;
+		font-size: 40px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__txt{
+		padding-left: 40px;
+	}
+
+	li{
+		padding-bottom: 40px;
+	}
+}
+
+.sub {
+	list-style: none;
+
+	&__nr{
+
+	}
+}
+
+.text-p{
+	font-size: 35px;
+	line-height: 60px;
+}
+
+.block-sign{
+	width: 50%;
+	float: left;
+	padding-top: 80px;
+
+	&__inner{
+		padding: 0 61px;
+	}
+
+	&__line{
+		padding-top: 55px;
+		border-bottom: 1px solid $color-black;
+	}
+
+	.text-p{
+		margin-bottom: 80px;
+	}
+}

@@ -1,0 +1,105 @@
+// stylelint-disable no-invalid-position-at-import-rule
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import '../../import/guideline/_fonts-guideline';
+
+@import "../../user_pages/import/_fonts";
+
+@import "../../user_pages/import/_variables";
+
+// general styles
+
+@include connect-epicons;
+
+@import '../../import/_iconsEP';
+
+@import '../../plug/bootstrap-4-5-2/_functions';
+
+@import '../../plug/bootstrap-4-5-2/_mixins';
+
+@import "../../import/_variables_bootstrap";
+
+@import '../../plug/bootstrap-4-5-2/_variables';
+
+@import '../../plug/bootstrap-4-5-2/_reboot';
+
+@import '../../plug/bootstrap-4-5-2/_grid';
+
+@import '../../plug/bootstrap-4-5-2/_buttons';
+
+@import '../../plug/bootstrap-4-5-2/_input-group';
+
+@import '../../plug/bootstrap-4-5-2/_modal';
+
+@import "../../import/_normalize_bootstrap";
+
+@import '../../user_pages/import/_my_normalize';
+
+@import '../../user_pages/import/_helper';
+
+@import "../../user_pages/general/blocks/main_wrappers";
+
+@import "../../user_pages/general/blocks/_modal_template";
+
+@import "../../user_pages/general/blocks/_loader";
+
+@import "../../user_pages/general/blocks/_inputs";
+
+@import "../../user_pages/general/blocks/_modal_system_messages";
+
+@import "../../user_pages/general/blocks/_system_messages";
+
+@import "../../user_pages/general/blocks/_modal_form";
+
+@import "../../user_pages/general/blocks/_inputs-40";
+
+@import "../../user_pages/general/blocks/_modal_result";
+
+@import "../../user_pages/general/blocks/_skiptranslate";
+
+@import "../../user_pages/general/blocks/_youtube-play-icon";
+
+@import "../../user_pages/general/blocks/_contact-us-popup";
+
+@import "./../../user_pages/general/blocks/_pages-socials-list";
+
+// end general styles
+
+@import "./blocks/_giveaway-container";
+
+@import "./blocks/_giveaway-header";
+
+@import "./blocks/_giveaway-nav";
+
+@import "./blocks/_giveaway-intro";
+
+@import "./blocks/_giveaway-section";
+
+@import "./blocks/_giveaway-countdown";
+
+@import "./blocks/_giveaway-steps";
+
+@import "./blocks/_giveaway-rules";
+
+@import "./blocks/_giveaway-video";
+
+@import "./blocks/_giveaway-prize-bg";
+
+@import "./blocks/_giveaway-prize";
+
+@import "./blocks/_giveaway-questions";
+
+@import "./blocks/_giveaway-socials";
+
+@import "./blocks/_giveaway-share";
+
+@import "./blocks/_giveaway-winner";
+
+@import "./blocks/_giveaway-promo";
+
+@import "../../user_pages/import/utilites/customeRadioBtn";
+
+@import "../../user_pages/import/utilites/customeCheckbox";

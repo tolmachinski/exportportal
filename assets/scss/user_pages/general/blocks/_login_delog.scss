@@ -1,0 +1,40 @@
+.main-login-delog {
+	$root: &;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	background: $color-white;
+	text-align: center;
+
+	&__txt {
+		padding-bottom: 15px;
+		color: $color-red;
+	}
+
+	&__or {
+		position: relative;
+		margin: 40px 0;
+		border: 1px solid $color-gray-lighter;
+
+		span {
+			position: absolute;
+			top: -9px;
+			left: 50%;
+			margin-left: -12px;
+			padding: 0 5px;
+			font-size: 16px;
+			line-height: 18px;
+			color: $color-gray;
+			background: $color-white;
+		}
+	}
+
+	&--show-simple {
+		position: relative;
+		display: block;
+	}
+}

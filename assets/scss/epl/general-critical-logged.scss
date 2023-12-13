@@ -1,0 +1,39 @@
+@import "./import/_all_imports";
+
+$pathImages4: '../../../../images/';
+
+@import "./old/import/_variables_bootstrap";
+
+@import "./old/plug/bootstrap-4-1-1/functions";
+
+@import "./old/plug/bootstrap-4-1-1/variables";
+
+@import "./old/plug/bootstrap-4-1-1/mixins";
+
+@import "./old/plug/bootstrap-4-1-1/utilities/display";
+
+@import "./old/plug/bootstrap-4-1-1/dropdown";
+
+@import "./old/plug/bootstrap-4-1-1/grid";
+
+@import './import/blocks/_epuser-line';
+
+@import './import/blocks/_fileupload';
+
+@import "./import/blocks/_files-icon";
+
+@import "./main/header/_epl-mobile-header-bottom-nav";
+
+@import "./main/header/_epl-mobile-header-bottom";
+
+@import "./components/favorites/index.scss";
+
+@import "./components/notifications/index.scss";
+
+.display-n_i {
+    display: none !important;
+}
+
+.tooltip {
+    display: none;
+}

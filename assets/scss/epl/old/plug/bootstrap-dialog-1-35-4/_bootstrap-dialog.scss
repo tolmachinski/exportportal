@@ -1,0 +1,131 @@
+.bootstrap-dialog {
+
+	.bootstrap-dialog-title {
+		color: $white;
+		display: inline-block;
+	}
+
+	&.type-default{
+		.bootstrap-dialog-title {
+			color: $black;
+		}
+
+		.modal-header {
+			background-color: $white;
+		}
+	}
+
+	&.size-normal{
+		.bootstrap-dialog-title {
+			font-size: 16px;
+		}
+
+		.bootstrap-dialog-close-button {
+			font-size: 20px;
+		}
+
+		.bootstrap-dialog-message {
+			font-size: 14px;
+		}
+	}
+
+	&.size-large{
+		.bootstrap-dialog-title {
+			font-size: 24px;
+		}
+
+		.bootstrap-dialog-close-button {
+			font-size: 30px;
+		}
+
+		.bootstrap-dialog-message {
+			font-size: 18px;
+		}
+	}
+
+	&.type-info{
+		.modal-header {
+			background-color: $blue;
+		}
+	}
+
+	&.type-primary{
+		.modal-header {
+			background-color: $blue;
+		}
+	}
+
+	&.type-success{
+		.modal-header {
+			background-color: $green;
+		}
+	}
+
+	&.type-warning{
+		.modal-header {
+			background-color: $orange;
+		}
+	}
+
+	&.type-danger{
+		.modal-header {
+			background-color: $red;
+		}
+	}
+
+	.bootstrap-dialog-close-button {
+        float: right;
+
+        .close{
+            opacity: .5;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+	}
+
+	.bootstrap-dialog-button-icon {
+		margin-right: 3px;
+    }
+
+    @include phone-only{
+        .bootstrap-dialog-close-button {
+
+            .close{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.bootstrap-dialog-footer-buttons{
+	.btn+.btn {
+		margin-left: 5px;
+		margin-bottom: 0;
+	}
+}
+
+.bootstrap-dialog-content-border-botttom{
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray-light;
+
+    @include phone-only{
+        padding-bottom: 15px;
+    }
+}
+
+.icon-spin {
+    display: inline-block;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+	}
+    100% {
+        transform: rotate(359deg);
+	}
+}

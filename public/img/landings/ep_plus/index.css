@@ -1,0 +1,481 @@
+.epl-headline, .epl-about__headline, .epl-slider__headline, .epl-structure__headline, .epl-who__headline {
+  font-size: 48px;
+  line-height: 58px;
+  color: #2f2f2f;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  letter-spacing: 3.3px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif; 
+  font-weight: bold;
+}
+  @media only screen and (max-width: 575px) {
+    .epl-headline, .epl-about__headline, .epl-slider__headline, .epl-structure__headline, .epl-who__headline {
+      font-size: 40px;
+      line-height: 48px; } }
+
+.epl-page__container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 47px 15px 0; }
+
+.epl-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .epl-navigation__link {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase; }
+  .epl-navigation__logo {
+    width: 71px;
+    height: 85px;
+    display: block; }
+    .epl-navigation__logo img {
+      width: 100%; }
+  @media only screen and (min-width: 1199px) {
+    .epl-navigation__link {
+      margin-top: 29px;
+      margin-left: 3px; }
+    .epl-navigation__logo {
+      margin-right: 27px; } }
+
+.epl-about {
+  padding-top: 27px;
+  padding-bottom: 40px; }
+  .epl-about__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 46px;
+    letter-spacing: 1.1px; }
+    .epl-about__subtitle span {
+      display: block;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif; 
+      font-weight: bold; }
+  .epl-about__list {
+    width: 100%;
+    margin: 65px auto;
+    max-width: 928px; }
+  .epl-about__list-item {
+    width: 20%; }
+  .epl-about__title {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 1.7px; }
+  .epl-about__list {
+    display: flex;
+    flex-wrap: wrap; }
+  .epl-about__info {
+    width: 100%;
+    font-size: 18px;
+    max-width: 933px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0 auto; }
+  .epl-about__link {
+    display: flex;
+    justify-content: center; }
+    .epl-about__link a {
+      width: 100%;
+      color: #fff;
+      height: 86px;
+      max-width: 352px;
+      font-size: 18px;
+      margin: 54px 0 0;
+      letter-spacing: 1.0px;
+      transition: all 0.15s linear;
+      border: 1px solid transparent;
+      text-transform: uppercase;
+      background-color: #006ee6;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .epl-about__link a:hover {
+        color: #006ee6;
+        border: 1px solid #006ee6;
+        transition: all 0.15s linear;
+        background-color: transparent; }
+  .epl-about__trade {
+    width: 90px; }
+  .epl-about__tech {
+    width: 77px; }
+  .epl-about__ecommerce {
+    width: 150px; }
+  .epl-about__logistics {
+    width: 165px; }
+  .epl-about__government {
+    width: 150px; }
+  .epl-about__laws {
+    width: 155px; }
+  .epl-about__sme {
+    width: 104px; }
+  .epl-about__industry {
+    width: 137px; }
+  .epl-about__data {
+    width: 112px; }
+  @media only screen and (min-width: 1199px) {
+    .epl-about__info {
+      margin: 55px auto 0; }
+    .epl-about__link a {
+      padding-left: 11px; }
+    .epl-about__trade {
+      margin-left: 31px; }
+    .epl-about__tech {
+      margin-left: 44px; }
+    .epl-about__ecommerce {
+      margin-top: 7px;
+      margin-left: 20px; }
+    .epl-about__logistics {
+      margin-top: 4px;
+      margin-left: 20px; }
+    .epl-about__government {
+      margin: 10px 2px 0 auto; }
+    .epl-about__laws {
+      margin-top: 71px;
+      margin-left: -3px; }
+    .epl-about__sme {
+      margin-top: 69px;
+      margin-left: 23px; }
+      .epl-about__sme .epl-about__title {
+        padding-left: 9px; }
+    .epl-about__industry {
+      margin-top: 53px;
+      margin-left: 29px; }
+      .epl-about__industry .epl-about__title {
+        line-height: 30px;
+        margin-left: -7px; }
+    .epl-about__data {
+      margin-top: 68px;
+      margin-left: 42px; }
+      .epl-about__data .epl-about__title {
+        line-height: 30px; } }
+  @media only screen and (max-width: 1199px) {
+    .epl-about__list-item {
+      margin-bottom: 50px; } }
+  @media only screen and (max-width: 991px) {
+    .epl-about__list-item {
+      width: 33.3%; }
+    .epl-about__block {
+      margin: 0 auto; } }
+  @media only screen and (max-width: 575px) {
+    .epl-about__list-item {
+      width: 50%; } }
+  @media only screen and (max-width: 480px) {
+    .epl-about__list-item {
+      width: 100%; } }
+
+.epl-icon {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url("img/about-icons.jpg"); }
+  .epl-icon__trade {
+    height: 94px;
+    margin: 0 auto 21px;
+    background-position: 0.5% 49%; }
+  .epl-icon__tech {
+    height: 92px;
+    margin: 0 auto 23px;
+    background-position: 7.3% 49%; }
+  .epl-icon__ecommerce {
+    width: 102px;
+    height: 87px;
+    margin: 0 auto 20px;
+    background-position: -219px -24px; }
+  .epl-icon__logistics {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background-position: -359px -20px; }
+  .epl-icon__government {
+    width: 76px;
+    height: 83px;
+    margin: 0 auto 23px;
+    background-position: -486px -23px; }
+  .epl-icon__laws {
+    width: 115px;
+    height: 94px;
+    margin: 0 auto 17px;
+    background-position: -588px -18px; }
+  .epl-icon__sme {
+    height: 98px;
+    margin: 0 auto 17px;
+    background-position: -732px -17px; }
+  .epl-icon__industry {
+    height: 122px;
+    margin: 0 auto 9px;
+    background-position: -873px -3px; }
+  .epl-icon__data {
+    width: 90px;
+    height: 86px;
+    margin: 0 auto 30px;
+    background-position: -1055px -22px; }
+
+.epl-slider {
+  position: relative; }
+  .epl-slider__container {
+    height: 670px; }
+  .epl-slider__slide {
+    height: 100%;
+    background-size: cover !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important; }
+  .epl-slider__headline {
+    color: #ffffff; }
+  .epl-slider__list {
+    color: #fff;
+    margin: 30px auto 0;
+    max-width: 800px;
+    padding-left: 30px;
+    padding-right: 15px; }
+  .epl-slider__list-item {
+    color: inherit;
+    position: relative;
+    font-size: 22px;
+    margin-bottom: 22px;
+    line-height: 32px; }
+    .epl-slider__list-item:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      left: -20px;
+      position: absolute;
+      vertical-align: middle;
+      display: inline-block;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      top: 12px; }
+  .epl-slider__text {
+    width: 100%;
+    color: #ffffff;
+    margin: 50px auto 0;
+    font-size: 48px;
+    max-width: 790px;
+    line-height: 58px;
+    text-align: center;
+    max-height: 300px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .epl-slider__info {
+    overflow: hidden;
+    height: 100%;
+    padding-top: 75px;
+    padding-bottom: 90px; }
+  .epl-slider .bx-controls {
+    width: 100%;
+    bottom: 44px;
+    position: absolute;
+    display: flex;
+    justify-content: center; }
+  .epl-slider .bx-pager {
+    display: flex; }
+  .epl-slider .bx-pager-link {
+    width: 18px;
+    font-size: 0;
+    height: 18px;
+    margin: 0 7px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .epl-slider .active {
+    background-color: #ffffff; }
+  @media only screen and (max-width: 767px) {
+    .epl-slider {
+      height: 850px; }
+      .epl-slider__container {
+        height: 850px; } }
+  @media only screen and (max-width: 575px) {
+    .epl-slider__text {
+      font-size: 28px;
+      line-height: 38px; } }
+  @media only screen and (max-width: 380px) {
+    .epl-slider {
+      height: 1000px; }
+      .epl-slider__container {
+        height: 1000px; } }
+
+.epl-structure {
+  padding-top: 81px;
+  padding-bottom: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("img/map.png"); }
+  .epl-structure__subtitle {
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 92px;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif; 
+    font-weight: bold; }
+  .epl-structure__list {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 928px;
+    display: flex;
+    justify-content: space-between; }
+  .epl-structure__image {
+    overflow: hidden; }
+    .epl-structure__image span {
+      width: 50px;
+      height: 110px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-image: url("img/about-icons.jpg"); }
+  .epl-structure__title {
+    font-size: 34px;
+    line-height: 44px; 
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+  }
+  .epl-structure__country .epl-structure__image span {
+    transform: rotate(45deg);
+    background-position: -1172px -26px; }
+  .epl-structure__country .epl-structure__title {
+    text-align: right; }
+  .epl-structure__content .epl-structure__image span {
+    background-position: -1172px -26px; }
+  .epl-structure__content .epl-structure__title {
+    text-align: center; }
+  .epl-structure__industry .epl-structure__image span {
+    width: 57px;
+    height: 80px;
+    transform: rotate(-45deg);
+    background-position: -1172px -26px; }
+  @media only screen and (min-width: 1199px) {
+    .epl-structure__subtitle {
+      padding-left: 33px;
+      letter-spacing: 1.5px; }
+    .epl-structure__country {
+      max-width: 285px; }
+      .epl-structure__country .epl-structure__image {
+        text-align: right;
+        margin-right: -58px;
+        margin-top: 19px; }
+        .epl-structure__country .epl-structure__image span {
+          margin-right: 30px; }
+      .epl-structure__country .epl-structure__title {
+        margin-top: -8px;
+        margin-right: 29px; }
+    .epl-structure__content {
+      width: 100%;
+      max-width: 220px; }
+      .epl-structure__content .epl-structure__image {
+        text-align: center;
+        margin-top: 25px;
+        margin-left: 38px; }
+        .epl-structure__content .epl-structure__image span {
+          margin-right: 30px; }
+      .epl-structure__content .epl-structure__title {
+        margin-left: 17px;
+        margin-top: -14px; }
+    .epl-structure__industry {
+      max-width: 285px; }
+      .epl-structure__industry .epl-structure__image {
+        margin-top: 28px;
+        margin-left: -13px; }
+        .epl-structure__industry .epl-structure__image span {
+          margin-right: 30px; }
+      .epl-structure__industry .epl-structure__title {
+        margin-left: 53px;
+        margin-top: 10px; } }
+  @media only screen and (max-width: 1199px) {
+    .epl-structure__image {
+      display: none; }
+    .epl-structure__list {
+      margin-top: 50px; }
+    .epl-structure__title {
+      text-align: center !important; } }
+  @media only screen and (max-width: 767px) {
+    .epl-structure__title {
+      font-size: 26px;
+      line-height: 36px; } }
+  @media only screen and (max-width: 575px) {
+    .epl-structure__list {
+      flex-direction: column; }
+    .epl-structure__list-item {
+      padding: 15px; } }
+
+.epl-who {
+  padding-top: 93px;
+  padding-bottom: 210px; }
+  .epl-who__info {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .epl-who__info strong {
+      display: block;
+      margin-top: 20px; }
+    .epl-who__info a {
+      color: #006ee6;
+      font-weight: bold; }
+  .epl-who__headline {
+    margin-top: 143px; }
+  .epl-who__logo {
+    width: 73px;
+    height: 83px;
+    overflow: hidden;
+    margin: 63px auto 0; }
+    .epl-who__logo img {
+      width: 100%; }
+  .epl-who__text {
+    margin-top: 30px;
+    max-width: 185px; }
+  .epl-who__ep {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 32px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .epl-who__list {
+    display: flex;
+    margin: 70px auto 0;
+    justify-content: space-between;
+    max-width: 770px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .epl-who__icon {
+    width: 130px;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("img/about-icons.jpg"); }
+  .epl-who__guard {
+    width: 90px;
+    margin: 0 auto;
+    background-position: -1055px -4px; }
+  .epl-who__money {
+    background-position: -1145px -10px; }
+  .epl-who__friendship {
+    background-position: -1272px -4px; }
+  @media only screen and (max-width: 767px) {
+    .epl-who__list {
+      margin: 25px auto 0;
+      flex-direction: column; }
+    .epl-who__text {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 15px; }
+    .epl-who__icon {
+      margin: 0 auto; }
+    .epl-who__money {
+      margin-top: 25px; }
+    .epl-who__friendship {
+      margin-top: 25px; } }
+  @media only screen and (max-width: 575px) {
+    .epl-who {
+      padding-bottom: 90px; } }

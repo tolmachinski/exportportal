@@ -1,0 +1,10 @@
+// important need to fix bug with jumping content on loading
+
+.ep-header-fixed-top {
+	min-height: 0 !important;
+    box-shadow: 0 1px 10px rgba($color-gray, 0.3);
+
+    @include my-media(991) {
+        min-height: 50px !important;
+    }
+}

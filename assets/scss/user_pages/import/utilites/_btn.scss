@@ -1,0 +1,263 @@
+@import "../../../import/guideline/_fonts-guideline";
+
+.button-link {
+	display: inline-block;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: inherit;
+    color: $color-blue2;
+    text-decoration: underline;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        color: $color-blue2-hover;
+        text-decoration: none;
+    }
+}
+
+.btn-link {
+    background: transparent;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+	white-space: normal;
+
+	&:focus,
+	&.focus {
+		box-shadow: none !important;
+	}
+
+	.ep-icon {
+		margin-top: -2px;
+
+		&_menu-circles {
+			margin-top: 0;
+		}
+    }
+
+    &-new18 {
+        padding: .75rem;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &-new16 {
+        padding: .813rem .75rem;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    &--more {
+        display: block;
+        width: 100%;
+        max-width: 370px;
+        margin: 0 auto;
+        padding: 1.5625rem 2.8125rem;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        white-space: normal;
+    }
+
+    &--status {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 10px;
+            height: 10px;
+            background: $color-green;
+            border-radius: 50%;
+        }
+
+        &-red::before {
+            background: $color-red;
+        }
+    }
+
+    &--40 {
+        padding-top: .563rem !important;
+        padding-bottom: .563rem !important;
+        font-size: 1rem !important;
+        line-height: 1.25 !important;
+    }
+
+    &--50 {
+        padding-top: .875rem !important;
+        padding-bottom: .875rem !important;
+        line-height: 1.25 !important;
+    }
+
+    @include my-media(991) {
+        padding: .563rem .75rem;
+
+        &-new18 {
+            padding: .75rem;
+        }
+
+        &-new16 {
+            padding: .813rem .75rem;
+        }
+    }
+
+    @include my-media(767) {
+
+        &-new18 {
+            padding: .50rem .75rem;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &-new16 {
+            padding: .50rem .75rem;
+        }
+    }
+
+    @include my-media(375) {
+
+        &--fs14-mobile375 {
+            font-size: 14px !important;
+        }
+    }
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+    line-height: 1.5 !important;
+}
+
+.btn-default {
+    color: $color-black;
+    background-color: $color-gray-lighter;
+    border-color: $color-gray-lighter;
+
+    &:hover {
+        color: $color-black;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $color-black;
+        background-color: $color-gray-lighter;
+        border-color: $color-gray-lighter;
+    }
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+	color: $color-white;
+}
+
+.btn-primary {
+	color: $color-white;
+
+    &.info-dialog {
+        color: $color-white;
+    }
+
+    &:hover {
+
+        &.info-dialog {
+        color: $color-white;
+        }
+    }
+}
+
+.btn-default,
+.btn-light {
+
+	&.active,
+	&:active,
+	&:hover {
+		background-color: $color-gray-lighter;
+    	border-color: $color-gray-lighter;
+	}
+}
+
+.btn-outline-light {
+
+	&:hover {
+		color: $color-black !important;
+		border: 1px solid $color-black !important;
+	}
+}
+
+.btn-group {
+
+	> .btn {
+        flex: 0 1 auto;
+
+        &:first-child {
+
+            &:hover {
+                z-index: 0;
+            }
+	    }
+    }
+
+	&.show {
+
+		> .btn {
+			z-index: 4;
+
+			+ .btn {
+				z-index: 5;
+			}
+
+			&:first-child {
+
+				&:hover {
+					z-index: 4;
+				}
+			}
+		}
+	}
+}
+
+.btn-fancybox {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-blue2;
+    background: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        color: $color-blue2-hover;
+    }
+}
+
+@supports (-moz-appearance:none) {
+
+    .btn {
+
+		.ep-icon {
+
+			&::before {
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
+}
+
+.dropdown.show {
+
+    > .dropdown-toggle {
+        position: relative;
+        z-index: 4;
+    }
+}

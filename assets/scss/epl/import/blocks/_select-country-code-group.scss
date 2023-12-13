@@ -1,0 +1,65 @@
+.select-country-code-group {
+
+    .select-country-code {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &:not(.select2-hidden-accessible) {
+            width: 159px;
+            padding-right: 30px;
+        }
+    }
+
+    .select2-selection {
+
+        &--single {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &__rendered {
+
+            span {
+                padding-right: 8px;
+            }
+
+            .select-country-flag {
+                width: 32px;
+                height: 32px;
+                margin-right: 10px;
+            }
+        }
+
+        &__arrow {
+
+            b {
+                right: 3px;
+            }
+        }
+    }
+
+    @include phone-only {
+
+        .select-country-code {
+
+            &:not(.select2-hidden-accessible) {
+                width: 147px;
+            }
+        }
+
+        .select2-selection {
+
+            &__rendered {
+                height: 100%;
+
+                .select-country-flag {
+                    margin-right: 0;
+                }
+
+                .select-country-code-number {
+                    display: none;
+                }
+            }
+        }
+    }
+}

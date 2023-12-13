@@ -1,0 +1,21 @@
+.minfo-title {
+    padding-bottom: 30px;
+
+    &__name {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    &__total {
+        line-height: 28px;
+        white-space: nowrap;
+    }
+
+    @include phone-only {
+
+        &__name {
+            text-align: center;
+        }
+    }
+}

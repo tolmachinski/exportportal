@@ -1,0 +1,230 @@
+/* multiple select */
+.ms-parent {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.ms-choice {
+    display: block;
+    width: 100%;
+    height: 35px;
+	padding: 0 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid $color-gray-nlight;
+    text-align: left;
+    white-space: nowrap;
+    background-color: $color-white;
+	font: 16px/35px Arial,sans-serif;
+	color: $color-gray-dark;
+
+	&.disabled {
+		background-color: #f4f4f4;
+		background-image: none;
+		border: 1px solid #ddd;
+		cursor: default;
+	}
+
+	> span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 20px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+		padding-left: 8px;
+		text-indent: 6px;
+
+		&.placeholder {
+			color: #999;
+		}
+	}
+
+	> div {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 20px;
+		height: 35px;
+		background: url('../plug_admin/jquery-multiple-select-1-1-0/img/multiple-select-icons1.png') -15px -8px no-repeat;
+
+		&.open {
+			background: url('../plug_admin/jquery-multiple-select-1-1-0/img/multiple-select-icons1.png') -65px -8px no-repeat;
+		}
+
+	}
+}
+
+.form-registration{
+	.ms-choice {
+		height: 50px;
+		line-height: 50px;
+
+		> div {
+			height: 50px;
+			background-position:-15px 0;
+
+			&.open {
+				background-position:-65px 0;
+			}
+		}
+	}
+}
+
+.unsubscribe-box{
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 50px 20px 0 20px;
+
+	&__ttl{
+		padding-bottom: 15px;
+		font: bold 18px/21px Arial,sans-serif;
+	}
+
+	&__txt{
+		padding-bottom: 30px;
+		font: 14px/18px Arial,sans-serif;
+		color: $color-gray;
+	}
+
+	&__form{
+		input[type=password],
+		input[type=text]{
+			width: 100%;
+			height: 30px;
+			padding: 0 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__btn{
+		margin-top: 20px;
+		float: right;
+	}
+
+	&__captcha{
+		display: flex;
+
+		&-fixed{
+			margin-right: 15px;
+		}
+
+		&-float{
+			flex: 1;
+			width: 100%;
+		}
+	}
+}
+
+.ms-drop {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    margin-top: -1px;
+    padding: 0;
+    position: absolute;
+    z-index: 1000;
+    background: $color-white;
+    color: #000;
+    border: 1px solid $color-gray-nlight;
+
+	&.bottom {
+		top: 100%;
+		@include box-shadow(0 4px 5px rgba(0, 0, 0, .15));
+	}
+
+	&.top {
+		bottom: 100%;
+		@include box-shadow(0 -4px 5px rgba(0, 0, 0, .15));
+	}
+
+
+	ul {
+		overflow: auto;
+		margin: 0;
+		padding: 5px 8px;
+
+		> li {
+			padding-left: 20px;
+			line-height: 20px;
+			list-style: none;
+			display: list-item;
+			background-image: none;
+			position: static;
+
+			&:first-child{
+				padding-left: 0;
+			}
+
+			.disabled {
+				opacity: .35;
+				filter: Alpha(Opacity=35);
+			}
+
+			&.multiple {
+				display: block;
+				float: left;
+
+				label {
+					width: 100%;
+					display: block;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+
+			&.group {
+				clear: both;
+				padding-left: 0;
+			}
+
+			label {
+				padding: 2px 0;
+				font-weight: normal;
+				display: block;
+				white-space: nowrap;
+				color: $color-gray-dark;
+
+				&.optgroup {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	input[type="checkbox"] {
+		vertical-align: middle;
+	}
+
+	.ms-no-results {
+		display: none;
+	}
+
+	.ms-search {
+		display: inline-block;
+		margin: 0;
+		min-height: 26px;
+		padding: 4px;
+		position: relative;
+		white-space: nowrap;
+		width: 100%;
+		z-index: 10000;
+
+		input {
+			width: 100%;
+			height: auto !important;
+			height: 30px !important;
+			padding: 0 20px 0 5px;
+			margin: 0;
+			outline: 0;
+			font-size: 14px;
+			border: 1px solid $color-gray-nlight;
+			background: $color-white url('../plug_admin/jquery-multiple-select-1-1-0/img/multiple-select-icons1.png') 102% -62px no-repeat;
+		}
+	}
+}
+/* multiple select */

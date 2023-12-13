@@ -1,0 +1,65 @@
+.list-info-col-group {
+    $root: &;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 15px !important;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__col {
+
+        &--right {
+            text-align: right;
+        }
+
+        &--float {
+            flex: 1;
+            min-width: 0;
+            padding-right: 10px;
+        }
+    }
+
+    &__name {
+
+        @include text-nowrap;
+    }
+
+    &__date {
+        font-size: 14px;
+        line-height: 24px;
+        color: $gray;
+    }
+
+    @include phone-extra-small {
+
+        &__row {
+            display: block;
+        }
+
+        &__item {
+
+            &--mobile-block {
+                display: block;
+
+                #{$root} {
+
+                    &__col {
+                        width: 100%;
+
+                        &--right {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

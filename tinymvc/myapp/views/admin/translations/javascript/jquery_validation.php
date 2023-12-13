@@ -1,0 +1,16 @@
+(function(){var d={jquery_validation:<?php echo json_encode([
+    'required'          => translationFileKeyI18n($records['js_jquery_validation_required_field'], 'text', $lang),
+    'equalTo'           => translationFileKeyI18n($records['js_jquery_validation_fields_not_match'], 'text', $lang),
+    'max'               => translationFileKeyI18n($records['js_jquery_validation_max_value'], 'text', $lang),
+    'validUserName'     => translationFileKeyI18n($records['js_jquery_validation_user_name'], 'text', $lang),
+    'selectPhoneMask'   => translationFileKeyI18n($records['js_jquery_validation_select_phone_mask'], 'text', $lang),
+    'completePhoneMask' => translationFileKeyI18n($records['js_jquery_validation_complete_phone_mask'], 'text', $lang),
+    'phoneNumber'       => translationFileKeyI18n($records['js_jquery_validation_phone_number'], 'text', $lang),
+    'minSize'           => translationFileKeyI18n($records['js_jquery_validation_min_size'], 'text', $lang),
+    'maxSize'           => translationFileKeyI18n($records['js_jquery_validation_max_size'], 'text', $lang),
+    'noWhitespaces'     => translationFileKeyI18n($records['js_jquery_validation_no_whitespaces'], 'text', $lang),
+    'email'             => translationFileKeyI18n($records['js_jquery_validation_email_with_whitespaces'], 'text', $lang),
+    'companyTitle'      => translationFileKeyI18n($records['js_jquery_validation_company_title'], 'text', $lang),
+    'naturalNumber'     => translationFileKeyI18n($records['js_jquery_validation_natural_number'], 'text', $lang),
+    'zipCode'           => translationFileKeyI18n($records['js_jquery_validation_zip_code'], 'text', $lang),
+]); ?>};window.__i18n_vocabulary=void 0!==window.__i18n_vocabulary?Object.assign({},window.__i18n_vocabulary||{},d):d;})();

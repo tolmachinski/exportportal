@@ -1,0 +1,135 @@
+.header {
+
+    &-slider {
+        $root: &;
+
+        &:not(.slick-initialized) {
+            #{$root}__item:nth-child(1n+2) {
+                display: none;
+            }
+        }
+
+        .slick-dots {
+            bottom: 15px;
+
+            button {
+                background-color: transparent;
+                border: 2px solid $color-white;
+            }
+
+            .slick-active button {
+                background-color: $color-blue2 !important;
+                border-color: $color-blue2;
+            }
+        }
+
+        .slick-arrow {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.15s linear;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        &:hover {
+
+            .slick-arrow {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &__item {
+            display: block;
+
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1420/400;
+            }
+        }
+
+        @include touch {
+
+            .slick-arrow {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    @include my-media(1199) {
+
+        &-slider {
+            margin: 0 -15px;
+        }
+    }
+
+    @media (max-width: 1199px),
+            (pointer:coarse) {
+
+        .slick-next {
+            right: 5px;
+        }
+
+        .slick-prev {
+            left: 5px;
+        }
+
+        .slick-arrow {
+            background: transparent;
+            border: none;
+        }
+
+        i {
+            color: $color-white;
+        }
+    }
+
+    @include my-media(991) {
+
+        &-slider {
+
+            &__item {
+
+                img {
+                    aspect-ratio: 991/774;
+                }
+            }
+        }
+    }
+
+    @include my-media(767) {
+
+        .slick-arrow {
+            width: 40px;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+    }
+
+    @include my-media(425) {
+
+        &-slider {
+
+            &__item {
+
+                img {
+                    aspect-ratio: 425/550;
+                }
+            }
+        }
+    }
+}

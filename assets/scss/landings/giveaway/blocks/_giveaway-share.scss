@@ -1,0 +1,16 @@
+.giveaway-share {
+
+    &__btn {
+        display: block;
+        width: 250px;
+        margin: 30px auto 0;
+    }
+
+    @include phone-only {
+
+        &__btn {
+            width: 260px;
+            margin-top: 14px;
+        }
+    }
+}

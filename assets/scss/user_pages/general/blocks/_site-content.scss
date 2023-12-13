@@ -1,0 +1,117 @@
+.site-content {
+    $root: &;
+
+    display: grid;
+    grid-template-areas:
+        "sidebar main-content"
+        "sidebar out-content";
+    grid-template-columns: min-content auto;
+
+        &--sidebar-right {
+            grid-template-areas:
+                "main-content sidebar"
+                "out-content sidebar";
+            grid-template-columns: auto min-content;
+        }
+
+    @include my-media(1460) {
+
+        &--products-list {
+
+            .sidebar {
+
+                &:not(.sidebar--show-md) {
+                    width: 250px;
+                    margin-right: 25px;
+                }
+
+                &--right {
+                    width: 250px;
+                    margin: 0 0 0 25px !important;
+                }
+            }
+        }
+    }
+
+    @include my-media(1385) {
+
+        &--products-list {
+
+            .sidebar {
+
+                &:not(.sidebar--show-md) {
+                    width: 240px;
+                    margin-right: 18px;
+                }
+
+                &--right {
+                    width: 240px;
+                    margin: 0 0 0 18px !important;
+                }
+            }
+        }
+    }
+
+    @include my-media(1366) {
+
+        &--products-list {
+
+            .sidebar {
+
+                &:not(.sidebar--show-md) {
+                    width: 300px;
+                    margin-right: 50px;
+                }
+
+                &--right {
+                    width: 300px;
+                    margin: 0 0 0 50px !important;
+                }
+            }
+        }
+    }
+
+    @include my-media(1200) {
+        grid-template-areas:
+            "main-content"
+            "out-content"
+            "sidebar";
+        grid-template-columns: 100%;
+
+        .sidebar {
+
+            &--right {
+                width: 300px;
+                margin: 0 !important;
+            }
+        }
+
+        &--show-sidebar-md {
+            grid-template-areas:
+                "sidebar main-content"
+                "out-content out-content";
+            grid-template-columns: 350px auto;
+        }
+    }
+
+    @include my-media(991) {
+
+        &--show-sidebar-md {
+            grid-template-areas:
+                "sidebar main-content"
+                "out-content out-content";
+            grid-template-columns: 235px auto;
+        }
+    }
+
+    @include phone-only {
+
+        &--show-sidebar-md {
+            grid-template-areas:
+                "main-content"
+                "out-content"
+                "sidebar";
+            grid-template-columns: 100%;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+$pathImages: '../../../images/';
+
+@import "../../import/scss_functions";
+
+@import "../../import/_colors";
+
+@import "../../import/guideline/_fonts-guideline";
+
+@import "../../import/guideline/_elements-guideline";
+
+// --- Sidebar filters --- //
+
+@import "./../general/blocks/_sidebar";
+
+@import "../general/blocks/_filter-block";
+
+@import "../general/blocks/_filter-options-list";
+
+@import "../general/blocks/_filter-options-multilist";
+
+@import "../general/blocks/_filter-search-form";
+
+@import "../general/blocks/_maxlist-more";
+
+// --- Main content --- //
+
+@import "../general/blocks/_page-main-title";
+
+@import "../general/blocks/_site-content";
+
+@import "../general/blocks/_site-main-content";
+
+@import "../general/blocks/_site-out-content";
+
+@import "../general/blocks/_product-requests";
+
+@import "../general/blocks/_filter-result-counter";
+
+@import "../general/blocks/_filter-control-bar";
+
+@import "../general/blocks/_filter-btn";
+
+@import "../general/blocks/_no-results-card";
+
+@import "../general/blocks/_no-results-card-list";
+
+@import "../../components/product_card/_products";

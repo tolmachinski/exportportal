@@ -1,0 +1,105 @@
+.subscribe {
+	padding: 0 0 100px;
+	background: $color-gray-lighter;
+
+	&__form {
+
+		input[type=text] {
+			height: 72px;
+			font-size: 16px;
+		}
+
+		.btn {
+			height: 72px;
+			padding-left: 80px;
+			padding-right: 80px;
+			font-size: 16px;
+			color: $color-white;
+			letter-spacing: 0.075em;
+			text-transform: uppercase;
+			background: $color-black;
+		}
+    }
+
+    @include phone-only {
+		margin-top: 50px;
+		padding-bottom: 50px;
+
+		&__form {
+
+			.input-group {
+				flex-direction: column;
+			}
+
+			input[type=text] {
+				width: 100%;
+				height: 50px;
+			}
+
+			.input-group-btn {
+
+				.btn-default {
+					width: 100%;
+					height: 50px;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+}
+
+.subscribe-ttl {
+    padding: 85px 0 35px;
+    font-size: 62px;
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__sub {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .ep-icon {
+        color: $color-blue2;
+    }
+
+    &--pt-50 {
+        padding-top: 50px;
+    }
+
+    &--fs-50 {
+        font-size: 50px;
+    }
+
+    .fs-58 {
+        font-size: 58px;
+    }
+
+    @include phone-only {
+        padding-top: 37px;
+        padding-bottom: 20px;
+        font-size: 30px;
+        line-height: 45px;
+        text-align: center;
+
+        &--pt-50 {
+            padding-top: 25px;
+        }
+
+        &--fs-50 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &--lh-u {
+            line-height: unset;
+        }
+
+        &__sub {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}

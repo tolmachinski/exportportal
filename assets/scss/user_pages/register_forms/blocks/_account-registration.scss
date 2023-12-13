@@ -1,0 +1,79 @@
+.account-registration {
+    $root: &;
+
+    max-width: 470px;
+    margin: 44px auto 50px;
+
+    &__main-title {
+        margin-bottom: 42px;
+		font-size: 26px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__half-input {
+        max-width: 50%;
+    }
+
+    .select2-container {
+
+        .select2-selection--single {
+
+            .select2-selection__rendered {
+                padding-right: 30px;
+            }
+        }
+
+        &--default {
+
+            .select2-selection--single {
+
+                .select2-selection__arrow {
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .tabs-circle {
+        padding: 0 0 25px;
+    }
+
+    .ep-tinymce-text {
+        padding-top: 20px;
+
+        ul {
+            padding: 7px 0 20px;
+        }
+    }
+
+    @include tablet-landscape-up {
+
+        &__main-title {
+            margin-bottom: 32px;
+        }
+
+        .tabs-circle {
+            padding-bottom: 15px;
+        }
+    }
+
+    @include phone-only {
+        margin: 32px auto 30px;
+
+        &__main-title {
+            margin-bottom: 20px;
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        .tabs-circle {
+            padding: 0 0 5px;
+        }
+
+        &__half-input {
+            max-width: 100%;
+        }
+    }
+}

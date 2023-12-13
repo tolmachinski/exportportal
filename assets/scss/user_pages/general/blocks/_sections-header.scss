@@ -1,0 +1,87 @@
+.section-header {
+    $root: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 29px;
+
+    &__column {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    &__title {
+
+        @include h302620;
+
+        margin-right: 15px;
+    }
+
+    &__subtitle {
+        width: 100%;
+        margin-top: 3px;
+
+        @include p181816;
+    }
+
+    &__link {
+
+        @include h181816;
+
+        color: $color-blue2;
+        transition: all 0.15s linear;
+
+        svg {
+            position: relative;
+            bottom: 1px;
+            margin-left: 11px;
+            fill: $color-blue2;
+        }
+
+        &:hover {
+            color: $color-blue2;
+            text-decoration: underline;
+        }
+    }
+
+    &--title-only {
+        #{$root}__title {
+            margin-right: 0;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: -1px;
+        margin-bottom: 13px;
+
+        &__title {
+            margin-top: 1px;
+        }
+
+        &__subtitle {
+            margin-top: 5px;
+        }
+
+        &__link {
+            margin-top: 9px;
+        }
+    }
+
+    @include my-media(575) {
+        margin-top: -7px;
+
+        &__title {
+            margin-top: 7px;
+        }
+
+        &__subtitle {
+            margin-top: 4px;
+        }
+
+        &__link {
+            margin-top: 8px;
+        }
+    }
+}

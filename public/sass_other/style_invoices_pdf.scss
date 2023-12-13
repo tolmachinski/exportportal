@@ -1,0 +1,222 @@
+@import "../../assets/scss/import/_scss_functions";
+@import "../../assets/scss/import/_colors";
+
+h1{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+h4{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+h5{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.document-b {
+    width: 800px;
+    margin: 20px auto;
+    padding: 10px 25px;
+    background: #fff;
+}
+.document-b p {
+    margin: 5px 0;
+}
+.document-b a {
+    font-size: 16px;
+}
+.document-b a:hover {
+    text-decoration: underline;
+}
+.document-b ul, .document-b ol {
+    padding: 5px 0 5px 30px;
+    font-size: 16px;
+}
+.document-b ul li, .document-b ol li {
+    padding-bottom: 5px;
+}
+.document-b ul {
+    list-style: disc;
+}
+.document-b ol {
+    list-style: decimal;
+}
+.sign {
+    padding-bottom: 20px;
+    font: 18px Arial;
+    text-align: right;
+}
+.text-b{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.toc-title-b{
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.logo{
+    height: 40px;
+    vertical-align: middle;
+}
+.logo-txt-1{
+    color: #1d6e0f;
+}
+.logo-txt-2{
+    color: #0f6c94;
+}
+/* For Table of Contents */
+div.mpdf_toc {
+    font-family: sans-serif;
+    font-size: 11pt;
+    font-weight: normal !important;
+}
+a.mpdf_toc_a  {
+    text-decoration: none;
+    color: black;
+}
+div.mpdf_toc_level_0 {		/* Whole line level 0 */
+    line-height: 1.5;
+    margin-left: 2em;
+    padding-right: 2em;	/* should match e.g <dottab outdent="2em" /> 0 is default */
+}
+span.mpdf_toc_t_level_0 {	/* Title level 0 - may be inside <a> */
+    font-weight: normal;
+}
+span.mpdf_toc_p_level_0 {	/* Page no. level 0 - may be inside <a> */
+}
+div.mpdf_toc_level_1 {		/* Whole line level 1 */
+    margin-left: 4em;
+    text-indent: -2em;
+    padding-right: 2em;	/* should match <dottab outdent="2em" /> 2em is default */
+    font-size: normal;
+}
+span.mpdf_toc_t_level_1 {	/* Title level 1 */
+    font-style: normal;
+    font-weight: normal;
+}
+span.mpdf_toc_p_level_1  {	/* Page no. level 1 - may be inside <a> */
+}
+div.mpdf_toc_level_2 {		/* Whole line level 2 */
+    margin-left: 6em;
+    text-indent: -2em;
+    padding-right: 2em;	/* should match <dottab outdent="2em" /> 2em is default */
+}
+span.mpdf_toc_t_level_2 {	/* Title level 2 */
+}
+span.mpdf_toc_p_level_2 {	/* Page no. level 2 - may be inside <a> */
+}
+div.mpdf_toc_level_3 {		/* Whole line level 3 */
+    margin-left: 8em;
+    text-indent: -2em;
+    padding-right: 2em;	/* should match <dottab outdent="2em" /> 2em is default */
+}
+span.mpdf_toc_t_level_3 {	/* Title level 3 */
+}
+span.mpdf_toc_p_level_3 {	/* Page no. level 3 - may be inside <a> */
+}
+.td-bordered{
+    border: 1px solid #dddddd;
+    padding:10px;
+}
+.page-break{
+    page-break-inside: avoid;
+}
+
+.metod-instructions-b{
+	padding-top: 20px;
+
+	ul,
+	ol{
+		padding: 0 0 20px 40px;
+	}
+
+	ul{
+		list-style-type: disc;
+	}
+
+	ol{
+		list-style-type: decimal;
+	}
+
+	> table{
+		width: 100%;
+		border:1px solid $color-gray-lighter;
+		border-collapse: collapse;
+		background:$color-white;
+
+		th{
+			height: 30px;
+			border:1px solid $color-gray-lighter;
+			vertical-align: middle;
+			font:bold 14px/30px Arial,sans-serif;
+			color:$color-white;
+			text-indent: 10px;
+			background: $color-blue2;
+		}
+
+		tr{
+			td{
+				height: 30px;
+				border:1px solid $color-gray-lighter;
+				vertical-align: middle;
+				font:12px Arial,sans-serif;
+				text-indent: 10px;
+
+				&:first-child{
+					width: 200px;
+					background:$color-gray-light;
+				}
+			}
+		}
+
+		tfoot tr td{
+			border-top:1px solid $color-black;
+			height: 20px;
+		}
+	}
+}
+
+.tt{
+	width: 100% !important;
+	border:1px solid $color-gray-lighter;
+	border-collapse: collapse;
+	background:$color-white;
+}
+
+.tt-th{
+	height: 30px;
+	border:1px solid $color-gray-lighter;
+	vertical-align: middle;
+	font:bold 14px/30px Arial,sans-serif;
+	color:$color-white;
+	text-indent: 10px;
+	background: $color-blue2;
+}
+
+.tt-td{
+	width: auto !important;
+	height: 30px;
+	padding: 0 10px;
+	border:1px solid $color-gray-lighter;
+	vertical-align: middle;
+	font:12px Arial,sans-serif;
+	text-indent: 10px;
+}
+
+.tt-td-first{
+	width: 200px !important;
+	background:$color-gray-light;
+}

@@ -1,0 +1,11 @@
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include phone-only{
+        .col-md-12 {
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+@import "../../import/_all_imports";
+
+@import "./blocks/_epl-resources-header";
+
+@import "./blocks/_epl-resources-questions-block";
+
+.epl-resources-questions {
+
+    &__heading-title {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+        color: $black;
+        text-align: center;
+    }
+
+    &__heading-subtitle {
+        width: 100%;
+        max-width: 650px;
+        margin: 20px auto 0;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black-light;
+        text-align: center;
+    }
+
+    @include my-media(991) {
+
+        &__heading-title {
+            font-size: 44px;
+            line-height: 50px;
+        }
+    }
+
+    @include phone-only {
+
+        &__heading-title {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        &__heading-subtitle {
+            margin-top: 13px;
+        }
+    }
+}

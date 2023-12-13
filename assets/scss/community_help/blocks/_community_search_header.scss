@@ -1,0 +1,121 @@
+.community-search-header {
+    position: relative;
+    padding: 30px 0;
+    background: $color-gray-lighter;
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__input {
+        position: relative;
+
+        .reset-btn {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 95%;
+            color: $color-black;
+            background: $color-white;
+            border-left: none;
+
+            &:hover {
+                color: $color-blue2;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 0;
+    }
+
+    select {
+        width: 270px;
+        border: 1px solid $color-gray-light;
+    }
+
+    input {
+        width: 430px;
+        border: 1px solid $color-gray-light;
+    }
+
+    &__search-active {
+        padding-top: 140px;
+    }
+
+    @include my-media(1200) {
+
+        input {
+            width: 350px;
+        }
+    }
+
+    @include my-media(1100) {
+
+        select,
+        input {
+            width: 240px;
+        }
+    }
+
+    @include my-media(991) {
+        margin-top: 0 !important;
+
+        &__title {
+            margin: 7px 0 12px;
+            text-align: center;
+        }
+
+        select,
+        input {
+            height: 50px;
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 9px;
+        }
+    }
+
+    @include phone-only {
+
+        &__input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        select,
+        input {
+            width: 100%;
+        }
+
+        &__btn {
+            margin-top: 0;
+        }
+    }
+
+    @include my-media(425) {
+
+        &__title {
+            margin: 0 0 3px;
+            font-size: 16px;
+        }
+    }
+}

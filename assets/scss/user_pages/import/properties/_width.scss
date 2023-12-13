@@ -1,0 +1,179 @@
+/* WIDTH percentage */
+$i: 0;
+
+@for $i from 1 through 100 {
+.w-#{$i}pr {
+width:$i*1% !important;}}
+
+.w-33-33pr {
+width:33.33% !important;}
+
+/* WIDTH */
+$i: 0;
+
+@while $i <= 1000 {
+.w-#{$i} {
+width:#{$i}px !important;}
+
+ $i: $i + 5;}
+
+.w-auto {
+width:auto !important;}
+
+.w-1170 {
+width:1170px !important;}
+
+.w-1024 {
+width:1024px !important;}
+
+.w-800 {
+width:800px !important;}
+
+.w-16 {
+width:16px !important;}
+
+/* min width */
+$i: 60;
+
+@while $i <= 700 {
+.mnw-#{$i} {
+min-width:#{$i}px !important;}
+
+ $i: $i + 1;}
+
+.mnw-0 {
+ min-width: 0 !important; }
+
+.mnw-1 {
+ min-width: 1px !important; }
+
+.mnw-30 {
+ min-width: 30px !important; }
+
+/* max width */
+$i: 25;
+
+@while $i <= 350 {
+.mw-#{$i} {
+max-width:#{$i}px !important;}
+
+ $i: $i + 5;}
+
+.mw-370 {
+ max-width: 370px !important; }
+
+.mw-500 {
+ max-width: 500px !important; }
+
+.mw-580 {
+ max-width: 580px !important; }
+
+.mw-768 {
+ max-width: 798px !important; }
+
+.mw-980 {
+ max-width: 980px; }
+
+.mw-995 {
+ max-width: 995px !important; }
+
+.mw-1024 {
+ max-width: 1024px !important; }
+
+.mw-100pr {
+ max-width: 100% !important; }
+
+.mw-60pr {
+ max-width: 60% !important; }
+
+@include my-media(1200) {
+
+	.w-xl-300 {
+		width: 300px;
+	}
+}
+
+@include my-media(991) {
+
+    .mnw-236-lg {
+        min-width: 236px !important;
+    }
+
+	.mnw-240-lg {
+		min-width: 240px !important;
+    }
+
+	.mnw-50-lg {
+		min-width: 50px !important;
+	}
+
+	.w-60pr-lg {
+		width: 60% !important;
+	}
+
+	.w-40pr-lg {
+		width: 40% !important;
+	}
+}
+
+@include phone-only {
+
+	.mnw-50-md {
+		min-width: 50px !important;
+	}
+
+	.mnw-110-md {
+		min-width: 110px;
+    }
+}
+
+@include my-media(660) {
+
+	.w-100pr-m {
+		width: 100% !important;
+	}
+
+	.w-30pr-m {
+		width: 30% !important;
+	}
+}
+
+@include my-media(480) {
+
+    .mnw-60-sm {
+        min-width: 60px !important;
+    }
+
+    .mnw-290-sm {
+        min-width: 290px !important;
+    }
+
+    .mnw-100pr-sm {
+        min-width: 100%;
+    }
+}
+
+@include my-media(767, 'min') {
+
+	.w-50pr-md-min {
+		width: 50% !important;
+	}
+
+	.mnw-130-md-min {
+		min-width: 130px;
+	}
+}
+
+@include my-media(660, 'min') {
+
+	.mnw-130-m-min {
+		min-width: 130px;
+	}
+}
+
+@include my-media(576, 'min') {
+
+	.mnw-160-sm {
+		min-width: 160px;
+	}
+}

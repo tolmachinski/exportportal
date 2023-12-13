@@ -1,0 +1,33 @@
+.modal-system-messages {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+
+	li {
+		padding: 5px;
+	}
+
+	&.message-errors,
+	&.errors {
+		color: $color-red;
+		background-color: $color-red-light;
+	}
+
+	&.message-success,
+	&.success {
+		color: $color-green;
+		background-color: $color-green-light;
+	}
+
+	&.message-info,
+	&.info {
+		color: $color-blue2;
+		background-color: $color-blue2-light;
+	}
+
+	&.message-warning,
+	&.warning {
+		color: $color-orange;
+		background-color: $color-orange-light;
+	}
+}

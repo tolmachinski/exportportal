@@ -1,0 +1,108 @@
+.epuser-subline-additional2 {
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+
+	.check-all2 {
+		margin: 0;
+
+		&__txt {
+			padding-left: 3px;
+			font-size: 14px;
+			line-height: 28px;
+		}
+	}
+
+	.actions {
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		padding-left: 15px;
+
+		.ep-icon {
+			display: none;
+		}
+	}
+
+	.epuser-pagination {
+
+		a,
+		span {
+			width: 40px;
+			line-height: 40px;
+
+			.ep-icon_arrow-right,
+			.ep-icon_arrow-left {
+				line-height: 35px;
+			}
+
+			&.disabled {
+				opacity: 0.4;
+			}
+		}
+	}
+
+	.epuser-pagination-from {
+		padding-left: 15px;
+	}
+
+	&--top {
+		padding-bottom: 7px;
+		border-bottom: 1px solid $gray-light;
+
+		@media screen and (max-height: 635px) {
+			display: none;
+		}
+	}
+
+	@include ie-only {
+
+		.actions {
+			flex: 0 1 auto;
+		}
+	}
+
+	@include my-media(991) {
+		padding-top: 15px;
+
+		.check-all2 {
+
+			&__txt {
+				display: none;
+			}
+		}
+
+		.actions {
+
+			.btn {
+				min-width: auto !important;
+			}
+
+			.text {
+				display: none;
+			}
+
+			.ep-icon {
+				display: inline-block;
+			}
+		}
+	}
+
+	@include my-media(480) {
+
+		.actions {
+			padding-left: 10px;
+		}
+
+		&--top {
+			display: none;
+		}
+	}
+
+	@include my-media(425) {
+		padding-top: 10px;
+	}
+}

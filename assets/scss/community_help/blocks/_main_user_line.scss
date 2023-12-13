@@ -1,0 +1,47 @@
+.main-user-line {
+    position: relative;
+    min-height: 70px;
+    padding: 10px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__burger {
+        display: none;
+        margin-right: 25px;
+        padding: 5px;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+    @include my-media(991) {
+        z-index: 1003;
+        min-height: auto;
+        padding: 5px 0;
+        background: $white;
+        border-bottom: 1px solid $color-gray-light;
+
+        &--hidden {
+            display: block;
+        }
+
+        &__burger {
+            display: block;
+        }
+	}
+
+    @include my-media(359) {
+
+        .main-user-line {
+
+            &__burger {
+                margin-right: 15px;
+            }
+        }
+    }
+}

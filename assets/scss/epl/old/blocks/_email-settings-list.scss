@@ -1,0 +1,13 @@
+.email-settings-list {
+
+	&__item {
+		padding: 4px 0;
+	}
+
+	@include phone-only {
+
+		&__item {
+			padding: 10px 0;
+		}
+	}
+}

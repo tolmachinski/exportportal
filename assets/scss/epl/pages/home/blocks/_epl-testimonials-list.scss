@@ -1,0 +1,206 @@
+.epl-testimonials-list {
+    $root: &;
+
+    margin: 47px -15px 0;
+
+    &__item {
+       padding: 0 15px 22px;
+    }
+
+    &__inner {
+        position: relative;
+        padding: 49px 70px 50px;
+        background: $white url("../../../../../images/epl/quote-img.png") calc(100% - 70px) calc(100% - 50px) no-repeat;
+        border-radius: 5px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 30px;
+            bottom: -23px;
+            border: 13px solid transparent;
+            border-color: $white $white transparent transparent;
+            border-bottom-width: 11px;
+        }
+    }
+
+    &__text {
+        min-height: 118px;
+        margin-bottom: 31px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__user-img {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+
+        .image {
+            border-radius: 50%;
+        }
+    }
+
+    &__user-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    &__user-country {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        color: $gray;
+        white-space: nowrap;
+
+        .image {
+            margin-right: 5px;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        li {
+            display: flex;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+
+            &.slick-active {
+
+                button {
+                    background: $white;
+                }
+            }
+        }
+
+        button {
+            overflow: hidden;
+            width: 12px;
+            height: 12px;
+            text-indent: -50px;
+            background: transparent;
+            cursor: pointer;
+            border: 2px solid $white;
+            border-radius: 50%;
+        }
+    }
+
+    &:not(.slick-initialized) {
+        display: flex;
+
+        #{$root} {
+
+            &__item {
+                width: 50%;
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include my-media(1200) {
+
+        &__inner {
+            padding: 50px 30px;
+            background-image: none;
+        }
+
+        &__text {
+            min-height: 168px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    @include my-media(1024) {
+        margin-top: 27px;
+
+        &__inner {
+            padding-top: 48px;
+        }
+
+        &__text {
+            margin-bottom: 17px;
+        }
+
+        &__user {
+            align-items: flex-start;
+        }
+
+        &__user-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+
+            .image {
+                width: inherit;
+                height: inherit;
+            }
+        }
+
+        &__user-country {
+            margin-top: 1px;
+        }
+    }
+
+    @include phone-only {
+
+        &__inner {
+            padding-top: 49px;
+        }
+
+        &__text {
+            min-height: 151px;
+            margin-bottom: 21px;
+            line-height: 22px;
+        }
+
+        &__user-country {
+            margin-top: 2px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &:not(.slick-initialized) {
+            display: flex;
+
+            #{$root} {
+
+                &__item {
+                    display: none;
+                    width: 100%;
+
+                    &:first-child {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            margin-top: 12px;
+        }
+    }
+
+    @include phone-extra-small {
+
+        &__inner {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

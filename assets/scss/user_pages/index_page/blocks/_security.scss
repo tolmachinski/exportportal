@@ -1,0 +1,148 @@
+.security {
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__benefit {
+        width: calc((100% - 120px)/5);
+        margin-right: 30px;
+        background-color: $color-gray-lighter;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__description {
+        padding: 9px 22px 15px;
+
+        @include p181816;
+
+        text-align: center;
+    }
+
+    &__picture {
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: $color-blue2;
+        border: 4px solid white;
+        border-radius: 100%;
+        transform: translateX(-50%);
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    @include my-media(1199) {
+
+        &__content {
+            justify-content: center;
+        }
+
+        &__benefit {
+            width: calc(33.33333% - 20px);
+
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                margin-top: 30px;
+            }
+        }
+
+        &__image {
+            height: 150px;
+        }
+    }
+
+    @include my-media(991) {
+
+        &__benefit {
+            width: calc(33.33333% - 10px);
+
+            &:not(:last-child, :nth-child(3)) {
+                margin-right: 15px;
+            }
+
+            &:nth-child(4),
+            &:nth-child(5) {
+                margin-top: 15px;
+            }
+        }
+
+        &__description {
+            padding: 9px 15px 15px;
+        }
+
+        &__image {
+            height: 120px;
+        }
+    }
+
+    @include my-media(767) {
+
+        &__benefit {
+            width: calc(50% - 7.5px);
+
+            &:not(:last-child, :nth-child(3)) {
+                margin-right: 0;
+            }
+
+            &:not(:nth-child(2), :nth-child(4), :last-child) {
+                margin-right: 15px;
+            }
+
+            &:nth-child(3) {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    @include my-media(474) {
+
+        &__benefit {
+            width: 100%;
+            margin-right: 0;
+
+            &:not(:nth-child(2)):not(:nth-child(4)):not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:not(:first-child) {
+                margin-top: 14px;
+            }
+        }
+
+        &__description {
+            width: 260px;
+            margin: 0 auto;
+            padding: 10px 0 13px;
+        }
+
+        &__image {
+            height: auto;
+        }
+    }
+}
